@@ -1,0 +1,43 @@
+[head.title]
+Device42, the only tool you need to automatically map your entire data center!
+
+[head.description]
+Device42 builds a data center map automatically with agent-less auto-discovery. Map out your physical and virtual infrastructure with power and environmental monitoring.
+
+[landing.title]
+
+Device42 Redefines DCIM with Automatic Data Center Mapping!
+
+[landing.image_format]
+gif
+
+[landing.content]
+
+Device42 auto-generates data center maps that help you understand your deployment. From room and rack layouts to power consumption to real-time capacity planning, and more:
+
+
+- Map your physical, virtual and cloud networks automatically and agent-lessly
+- Auto-generated, photo-realistic rack layouts feature drag'n'drop
+- Color-coded room layouts display heat-maps for easy capacity planning
+- Web-based, fast, and light-weight with SVG exports that import to Visio
+- Resource utilization, real-time power and environmental monitoring, reports, charts, alerts, and much, much more!
+
+
+[feature[1].title]
+Powerful data center map includes drag'n'drop room and rack layouts with what-if scenarios
+[feature[1].image_format]
+gif
+[feature[1].content]
+Device42 creates a data center map for you by auto-discovering all of your systems, highlighting dependencies between physical, virtual, and applications deployments!
+
+[feature[2].title]
+Powerful capacity planning with resource utilization, monitoring, and control
+[feature[2].content]
+Datacenter map includes all DCIM-related details across your data center: IPs and connections, services and interdependencies, and more, all autodiscovered and automatically correlated!
+
+[feature[3].title]
+Automated DCIM with of awesome out-of-the-box integrations
+[feature[3].image_format]
+png
+[feature[3].content]
+Device42 extends your data center map to the software you already use: Chef, Puppet, JIRA, MS SCCM, Infoblox, Splunk, ServiceNow and more. Use this real-time map for reduced MTTR and for faster decision making.

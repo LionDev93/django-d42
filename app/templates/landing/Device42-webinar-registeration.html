@@ -1,0 +1,213 @@
+{% extends "base/_base.html" %}
+{% load i18n static %}
+{% block title %}{% trans "Automating ServiceNow with discovery" %}{% endblock %}
+{% block og_meta %}
+    <meta property="og:title" content="Automating ServiceNow with discovery">
+    <meta property="og:description" content="Automating ServiceNow with discovery">
+{% endblock %}
+{% block meta %}
+    <meta name="description" content="Automating ServiceNow with discovery">
+    <meta name="keywords" content="register, webinar">
+{% endblock %}
+
+{% block styles %}
+<style>
+    body{
+    }
+    .left-content {
+      text-align: center;
+      padding: 20px;
+    }
+    .left-content ul {
+      text-align: left;
+    }
+    .left-content ul li {
+      margin-bottom: 5px;
+      font-size: 20px;
+    }
+    .time-available {
+      margin-bottom: 40px;
+    }
+    .time-available img {
+      width: 100px;
+      display: inline-block;
+    }
+    .time-available .time{
+      display: inline-block;
+      padding-top: 10px;
+      vertical-align: middle;
+    }
+    .time-available .time p{
+      font-size: 24px;
+      font-weight: 700;
+      color: #246e90;
+      margin: 0;
+    }
+    .description {
+      text-align: left;
+    }
+    .description p{
+      font-size: 20px;
+      color: #000;
+    }
+    .description span {
+      font-weight: 700;
+    }
+    .regist_form {
+      font-family: Helvetica, Trebuchet MS, sans-serif !important;
+      background-color: #22a3df !important;
+      color: #ffffff !important;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    .regist_form h2 {
+      color: #ffffff !important;
+      font-weight: normal !important;
+      font-family: Helvetica, Trebuchet MS, sans-serif !important;
+      font-size: 30px;
+      text-align: center;
+      margin: 0;
+    }
+    .regist_form input[type=text], .regist_form input[type=email] {
+        width: 100% !important;
+        padding: 10px !important;
+        font-size: 17px !important;
+        font-style: italic !important;
+        color: #246e90;
+        margin-top: 20px;
+    }
+    .regist_form input[type=submit] {
+        background: #ffd377 !important;
+      ﻿ color: #383838;
+        width: 50% !important;
+        border-radius: 2px !important;
+        font-size: 20px !important;
+        font-weight: bold !important;
+        padding-bottom: 7px !important;
+        padding-top: 7px !important;
+        border: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        margin-top: 40px;
+    }
+    .regist_form p label {
+      display: none;
+    }
+    .regist_form p {
+      padding: 0px !important;
+    }
+  ﻿
+    @media screen and (min-width: 768px){
+      .left-content {
+        padding-left: 70px;
+      }
+      .right-content{
+        padding-right: 70px;
+      }
+    }
+    @media screen and (max-width: 768px){
+      .main-content {
+        margin: 0;
+      }
+      .left-content h1{
+        font-size: 24px;
+      }
+      .time-available .time p{
+        font-size: 18px;
+      }
+      .hbspt-form{
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      .main-content > .row {
+        margin-top: 40px;
+      }
+    }
+
+    @media screen and (min-width: 480px){
+      h1, .h1 {
+          font-size: 38px;
+          line-height: 1.2em;
+      }
+    }
+
+    @media screen and (min-width: 768px){
+      h1, .h1 {
+          font-size: 42px;
+          line-height: 1.2em;
+      }
+    }
+
+    @media screen and (min-width: 992px){
+      h1, .h1 {
+          font-size: 46px;
+          line-height: 1.2em;
+      }
+    }
+
+    @media screen and (min-width: 1200px){
+      h1, .h1 {
+          font-size: 50px;
+          line-height: 1.1em;
+      }
+    }
+
+
+
+
+</style>
+{% endblock %}
+
+{% block body %}
+<article class="container vert-offset-top-1">
+      <h1 style="margin-top: 100px;text-align: center;">{% trans "Automating ServiceNow with discovery" %}</h1>
+      <div class="row">
+        <div class="col-md-7 left-content">
+          <div class="time-available">
+            <img src="{% static 'img/landing/calendar.png' %}" />
+            <div class="time">
+              <p>{% trans "Thursday, February 22nd " %}</p>
+              <p>{% trans "12:00 pm EST" %}</p>
+            </div>
+          </div>
+          <p style="text-align: justify;">{% trans 'Join us on <b>Thursday, February 22nd at 12:00 pm EST</b> for a brief webinar where Greg Osborne, Device42’s head of Solution Architecture will show you how Device42 can be deployed and populating ServiceNow within a matter of days. Don’t take our word for it--attendees will receive a <span style="font-style: italic;">complimentary trial of Device42</span> and implementation assistance.' %}</p>
+        </div>
+        <div class="col-md-5 right-content">
+          <!--﻿﻿&lt;!&ndash;[if lte IE 8]>-->
+            <!--<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>-->
+            <!--<![endif]&ndash;&gt;-->
+            <!--<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>-->
+            <!--<script>-->
+              <!--hbspt.forms.create({-->
+                <!--portalId: '433338',-->
+                <!--formId: 'c53d3e88-a234-4705-9abc-e9648b8167f1',-->
+                <!--css: ''-->
+              <!--});-->
+            <!--</script>-->
+          <form class="regist_form" role="form" action="" method="post">
+            <h2>Please complete the registration form below:</h2>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="SUBMIT"/>
+          </form>
+        </div>
+      </div>
+</article>
+{% endblock %}
+
+{% block body_scripts %}
+<script type="text/javascript">
+    videoSrc = 'https://www.youtube.com/embed/X9zirQ-HZEw?rel=0';
+
+    $("#videoModal").on('show.bs.modal', function() {
+        $("#videoModal iframe").attr('src', videoSrc + '&amp;autoplay=1');
+    });
+
+    $("#videoModal").on('hidden.bs.modal', function() {
+        $("#videoModal iframe").removeAttr('src');
+    });
+</script>
+{% endblock %}

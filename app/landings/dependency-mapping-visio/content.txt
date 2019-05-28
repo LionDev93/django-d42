@@ -1,0 +1,40 @@
+[head.title]
+Trying to do dependency mapping with Visio? Device42 dependency mapping tool auto-discovers your hardware, software, and application and service dependencies!
+
+[head.description]
+Device42 dependency mapping tools discover your application and service dependencies, generating powerful dependency maps, automatically! Visio can't keep up!
+
+
+[landing.title]
+Don't Fight with Visio for Dependency Mapping!
+
+[landing.image_format]
+png
+
+
+[landing.content]
+Visio wasn't built with dependency mapping in mind. Device42 was, automatically discovering your entire infrastructure, and generating dependency maps that highlight key relationships and interdependencies!
+
+- Agentless service and application dependency discovery via native Windows (WMI) and Linux (SSH) protocols, and via SNMP for network hardware
+- Device42 discovers all of your deployed hardware, software, manufacturers, and versions
+- Automatically discover all server and service dependencies, protocols & ports
+- Easily view application to application and to server dependency maps
+- View comprehensive application dependency maps even for machines that can't be directly accessed, built out with Netflow data!
+
+
+[feature[1].title]
+Automated Dependency Map Creation!
+[feature[1].image_format]
+png
+[feature[1].content]
+Device42 dependency mapping tools run laps around Visio, auto-discovering hardware, software, and application dependencies. View dependency maps that identify and track all of your physical and logical components, relationships, and more!
+
+[feature[2].title]
+Application Dependency Maps, Lists, and Flow Diagrams
+[feature[2].content]
+Automatic dependency mapping tools auto-discovers and maps impacts of each discovered application. Easy to consume list pages and maps are Visio compatible, too!
+
+[feature[3].title]
+Device42 Integrates with Your Other Tools!
+[feature[3].content]
+Not only can Device42 import existing data from Excel, CSV, and more, but with RESTful APIs you can also automate and integrate with your favorite IT tools, too: JIRA, ServiceNow, BMC, Ansible, Puppet, Chef, and more!

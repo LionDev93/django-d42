@@ -1,0 +1,182 @@
+{% extends "base/_base-landing-v1.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% blocktrans %}It is a good idea to compare alternative CMDB tools like Riada's Insight for Jira, and possibly other tools. There are a wide variety available, but Device42 is among the best.{% endblocktrans %}"/>
+    <meta name="keywords"
+          content="device42, vs, compare, comparison, riada, insight, jira, device, management, core, asset, ipam, itam, cmdb, functions, features, cloud, discovery, autodiscovery, app, mapping, appmapping, application, map, diagram, discover, depedency, dcim, ticketing, plugin, addon, enterprise, free, trial, tool, tools" />
+{% endblock %}
+{% block title %}{% trans "Zendesk Integration" %}{% endblock %}
+{% block scripts %}
+    <script>
+        $(function () {
+            $("[data-toggle='tooltip']").tooltip();
+        });
+    </script>
+{% endblock %}
+
+{% block styles %}
+  <style>
+    .table-responsive {
+      max-width: 900px;
+      text-align: left;
+    }
+    hr{
+      margin: 0px;
+    }
+    table {
+      margin-bottom: 0px !important;
+    }
+    p.small-font {
+      font-size: 15px;
+      color: #22a3df;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Roboto Condensed', sans-serif !important;
+    }
+    form label {
+      display: none;
+    }
+    form p {
+      display: inline-block;
+    }
+    form p input {
+      padding: 5px;
+      color: #246d8f;
+    }
+    .d-table {
+      display: table;
+      width: 100%;
+    }
+    .d-table-cell {
+      text-align: center;
+      display: table-cell;
+    }
+    .d-table-submit {
+      padding: 10px;
+      margin-top: 50px !important;
+      width: 250px;
+    }
+    .sub-heading {
+        color: #35ade4;
+        font-family: 'Roboto Condensed', sans-serif !important;
+        font-size: 35px;
+        margin-top: 0px;
+    }
+  </style>
+{% endblock %}
+
+{% block landingHeadingText %}{% trans "Zendesk + Device42 CMDB Integration" %}{% endblock %}
+{% block landingfeature %}
+<section class="row padded">
+  <div class="col-md-8">
+    <p class="lead" style="margin-bottom: 0px;">{% trans "Easily add this free module to your Zendesk installation via the Zendesk Marketplace, and begin including accurate Device42 CI in your Zendesk tickets today!" %}</p>
+  </div>
+  <div class="col-md-4">
+    <a href="https://www.zendesk.com/apps/device42/" class="btn btn-sm btn-primary" id="zendesk_download" target="_blank">Download<br>Zendesk Module</a>
+  </div>
+</section>
+{% endblock %}
+
+{% block maincontent %}
+    <section>
+        <p class="h2 lead">Device42 / Zendesk connector at a glance:</p>
+        <div class="media">
+            <div class="media-left">
+                <i class="fa fa-check-square-o fa-2x"></i>
+            </div>
+            <div class="media-body">
+                <p class="">Associate configuration items (CIs) from Device42, including devices, racks, parts, and PDUs with Zendesk tickets</p>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-left">
+                <i class="fa fa-check-square-o fa-2x"></i>
+            </div>
+            <div class="media-body">
+                <p class="">View device type, service level, and serial numbers from Device42 directly in Zendesk</p>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-left">
+                <i class="fa fa-check-square-o fa-2x"></i>
+            </div>
+            <div class="media-body">
+                <p class="">Click through from Zendesk to view the CI details in Device42</p>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-left">
+                <i class="fa fa-check-square-o fa-2x"></i>
+            </div>
+            <div class="media-body">
+                <p class="">Add Device42 items as a column in Zendesk to see CIs in list view</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="row landing-section">
+      <div class="col-md-9">
+        <h3 class="sub-heading">{% trans "Link CMDB items to issues in Zendesk" %}</h3>
+        <p>{% trans "Now you can associate auto-discovered IT assets (or Configuration Items, CI) including devices, parts, PDUs and racks from Device42 with Zendesk tickets. Within Zendesk, Device42 Configuration Items can be directly selected when creating a Zendesk ticket." %}</p>
+      </div>
+      <div class="col-md-3" style="text-align: right;">
+        <a href="{% static 'img/sections/support/integrations/zendesk/Zendesk-connector.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/zendesk/Zendesk-connector.png' %}" class="img-responsive center-block" alt="{% trans 'Zendesk Integration' %}">
+        </a>
+      </div>
+    </section>
+
+    <section class="row landing-section">
+      <div class="col-md-3">
+        <a href="{% static 'img/sections/support/integrations/zendesk/Zendesk-connector-populated.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/zendesk/Zendesk-connector-populated.png' %}" class="img-responsive center-block" alt="{% trans 'Zendesk Integration' %}">
+        </a>
+      </div>
+      <div class="col-md-9">
+        <h3 class="sub-heading">{% trans "View CI details from Zendesk tickets" %}</h3>
+        <p>{% trans "With the Device42 Zendesk connector, detailed device information from Device42 (such as serial #, asset #, and hardware model) for that Configuration Item can be viewed directly from within Zendesk. Similarly, you can see the associated info for other CI types. Conversely, the CI in Zendesk is a link to view the Device42 page for that Configuration Item, enabling quick navigation to a detailed view of a given configuration item’s details in Device42." %}</p>
+      </div>
+    </section>
+
+    <section class="row landing-section">
+      <div class="col-md-12">
+        <h3 class="sub-heading">{% trans "Add Device42 items as columns within Zendesk, and view CIs in list view" %}</h3>
+        <p>{% trans "If you add a Device42 column to Zendesk, you will be able to see detailed information about each linked CI within the ticket. You are also able to follow the link to jump directly to the CI details within Device42." %}</p>
+      </div>
+    </section>
+    <section class="row">
+      <div class="col-md-offset-1 col-md-10">
+        <div class="row landing-section">
+          <div class="col-md-8">
+            <a href="{% static 'img/sections/support/integrations/zendesk/Zendesk-table-columns.png' %}"
+               data-featherlight="image">
+                <img src="{% static 'img/sections/support/integrations/zendesk/Zendesk-table-columns.png' %}" class="img-responsive center-block" alt="{% trans 'Zendesk Integration' %}">
+            </a>
+          </div>
+          <div class="col-md-4">
+            <p>{% trans "You can also create a custom view in Zendesk to associate Device42 CIs with your tickets. To do so, simply open your Zendesk settings by clicking the gear in the bottom left, click Views, then “add view” and drag “Device42 CI” from the “Columns not included in the table” column to the “Columns included in the table” column." %}</p>
+          </div>
+        </div>
+        <p style="text-align: center; font-style: italic; font-size: 18px;">{% trans "Now when viewing your tickets, you will also see the associated Device42 CI within the main view!" %}</p>
+      </div>
+    </section>
+    <section class="row landing-section">
+      <div class="col-md-offset-1 col-md-10">
+        <a href="{% static 'img/sections/support/integrations/zendesk/Zendesk-tickets-with-CI.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/zendesk/Zendesk-tickets-with-CI.png' %}" class="img-responsive center-block" alt="{% trans 'Zendesk Integration' %}">
+        </a>
+      </div>
+    </section>
+
+    <section class="row landing-section">
+      <div class="col-md-12">
+        <h3 class="sub-heading">{% trans "Download the Zendesk / Device42 CMDB connector for better ITSM Today!" %}</h3>
+        <p>{% trans 'The Zendesk / Device42 connector can be found in the <a href="https://www.zendesk.com/apps/device42/">Zendesk Apps Marketplace</a>.' %}</p>
+      </div>
+    </section>
+{% endblock %}

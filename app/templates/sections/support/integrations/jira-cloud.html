@@ -1,0 +1,67 @@
+{% load i18n static %}
+<h2>{% trans "Enhance your ITSM by connecting Atlassian's Jira Service Desk to the Device42 enterprise CMDB!" %}</h2>
+<span>{% trans "The Enterprise CMDB for Jira Service Desk. Comprehensive Discovery + Visualizations, Automation, Integrations, RESTful APIs and webhooks! #ADM,DCIM,ITAM,ITSM,IPAM." %}</span>
+<div style="margin-top: 20px;">
+  <img src="{% static 'img/sections/support/integrations/jira-cloud/d42_jira_logos.png' %}" class="img-responsive" width="100" height="100" style="float: right; margin-right: 20px" />
+  <h3 class="prelist vert-offset-bottom-2">{% blocktrans %} This free plugin connects your enterprise CMDB to Jira Service Desk. Create & associate Jira tickets right from Device42, see all tickets associated with an asset, and attach assets from Jira tickets! {% endblocktrans %}</h3>
+</div>
+<section class="row">
+    <div class="col-sm-9 p-r-desk-70">
+        <h3>{% trans "Create New Jira Service Desk tickets from Device42!" %}</h3>
+        <p>{% trans "See attached Jira Service Desk Issues right from any Device42 CI, and create new ones with a single click, as well!" %}</p>
+        <p>{% trans "Simply select “Add Jira Issue” and you are on your way! Similar to creating a ticket within Jira Service Desk, but conveniently within Device42. The newly created ticket is then both linked and immediately viewable in Jira Service Desk." %}</p>
+    </div>
+    <div class="col-sm-3">
+        <a href="{% static 'img/sections/support/integrations/jira-cloud/Create_Jira_from_Device42.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/jira-cloud/Create_Jira_from_Device42.png' %}"
+                 class="img-responsive center-block img-border" alt="{% trans 'Create a new Jira Service Desk tickets right from Device42' %}">
+        </a>
+    </div>
+</section>
+<section class="row">
+    <div class="col-sm-6 padded">
+        <a href="{% static 'img/sections/support/integrations/jira-cloud/Link_Jira_Device42.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/jira-cloud/Link_Jira_Device42.png' %}"
+                 class="img-responsive center-block img-border" alt="{% trans 'Link CMDB items to Jira Service Desk ITSM' %}">
+        </a>
+    </div>
+    <div class="col-sm-6">
+        <h3>{% trans "Link CMDB Items to Existing Jira Issues" %}</h3>
+        <p>{% trans "Once the Device42 CMDB Add-on is installed, users can both details from Device42 in Jira Service Desk or link more assets to an issue." %}</p>
+    </div>
+</section>
+<section class="row">
+    <div class="col-sm-8 padded p-r-desk-70">
+        <h3>{% trans "See Device42 Assets on Jira Service Desk tickets" %}</h3>
+        <p>{% trans "Once the Device42 CMDB Add-on is installed to Jira Service Desk, users can see details from Device42 (e.g. timestamps, device type, and service status, and more) for that CI in Jira. Similarly, see the associated info for other CI types." %}</p>
+        <p>{% trans "Staff can quickly identify associated IT assets and direct troubleshooting efforts, and can click device name links to jump to full CI details in Device42." %}</p>
+    </div>
+    <div class="col-sm-4 img-shadow">
+        <a href="{% static 'img/sections/support/integrations/jira-cloud/win_linux_asset_example_Jira.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/jira-cloud/win_linux_asset_example_Jira.png' %}"
+                 class="img-responsive center-block img-border" alt="{% trans 'View Device42 CI details in Jira service Desk tickets' %}">
+        </a>
+    </div>
+</section>
+<section class="row">
+    <div class="col-sm-5">
+        <a href="{% static 'img/sections/support/integrations/jira-cloud/view_external_integration_d42.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/jira-cloud/view_external_integration_d42.png' %}"
+                 class="img-responsive center-block img-border" alt="{% trans 'Easy Jira Servce Desk Installation' %}">
+        </a>
+    </div>
+    <div class="col-sm-7 padded">
+        <h3>{% trans "Easy Installation" %}</h3>
+        <p>{% trans "Simply head over to integrations to enable Jira Service Desk integration, and install from the atlassian marketplace. Device42's Jira Service Desk add-on is ready for use in seconds!" %}</p>
+    </div>
+</section>
+
+<hr>
+<h4 style="font-style: italic;">{% trans "Get the most out of your ITSM with Jira Service Desk + Device42" %}</h4>
+<h4><b>{% blocktrans %}Ready to get started: <a href="https://docs.device42.com/external-integrations/device42-jira-cloud-integration/" target="_blank">Device42 Jira Service Desk docs</a>{% endblocktrans %}</b></h4>
+<p>{% blocktrans %}Looking for Device42’s Jira Server-based Integration? Get it <a href="/integrations/jira">here</a>{% endblocktrans %}</p>
+<p>{% blocktrans %}Users can download the Jira Device42 connector from the <a href="https://marketplace.atlassian.com/vendors/1212225/device42">Atlassian Marketplace</a>{% endblocktrans %}</p>

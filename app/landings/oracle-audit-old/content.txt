@@ -1,0 +1,47 @@
+[head.title]
+Oracle Audit
+
+[head.description]
+Description
+
+[head.meta]
+<meta name="robots" content="noindex, follow">
+
+[landing.image_format]
+gif
+
+[landing.title]
+Oracle Audit
+
+[landing.content]
+Device42 provides comprehensive Oracle audit capabilities including powerful license auto-discovery with fully
+configurable asset types. Easily accommodate any IT asset type, hardware or software, within your infrastructure.
+
+- Agentless and/or agent-based Continuous Auto-discovery
+- Physical and Virtual based auditing
+- Device42’s Oracle audit tools manage servers on premise and in the cloud
+- Track and visualize relationships between your servers and other IT assets
+- Device42 scales from small to huge – No inventory is too large
+- Powerful, customizable license usage reports
+
+[feature[1].image_format]
+png
+[feature[1].title]
+Auto Discover Your Licenses & Software Inventory
+[feature[1].content]
+Device42’s Oracle audit software produces an accurate inventory that is ALWAYS audit-ready
+Populate your software inventory quickly and effortlessly with an extensive range of auto-discovery tools that support
+physical, virtual, hybrid, and cloud server infrastructures.
+
+[feature[2].title]
+Oracle Audit & Complete Software Inventory Management
+[feature[2].content]
+Device42 locates your devices and the software running on them automatically, making it easy to document and inventory
+the software running across physical or virtual servers, blades, clusters, switches or any other device types.
+
+[feature[3].title]
+Track Relationships and Map Dependencies
+[feature[3].content]
+Device42’s Oracle audit software also provides the powerful ability to track and visualize operational dependencies.
+
+#template=landing_alt/layout-1.html

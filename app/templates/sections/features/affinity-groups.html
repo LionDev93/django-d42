@@ -1,0 +1,79 @@
+{% extends 'base/_base.html' %}
+{% load i18n static include_partial %}
+{% block title %}{% trans "Affinity Groups" %}{% endblock %}
+{% block site_section_features %}active{% endblock %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Affinity Groups uses your auto-discovered infrastructure dependencies to calculate migration-ready <i>move-groups</i> around your key infrastructure services.' %}"/>
+{% endblock %}
+{% block body %}
+    <header class="row head-home bg-info">
+        <div class="container">
+            <div class="row featurette is-table-row">
+                <div class="col-sm-8">
+                    <span class="section-label">{% trans "Features Tour" %}</span>
+                    <h1 class="featurette-heading">{% trans "Affinity Groups - <i>Automatic Move Groups</i>" %}</h1>
+                    <p>{% trans "Planning for your next maintenance or migration has never been easier. Device42's automatic Affinity Groups uses auto-discovered infrastructure dependency information to calculate migration-ready <i>move-groups</i> around your key infrastructure services." %}</p>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <ul class="checklist font-stack-condensed">
+                                <li>{% trans "Auto-generate complete move groups" %}</li>
+                                <li>{% trans "Automatic nightly refreshes" %}</li>
+                              <li>{% trans "View historical affinity groups to understand infrastructure changes over time" %}</li>
+                              <li>{% trans "Simply `Pin` key services and affinity groups are automatically generated" %}</li>
+                              <li>{% trans "Impact Charts minimize noise and highlight the connection info you care about" %}</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6">
+                            <ul class="checklist font-stack-condensed">
+                                <li>{% trans "Affinity group impact charts 30-days of the most relevant connection activity" %}</li>
+                                <li>{% trans "Database services are 'Pinned' automatically" %}</li>
+                                <li>{% trans "Fully customizable dataset driven by powerful, editable stored DOQL" %}</li>
+                                <li>{% trans "See all affinity groups a device is a part of on the device view page" %}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <img class="featurette-image img-responsive box-shadow center-block"
+                         alt="{% trans 'Enterprise Password Management' %}"
+                         src="{% static 'img/sections/features/affinity-groups/affinity_group_impact_v2.png' %}">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="row bg-warning feature-menu-wrap flat-top flat-bottom">
+        <div class="feature-menu">
+            <a href="#" data-jump="#automaticgroups" data-offset="top-nav">{% trans "Automatic Move Groups" %}</a>
+            <a href="#" data-jump="#storeddoql" data-offset="top-nav">{% trans "Stored DOQL" %}</a>
+            <a href="#" data-jump="#historicalag" data-offset="top-nav">{% trans "Historical Affinity Groups" %}</a>
+            <a href="#" data-jump="#totalflexibility" data-offset="top-nav">{% trans "Total Customizability" %}</a>
+        </div>
+    </div>
+
+    <div class="container featurette-wrap">
+        {% include_partial "partials/affinity-groups/automatic-move-groups.html" vcenter=True id="automaticgroups" %}
+        {% include_partial "partials/affinity-groups/stored-doql.html" image="left" vcenter=True id="storeddoql" %}
+        {% include_partial "partials/affinity-groups/affinity-group-audit-trail.html" vcenter=True id="historicalag" %}
+        {% include_partial "partials/affinity-groups/total-flexibility.html" image="left" vcenter=True id="totalflexibility" %}
+        <div class="row foot-nav">
+            <div class="col-xs-6 text-left">
+                <small class="text-uppercase text-muted">{% trans 'Previous' %}</small>
+                <br>
+                <a href="{% url 'features_software_license' %}"><i
+                        class="fa fa-chevron-left"></i> {% trans 'Software License Management' %}
+                </a>
+            </div>
+            <div class="col-xs-6 text-right">
+                 <small class="text-uppercase text-muted">{% trans 'Next' %}</small>
+                <br>
+                <a href="{% url 'features_integrations' %}">{% trans 'Integrations' %} <i
+                        class="fa fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+

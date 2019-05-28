@@ -1,0 +1,71 @@
+{% extends "base/_base.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Dell EMC IDC Whitepaper Download' %}"/>
+{% endblock %}
+{% block title %}{% trans "Dell EMC IDC Whitepaper Download" %}{% endblock %}
+
+{% block styles %}
+<style>
+    body{
+    }
+      a.btn {
+        width: 200px;
+      }
+      span.desc {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        font-weight: 100;
+        font-size: 15px;
+        text-align: center;
+        font-style: italic;
+        color: #b1b1b1;
+        width: 75%;
+      }
+      img.landing-logo {
+        width: 75%;
+      }
+      .m-80 {
+        margin-top: 80px;
+        margin-bottom: 30px;
+      }
+      .m-t-130 {
+        margin-top: 130px;
+      }
+
+      .thx-click {
+        font-size: 25px;
+        text-align: center;
+        font-style: italic;
+      }
+
+      @media(max-width: 767px){
+        .m-t-130 {
+          margin-top: 30px;
+        }
+      }
+</style>
+{% endblock %}
+
+{% block body %}
+  <article class="container m-80">
+    <section class="row">
+      <div class="col-sm-offset-2 col-sm-5">
+        <p class="thx-click">{% trans "Thanks for clicking!" %}</p>
+        <img src="{% static 'img/landing/dell_emc/dellemc.png' %}" class="img-responsive center-block landing-logo" alt="{% trans 'DELL EMC' %}">
+        <p>{% trans "The common requirement when planning a migration, populating a service ticketing or monitoring system, or to simply know what you own at any given moment is technology that continuously discovers and rediscovers everything, relentlessly and all the time." %}</p>
+        <br />
+        <p>{% trans "Device42 has introduced a simple, scalable, agentless solution now in use in over 50 countries worldwide by enterprises and integrators of all sizes and complexity." %}</p>
+        <br />
+        <p>{% trans "Here is your copy of how Dell EMC solves the problem of migrating IT assets from one datacenter to another. Just one of the many uses for our continuous discovery." %}</p>
+        <br />
+        <a href="{% static 'data/pdf/Dell-EMC-IDC-Whitepaper.pdf' %}" class="btn btn-primary btn-block-xs center-block" download target="_blank">LOOK, NO FORM!<br />DOWNLOAD NOW!</a>
+        <span class="desc center-block">{% trans "*No form required. We just want you to download the whitepaper. (Seriously, we're not being creepy.)" %}</span>
+      </div>
+      <div class="col-sm-3 m-t-130">
+        <img src="{% static 'img/landing/dell_emc/analyze_idc.png' %}" class="img-responsive center-block" alt="{% trans 'Analyze IDC' %}">
+      </div>
+    </section>
+  </article>
+{% endblock %}

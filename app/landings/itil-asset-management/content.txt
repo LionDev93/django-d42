@@ -1,0 +1,38 @@
+[head.title]
+Comprehensive ITIL asset management with agent-less auto-discovery
+
+[head.description]
+Device42 is a comprehensive ITIL asset management with agent-less auto-discovery.
+
+[landing.title]
+Comprehensive ITIL asset management
+[landing.image_format]
+png
+[landing.content]
+
+Device42 provides comprehensive ITIL asset management capabilities including powerful auto-discovery with fully configurable asset types. Easily accommodate any IT asset type within in your infrastructure.
+
+- Agent-less auto-discoveries to keep all your complete ITIL asset inventory up-to-date, with an optional agents for remote assets
+- Support for physical, virtual and cloud infrastructure to track complete hardware and software inventory
+- Discover hardware and software inventory on any operating system: Windows, Linux, UNIX, Mac, or BSD
+- Out of box integrations with ITSM tools like JIRA, servicenow, Cherwell and many more help you enhance the value of your existing investments.
+- Know your support expiry and more with automatic contract management for various vendors.
+- Easier audits with comprehensive reports and visualization tools
+
+
+[feature[1].title]
+Complete Auto Discovery for all networks
+[feature[1].content]
+Device42 autodiscovery spans across legacy and newer systems, tracking ITIL asset inventory and highlighting dependencies between physical, virtuals, cloud infrastructure and applications. 
+
+
+[feature[2].title]
+Support Entitlement Tracking and Complete ITIL Asset Management
+[feature[2].content]
+Device42 helps you autodiscover your warranty details, and keeps track of your support expiration dates. Know in advance when your server support is up for renewal!
+
+
+[feature[3].title]
+Real-time Map of your IT Infrastructure with Integrations
+[feature[3].content]
+Go beyond traditional inventory tools using our out of box integrations with JIRA, Confluence, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, ServiceNow and more. Use this real-time insight to reduce your MTTR and make faster decisions in your daily IT operations.

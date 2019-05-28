@@ -1,0 +1,19 @@
+{% load i18n static %}
+<div {% if id %}id="{{ id }}" {% endif %}class="row featurette image-right-8x4 {% if vcenter %}is-table-row{% endif %}">
+
+    <div class="col-sm-5">
+        <img class="img-responsive center-block animated box-shadow"
+             src="{% static 'img/sections/features/affinity-groups/pinned_services_and_menu.png' %}"
+             alt="{% trans 'Automatic move group generation' %}">
+    </div>
+    <div class="col-sm-7">
+        <h2>{% trans "Automatic Move Groups" %}</h2>
+        <p>{% trans "Device42 generates move groups for all your core, <i>'pinned'</i> infrastructure services" %}</p>
+        <ul class="dash">
+            <li>{% trans "Simply 'pin' important services with a click" %}</li>
+            <li>{% trans "Database services are pinned automatically when discovered" %}</li>
+            <li>{% trans "Move groups are re-generated nightly" %}</li>
+            <li>{% trans "Never miss a dependency again" %}</li>
+        </ul>
+    </div>
+</div>

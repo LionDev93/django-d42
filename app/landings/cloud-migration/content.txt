@@ -1,0 +1,48 @@
+[head.title]
+Easier cloud migration with dependency mapping, resource utilization, and comprehensive agentless autodiscovery
+
+[head.description]
+Device42 makes cloud migration easier with true autodiscovery, powerful application dependency mapping, and resource utilization.
+
+[landing.title]
+Make Cloud Migration Easier
+
+[landing.image_format]
+jpg
+
+[landing.content]
+## Complete Cloud Migration Solution - Get to the Cloud: AWS, Azure, Digital Ocean, and more!
+
+Device42 automatically discovers and generates a centralized repository of application, service and device relationships and dependencies for optimized cloud migrations.
+
+1. **Agentless Auto-Discovery**
+   Agentless services and application dependencies discovery uses native Windows (WMI) and Linux (SSH) protocols
+2. **Complete Application Details**
+   Device42 discovers all of your deployed applications, application dependencies, manufacturers, and versions
+3. **Complete Service Details**
+   Automatically discover all services dependencies, running or not, protocols & ports
+4. **Powerful Visualizations**
+   Easily view application to server and application to application dependencies
+5. **Application Dependencies!**
+   View comprehensive application dependency maps even for machines that can't be directly accessed, built out with Netflow data!
+
+
+[feature[1].title]
+Simplified Cloud Migration Planning
+[feature[1].image_format]
+png
+[feature[1].content]
+Planning your cloud migration is much easier with automatically discovered hardware, software, and application dependency maps. All physical and logical components, their relationships, and their interdependencies are identified and tracked!
+
+[feature[2].title]
+Complete Application Dependency Discovery
+[feature[2].content]
+Easy to consume charts and list pages ensure your cloud migration will go smoothly. View the impact of any application, and be confident about approving your cloud migration change controls.
+
+[feature[3].title]
+Powerful Visualizations, Reporting, and APIs
+[feature[3].content]
+Easily build cloud migration move groups, or report on any the dependency data in your desired format from Excel to CSV or even a direct connection to an external database. Flexible APIs let you manipulate data your way and integrate Device42 with other products, too!
+
+
+#template=landing_alt/layout-2.html

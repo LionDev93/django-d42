@@ -1,0 +1,311 @@
+{% extends 'base/_base.html' %}
+{% load i18n static %}
+{% block title %}{% trans "Device42 Customers" %}{% endblock %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Customer List for Device42 - Comprehensive Data Center Documentation Software' %}"/>
+{% endblock %}
+{% block styles %}
+  <style>
+    .secondary-menu {
+      text-align: center;
+    }
+
+    @media(max-width: 992px){
+      .secondary-menu {
+        display: none;
+      }
+    }
+
+    .secondary-menu.fixed {
+      position: fixed;
+      background: white;
+      z-index: 999;
+      top: 53px;
+      width: 100%;
+    }
+
+    .secondary-content  {
+      display: inline-block;
+    }
+
+    .secondary-menu-list {
+      display: inline-block;
+      list-style: none;
+      margin: 0;
+      padding: 0px;
+    }
+
+    .secondary-menu-list-item {
+      display: inline-block;
+      text-align: center;
+      zoom: 1;
+      vertical-align: middle;
+      height: 100%;
+      width: auto;
+      min-width: 100px;
+      cursor: pointer;
+      position: relative;
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+
+    .secondary-menu-list-item:before {
+      display: none;
+    }
+
+    .secondary-menu-link {
+      padding: 1.5rem 0;
+      color: #706F6F;
+      display: block;
+    }
+
+    .secondary-menu-link:focus, .secondary-menu-link:hover {
+      color: #706F6F;
+      text-decoration: none;
+    }
+
+    <!--.secondary-menu-list-item:hover, .secondary-menu-list-item.active {-->
+      <!--color: #706F6F;-->
+      <!--border-bottom: 3px solid #ab00dc;-->
+    <!--}-->
+
+    .secondary-menu-list-item:after {
+      content: "";
+      background-color: #22a3df;
+      padding: 1.5px;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      line-height: 3px;
+      font-size: 2em;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      right: 50%;
+      visibility: hidden;
+      transition: all 0.2s linear;
+    }
+
+    .secondary-menu-list-item:hover:after {
+          visibility: visible;
+        left: 6px;
+        right: 6px;
+    }
+
+    .secondary-menu-list-item.active:after {
+      visibility: visible;
+      content: "";
+      background-color: #eb8f34;
+      font-size: 30px;
+      padding: 1.5px;
+      line-height: 3px;
+      position: absolute;
+      bottom: 0;
+      left: 6px;
+      right: 6px;
+    }
+
+    .d-flex {
+      display: flex;
+    }
+
+    blockquote {
+      margin: 0px;
+      border: 0px;
+      background: #eb8e35;
+      color: white;
+      padding-top: 50px;
+      box-shadow: none;
+      vertical-align: middle;
+      display: table-cell;
+    }
+
+    blockquote:before {
+      color: white;
+      float: right;
+      margin: .3rem;
+      margin-top: 0;
+      margin-left: 1.5rem;
+      font-size: 70px;
+    }
+
+    .customers .carousel-inner{
+        height: 500px;
+    }
+
+    .customers .carousel-inner .item {
+      padding-left: 100px;
+      padding-right: 100px;
+      background: #eb8e35;
+      height: 500px;
+    }
+
+    @media(max-width: 767px) {
+      .customers .carousel-inner .item {
+        padding: 0px;
+      }
+    }
+
+    .customers .carousel-inner .item-container {
+      height: 100%;
+      width: 100%;
+      display: table;
+    }
+
+    .customers .carousel-control.right, .customers .carousel-control.left {
+      background-image: none;
+    }
+
+    .glyphicon-chevron-right:before {
+        content: "\e080";
+    }
+    .glyphicon-chevron-left:before {
+        content: "\e079";
+    }
+
+    .carousel-control .fa-chevron-left, .carousel-control .fa-chevron-right {
+        position: absolute;
+        top: 50%;
+        margin-top: -10px;
+        z-index: 5;
+        display: inline-block;
+        color: white;
+    }
+
+    .carousel-indicators li {
+      border: 1px solid #ffffff;
+    }
+
+    .carousel-indicators li.active {
+        border: 2px solid #ffffff;
+        background-color: #ffffff;
+    }
+
+    blockquote cite span {
+        font-weight: 500;
+        font-size: 12px;
+    }
+
+    #customers h2 {
+      color: #2270b2;
+      margin-bottom: 40px;
+    }
+
+    #case-studies > .container > h2 {
+      color: #2270b2;
+    }
+
+    .photo-card>.heading .title {
+       border-bottom: 1px solid #445362;
+    }
+
+    .photo-card>.heading {
+      padding: 24px;
+    }
+
+    .photo-card>.image img {
+      max-height: 220px;
+    }
+
+    .photo-card .font-stack-serif {
+      font-size: 15px;
+    }
+  </style>
+{% endblock %}
+{% block body_scripts %}
+<script type="text/javascript">
+    $(function() {
+        D42.tools.loadJs('//fast.wistia.com/assets/external/E-v1.js', true);
+    });
+    function goto_testimonials(){
+      $(document).ready(function() {
+        $('html, body').animate({
+          scrollTop: $('#testimonialCarousel').offset().top - 110
+        }, 500);
+      })
+    }
+    function goto_customers(){
+      $(document).ready(function() {
+        $('html, body').animate({
+          scrollTop: $('#customers').offset().top - 110
+        }, 500);
+      })
+    }
+    function goto_casestudies(){
+      $(document).ready(function() {
+        $('html, body').animate({
+          scrollTop: $('#case-studies').offset().top - 110
+        }, 500);
+      })
+    }
+
+    $(window).scroll(function () {
+        var cur_pos = $(window).scrollTop();
+
+        if(cur_pos > ($("#testimonialCarousel").offset().top)){
+          $(".secondary-menu").addClass("fixed");
+        }else{
+          $(".secondary-menu").removeClass("fixed");
+        }
+
+        if(cur_pos > ($("#testimonialCarousel").offset().top)){
+          $(".secondary-menu-list-item").siblings().removeClass("active");
+          $("#testimonials_link").addClass("active");
+        }else{
+          $(".secondary-menu-list-item").siblings().removeClass("active");
+        }
+
+        if(cur_pos > ($("#customers").offset().top - 115)){
+          $(".secondary-menu-list-item").siblings().removeClass("active");
+          $("#customers_link").addClass("active");
+        }else{
+          $(".secondary-menu-list-item").siblings().removeClass("active");
+        }
+
+        if(cur_pos > ($("#case-studies").offset().top - 115)){
+          $(".secondary-menu-list-item").siblings().removeClass("active");
+          $("#case_studies_link").addClass("active");
+        }
+    });
+</script>
+{% endblock %}
+
+{% block body %}
+    <div class="secondary-menu">
+      <div class="secondary-content">
+        <ul class="secondary-menu-list">
+          <li class="secondary-menu-list-item" id="testimonials_link">
+            <a href="{% url 'customers_testimonials' %}" class="secondary-menu-link">
+              {% trans "TESTIMONIALS" %}
+            </a>
+          </li>
+          <li class="secondary-menu-list-item" id="customers_link">
+            <a href="{% url 'customers' %}" class="secondary-menu-link">
+              {% trans "CUSTOMERS" %}
+            </a>
+          </li>
+          <li class="secondary-menu-list-item" id="case_studies_link">
+            <a href="{% url 'customers_case_studies' %}" class="secondary-menu-link">
+              {% trans "CASE STUDIES" %}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section id="customers">
+      <div class="container">
+        <h2 class="text-center text-muted alt-font"><strong>{% trans "People Around The World Are Loving Device42!" %}</strong></h2>
+        <div class="row customer-logo-panel flat-top flat-bottom">
+            {% for i in logos %}
+                <div class="col-sm-3 logo-panel">
+                    <img src="{% static 'img/customers/' %}{{ i }}.png" class="img-responsive" alt="{{ i }} logo">
+                </div>
+                {% if forloop.counter|divisibleby:4 %}
+                </div><div class="row customer-logo-panel flat-top flat-bottom">
+                {% endif %}
+            {% endfor %}
+        </div>
+      </div>
+    </section>
+{% endblock %}

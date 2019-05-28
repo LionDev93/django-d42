@@ -1,0 +1,23 @@
+{% load static i18n %}
+<div {% if id %}id="{{ id }}" {% endif %}class="row featurette image-{{ image|default:'right' }}-7x5 {% if vcenter %}is-table-row{% endif %}">
+    <div class="col-sm-6">
+        <img class="featurette-image img-responsive center-block"
+             alt="{% trans 'Application Dependency Mapping' %}"
+             src="{% static 'img/generic/ApplicationDependencyFlowCharts.png' %}">
+    </div>
+    <div class="col-sm-6">
+        <h3 class="prelist flat-top">{% trans "Highlighted features" %}:</h3>
+        <ul class="checklist tight bullet-blue text-small">
+            <li>{% trans 'Agentless services and application discovery using native protocols' %}</li>
+            <li>{% trans 'Agent based discovery available for sensitive and/or often disconnected devices' %}</li>
+            <li>{% trans 'See all deployed applications, manufacturer / owner, version number and function' %}</li>
+            <li>{% blocktrans %}'Pin' key services and Affinity Groups defines move groups & calculates impact charts for each; See a visual grouping of communication patterns {% endblocktrans %}</li>
+            <li>{% trans 'List all services, running or not, users, protocols & ports' %}</li>
+            <li>{% trans 'Granular software and service details include install location, date, registry information, permissions, and configuration files for each software component!' %}</li>
+            <li>{% trans 'Application dependency diagrams visualize application to device relationships' %}</li>
+            <li>{% trans 'Map applications to servers, servers to switch ports, and users to devices and applications' %}</li>
+            <li>{% trans 'Enjoy comprehensive application dependency maps even for machines that can’t be directly accessed with Netflow data!' %}</li>
+            <li>{% trans 'Discoveries are scheduled, with no agents to install on thousands of servers!' %}</li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+{% load i18n static %}
+<div {% if id %}id="{{ id }}" {% endif %}class="row featurette image-right-8x4 {% if vcenter %}is-table-row{% endif %}">
+
+    <div class="col-sm-5">
+        <img class="img-responsive center-block animated box-shadow"
+             src="{% static 'img/sections/features/affinity-groups/select_affinity_groups_view_trimmed.png' %}"
+             alt="{% trans 'View historical affinity groups ' %}">
+    </div>
+    <div class="col-sm-7">
+        <h2>{% trans "View Any Historical Affinity Group" %}</h2>
+        <p>{% trans "Previous affinity group impact charts are saved when re-generated." %}</p>
+        <ul class="checklist">
+            <li>{% trans "Device42 saves nightly affinity groups, providing an affinity group 'audit trail'" %}</li>
+            <li>{% trans "See and understand how dependencies have changed over time" %}</li>
+            <li>{% trans "No re-calculation required when viewing historical affinity groups" %}</li>
+        </ul>
+    </div>
+</div>

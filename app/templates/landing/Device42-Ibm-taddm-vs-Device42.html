@@ -1,0 +1,236 @@
+{% extends "base/_base-landing.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% blocktrans %}It is a good idea to compare alternative CMDB tools like Riada's Insight for Jira, and possibly other tools. There are a wide variety available, but Device42 is among the best.{% endblocktrans %}"/>
+    <meta name="keywords"
+          content="device42, vs, compare, comparison, riada, insight, jira, device, management, core, asset, ipam, itam, cmdb, functions, features, cloud, discovery, autodiscovery, app, mapping, appmapping, application, map, diagram, discover, depedency, dcim, ticketing, plugin, addon, enterprise, free, trial, tool, tools" />
+{% endblock %}
+{% block title %}{% trans "Device42 is a Better, Faster Alternative to IBM’s TADDM" %}{% endblock %}
+{% block scripts %}
+    <script>
+        $(function () {
+            $("[data-toggle='tooltip']").tooltip();
+        });
+    </script>
+{% endblock %}
+
+{% block styles %}
+  <style>
+    .table-responsive {
+      max-width: 900px;
+      text-align: left;
+    }
+    hr{
+      margin: 0px;
+    }
+    table {
+      margin-bottom: 0px !important;
+    }
+    p.small-font {
+      font-size: 15px;
+      color: #22a3df;
+      text-align: center;
+    }
+  </style>
+{% endblock %}
+
+{% block landingHeadingText %}{% trans "Device42 is a Better, Faster Alternative to IBM’s TADDM" %}{% endblock %}
+{% block landingfeature %}
+<section class="row padded">
+  <div class="col-md-12">
+    <p style="font-stlye: italic;">{% trans "Adding a powerful CMDB with ADM (Application Dependency Mapping) and advanced discovery features to your IT toolkit is a great idea, and we want to make your decision as easy as possible. Below, you will find information that will help familiarize you with the commonalities between Device42 & IBM TADDM, and will also highlight some of the main differences between the two solutions." %}</p>
+    <p>{% trans "Device42 focuses on complete and accurate discovery, identifying all the details about what you have running in your environment today, and clearly highlighting the interdependencies.  Similarly, IBM TADDM automatically discovers your IT inventory and the details around it, including “assets and their application dependencies”. " %}</p>
+  </div>
+</section>
+{% endblock %}
+
+{% block maincontent %}
+  <p>{% blocktrans %}Both Discovery Products have a number of similar use cases and benefits. Some of the more common use cases, and their supporting features are found below:{% endblocktrans %}</p>
+  <section class="row">
+        <div class="col-md-offset-2 col-md-5">
+          <p class="lead" style="font-style: italic;">{% trans "Common Benefits & Use Cases:" %}</p>
+          <ul class="bullet-blue font-stack-condensed">
+            <li>{% trans "Discover, consolidate, and decommission servers" %}</li>
+            <li>{% trans "Identify old, inefficient servers & save on operating expense" %}</li>
+            <li>{% trans "Orchestrate migration planning after discovery of applications & dependencies" %}</li>
+            <li>{% trans "Troubleshoot more efficiently with shorter MTTR" %}</li>
+            <li>{% trans "Reduce audit time & effort significantly" %}</li>
+            <li>{% trans "Eliminate the majority of manual infrastructure documentation" %}</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <p class="lead" style="font-style: italic;">{% trans "Common Features:" %}</p>
+          <ul class="bullet-blue font-stack-condensed">
+            <li>{% trans "Powerful, customizable reporting" %}</li>
+            <li>{% trans "IP address, MAC, Subnet, and other network details" %}</li>
+            <li>{% trans "Dependency diagrams" %}</li>
+            <li>{% trans "High level of well organized detail" %}</li>
+            <li>{% trans "Customizable fields" %}</li>
+          </ul>
+        </div>
+    </section>
+    <br>
+    <section class="landing-section" style="text-align: center;">
+        <p>{% trans "Though Device42 and IBM TADDM have some high level features in common, there are many key features differentiating the two:" %}</p>
+        <div class="table-responsive" style="margin: auto;">
+                <table class="table table-condensed table-hover d42-sw-compare">
+                    <thead>
+                    <tr>
+                        <th class="table-title">
+                            <p class="dark-blue text-left alt-text" style="margin:0;font-size:24px;">{% trans "Solution Comparison" %}</p>
+                        </th>
+                      <th class="product-heading blue"><span style="font-style: italic">{% trans "Device42" %}</span></th>
+                      <th class="product-heading blue"><span style="font-style: italic">{% trans "IBM TADDM" %}</span></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="comp-feature">{% blocktrans %}Cloud and On Premise Option{% endblocktrans %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Advanced Visualizations" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><a data-toggle="tooltip" data-placement="left"
+                             title="{% trans 'Many visualizations require add-on tools.' %}"><i
+                              class="fa fa-2x fa-exclamation-triangle"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Native Windows and Linux Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Native VMware Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Native Hyper-V, Xen, KVM, LXC Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><a href="https://www.ibm.com/support/knowledgecenter/en/SS2GNX_7.2.2/com.ibm.tivoli.tpm.scenario.doc/discovery/tdsc_ccmdbdevice.html" data-toggle="tooltip" data-placement="left"
+                               title="Doesn't appear to support anything but esx"><i
+                                class="fa fa-2x fa-times"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Native Cloud Platform Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Application Dependency Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "SNMP Support" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Mainframe support" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Agent-less Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Optional Agent Based Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><a data-toggle="tooltip" data-placement="left"
+                             title="Separate Product Required: Agents only available via 'existing' deployment of IBM Tivoli Monitoring's 'ITMScopeSensors'"><i
+                              class="fa fa-2x fa-exclamation-triangle"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Resource Utilization" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Nmap & Netflow Based Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><a href="https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli+Application+Dependency+Discovery+Manager/page/A+Flexible+Approach+to+Discovery" data-toggle="tooltip" data-placement="left"
+                               title="NetFlow and banner-matching are not currently supported."><i
+                                class="fa fa-2x fa-times"></i></a></td>
+                    </tr><tr>
+                        <td class="comp-feature">{% trans "Selection of Integrations w/ Common 3rd party Software " %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "XLS/XLSX Spreadsheet Imports" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Webhooks" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "No Installation (Virtual Appliance)" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><a data-toggle="tooltip" data-placement="left"
+                             title="Requires both client and server installation as well as various module installations."><i
+                              class="fa fa-2x fa-exclamation-triangle"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "RESTful APIs" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <hr>
+            </div>
+        <p class="small-font">{% trans "*All feature data deduced from product website and available marketing materials. Please let us know if something isn’t right and we’ll gladly update it." %}</p>
+    </section>
+
+    <section class="row">
+        <div class="col-xs-12">
+          <h3 class="text-strong">{% trans "Device42’s ADM Solution" %}</h3>
+          <p>{% trans "A complete solution from IBM requires the purchase and integration of numerous components including their Discovery product (TADDM), their CMDB product, separate reporting software, and their monitoring product if you require agent-based discovery.  Setup and configuration are extremely complex, even for the simplest deployments." %}</p>
+          <p>{% trans "In contrast, Device42 is fully integrated with no standalone modules (though some components are licensed separately).  Device42 is truly a one-stop single source of truth because it includes a fully integrated suite of enterprise DCIM features: " %}</p>
+          <div class="row">
+            <div class="col-md-4">
+              <ul class="bullet-blue font-stack-condensed">
+                <li>{% trans "A CMDB " %}</li>
+                <li>{% trans "Power Monitoring & Control" %}</li>
+                <li>{% trans "IPAM" %}</li>
+                <li>{% trans "Password Management" %}</li>
+                <li>{% trans "Certificate Management" %}</li>
+                <li>{% trans "Multi-Tenancy" %}</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <ul class="bullet-blue font-stack-condensed">
+                <li>{% trans "Capacity Planning" %}</li>
+                <li>{% trans '“What-if” scenarios' %}</li>
+                <li>{% trans "Inventory Lifecycle Management" %}</li>
+                <li>{% trans "Automatic Rack Diagrams" %}</li>
+                <li>{% trans "Cable Management" %}</li>
+                <li>{% trans "Drag-and-drop Room Layouts" %}</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <ul class="bullet-blue font-stack-condensed">
+                <li>{% trans "Full Audit Trails" %}</li>
+                <li>{% trans "Asset Transfers" %}</li>
+                <li>{% trans "Asset Lifecycle Tracking" %}</li>
+                <li>{% trans "Purchase Tracking" %}</li>
+                <li>{% trans "QR / Barcode Generation" %}</li>
+                <li>{% trans "Spreadsheet / CSV Import of CI’s and Attributes" %}</li>
+              </ul>
+            </div>
+          </div>
+          <p>{% trans "Device42’s Advanced Visualizations, powerful, Customizable Reporting facilities, and its advanced, well documented RESTful APIs work together to provide an enhanced data management experience: by helping to make your data either easier to see and understand, faster to manipulate, and/or more convenient to quantify. All of these features, too, are available at a price that will surprise you." %}</p>
+          {% include 'partials/try-free-callout.html' %}
+          <p style="font-style: italic; text-align: center;margin:0;">{% trans 'Download a 30-day free trial of Device42 today, and see why customers in over 50 countries are proud to say “We use Device42!”' %}</p>
+        </div>
+    </section>
+{% endblock %}

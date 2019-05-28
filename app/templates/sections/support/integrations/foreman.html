@@ -1,0 +1,85 @@
+{% load i18n static %}
+<h2>Device42's {% trans "Integration with" %} Foreman</h2>
+<h4 class="prelist">{% trans "Quickly and easily discover and sync node information from The Foreman to Device42" %}</h4>
+<div class="row is-table-row">
+    <div class="col-xs-12">
+        <p>{% trans "Foreman is a lifecycle management tool for both physical and virtual servers. It provides a powerful toolset that helps to automate repetitive server management tasks. With the Device42’s Foreman Integration, you can now pull information about your devices directly from the tool you use to provision them." %}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h3>{% trans "The Device42 / Foreman Integration can gather the following attributes from The Foreman:" %}</h3>
+        <section class="row">
+            <div class="col-xs-6 col-sm-3">
+                <ul class="checklist font-stack-roboto">
+                    <li>{% trans "Hostname" %}</li>
+                    <li>{% trans "Virtual or Physical" %}</li>
+                    <li>{% trans "Operating System" %}</li>
+                    <li>{% trans "IP / Network Address" %}</li>
+                </ul>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <ul class="checklist font-stack-roboto">
+                    <li>{% trans "Memory Size (MB)" %}</li>
+                    <li>{% trans "CPU Count (Physical)" %}</li>
+                    <li>{% trans "Operating System Version" %}</li>
+                    <li>{% trans "Gateway" %}</li>
+                </ul>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <ul class="checklist font-stack-roboto">
+                    <li>{% trans "FQDN" %}</li>
+                    <li>{% trans "CPU Core Count" %}</li>
+                    <li>{% trans "MAC Address" %}</li>
+                    <li>{% trans "Subnet Mask" %}</li>
+                </ul>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <ul class="checklist font-stack-roboto">
+                    <li>{% trans "Disks" %}</li>
+                    <li>{% trans "CPU Model" %}</li>
+                    <li>{% trans "Network Interfaces" %}</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</div>
+<div class="row">
+  <div class="col-sm-6 padded">
+    <h3>{% trans "See Your Foreman Configuration Data in Device42!" %}</h3>
+    <p>{% trans "You can have the Device42-Foreman integration up in running in minutes flat. From that point on, any time your Foreman configuration is changed Device42 can automatically sync changes too!" %}</p>
+  </div>
+  <div class="col-sm-6">
+    <pre class="prettyprint lng-yaml">
+# ========= Foreman
+Foreman:
+    host: host
+    user: user
+    pass: pass
+    puppet_server: null
+
+# ========= Device 42
+Device42:
+    host: host
+    user: user
+    pass: pass</pre>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <a href="{% static 'img/landing/views-deployments-foreman.png' %}"
+       data-featherlight="image">
+        <img src="{% static 'img/landing/views-deployments-foreman.png' %}"
+             alt="{% trans 'Views Deployment Foreman' %}" class="center-block img-responsive">
+    </a>
+  </div>
+  <div class="col-sm-6 padded">
+    <h3>{% trans "Visualize your Deployments with Device42’s Topology Views!" %}</h3>
+    <p>{% trans "Quickly understand your entire deployment. Seeing your infrastructure devices, applications, services, and connections mapped out in easy to understand dependency and topology charts." %}</p>
+  </div>
+</div>
+<hr>
+<p>{% trans "If you run into any unexpected behavior, bugs, or otherwise have questions, comments, or feature requests, feel free to reach out to" %} <a href="mailto:support@device42.com">support@device42.com</a>.</p>
+<h3 class="vert-offset-bottom-1 text-strong text-default"><a href="https://github.com/device42/puppet_to_device42_sync_py/archive/master.zip" class="btn btn-warning">Download</a> {% trans "the Foreman integration script for Device42 today!" %}</h3>
+

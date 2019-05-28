@@ -1,0 +1,50 @@
+[head.title]
+Comprehensive asset management with agent-less auto-discovery
+
+[head.description]
+Device42 is a comprehensive asset management with agent-less auto-discovery.
+
+[landing.title]
+Comprehensive Asset Management
+[landing.image_format]
+png
+
+[landing.content]
+## A Complete Asset Management Solution, and So Much More!
+
+Device42 provides comprehensive ITIL asset management capabilities including powerful auto-discovery with fully configurable asset types. Easily accommodate any IT asset type within in your infrastructure.
+
+1. **Comprehensive Agentless Autodiscovery**
+Agent-less auto-discoveries to keep all your complete ITIL asset inventory up-to-date, with optional agents available for remote or high security assets or DMZs
+2. **Supports for Any Infrastructure Type**
+Support for physical, virtual and cloud infrastructure to track complete hardware and software inventory
+3. **Complete OS Support**
+Discover hardware and software inventory on any operating system: Windows, Linux, UNIX, Mac, or BSD
+4. **Powerful Integrations**
+Out of box integrations with ITSM tools like JIRA, ServiceNow, Cherwell, and many more enhance the value of your existing investments
+5. **Contract Management**
+Know your support expiry and more with automatic contract management for various vendors.
+6. **Simplify Audits**
+Easier audits with comprehensive reports and visualization tools
+
+
+[feature[1].title]
+Complete Auto Discovery for all networks!
+[feature[1].content]
+Device42 autodiscovery spans across legacy and newer systems, tracking your complete asset inventory and highlighting dependencies between physical, virtuals, cloud infrastructure and applications
+
+
+[feature[2].title]
+Complete Asset Management with Support Entitlement Tracking
+[feature[2].content]
+Device42 not only helps you autodiscover your warranty details, but also keeps track of your support expiration ates. Know in advance when your server support is up for renewal!
+
+
+[feature[3].title]
+Enjoy a real-time Map of your IT Infrastructure - with Integrations
+[feature[3].content]
+Go beyond traditional inventory tools using our out of box integrations with JIRA, Confluence, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, ServiceNow and more. Use this real-time insight to reduce your MTTR and make faster decisions in your daily IT operations.
+
+
+
+#template=landing_alt/layout-2.html

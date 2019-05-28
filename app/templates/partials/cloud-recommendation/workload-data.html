@@ -1,0 +1,23 @@
+{% load i18n static %}
+<div {% if id %}id="{{ id }}" {% endif %}class="row featurette image-{{ image|default:'right' }} {% if vcenter %}is-table-row{% endif %}">
+    <div class="col-md-12">
+        <h3>{% trans "CRE analyzes workload data across your infrastructure, automatically!" %}</h3>
+        <p>{% trans "After Device42’s auto-discovery tools have the details about your physical, virtual, and existing cloud workloads, the cloud recommendation engine’s proprietary software gives you the insights you need to decide which workloads are the right candidates for the cloud, which instance sizes you should choose, and which cloud platform offers the best value!" %}</p>
+        <div class="row">
+            <div class="col-sm-6">
+                <p>{% trans "Get answers to your important cloud migration" %}</p>
+                <p>{% trans "questions - AUTOMATICALLY!" %}</p>
+                <p>{% trans "...all tailored to your actual workloads!" %}</p>
+            </div>
+            <div class="col-sm-6">
+                <ul class="checklist">
+                    <li>{% trans "Which workloads are good candidates for migration to the cloud?" %}</li>
+                    <li>{% trans "Granular APIs with sample scripts for custom discovery" %}</li>
+                    <li>{% trans "Fast, flexible and easy to deploy" %}</li>
+                    <li>{% trans "Result is a system that is always audit ready" %}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+

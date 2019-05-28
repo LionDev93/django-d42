@@ -1,0 +1,37 @@
+{% load static i18n %}
+
+<style>
+    .brands {
+        background-color: #246e90;
+        padding: 20px 0;
+    }
+    .brands .img-responsive {
+        max-width: 60% !important;
+    }
+</style>
+
+<div class="row text-center vert-offset-top-5 vert-offset-bottom-3 brands">
+    <div class="container">
+        <div class="col-xs-5 col-xs-offset-1 col-sm-3 col-sm-offset-0">
+            <img class="customer-logo img-responsive center-block"
+                 src="{% static 'img/customers/avaya-white.png' %}"
+                 alt="Avaya">
+        </div>
+        <div class="col-xs-5 col-sm-3">
+            <img class="customer-logo img-responsive center-block"
+                 src="{% static 'img/customers/mercedesbenz-white.png' %}"
+                 alt="Mercedes Benz">
+        </div>
+        <div class="col-xs-5 col-xs-offset-1 col-sm-offset-0 col-sm-3">
+            <img class="customer-logo img-responsive center-block"
+                 style="margin-top: -5px;"
+                 src="{% static 'img/customers/verizon-white.png' %}"
+                 alt="Verizon">
+        </div>
+        <div class="col-xs-5 col-sm-3">
+            <img class="customer-logo img-responsive center-block"
+                 src="{% static 'img/customers/westerndigital-white.png' %}"
+                 alt="Western Digital">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,244 @@
+{% extends "base/_base-landing-v3.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% blocktrans %}It is a good idea to compare alternative CMDB tools like Riada's Insight for Jira, and possibly other tools. There are a wide variety available, but Device42 is among the best.{% endblocktrans %}"/>
+    {% endblock %}
+{% block title %}{% trans "Device42 vs. Riada Insight for Jira" %}{% endblock %}
+
+{% block styles %}
+<style>
+    .cta-free-trial {
+        padding: 24px 0;
+        text-transform: none !important;
+        background-color: #ffc90e;
+        color: #130dff !important;
+    }
+    #top-container h1 {
+        margin-bottom: 0px;
+    }
+</style>
+{% endblock %}
+{% block script %}
+    <script type="text/javascript">
+        $(function () {
+            $("i.fa").tooltip();
+        });
+    </script>
+{% endblock %}
+
+{% block landingHeadingText %}
+    {% trans "Device42 vs. Riada Insight for Jira" %}
+{% endblock %}
+{% block landingSubHeadText %}
+    <em class="h3 flat-top flat-bottom">{% trans "Looking for a better alternative to Jira CMDB tools like Riada’s Insight?" %}</em><br>
+    <em class="h3 flat-top flat-bottom">{% trans "You’re in the right place!" %}</em>
+{% endblock %}
+
+{% block landingfeature %}
+    <section class="row landing-section">
+        <div class="col-sm-7">
+
+            <p class="h3">{% trans "Device42 offers best-in-class:" %}</p>
+            <div class="table-responsive vert-offset-bottom-3">
+                <table class="table" style="margin-bottom: 0;">
+                    <thead>
+                    <tr>
+                        <td class="text-center">
+                            <i class="fa fa-check"></i>   <p class="h3" style="display: inline;">{% trans "Features" %}</p>
+                        </td>
+                        <td class="text-center">
+                            <i class="fa fa-check"></i>   <p class="h3" style="display: inline;">{% trans "Pricing" %}</p>
+                        </td>
+                        <td class="text-center">
+                            <i class="fa fa-check"></i>   <p class="h3" style="display: inline;">{% trans "Support" %}</p>
+                        </td>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+
+            <p class="h3 flat-bottom">{% trans "The table below highlights key similarities and differences between Device42 and Insight for Jira:" %}</p>
+            <table class="table table-hover d42-sw-compare flat-top">
+                    <thead>
+                    <tr>
+                        <th class="table-title">
+                            <p class="dark-blue text-left alt-text"
+                               style="margin:0;font-size:24px;">{% trans "Features" %}</p>
+                        </th>
+                        <th class="product-heading blue">{% trans "Device42" %}</th>
+                        <th class="product-heading blue">{% trans "Riada Insight" %}<sup>&reg;</sup></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="comp-feature">{% blocktrans %}Powerful, <u>FREE</u> JIRA Integration{% endblocktrans %}</td>
+                            <td class="text-center"><i class="fa fa-check"></i></td>
+                            <td class="text-center"><i class="fa fa-times"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="comp-feature">{% trans "<u>Discovery Included</u> in Core product" %}</td>
+                            <td class="text-center"><i class="fa fa-check"></i></td>
+                            <td class="text-center"><i class="fa fa-times"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="comp-feature">{% trans "CMDB (Configuration Management)" %}</td>
+                            <td class="text-center"><i class="fa fa-check"></i></td>
+                            <td class="text-center"><i class="fa fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="comp-feature">{% trans "ITAM (IT Asset Management)" %}</td>
+                            <td class="text-center"><i class="fa fa-check"></i></td>
+                            <td class="text-center"><i class="fa fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="comp-feature">{% trans "IPAM (IP Address Management)" %}</td>
+                            <td class="text-center"><i class="fa fa-check"></i></td>
+                            <td class="text-center"><i class="fa fa-times"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="comp-feature">{% trans "DCIM (Data Center Infrastructure Management)" %}</td>
+                            <td class="text-center"><i class="fa fa-check"></i></td>
+                            <td class="text-center"><i class="fa fa-times"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="comp-feature">{% trans "Password Management" %}</td>
+                            <td class="text-center"><i class="fa fa-check"></i></td>
+                            <td class="text-center"><i class="fa fa-times"></i></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td class="comp-feature">
+                                {% trans "Cost" %} <em class="text-muted">[{% trans "Core / Core + Dependency Mapping" %}]</em>
+                            </td>
+                            <td class="text-center">
+                                <i class="fa fa-money text-success"></i>
+                                <i class="fa fa-money text-success"></i> / 
+                                <i class="fa fa-money text-success"></i>
+                            </td>
+                            <td class="text-center">
+                                <i class="fa fa-money text-danger"></i> / 
+                                <i class="fa fa-money text-danger"></i>
+                                <i class="fa fa-money text-danger"></i>
+                                <i class="fa fa-money text-danger"></i>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+        </div>
+        <div class="col-sm-5" style="vertical-align: top !important;">
+            <a href="{% url 'download' %}">
+                <img src="{% static 'img/sections/features/app-map/set-it-all-in-one-place.jpg' %}"
+                     alt="{% trans 'Insight Jira vs Device42' %}"
+                     class="img-responsive center-block vert-offset-bottom-1"
+                     style="max-width: 90% !important;">
+            </a>
+            <p class="vert-offset-bottom-2">{% blocktrans %}Device42 looks at your IT Infrastructure holisticaly, providing a single console based <em>single source of truth</em> to manage your Data Center (DCIM), IP addresses (IPAM) and passwords in addition to ITAM (IT asset management), all backend by an enterprise-level CMDB.{% endblocktrans %}</p>
+            <a class="btn center-block cta-free-trial h3"
+                href="{% url 'download' %}">{% trans "Get your FREE, fully-functional trial NOW!" %}</a>
+        </div>
+    </section>
+{% endblock %}
+
+{% block good_company %}
+{% endblock %}
+
+{% block maincontent %}
+    <section class="row landing-section">
+        <div class="col-sm-7">
+
+            <div class="row vert-offset-top-1" style="width: 100%;">
+
+                <div class="text-center" style="width: 32%; float: left; margin-left: 3%;">
+                    <div style="max-width:50%; margin-left:auto; margin-right:auto; margin-top:24px; height:auto !important;" 
+                         class="clearfix">
+                        <div class="embed-responsive embed-responsive-16by9" style="margin-bottom: 5px;">
+                            <div class="wistia_responsive_wrapper"
+                                 style="height:100%; left:0; position:absolute; top:0; width:100%;">
+                                <script src="//fast.wistia.com/embed/medias/igc5qfvoyr.jsonp" async></script>
+                                <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                                <div class="wistia_responsive_padding"
+                                     style="padding:60% 0 0 0; position:relative;">
+                                    <div class="wistia_responsive_wrapper"
+                                         style="height:100%; left:0; position:absolute; top:0; width:100%;">
+                                        <span class="wistia_embed wistia_async_igc5qfvoyr popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block; height:100%; width:100%">&nbsp;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="text-primary font-stack-roboto text-center h4" style="margin-top: 0px !important; margin-bottom: 0px !important;">{% trans "90 Second Overview" %}</span>
+                </div>
+
+                <div class="vert-offset-top-1" style="width: 65%; float: left;">
+                    <p>{% blocktrans %}<strong>You're in good company!</strong><br> <em>Many global companies use Device42<br> for Jira tools, and they LOVE us!</em>{% endblocktrans %}</p>
+                </div>
+
+            </div>
+
+            <p class="h3 flat-bottom">{% trans "You get more for your money with Device42." %}</p>
+            <p class="text-primary flat-top">{% trans "Don’t pay enterprise prices -- without getting enterprise features." %}</p>
+        </div>
+        <div class="col-sm-5">
+            <a href="{% url 'download' %}">
+                <img src="{% static 'img/sections/features/cmdb/Solution-Components.png' %}"
+                     alt="{% trans 'Insight Jira vs Device42' %}"
+                     class="img-responsive center-block">
+            </a>
+        </div>
+    </section>
+
+    <section class="row text-center vert-offset-top-2">
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="lead"><strong style="font-weight: 400;">{% trans "Both Device42 and Insight’s Jira Integrations share similar functionality:" %}</strong></p>
+                <div class="row">
+                    <div class="col-xs-4 col-xs-offset-1">
+                        <ul class="checklist">
+                            <li>{% trans "Link CMDB Items to JIRA Issues" %}</li>
+                            <li>{% trans "Search Jira Tickets for CI’s" %}</li>
+                            <li>{% trans "View CI Details From HelpDesk Tickets" %}</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3">
+                        <ul class="checklist">
+                            <li>{% trans "Conditional Functions" %}</li>
+                            <li>{% trans "Validator Functions" %}</li>
+                            <li>{% trans "POST Functions" %}</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3">
+                        <ul class="checklist">
+                            <li>{% trans "Custom Jira Fields" %}</li>
+                            <li>{% trans "Custom Jira Workflows" %}</li>
+                            <li>{% trans "Powerful Permissioning" %}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="lead">{% blocktrans %}...until you realize Insight’s Jira <strong style="font-weight: 400;"> doesn’t include *any* auto-discovery.</strong>{% endblocktrans %}</p>
+            </div>
+        </div>
+    </section>
+    <section class="row text-center">
+        <div class="col-xs-12">
+            <p class="lead" style="font-weight: 400; margin-bottom: 0px;">{% trans "Device42’s Core product includes Autodiscovery, and our JIRA enhancement add-on is completely free." %}</p>
+            <p><em>*{% blocktrans %}Riada’s Insight & Discovery Jira plugins are their core product, and <b>you only get discovery if you buy both.</b>{% endblocktrans %}</em></p>
+            <hr>
+        </div>
+    </section>
+    <section class="row text-center landing-section">
+        <div class="col-xs-12">
+            <strong class="h3">{% trans "Get treated like a paying customer from the moment you download." %}</strong>
+        </div>
+    </section>
+{% endblock %}
+
+{% block landingSubCTAtext %}
+    {% trans "Making the switch is easy with migration utilities and imports" %}
+{% endblock %}

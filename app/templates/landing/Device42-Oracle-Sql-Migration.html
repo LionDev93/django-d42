@@ -1,0 +1,144 @@
+{% extends 'base/_base-landing.html' %}
+{% load i18n static custom_tags %}
+{% block styles %}
+    <style>
+      p {
+        font-size: 20px;
+        font-family: "Roboto Condensed", sans-serif !important;
+        font-weight: 300;
+      }
+
+      p.italic {
+        font-style: italic;
+      }
+
+      .w-100 {
+        width: 100%;
+      }
+      .m-b-20 {
+        margin-bottom: 20px;
+      }
+      .m-t-20 {
+        margin-top: 20px;
+      }
+      .m-t-40 {
+        margin-top: 40px;
+      }
+
+      .sub-title {
+        color: #445463;
+        font-family: "Roboto Condensed", sans-serif !important;
+      }
+
+      .numeric-ul {
+        list-style-type: decimal;
+      }
+
+      .numeric-ul li:before {
+        content: '';
+        width: 15px;
+      }
+
+      h4 {
+        font-family: "Roboto Condensed", sans-serif !important;
+      }
+
+      h4 a {
+        text-decoration: underline;
+        color: #445463;
+      }
+
+      ul li{
+        font-family: "Roboto Condensed", sans-serif !important;
+        font-weight: 300;
+      }
+
+      @media screen and (max-width: 767px) {
+          .m-t-40.mobile-no {
+            margin-top: 0px !important;
+          }
+      }
+    </style>
+{% endblock %}
+{% block title %}{% trans "Oracle / SQL Migration: Application Migration Tools" %}{% endblock %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Oracle / SQL Migration: Application Migration Tools' %}"/>
+{% endblock %}
+
+{% block landingHeadingText %}{% trans "Oracle / SQL Migration:" %}{% endblock %}
+{% block landingSubHeadingText %}Application Migration Tools{% endblock %}
+
+{% block landingfeature %}
+    <section class="row landing-section">
+        <div class="col-sm-8">
+            <p class="alt-font italic">{% trans "Device42’s automated and agent-less application mapping makes" %} <strong>{% trans "Oracle and SQL Database and other application migrations easier," %}</strong> {% trans "ensuring you know all your dependencies and have all your configurations squared away ahead of time, avoiding unnecessary downtime. " %}</p>
+            <p><strong>{% trans "Device42 is here to help with your Oracle or SQL Application migrations whether you are:" %}</strong></p>
+            <ul>
+              <li>{% trans "Moving to a new facility, a DR site, or to the cloud" %}</li>
+              <li>{% trans "Migrating servers from one cloud provider to another" %}</li>
+              <li>{% trans "Consolidating existing infrastructure" %}</li>
+              <li>{% trans "Providing general application migration services, or specialized Oracle migration and SQL migration services" %}</li>
+            </ul>
+        </div>
+        <div class="col-sm-4">
+            <a href="{% static 'img/landing/sql-migration/banner1.png' %}"
+               data-featherlight="image">
+                <img src="{% static 'img/landing/sql-migration/banner1.png' %}" class="img-responsive center-block img-border">
+            </a>
+        </div>
+    </section>
+{% endblock %}
+
+{% block maincontent %}
+
+        <div class="is-table-row">
+          <h3 class="sub-title">{% trans "Device42’s application migration tools help you build a complete picture of your or your customer’s infrastructure by:" %}</h3>
+          <ul class="numeric-ul">
+            <li>{% trans "Analyzing thousands of servers without installing any agents, and discovering all your application dependencies via automated Application Dependency Mapping (ADM) without complicated and expensive span ports" %}</li>
+            <li>{% trans "Discovering which services are listening on what ports, all open ports on each machine, and augmenting the discovery with netflow data for servers that can’t be accessed directly" %}</li>
+            <li>{% trans "Automatically generating dependency flow diagrams that show relationships between devices, applications, and application components" %}</li>
+            <li>{% trans "Importing application configuration files (Oracle / SQL / etc.) which allow you to determine which database instances are running where and to verify configuration integrity during and post migration process" %}</li>
+            <li>{% trans "Helping to identify and select the best candidate servers for each ‘migration group’ a.k.a ‘move group’ (subset of servers to be moved as a unit)" %}</li>
+          </ul>
+          <p class="m-t-40"><strong>{% trans "Lean on Device42 before, during, AND after your application migration." %}</strong> ﻿While planning, quickly determine who needs to be notified during each stage of the migration. As the Oracle or SQL Migration gets underway, turn to Device42 for server credentials, and generate a new secure set for the migrated server. When your migration is nearing completion, launch (and/or re-schedule) an auto-discovery, and allow Device42’s self-documenting CMDB to automatically map out all the changes, and verify all migration-related changes appear as they should.</p>
+        </div>
+        <div class="row is-table-row ">
+            <div class="col-md-8">
+              <h4><a>{% trans "Application Dependency Mapping (ADM)" %}</a></h4>
+              <p class="italic">{% trans "With our powerful agent-less auto-discovery methods, you can easily map services, listening ports on the services and remote connections on Windows, Linux, UNIX, and BSD machines. ADM also helps you:" %}</p>
+              <ul>
+                <li>{% trans "Find out all the open ports on a machine, and know what services are listening on what ports" %}</li>
+                <li>{% trans "Visualize all the dependencies (local, service, and remote) for a machine instance, both graphically or in a list format" %}</li>
+                <li>{% trans "With Netflow discovery augmenting the agentless process, there is never a need to configure expensive span ports to get dependencies between servers" %}</li>
+                <li>{% trans "Easy migration path for your legacy systems" %}</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <a href="{% static 'img/landing/sql-migration/banner.png' %}"
+                 data-featherlight="image">
+                  <img src="{% static 'img/landing/sql-migration/banner.png' %}" class="img-responsive center-block">
+              </a>
+            </div>
+        </div>
+
+        <div class="row is-table-row ">
+            <div class="col-md-4">
+                <a href="{% static 'img/landing/sql-migration/banner2.png' %}"
+                   data-featherlight="image">
+                    <img src="{% static 'img/landing/sql-migration/banner2.png' %}" class="img-responsive center-block">
+                </a>
+            </div>
+            <div class="col-md-8">
+              <h4><a>{% trans "Powerful, Agent-less Device Discovery" %}</a></h4>
+              <p>{% trans "Device42’s discovery tools enable SNMP discovery for network devices...and more. SNMP discovery provides comprehensive capabilities to identify and track physical and logical components, and their relationship inter-dependencies. The .Net based agent-less software discovers devices on the network, compiles detailed device information and automatically uploads the information to the Device42 appliance." %}</p>
+              <ul>
+                <li>{% trans "Windows servers & devices using WMI" %}</li>
+                <li>{% trans "Linux, UNIX, BSD, and Mac servers using SSH" %}</li>
+                <li>{% trans "Hyper-V hosts and VMs" %}</li>
+                <li>{% trans "Custom discovery scheduling" %}</li>
+                <li>{% trans "Run discoveries from remote locations" %}</li>
+              </ul>
+            </div>
+        </div>
+{% endblock %}

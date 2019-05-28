@@ -1,0 +1,150 @@
+{% extends "base/_base-landing-v3.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Device42 is a powerful IP Address management solution that integrates IT Infrastructure management.' %}"/>
+{% endblock %}
+{% block title %}{% trans "IPAM - IP Address Management Software" %}{% endblock %}
+{% block styles %}
+<style>
+    .cta-free-trial {
+        padding: 24px 5px;
+        text-transform: none !important;
+        background-color: #ffc90e;
+        color: #130dff !important;
+        border: none !important;
+    }
+    #top-container h1 {
+        margin-bottom: 0px;
+    }
+</style>
+{% endblock %}
+
+
+{% block landingHeadingText %}
+    {% trans "IPAM - IP Address Management Software" %}
+{% endblock %}
+{% block landingSubHeadText %}
+    <em class="h3 flat-top flat-bottom">{% trans "Device42’s IP Address Management software provides an intuitive, easy to use console for centralized IP visibility and control." %}</em>
+{% endblock %}
+
+{% block key_benefits %}
+    <section class="row landing-section flat-bottom">
+        <div class="col-sm-7">
+
+            <h3 class="text-strong">{% trans "Key Benefits:" %}</h3>
+            <ul class="bullet-blue">
+                <li>{% trans "Centralized tracking of all IT related assets, IP addresses and everything you’d ever care to know about them in one place" %}
+                    <ul class="bullet-gray flat-top">
+                        <li>{% trans "IP management tools provide clear visibility into your IP address usage, modification times, and the devices they were assigned to" %}</li>
+                        <li>{% trans "Automated provisioning helps avoid users errors typically found in manual processes; let our IPAM software help manage IP addresses" %}</li>
+                    </ul>
+                </li>
+                <li>{% trans "Time savings with powerful autodiscovery that populates your devices and IP’s into Device42’s CMDB for you" %}</li>
+                <li>{% trans "More uptime with comprehensive interdependency tracking that helps prevent outages in the first place" %}</li>
+            </ul>
+
+            <div style="width: 100%;">
+                
+                <div class="text-center" style="width: 30%; float: left; margin-left: 5%;">
+                    <div style="max-width:50%; margin-left:auto; margin-right:auto; margin-top:24px; height:auto !important;" 
+                         class="clearfix">
+                        <div class="embed-responsive embed-responsive-16by9" style="margin-bottom: 5px;">
+                            <div class="wistia_responsive_wrapper"
+                                 style="height:100%; left:0; position:absolute; top:0; width:100%;">
+                                <script src="//fast.wistia.com/embed/medias/igc5qfvoyr.jsonp" async></script>
+                                <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                                <div class="wistia_responsive_padding"
+                                     style="padding:60% 0 0 0; position:relative;">
+                                    <div class="wistia_responsive_wrapper"
+                                         style="height:100%; left:0; position:absolute; top:0; width:100%;">
+                                        <span class="wistia_embed wistia_async_igc5qfvoyr popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block; height:100%; width:100%">&nbsp;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="text-primary font-stack-roboto text-center h4" style="margin-top: 0px !important; margin-bottom: 0px !important;">{% trans "90 Second Overview" %}</span>
+                </div>
+                
+                <div class="vert-offset-top-1" style="width: 60%; float: left; margin-left: 5%;">
+                    <p>{% blocktrans %}<strong>You're in good company!</strong><br> Many global companies you know use Device42’s IPAM tools, too!{% endblocktrans %}</p>
+                </div>
+                
+            </div>
+
+        </div>
+        <div class="col-sm-5">
+            <a href="{% url 'download' %}">
+                <img src="{% static 'img/sections/features/cmdb/Solution-Components.png' %}"
+                     alt="{% trans 'IP Address Management Software' %}"
+                     class="img-responsive center-block vert-offset-bottom-3">
+            </a>
+            <a class="btn center-block cta-free-trial h3 img-border"
+                href="{% url 'download' %}">{% trans "Get your FREE, fully-functional trial NOW!" %}</a>
+        </div>
+    </section>
+{% endblock %}
+
+{% block good_company %}
+{% endblock %}
+
+{% block key_features %}
+    <section class="row image-right-5x7 is-table-row vert-offset-top-1">
+        <div class="col-sm-7">
+            <h3 class="text-strong">{% trans "Key Features:" %}</h3>
+            <ul class="bullet-blue">
+                <li>{% trans "IPv4/IPv6 IP address database with single click nested subnets" %}</li>
+                <li>{% trans "Auto-discovery automatically keeps IP records accurate and up-to-date" %}</li>
+                <li>{% trans "VRF groups allow assignment of subnets to customers or departments" %}</li>
+                <li>{% trans "Multi-tenancy allows for easy management of multiple customers networks" %}</li>
+                <li>{% trans "Easily merge subnets into parents, or combine VLANs" %}</li>
+                <li>{% trans "Subnet tree view with nested subnets and IPs" %}</li>
+                <li>{% trans "Auto-generated visualizations of network connectivity and switch port connections" %}</li>
+                <li>{% trans "Easy usage-per-subnet tracking and auto-assignment of free IP’s to devices" %}</li>
+                <li>{% trans "DNS server integration for automatic zone imports" %}</li>
+                <li>{% trans "Powerful APIs enable IP search, find, and integration with other tools" %}</li>
+            </ul>
+        </div>
+        <div class="col-sm-5 vert-offset-top-2">
+            <a href="{% url 'download' %}">
+                <img src="{% static 'img/sections/product/mascot_checklist.png' %}"
+                     alt="{% trans 'IP Address Management Software' %}" 
+                     class="img-responsive center-block"
+                     style="max-width: 48% !important; float: left;">
+            </a>
+            <a href="{% url 'download' %}">
+                <img src="{% static 'img/generic/icons_cog_treelist.png' %}"
+                     alt="{% trans 'IP Address Management Software' %}" 
+                     class="img-responsive center-block"
+                     style="max-width: 48% !important; float: left; margin-left: 4%;">
+            </a>
+        </div>
+    </section>
+{% endblock %}
+
+{% block maincontent %}
+    <p class="vert-offset-top-2">{% trans "Take advantage of IP auto-assignment. Device42 quickly finds the next available IP address for you. Device42's IP software tools provide simple API calls to find the next available IP, to search for an IP, or to reserve and assign new IPs using a scripting language." %}</p>
+    <section class="row vert-offset-top-1">
+        <div class="col-xs-10 col-xs-offset-1">
+
+            <div class="row is-table-row">
+                <div class="col-xs-12 col-sm-6 vert-offset-bottom-1">
+                    <a href="{% url 'download' %}">
+                        <img src="{% static 'img/landing/ip-tracking/auto_assign_ip.png' %}"
+                             alt="{% trans 'IP Address Management Software' %}"
+                             class="img-responsive center-block img-border">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <a href="{% url 'download' %}">
+                        <img src="{% static 'img/sections/features/cmdb/RESTful-APIs.png' %}"
+                             alt="{% trans 'IP Address Management Software' %}"
+                             class="img-responsive center-block img-border">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+{% endblock %}

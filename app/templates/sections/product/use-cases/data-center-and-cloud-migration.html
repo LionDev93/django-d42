@@ -1,0 +1,120 @@
+{% extends 'base/_base-use-cases.html' %}
+{% load i18n static %}
+{% block title %}{% trans "Use Case: Data center and Cloud Migration with RU, CRE, and Affinity Groups" %}{% endblock %}
+
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Data Center and Cloud migrations require meticulous planning and execution. They also carry significant business risk, as botched cutovers can results in runaway costs compensating customers for downtime, as well as unplanned spend on extra time in the original data center.' %}"/>
+{% endblock %}
+{% block pageTitle %}{% trans "Data Center and Cloud Migrations with RU, CRE, and Affinity Groups" %}{% endblock %}
+{% block challengeBody %}
+  <p class="lead text-strong">{% trans "Data Center and Cloud migrations require meticulous planning and execution. They also carry significant business risk, as botched cutovers can results in runaway costs compensating customers for downtime, as well as unplanned spend on extra time in the original data center." %}</p>
+  <p>Keeping an accurate inventory of data center assets has challenged businesses of all sizes across all industries. Whether your goal is to migrate to a new hosting facility, to the public cloud, to a private cloud platform like OpenStack, or from one cloud vendor to another, you need to be able to answer important questions before you begin.</p>
+  <p class="lead" style="margin-bottom: 0px;">{% trans "To plan your migration, you need to be able to answer the following" %}:</p>
+  <ol type="1">
+      <li>{% trans "Where are my existing physical, virtual, and cloud devices?" %}</li>
+      <li>{% trans "What hardware and services support my key business applications?" %}</li>
+      <li>{% trans "What does the current Resource usage profile look like?" %}</li>
+	  <li>{% trans "Which cloud vendors can host my target workloads at the best value?" %}</li>
+  </ol>
+  <br>
+  <p class="lead text-strong">{% trans "Common migration mistakes stem from overlooking application dependencies on on-premises data and IT services and network connectivity problems with virtual private network configurations, routing and remote network security policies.." %}</p>
+  <p class="lead" style="margin-bottom: 0px;">{% trans "You can avoid common pitfalls by" %}:</p>
+  <ol type="1">
+      <li>{% trans "Ensuring your interdependencies of all your workloads are well documented and well understood." %}</li>
+      <li>{% trans "Avoiding the temptation to rush into the cloud <i>overnight</i> because an executive heard his friend did it." %}</li>
+      <li>{% trans "Understanding and remembering that virtual cloud resources are supplied by physical servers running in actual data centers" %}</li>
+      <li>{% trans "Understanding the resource utilization of the application(s) you plan to move, and that of each service that supports those applications" %}</li>
+  </ol>
+{% endblock %}
+{% block challengeRight %}
+  <img src="{% static 'img/components/study-a/use-cases/Data center and Cloud Migration.png' %}" class="img-inline-right" alt="{% trans 'Data Center and Cloud Migration' %}" />
+{% endblock %}
+{% block body %}
+  <div class="row">
+    <div class="col-md-12">
+      <a href="{% static 'img/components/study-a/use-cases/cloud_migration_ru-cre-ag.png' %}" data-featherlight="image">
+          <img src="{% static 'img/components/study-a/use-cases/cloud_migration_ru-cre-ag.png' %}"
+           class="img-responsive box-shadow img-restrict center-block" style="width:50%" alt="{% trans 'Software Audit & Compliance' %}"/>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 highlight-area">
+      <h2>{% trans "Highlights" %}</h2>
+      <ul class="checklist bullet-yellow">
+          <li>{% trans "<b>Automatic Affinity Groups:</b> Builds migration “move groups”" %}</li>
+          <li>{% trans "<b>Resource Utilization:</b> Profile your current, running workloads." %}</li>
+          <li>{% trans "<b>Cloud Recommendation Engine:</b> Recommends appropriate target cloud instance sizes & prices on leading cloud platforms!" %}</li>
+      </ul>
+    </div>
+
+    <div class="col-md-8 solution-area">
+      <h2>{% trans "Solution" %}</h2>
+      <p>{% trans "Using Device42’s powerful agentless auto-discovery process, organizations can create and maintain a comprehensive, accurate map of their entire IT infrastructure — from building to the server, and everything in between. Device42 complements the industry’s most comprehensive auto-discovery and dependency mapping with Automatic Affinity Groups, Resource Utilization, and the Cloud Migration engine to create the ultimate cloud migration toolset:" %}</p>
+      <a href="{% static 'img/components/study-a/use-cases/affinity_group_2.png' %}" data-featherlight="image">
+          <img src="{% static 'img/components/study-a/use-cases/affinity_group_2.png' %}"
+           class="img-responsive box-shadow center-block" style="width: 50%;" alt="{% trans 'Software Audit & Compliance' %}"/>
+      </a>
+      <p>Successful cloud migration requires that you know all the details about where you are today as well as where you want to go in order to divise the best plan for getting there. Device42 answers the hard questions and automates much of the migraiton planning process by providing exactly the details you need, when you need them at each step along the way.</p>
+      <p>Device42 Discovers your infrastructure as it sits, including all of the key interdependencies that support your key business applications, and Measures the current resource utilization levels for each critical piece of your infrastructure. Your infrastructure is then Divided into logical “move groups”, each of which includes all the supporting pieces (your target service or application and its dependencies) to run independently. Selects appropriately-sized cloud-based targets for each of these workloads, and compare the price of those target instances on competing cloud vendor platforms.</p>
+      <p>Automatic Affinity Groups shows you exactly which servers and applications can and must migrate together. You simply specific the ‘key’ backbone service you want to move, and Affinity Groups does the rest. Let Resource Utilization gather RU data on those workloads as they sit for baselining your workloads. Cloud Recommendation steps in to finish planning your migration, using that RU data you gathered and your IT Asset data to recommend appropriate instance sizes and price out your cloud migration on leading cloud vendors!</p>
+      <p>Next thing you know, you’re in the cloud -- and Device42 stands by your side!</p></p>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <h4 class="text-primary text-strong text-center">{% trans "Device42 auto-discovers" %}</h4>
+      <p>
+        {% trans "Discovery can be run on a schedule so you can stop playing catch-up." %}<br>
+        {% trans "Auditing is no longer a giant undertaking to identify a ‘point in time’ state of your infra." %}<br>
+        {% trans "Less manual entry, reduced investment of time & manpower, and fewer errors." %}
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h4 class="text-primary text-strong text-center">{% trans "Device42 means compliance" %}</h4>
+      <p>
+        {% trans "License compliance – identify over-licensed, unlicensed, and expired licenses." %}<br>
+        {% trans "Standards assurance – identify prohibited and approved software." %}<br>
+        {% trans "Cost management – report license costs and minimize under-licensed software." %}
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h4 class="text-primary text-strong text-center">{% trans "Device42 means security" %}</h4>
+      <p>
+        {% trans "Know which physical, virtual, and cloud devices have software vulnerabilities." %}<br>
+        {% trans "Be alerted when new vulnerabilities are discovered." %}<br>
+        {% trans "View vulnerabilities by device (and lots of other views) to help create patching plans." %}
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <h4 class="text-primary text-strong text-center">{% trans "Device42 is flexible" %}</h4>
+      <p>
+        {% trans "Infrastructure scanning is completely configurable, and can run as often as is appropriate. Device42 scales with you -- without changes on your end." %}<br>
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h4 class="text-primary text-strong text-center">{% trans "Device42 utilizes existing data" %}</h4>
+      <p>
+        {% trans "Data in spreadsheets and CSV files can be ingested and organized, eliminating duplicated effort." %}<br>
+        {% trans "Data can be pulled from external systems such as Microsoft SCCM and BMC Remedy." %}
+      </p>
+    </div>
+  <div class="col-md-4">
+      <h4 class="text-primary text-strong text-center">{% trans "Device42 is painless" %}</h4>
+      <p>
+        {% trans "Lightweight, agentless and highly scalable, shipped as a ready-to-run virtual appliance - no installation process to deal with, no external configuration required." %}<br>
+      </p>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+      <div class="col-md-12">
+          <h5><a href="{% url 'use_cases' %}" class="dir-arrow text-capitalize"><i class="fa fa-chevron-left"></i> {% trans "Back to Use Cases" %}</a></h5>
+      </div>
+  </div>
+{% endblock %}
+

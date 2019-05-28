@@ -1,0 +1,36 @@
+[head.title]
+HP uCMDB alternative Configuration Management Database with agent-less auto-discovery
+
+[head.description]
+Device42 is a comprehensive Configuration Management Database with agent-less auto-discovery
+
+[landing.title]
+Better HP uCMDB alternative for CMDB
+
+[landing.image_format]
+png
+
+[landing.content]
+Looking for a better HP uCMDB Configuration Management Database (CMDB) alternative? Device42 CMDB is a single source of truth within your organization that ensures that configuration records are accurate with powerful auto-discoveries and provides a clear view into your IT ecosystem.
+
+- Agent-less auto-discoveries keep all your configuration items (CIs) up-to-date.
+- Device42 fosters the viewing of unified data across teams as well as departments, creating alignment and consistency company-wide.
+- Powerful visualizations highlight the impacts of different CIs on other CIs, making business decisions easier.
+- Out-of-the-box integrations with ITSM tools like JIRA, ServiceNow, Cherwell, and more providing enhanced value from existing investments.
+- REST APIs for easy integrations with homegrown and external tools from CMDBs to automation and more!
+
+
+[feature[1].title]
+Complete Auto Discovery for All Networks
+[feature[1].content]
+Device42 auto-discovery spans across legacy and new systems alike, building dependencies between physicals, virtuals, and cloud infrastructure and applications - all with a single, unified tool!
+
+[feature[2].title]
+Cloud-ready with Powerful Reporting and Visualizations
+[feature[2].content]
+Device42 comes with cloud-ready with pre-configured CIs. There is no need to spend time or money on expensive implementation services. Discover any physical, virtual or service dependency you care about, automatically!
+
+[feature[3].title]
+Real-time Map of your IT Infrastructure with Integrations
+[feature[3].content]
+Go beyond traditional CMDBs! Out-of-the-box integrations with JIRA, ServiceNow, Puppet, Chef, SCCM, Infoblox, Splunk, and more. Use this real-time map to reduce MTTRs and make faster business decisions across daily IT operations.

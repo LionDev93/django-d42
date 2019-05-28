@@ -1,0 +1,210 @@
+{% extends 'base/_base.html' %}
+{% load i18n static %}
+{% block title %}{% trans "World’s Largest Virtualization Company - Case Study" %}{% endblock %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Case studies for Device42 - with World’s Largest Virtualization Company' %}"/>
+{% endblock %}
+{% block styles %}
+  <style>
+    .secondary-menu {
+      text-align: center;
+    }
+
+    @media(max-width: 992px){
+      .secondary-menu {
+        display: none;
+      }
+    }
+
+    .secondary-menu.fixed {
+      position: fixed;
+      background: white;
+      z-index: 999;
+      top: 53px;
+      width: 100%;
+    }
+
+    .secondary-content  {
+      display: inline-block;
+    }
+
+    .secondary-menu-list {
+      display: inline-block;
+      list-style: none;
+      margin: 0;
+      padding: 0px;
+    }
+
+    .secondary-menu-list-item {
+      display: inline-block;
+      text-align: center;
+      zoom: 1;
+      vertical-align: middle;
+      height: 100%;
+      width: auto;
+      min-width: 100px;
+      cursor: pointer;
+      position: relative;
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+
+    .secondary-menu-list-item:before {
+      display: none;
+    }
+
+    .secondary-menu-link {
+      padding: 1.5rem 0;
+      color: #706F6F;
+      display: block;
+    }
+
+    .secondary-menu-link:focus, .secondary-menu-link:hover {
+      color: #706F6F;
+      text-decoration: none;
+    }
+
+    <!--.secondary-menu-list-item:hover, .secondary-menu-list-item.active {-->
+      <!--color: #706F6F;-->
+      <!--border-bottom: 3px solid #ab00dc;-->
+    <!--}-->
+
+    .secondary-menu-list-item:after {
+      content: "";
+      background-color: #22a3df;
+      padding: 1.5px;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      line-height: 3px;
+      font-size: 2em;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      right: 50%;
+      visibility: hidden;
+      transition: all 0.2s linear;
+    }
+
+    .secondary-menu-list-item:hover:after {
+          visibility: visible;
+        left: 6px;
+        right: 6px;
+    }
+
+    .secondary-menu-list-item.active:after {
+      visibility: visible;
+      content: "";
+      background-color: #eb8f34;
+      font-size: 30px;
+      padding: 1.5px;
+      line-height: 3px;
+      position: absolute;
+      bottom: 0;
+      left: 6px;
+      right: 6px;
+    }
+
+    .d-flex {
+      display: flex;
+    }
+
+    .side-img {
+      float: right;
+      width: 50%;
+      shape-margin:20px;
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    ol {
+      counter-reset: list;
+    }
+    ol > li {
+      list-style: none;
+    }
+    ol > li:before {
+      content: counter(list) ") ";
+      counter-increment: list;
+      position: absolute;
+      left: 1em;
+    }
+  </style>
+{% endblock %}
+{% block body_scripts %}
+<script>D42.setSiteSection("customers");</script>
+{% endblock %}
+{% block body %}
+    <header class="row bg-primary head-home">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{% trans "Case Studies" %} - {% trans "World’s Largest Virtualization Company" %}</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <br />
+                {% include 'sections/customers/_case-studies_left_col.html' %}
+            </div>
+            <div class="col-sm-9">
+                <br />
+                <div class="secondary-menu">
+                <div class="secondary-content">
+                  <ul class="secondary-menu-list">
+                    <li class="secondary-menu-list-item" id="testimonials_link">
+                      <a href="{% url 'customers_testimonials' %}" class="secondary-menu-link">
+                        {% trans "TESTIMONIALS" %}
+                      </a>
+                    </li>
+                    <li class="secondary-menu-list-item" id="customers_link">
+                      <a href="{% url 'customers' %}" class="secondary-menu-link">
+                        {% trans "CUSTOMERS" %}
+                      </a>
+                    </li>
+                    <li class="secondary-menu-list-item" id="case_studies_link">
+                      <a href="{% url 'customers_case_studies' %}" class="secondary-menu-link">
+                        {% trans "CASE STUDIES" %}
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <ul>
+                  <li><strong>{% trans "Company" %}</strong>: {% trans "World’s Largest Virtualization Company" %}</li>
+                  <li><strong>{% trans "Industry" %}</strong>: {% trans "Cloud Infrastructure, Virtualization, Business Mobility" %}</li>
+                  <li><strong>{% trans "Location" %}</strong>: {% trans "HQ Palo Alto, CA" %}</li>
+              </ul>
+
+              <p>&emsp;&emsp;<em>Device42 helps the product team at a global leader in cloud infrastructure and business mobility to visualize and manage their SaaS environment, unifying information sources within one tool.</em></p>
+
+              <h3 class="text-muted">{% trans "World’s Largest Virtualization Company" %}</h3>
+              <p>{% blocktrans %}Headquartered in Silicon Valley with offices throughout the world, this company is a global leader in cloud infrastructure and business mobility. The world’s largest virtualization company offers industry-leading virtualization technology with solutions that are in use everywhere from personal desktops to 24/7 production critical data centers. They pride themselves on delivering <em>“a brave new model of IT that is fluid, instant, and more secure.”</em>{% endblocktrans %}</p>
+              <div>
+                <img class="side-img" src="{% static 'img/sections/customers/biggest-visual.png' %}" alt="World's biggest visualization company">
+                <h3 class="text-muted">{% trans "Leading Virtualization Company’s Challenges" %}</h3>
+                <p>{% trans "As the world’s largest virtualization company, the number of assets (servers, software, applications, network components, storage, and so on) powering the underlying IT infrastructure is large, and growing dramatically." %}</p>
+                <p>{% trans "Prior to Device42, several fragmented solutions were utilized to manage and track their huge asset deployments.  This made it difficult for the data center operations teams to maintain an accurate, centralized record of IT assets that was available to all authorized personnel." %}</p>
+                <p>{% trans "These challenges fell into four main categories:" %}</p>
+              </div>
+              <ol>
+                <li>{% blocktrans %}<strong>Manage Data Center Inventory:</strong> Documentation efforts were mostly manual, and were becoming unmanageable.{% endblocktrans %}</li>
+                <li>{% blocktrans %}<strong>Disparate information sources:</strong> The mixture of separate utilities and documents made locating information, if it was even available, challenging.  The world’s largest virtualization company needed a solution that would consolidate these information sources, providing a simple, single pane of glass view.{% endblocktrans %}</li>
+                <li>{% blocktrans %}<strong>Complication at every level:</strong> The solution also needed to be easy to implement and maintain, and would continue to grow and scale without becoming exponentially complex.{% endblocktrans %}</li>
+                <li>{% blocktrans %}<strong>Critical information was not being tracked:</strong>  The tools that were in use left it up to staff to manually determine inter-dependencies between the network equipment, storage, servers, software, services, and ultimately business processes they supported. The ideal solution would identify and record these inter-dependencies automatically.{% endblocktrans %}</li>
+              </ol>
+              <h3 class="text-muted">{% trans "The Device42 Solution" %}</h3>
+              <p>{% trans "Prior to implementing Device42, efforts to document the infrastructure used by the world’s largest virtualization provider were mostly manual. Device42’s comprehensive auto-discoveries not only eliminated the manual burden, but also provided peace of mind that the data was correct and up-to-date." %}</p>
+              <p style="padding-left: 20px;">{% blocktrans %}&emsp;&emsp;<em>“We already had SolarWinds as our monitoring tool and there was talk to expand its use. We also looked at the open source solution, Racktables. Both solutions were explored but the time needed to configure either would have been long. While Racktables was free, the amount of backend scripting that would have been needed to get it functioning on the level of Device42 would have been staggering.”</em> <strong style="font-size: 14px;">- World’s Largest Virtualization Company</strong>{% endblocktrans %}</p>
+              <p>{% trans "At first, the world’s largest virtualization provider tried SharePoint to centralize infrastructure documentation. However, it was quickly realized that the solution simply exchanged one set of challenges for another." %}</p>
+              <p>{% trans "Though things were easier to find, they were still separate documents, and there was still no way to ensure their accuracy. On top of this, there were certain tasks that still fell outside the realm of the SharePoint consolidation efforts, such as certificate and password management. Sharepoint also still required a manual effort to determine inter-dependencies across the infrastructure on a case-by-case basis." %}</p>
+              <p style="padding-left: 20px;">{% blocktrans %}&emsp;&emsp;<em>“A project like this in a deployment as large as ours is never truly finished […] However, once usable data started getting imported we were immediately able to start creating reports and once we realized how much could be tracked we started using more and more features.”</em> <strong style="font-size: 14px;">- World’s Largest Virtualization Company</strong>{% endblocktrans %}</p>
+              <p>{% trans "To summarize, an ideal solution would dynamically update a single pane of glass view of all the assets in their infrastructure as well as the inter-relationships between the assets.  Expanding the reach of existing tools and were Open Source options were ruled out after evaluating Device42 and determining that it offered the optimal solution. Both the hidden costs of extending the existing toolset and the level of internal effort that would have been required to customize an open source solution made the decision to use Device42 easy - and the world’s largest virtualization provider hasn’t looked back!" %}</p>
+              <p style="padding-left: 20px;">{% blocktrans %}&emsp;&emsp;<em>“If you are tracking more and more data on your gear or just want a single pane of glass to view your info from, Device42 is a fantastic option. Not to mention the top-notch support and reasonable pricing.”</em>{% endblocktrans %}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

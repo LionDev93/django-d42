@@ -1,0 +1,70 @@
+{% extends 'base/_base.html' %}
+{% load i18n static custom_tags %}
+{% block title %}{% trans "LISA 2017 Survey Results" %}{% endblock %}
+{% block site_section_software %}active{% endblock %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'LISA 2017 Survey Results' %}">
+{% endblock %}
+{% block body_scripts %}
+    <style>
+      h1 {
+        font-family: "Roboto Condensed", sans-serif !important;
+      }
+      .w-100 {
+        width: 481px;
+        height: 385px;
+      }
+      .d-flex {
+        display: flex;
+      }
+      .m-30 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      @media (max-width: 767px){
+        .m-30 {
+          margin-top: 0px;
+        }
+      }
+    </style>
+{% endblock %}
+{% block body %}
+    <div class="landing-page">
+      <div class="container">
+        <h1 style="margin-bottom: 0;">LISA 2017 Survey Results</h1>
+      </div>
+    </div>
+    <article class="container vert-offset-top-1">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="{% static 'img/lisa-results/Lisa_Conf_Graph1.png' %}" class="img-responsive center-block m-30">
+        </div>
+        <div class="col-md-6">
+          <img src="{% static 'img/lisa-results/Lisa_Conf_Graph2.png' %}" class="img-responsive center-block m-30">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="{% static 'img/lisa-results/Lisa_Conf_Graph3.png' %}" class="img-responsive center-block m-30">
+        </div>
+        <div class="col-md-6">
+          <img src="{% static 'img/lisa-results/Lisa_Conf_Graph4.png' %}" class="img-responsive center-block m-30">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="{% static 'img/lisa-results/Lisa_Conf_Graph5.png' %}" class="img-responsive center-block m-30">
+        </div>
+        <div class="col-md-6">
+          <img src="{% static 'img/lisa-results/Lisa_Conf_Graph6.png' %}" class="img-responsive center-block m-30">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+          <img src="{% static 'img/lisa-results/Lisa_Conf_Graph7.png' %}" class="img-responsive center-block m-30">
+        </div>
+      </div>
+    </article>
+
+{% endblock %}

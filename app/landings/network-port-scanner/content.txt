@@ -1,0 +1,37 @@
+[head.title]
+Comprehensive network port scanner with agentless autodiscovery
+
+
+[head.description]
+Device42 is a comprehensive network port scanner with agentless autodiscovery. Scan your entire network in minutes!
+
+
+[landing.title]
+Comprehensive Network Port Scanner
+
+
+[landing.content]
+The Device42 network port scanner enables SNMP, WMI, and SSH discovery, comprehensively identifying and tracking all of your physical and logical components, relationships, and interdependencies!
+
+- Network port scanner features complete hardware & software scan - Windows, Linux, *NIX
+- Full network port scanning: Switches, Routers, Firewalls, Load Balancers
+- IP to MAC address and MAC to switch port relationships are discovered by Device42's network port scanner
+- Network port scanner discovers VLANs, subnets, and CDP / LLDP neighbors
+- Enjoy automatic cloud & hypervisor discovery with custom network port scanner schedules!
+
+
+
+[feature[1].title]
+Complete hypervisor, VM, and cloud Network Port Scanner Discovery
+[feature[1].content]
+Device42's network port scanner connects to your hypervisor and cloud platforms, collecting host and guest details. Network scans are scheduled & on-demand, support for all popular platforms!
+
+[feature[2].title]
+Load balancer & Network Port Scan Discovery
+[feature[2].content]
+The Device42 SNMP network port scanner connects to your F5's and other load balancers and builds dependencies between physical, virtuals and applications.
+
+[feature[3].title]
+Comprehensive Data Collection and Auto-correlation, External Integrations, and REST APIs!
+[feature[3].content]
+Much more than just a network port scanner, integrations with Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, ServiceNow and more. Bring in data discovered by other systems, and use REST APIs to customize what data you want to send to Device42!

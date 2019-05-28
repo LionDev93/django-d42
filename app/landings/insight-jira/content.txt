@@ -1,0 +1,34 @@
+[head.title]
+Looking for a better Riadia Insight JIRA CMDB alternative? You're in the right place!
+
+[head.description]
+Device42, the comprehensive JIRA CMDB with agent-less autodiscovery is the better choice vs. Riada Insight JIRA
+
+[landing.title]
+Device42 with agent-less autodiscovery is the better CMDB vs. Insight JIRA 
+
+[landing.content]
+
+Device42 offers much more than Insight JIRA. Get a clear view into your IT ecosystem with:
+
+- Agent-less auto-discoveries to keep all your configuration items (CIs) up-to-date.
+- Helps you unify data and processes across teams, as well as departments, creating alignment companywide.
+- Powerful visualizations to make quick business decisions and quickly find impacts of different CIs to other CIs.
+- Includes plugins for JIRA hosted, JIRA service desk and JIRA cloud, providing more value from your ITSM.
+- REST APIs to build quick integrations with homegrown and external tools whether it is another CMDB, automation or other tools.
+
+
+[feature[1].title]
+Complete Autodiscovery across your entire network with ITSM Integration
+[feature[1].content]
+Device42 auto-discovers across legacy and newer systems, building dependencies between physical, virtuals, and cloud infrastructure and applications. Native integration with JIRA hosted, JIRA service desk and JIRA cloud to enhance your ITSM.
+
+[feature[2].title]
+Device42 CMDB beats Insight JIRA with powerful reporting and visualizations
+[feature[2].content]
+Device42 comes with pre-configured CIs so there is no need to spend time or money on expensive implementation services. Coupled with advanced customizations, discover any physical, virtual or service dependencies you want to capture.
+
+[feature[3].title]
+Real time map of your IT infrastructure with integrations
+[feature[3].content]
+Go beyond traditional CMDBs using our out of box integrations with JIRA, Confluence, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, ServiceNow and many more. Use this real-time map to reduce your mean time to recovery and make faster decisions in your daily IT operations.

@@ -1,0 +1,128 @@
+{% extends 'base/_base-landing.html' %}
+{% load i18n static custom_tags %}
+{% block styles %}
+    <style>
+      p {
+        font-size: 20px;
+        font-family: "Roboto Condensed", sans-serif !important;
+        font-weight: 300;
+      }
+
+      h1 {
+        font-family: "Roboto Condensed", sans-serif !important;
+      }
+
+      p.italic {
+        font-style: italic;
+      }
+
+      .w-100 {
+        width: 100%;
+      }
+      .m-b-20 {
+        margin-bottom: 20px;
+      }
+      .m-t-20 {
+        margin-top: 20px;
+      }
+      .m-t-40 {
+        margin-top: 40px;
+      }
+
+      .sub-title {
+        color: #445463;
+        font-family: "Roboto Condensed", sans-serif !important;
+      }
+
+      .numeric-ul {
+        list-style-type: decimal;
+      }
+
+      .numeric-ul li:before {
+        content: '';
+        width: 15px;
+      }
+
+      h4 {
+        font-family: "Roboto Condensed", sans-serif !important;
+      }
+
+      h4 a {
+        text-decoration: underline;
+        color: #445463;
+      }
+
+      ul li{
+        font-family: "Roboto Condensed", sans-serif !important;
+        font-weight: 300;
+      }
+
+      @media screen and (max-width: 767px) {
+          .m-t-40.mobile-no {
+            margin-top: 0px !important;
+          }
+      }
+    </style>
+{% endblock %}
+{% block title %}{% trans "Network Automation" %}{% endblock %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Network Automation' %}"/>
+{% endblock %}
+
+{% block landingHeadingText %}{% trans "Network Automation" %}{% endblock %}
+
+{% block landingfeature %}
+    <section class="row">
+        <div class="col-sm-8">
+            <p class="lead italic">{% trans "A powerful, accurate CMDB is critical to network automation tasks. Device42’s automated and agent-less discovery with application dependency mapping automatically populates the pre-configured CMDB for you, making network automation easier.  Device42’s well-documented RESTful API’s and powerful webhooks make network automation tasks that involve any other ITSM or ITIL tools easier, too." %}</p>
+            <p><strong>{% trans "Device42 comes ready to help with all of your Network Automation tasks: " %}</strong></p>
+            <ul class="lead-small bullet-blue light-weight">
+              <li>{% trans "Device42 works with all of your favorite DevOps automation tools: Puppet, Chef, Salt, Ansible, Zapier, StackStorm, CFEngine, Terraform, Jenkins, Vagrant... really, all of them!" %}</li>
+              <li>{% trans "The well-documented RESTful API allows full access to manipulate all CIs on your network" %}</li>
+              <li>{% trans "Webhooks can be configured to trigger automation on any event that generates an audit log" %}</li>
+              <li>{% trans "For example, have your network automation request and reserve an IP when a new machine comes online, while Device42 creates a ticket in your ITSM system to record the work you’re doing - automatically" %}</li>
+            </ul>
+        </div>
+        <div class="col-sm-4">
+            <a href="{% static 'img/landing/sql-migration/banner1.png' %}"
+               data-featherlight="image">
+                <img src="{% static 'img/landing/sql-migration/banner1.png' %}" class="img-responsive center-block" alt="{% trans 'IT Relocation' %}">
+            </a>
+        </div>
+    </section>
+{% endblock %}
+
+{% block maincontent %}
+
+        <div class="is-table-row">
+          <h3 class="sub-title">{% trans "Physical, Virtual, Software-Defined, Cloud, or Hybrid Deployments - Device42 has your back:" %}</h3>
+          <ul class="numeric-ul">
+            <li>{% trans "Focus on the work to be done and automating those critical changes around your network, and Device42 will handle documenting them as they happen" %}</li>
+            <li>{% trans "Ensure everything looks just as it should by viewing an automatically generated topology diagram and the resultant interdependencies, and configuration files, too" %}</li>
+            <li>{% trans "Let Device42 help ensure changes made with SDN (Software Defined Networking) don’t compromise the security of your network" %}</li>
+          </ul>
+        </div>
+
+        <div class="row is-table-row ">
+            <div class="col-md-6">
+                <a href="{% static 'img/landing/solution_components.png' %}"
+                   data-featherlight="image">
+                    <img src="{% static 'img/landing/solution_components.png' %}" class="img-responsive center-block" alt="{% trans 'Powerful, Agent-less Device Discovery' %}">
+                </a>
+            </div>
+            <div class="col-md-6">
+              <h4><a>{% trans "Device42 is Your Network Automation ‘Swiss Army Knife’ :" %}</a></h4>
+
+              <ul class="lead-small bullet-blue light-weight">
+                <li>{% trans "Powerful agentless auto-discovery with remote collectors" %}</li>
+                <li>{% trans "A full CMDB with configurable asset types" %}</li>
+                <li>{% trans "Comprehensive DCIM functionality" %}</li>
+                <li>{% trans "A complete IT Asset Management (ITAM) suite" %}</li>
+                <li>{% trans "RESTful APIs and Webhooks" %}</li>
+                <li>{% trans "Seamless integrations with your ITSM suite, CM tools, and SIEM tools" %}</li>
+                <li>{% trans "A holistic approach to IT infrastructure with everything you need in one product" %}</li>
+              </ul>
+            </div>
+        </div>
+{% endblock %}

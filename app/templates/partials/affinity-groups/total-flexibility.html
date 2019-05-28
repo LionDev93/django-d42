@@ -1,0 +1,19 @@
+{% load i18n static %}
+<div {% if id %}id="{{ id }}" {% endif %}class="row featurette image-left-4x8 {% if vcenter %}is-table-row{% endif %}">
+
+    <div class="col-sm-5">
+        <img class="img-responsive center-block animated box-shadow"
+             src="{% static 'img/sections/features/affinity-groups/affinity_group_tags.png' %}"
+             alt="{% trans 'Total Flexibility' %}">
+    </div>
+    <div class="col-sm-7">
+       <h2>{% trans "Granular Affinity Group Customizations" %}</h2>
+    <p>Leverage powerful options to ensure your affinity groups are simply perfect.</p>
+      <ul class="checklist">
+      <li>{% trans "Add tags and even your own custom fields to your affinity groups" %}</li>
+      <li>{% trans "Re-Arrange the affinity group display, and your changes are automatically remembered" %}</li>
+      <li>{% trans "Visualize Application Componenets" %}</li>
+      <li>{% blocktrans %}The "Ignore client connections" flag hides connections you don't want to see!{% endblocktrans %}</li>
+      </ul>
+    </div>
+</div>

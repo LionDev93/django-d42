@@ -1,0 +1,283 @@
+{% extends 'base/_base.html' %}
+{% load i18n %}
+{% load static from staticfiles %}
+{% load include_partial %}
+{% block title %}{% trans "Device42 vs. Riada Insight Jira" %}{% endblock %}
+{% block site_section_compare %}active{% endblock %}
+{% block meta %}
+    <meta name="description"
+          content="{% blocktrans %}It is a good idea to compare the wide variety of alternative CMDB tools like Riada's Insight for Jira - Device42 stands above the rest in a class of its own.{% endblocktrans %}"/>
+    <meta name="keywords"
+          content="device42, vs, compare, comparison, riada, insight, jira, device, management, core, asset, ipam, itam, cmdb, functions, features, cloud, discovery, adm, addm, autodiscovery, app, mapping, appmapping, application, map, diagram, discover, dependency, depedency, dcim, itsm, ticketing, plugin, addon, enterprise, free, trial, tool, tools" />
+{% endblock %}
+{% block body %}
+    <header class="row head-home bg-primary">
+        <div class="container">
+            <div class="row">
+                <h1>{% trans "Device42 vs. Riada Insight Jira" %}</small></h1>
+            </div>
+        </div>
+    </header>
+
+    <article class="container vert-offset-top-1">
+        <div class="col-sm-9">
+            <p>{% trans "Modern data centers often span multiple locations in hybrid deployments, both physical and cloud. Highly virtualized and automated, with containers and software defined networks and intricate load-balanced high-availability configurations, tracking these deployments is complicated. It isn't practical to manage modern IT infrastructure with separate tools for cloud and data center infrastructure management (DCIM), asset management (ITAM), IP address management (IPAM), application dependency discovery & management (ADM/ADDM), and software license management (SLM)." %}</p>
+        </div>
+        <div class="col-sm-3">
+            <img class="img-responsive center-block"
+                 alt="{% trans 'Insight Jira vs Divece42' %}"
+                 src="{% static 'img/landing/insight-jira/insight-jira-vs-device42.png' %}">
+        </div>
+        <p>{% trans "The dependencies and inter-relationships are critical IT operations like maintenance and migration planning, capacity management, and troubleshooting, yet there are simply too many to try to track and manage manually. Modern infrastructure demands Device42." %}</p>
+        <p class="lead text-center" style="padding-top: 20px;"><strong>{% blocktrans %}You've found the best Insight Jira alternative! <br> With Device42's CMDB. you can attach IT assets right to Jira tickets!{% endblocktrans %}</strong></p>
+        <hr>
+        <p class="text-center">{% trans "Both integrations enhance Jira with CMDB attributes, but Riada's Insight requires you buy a second product to do auto-discovery!" %}</p>
+        <p class="text-center"><strong>{% trans "Device42 offers a complete product that includes Auto-Discovery, integrating your with Jira automatically." %}</strong></p>
+      <p class="text-center">{% blocktrans %}PLUS, Device42 also integrates with the rest of your favorite IT software: Confluence and Jira Service Desk, Automation tools like Ansible and Puppet, SIEM tools like Splunk and Logstash, as well as many more -- <strong>See for yourself! <em><a href="/download/">Download Device42 NOW, FREE!</a></em></strong>{% endblocktrans %}</p>
+
+        {% include 'partials/try-free-callout.html' %}
+        <hr>
+
+        <h3 class="text-center">{% trans "See the Device42 difference vs. Insight for Jira:" %}</h3>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <table class="table table-hover table-striped">
+                    <thead>
+                    <tr>
+                        <th class="h4 text-dark-blue text-strong" style="vertical-align: middle;">{% trans "Features" %}</th>
+                        <th class="h4 text-default text-center text-strong" style="vertical-align: middle;">Device42</th>
+                        <th class="h4 text-default text-center text-strong">Riada Insight for Jira +<br>Insight Discovery</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="comp-feature alt-font">{% blocktrans %}Powerful, <em><u>FREE</u></em> JIRA Integration{% endblocktrans %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Discovery Included in Core product" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Password Management" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Integrated Solution" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "IPAM" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "DCIM" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "CMDB" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "ITAM" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+
+
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Cloud and On-Premise Option" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Agentless Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% blocktrans %}<em>Optional</em> Agent-Based Discovery{% endblocktrans %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Automatic Service/Application Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Native Windows WMI & *nix (ssh) Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "SNMP Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "WinRM Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Linux-based Discovery Tools" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Discovery compatible with existing data" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Single-vendor purchasing  " %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Simple, unified licensing model" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Native Cisco UCS Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Native Load Balancer Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Native VMware Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Native Other Virtualization (Hyper-V, Xen, KVM, LXC)" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Native Public/Private Cloud Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Automatic Affinity Groups" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Nmap Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Netflow Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "RESTful APIs" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Webhooks to drive automation" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <h3>{% trans "Device42 has everything you need to manage your IT infrastructure: DCIM, IPAM, ITAM, and more." %}</h3>
+        <div class="row text-center">
+            <div class="col-xs-12">
+                <p class="lead"><strong style="font-weight: 400;">{% trans "Integrate Device42's enterprise CMDB with Jira to:" %}</strong></p>
+                <div class="row center-block">
+                    <div class="col-xs-4">
+                        <ul class="checklist">
+                            <li>{% trans "Link any IT Asset to Jira Issues" %}</li>
+                            <li>{% trans "Search Jira tickets for IT Assets" %}</li>
+                            <li>{% trans "View asset details from helpdesk tickets" %}</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-4">
+                        <ul class="checklist">
+                            <li>{% trans "Create Jira conditional functions" %}</li>
+                            <li>{% trans "Create validator functions" %}</li>
+                            <li>{% trans "Create POST functions" %}</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-4">
+                        <ul class="checklist">
+                            <li>{% trans "Create custom Jira fields" %}</li>
+                            <li>{% trans "Create custom Jira workflows" %}</li>
+                            <li>{% trans "...and so much more!" %}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3>{% trans "A complete solution from Riada requires the purchase and integration both the Insight CMDB product and the expensive stand-alone Discovery product (along with Jira)." %}</h3>
+                <p><strong>{% trans "Device42 is fully integrated <small>(some components are licensed separately)</sm>, packing all this and more into a single product:" %}</strong></p>
+                <div class="row center-block">
+                    <div class="col-xs-3 col-xs-offset-1">
+                        <ul class="bullet-blue tight font-stack-condensed">
+                            <li>{% trans "Auto-discovery" %}</li>
+                            <li>{% trans "Application dependency mapping" %}</li>
+                            <li>{% trans "CMDB & IPAM" %}</li>
+                            <li>{% trans "DCIM" %}</li>
+                            <li>{% trans "Password management" %}</li>
+                            <li>{% trans "Certificate management" %}</li>
+                            <li>{% trans "Capacity planning" %}</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3">
+                        <ul class="bullet-blue tight font-stack-condensed">
+                            <li>{% trans "Power monitoring & control" %}</li>
+                            <li>{% trans "Resource utilization" %}</li>
+                            <li>{% trans "Inventory lifecycle management" %}</li>
+                            <li>{% trans "Automatic rack diagrams" %}</li>
+                            <li>{% trans "Cable management" %}</li>
+                            <li>{% trans "Drag-and-drop buildings/rooms" %}</li>
+                            <li>{% trans "Purchase tracking" %}</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3">
+                        <ul class="bullet-blue tight font-stack-condensed">
+                            <li>{% trans "Cloud recommendation engine" %}</li>
+                            <li>{% trans "Automatic affinity groups" %}</li>
+                            <li>{% trans "Asset lifecycle tracking" %}</li>
+                            <li>{% trans "Asset transfers" %}</li>
+                            <li>{% trans "XLS/CSV imports & exports" %}</li>
+                            <li>{% trans "QR / Barcode Generation" %}</li>
+                            <li>{% trans '“What-if” scenarios' %}</li>
+                            <li>{% trans "Complete audit trails" %}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row padded">
+            <div class="col-md-12">
+                <p><em>{% trans "...PLUS Advanced Visualizations, powerful & customizable reporting, advanced RESTful APIs, webhooks -- all at a price that will surprise you. Download NOW!" %}</em></p>
+            </div>
+        </div>
+        {% include 'partials/try-free-callout.html' %}
+
+    </article>
+{% endblock %}

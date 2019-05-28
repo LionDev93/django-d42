@@ -1,0 +1,47 @@
+{% load i18n static %}
+<h2>{% trans "Bring the power of Device42 autodiscovery to Cherwell for better ITSM" %}</h2>
+
+<div class="row">
+    <div class="col-sm-12">
+        <form action="." method="post" role="form" class="text-center" style="float: right; margin-left: 20px;margin-top: 10px; margin-right: 10px;">{% csrf_token %}
+            <button class="btn btn-sm btn-primary" type="submit">{% trans "Download Cherwell" %}<br>{% trans "Integration Package" %}</button>
+        </form>
+        <p>{% blocktrans %}Using the <a href="https://github.com/device42/cherwell_device42_sync" target="_blank" class="ext-link">Device42-Cherwell sync integration</a>,users can synchronize data from Device42 to Cherwell. The integration script brings Device42’s enhanced asset management and tracking capabilities to Cherwell.{% endblocktrans %}</p>
+    </div>
+</div>
+<p>{% blocktrans %}<a href="/">Device42</a>'s comprehensive agentless autodiscovery, optional agents, and remote collectors automatically maintain an up-to-date inventory of your physical, virtual, and cloud servers, containers, network components, software, services, and applications - and their critical interrelationships and interdependencies.{% endblocktrans %}</p>
+
+<div class="row is-table-row">
+    <div class="col-sm-7">
+        <h3>{% trans "Sync CIs and Dependencies from Device42 to Cherwell" %}</h3>
+        <p>{% trans "Once you sync your Device42 CMDB with Cherwell, you'll be able to see your infrastructure information, including application dependency mapping data, in Cherwell." %}</p>
+        <p>{% trans "Easily view or manipulate synced CIs, or visualize dependency information - all natively in the Cherwell system." %}</p>
+    </div>
+    <div class="col-sm-5">
+        <a href="{% static 'img/sections/support/integrations/cherwell/cherwell_device42_1.png' %}" data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/cherwell/cherwell_device42_1.png' %}"
+                 class="img-responsive center-block img-border"
+                 alt="{% trans 'Cherwell Integration' %}">
+        </a>
+    </div>
+</div>
+
+<div class="row image-right-5x7 is-table-row vert-offset-top-1">
+    <div class="col-sm-7">
+        <h3 class="flat-top">{% trans "Associate imported CIs with Cherwell requests!" %}</h3>
+        <p>{% blocktrans %}When a creating a new request in Cherwell, users can choose to associate configuration items synced from Device42. They can then be managed natively within Cherwell, utilizing the task management workflow you’re already used to. Assign teams and create task checklists related to CI’s imported from Device42.{% endblocktrans %}</p>
+    </div>
+    <div class="col-sm-5">
+        <a href="{% static 'img/sections/support/integrations/cherwell/cherwell_device42_2.png' %}" data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/cherwell/cherwell_device42_2.png' %}"
+                 class="img-responsive center-block img-border"
+                 alt="{% trans 'Cherwell Integration' %}">
+        </a>
+    </div>
+</div>
+
+<h3>{% trans "Sync hardware, software and services, vendors, and application dependency mapping data from Device42 to Cherwell." %}</h3>
+<p>{% trans "Let Device42 auto-discovery populate and maintain your Cherwell CMDB, automatically! Leverage CI details you already have in Device42 to sync anything from software and services, to service levels and customers, and more to your Cherwell instance."%}</p>
+<p>{% trans "Automate common IT tasks and boost IT efficiency with application dependency mapping data from Device42 in Cherwell." %}</p>
+
+<p>{% blocktrans %}Download the Device42-Cherwell integration from the <a href="https://github.com/device42/cherwell_device42_sync">Device42 Github page</a>{% endblocktrans %}</p>

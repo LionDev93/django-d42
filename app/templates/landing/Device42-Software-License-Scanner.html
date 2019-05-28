@@ -1,0 +1,128 @@
+{% extends "base/_base-landing.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Software License Scanning utility for automated IT infrastructure management.' %}"/>
+{% endblock %}
+
+{% block title %}{% trans "Software License Scanner" %}{% endblock %}
+
+{% block landingHeadingText %}{% trans "Software License Scanner" %}{% endblock %}
+{% block landingSubHeadingText %}<br/>
+    {% trans "Map your physical, virtual and cloud networks automatically with Device42’s agentless software license scanner" %}{% endblock %}
+{% block landingfeature %}
+    <section class="row landing-section">
+        <div class="col-sm-7">
+            <h4>{% trans "Device42 can quickly and thoroughly scan your entire network using a variety of auto-discovery methods, automatically correlating the information:" %}</h4>
+            <ul class="square-style">
+                <li>{% trans "SNMP Discovery (v1/v2c/v3):" %}</li>
+                <ul>
+                    <li>{% trans "Network switches, routers and firewalls" %}</li>
+                    <li>{% trans "Load balancers (such as " %} BIG-IP F5 & Cisco NetScaler</li>
+                    <li>{% trans "Blade systems to get chassis/blade system information" %}</li>
+                    <li>{% trans "Discovery and monitoring of power devices like PDUs, UPS, CRAC, etc." %}</li>
+                    <li>{% trans "Console switches, fiber switches, SAN switches, etc." %}</li>
+                </ul>
+                <li>{% trans "WMI based discovery for Windows based machines (and servers)" %}</li>
+                <li>{% trans "SSH based discovery for different UNIX and Linux flavors." %}</li>
+                <li>{% trans "Hypervisor and VMs discovery with support for all major virtualization platforms" %}</li>
+                <li>{% trans "Cloud discovery support for Amazon, Azure, Joyent, Linode, Digital Ocean etc." %}</li>
+                <li>{% trans "Cisco UCS" %}</li>
+                <li>{% trans "DNS sync and ping sweep for network discovery" %}</li>
+                <li>{% trans "Pull inventory data from tools like Puppet, Chef, Microsoft SCCM, monitoring systems" %}</li>
+                <li>{% trans "IPMI discovery for BMC boards" %}</li>
+            </ul>
+        </div>
+        <div class="col-sm-5 hidden-xs">
+          <a href="{% static 'img/sections/solutions/network-discovery-01.png' %}" data-featherlight="image">
+            <img src="{% static 'img/sections/solutions/network-discovery-01.png' %}"
+                 alt="{% trans 'Switch Port Map Visualization' %}" class="img-responsive">
+          </a>
+        </div>
+    </section>
+{% endblock %}
+
+{% block maincontent %}
+    <section class="row landing-section">
+        <div class="col-md-3">
+          <a href="{% static 'img/sections/solutions/software-inventory.png' %}" data-featherlight="image">
+            <img src="{% static 'img/sections/solutions/software-inventory.png' %}"
+                 class="img-responsive box-shadow center-block"
+                 alt="{% trans 'SNMP Network Discovery' %}"/>
+          </a>
+        </div>
+        <div class="col-md-9">
+            <h3 class="sub-heading">{% trans "Device42’s Software License Scanner Discovers Your Inventory Details" %}</h3>
+            <p>{% trans "<b>Device42’s</b> software license scanning software produces <b>an accurate IT inventory that is ALWAYS audit-ready.</b>" %}</p>
+            <br>
+            <p class="text-strong">{% trans "Data Collected Includes:" %}</p>
+            <ul>
+                <li>{% trans "Basic inventory information (hostname, serial number, hardware model, CPU/memory/harddisk details)" %}</li>
+                <li>{% trans "Operating System with version number and build information [Windows, Linux, UNIX, Mac, BSD]" %}</li>
+                <li>{% trans "IP and MAC addresses with relations between them (Automatically correlates to corresponding switch ports)" %}</li>
+                <li>{% trans "Installed software and software licenses (including version number and installation date)" %}</li>
+                <li>{% trans "Listening ports for all the services and remote connections" %}</li>
+                <li>{% trans "Service-to-service IP, port maps, and application dependency maps" %}</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section class="row landing-section is-table-row">
+        <div class="col-xs-12 col-sm-3 col-sm-push-9">
+          <a href="{% static 'img/landing/server-inventory/relations.png' %}" data-featherlight="image">
+            <img class="img-responsive center-block" alt="{% trans 'Software License Scanner' %}"
+                 src="{% static 'img/landing/server-inventory/relations.png' %}">
+          </a>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-sm-pull-3">
+            <h3 class="sub-heading">{% trans "Device42’s Software License Scanner Tracks Relationships and Maps Dependencies Between Your Software Inventory and Your Other IT Assets" %}</h3>
+            <p>{% trans "Device42’s software inventory scanner tool produces detailed software and server impact charts:" %}</p>
+            <ol class="styled">
+                <li>{% trans "Display downward dependencies from Virtual Server Host or Blade Chassis to contained VM’s" %}</li>
+                <li>{% trans "Visualize all service connections between them" %}</li>
+                <li>{% trans "See a clear map of your operations and its interdependencies" %}</li>
+                <li>{% trans "Quickly understand the trickle-down effect of a service interruption if a blade or service were to become unavailable" %}</li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="row landing-section is-table-row">
+
+        <div class="col-sm-6 col-sm-push-6">
+          <a href="{% static 'img/sections/solutions/network-discovery-11.png' %}" data-featherlight="image">
+            <img class="img-responsive img-rounded box-shadow center-block" alt="{% trans 'REST APIs' %}"
+                 src="{% static 'img/sections/solutions/network-discovery-11.png' %}">
+          </a>
+        </div>
+        <div class="col-sm-6 col-sm-pull-6">
+            <h3 class="sub-heading">{% trans "External Integrations and REST APIs" %}</h3>
+            <p>{% trans "Using our out of box integrations with Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, Servicenow and many more, you can bring in your data discovered by other systems.  You can use REST APIs to customize what data you want to send to Device42." %}</p>
+            <ul>
+              <li>{% trans "Utilize Device42’s powerful RESTful API to automate software license scanning and management" %}</li>
+              <li>{% trans "Use Device42’s software license scanning tool as is, or build on any of the included sample scripts for custom discoveries" %}</li>
+            </ul>
+        </div>
+    </section>
+
+    {% include 'partials/try-free-callout.html' %}
+
+    <section class="row landing-section">
+        <div class="col-sm-12 col-md-6">
+          <a href="{% static 'img/sections/features/cmdb/Solution-Components.png' %}" data-featherlight="image">
+            <img class="img-responsive center-block" alt="{% trans 'Device42 Solution Components' %}"
+                 src="{% static 'img/sections/features/cmdb/Solution-Components.png' %}">
+          </a>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <h3 class="sub-heading"><em>{% blocktrans %}See <strong style="font-style:normal;">IT</strong> All in One Place!</em>{% endblocktrans %}</h3>
+            <p>{% trans "Device42 offers an extensive and highly-customizable set of reports and inquiry screens to access your CI data. But even better, Device42 provides an extensive set of visualizations including:" %}</p>
+            <ul>
+                <li>{% trans "Your computer rooms and racks with power and capacity heatmaps" %}</li>
+                <li>{% trans "Your full IP connectivity and power chain" %}</li>
+                <li>{% trans "Your hardware, software, and application dependencies" %}</li>
+            </ul>
+            <p>{% trans "Device42's CMDB provides a <em>single source of truth</em> within your organization.  Enjoy a clear view into your IT ecosystem to identify, manage, and verify all configuration items (CI) in your environment." %}</p>
+        </div>
+    </section>
+{% endblock %}

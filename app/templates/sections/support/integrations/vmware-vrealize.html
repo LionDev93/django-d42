@@ -1,0 +1,61 @@
+{% load i18n static %}
+<h2>{% trans "VMWare vRealize Orchestrator - Device42 IPAM Workflow Template" %}</h2>
+<div class="row">
+    <div class="col-md-12">
+        <p>{% trans "VMWare’s vRealize Orchestrator provides a powerful framework that allows you to design and automate complex, custom workflows in just a few clicks. It includes an extensive workflow library, featuring a wide selection of pre-built tasks, each one of which solves a specific challenge and/or performs a common administrative action." %}</p>
+    </div>
+</div>
+
+<div class="row image-left-7x5 is-table-row">
+    <div class="col-sm-7">
+        <h3>{% trans "Device42’s vRealize IP Address Workflow Template Supplies Your VM’s With Available IP Addresses in Real Time" %}</h3>
+        <p>{% trans "Leverage it by itself, or in combination with other existing task template to create custom workflows with the vRealize Orchestrator JavaScript-based scripting engine!" %}</p>
+    </div>
+    <div class="col-sm-5">
+        <a href="{% static 'img/sections/support/integrations/vrealize/vrealize-1.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/vrealize/vrealize-1.png' %}"
+                 class="img-responsive center-block img-border"
+                 alt="{% trans 'VMWare vRealize Integration' %}">
+        </a>
+    </div>
+</div>
+
+<div class="row image-right-5x7 is-table-row padded">
+    <div class="col-sm-7">
+        <h3>{% trans "Fully Automate Deployment and Documentation Processes" %}</h3>
+        <p>{% trans "Create custom workflows that both deploy new virtual machines automatically with IP addresses provided by Device42’s IPAM, which are then automatically documented shortly after deployment by Device42’s autodiscovery." %}</p>
+    </div>
+    <div class="col-sm-5">
+        <a href="{% static 'img/sections/support/integrations/vrealize/vrealize-2.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/vrealize/vrealize-2.png' %}"
+                 class="img-responsive center-block img-border"
+                 alt="{% trans 'VMWare vRealize Integration' %}">
+        </a>
+    </div>
+</div>
+
+<div class="row image-left-7x5 is-table-row">
+    <div class="col-sm-7">
+        <h3>{% trans "It’s as Simple as Drag & Drop!" %}</h3>
+        <p>{% trans "Device42’s VMware vRealize IPAM Workflow Template is easy to use, yet extremely powerful. Simply drag the Device42 template over, and you’re ready to start pulling IP addresses into your vRealize workflow." %}</p>
+    </div>
+    <div class="col-sm-5">
+        <a href="{% static 'img/sections/support/integrations/vrealize/vrealize-3.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/vrealize/vrealize-3.png' %}"
+                 class="img-responsive center-block img-border"
+                 alt="{% trans 'VMWare vRealize Integration' %}">
+        </a>
+    </div>
+</div>
+
+<div class="row padded">
+    <div class="col-md-12">
+        <form action="." method="POST" role="form">{% csrf_token %}
+            <p><strong>{% blocktrans %}Download <button class="btn-link" style="padding: 0px; border: 0px; text-decoration: underline;" type="submit">the Device42 vRealize Orchestrator Workflow Template</button> today!{% endblocktrans %}</strong></p>
+        </form>
+        <p>{% trans "Leverage Device42’s IPAM functionality to supply IPs to VMs in your custom vRealize Orchestrator workflows." %}</p>
+    </div>
+</div>

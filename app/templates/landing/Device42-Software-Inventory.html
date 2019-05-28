@@ -1,0 +1,107 @@
+{% extends "base/_base-landing.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Device42’s automated and agent-less application mapping makes server migrations easier, ensuring you know all of your dependencies and have all your configurations squared away ahead of time, uncovering the hidden issues before they cause unnecessary downtime.' %}"/>
+{% endblock %}
+{% block title %}{% trans "Software Inventory" %}{% endblock %}
+
+{% block styles %}
+<style>
+    body{
+    }
+    .cta-free-trial {
+        padding: 24px 0;
+        text-transform: none !important;
+        background-color: #ffc90e;
+        color: #130dff !important;
+    }
+    .v-top {
+      vertical-align: top !important;
+    }
+</style>
+{% endblock %}
+
+{% block landingHeadingText %}{% trans "Software Inventory" %}{% endblock %}
+{% block landingfeature %}
+    <section class="row flat-bottom landing-section">
+        <div class="col-sm-7">
+            <p>{% blocktrans %}Device42 provides comprehensive IT software inventory management capabilities including powerful, software inventory auto-discovery with fully configurable asset types. Easily accommodate any IT asset type within in your infrastructure.{% endblocktrans %}</p>
+            <ul class="checklist lead-small bullet-blue light-weight">
+              <li>{% trans "Agentless and/or agent-based Continuous Auto-discovery" %}</li>
+              <li>{% trans "Physical and Virtual software inventory including hardware and software inventory" %}</li>
+              <li>{% trans "Device42’s software inventory tools manage servers both on premise and in the cloud" %}</li>
+              <li>{% trans "Track and visualize relationships between your software inventory and other IT assets" %}</li>
+              <li>{% trans "Scalability, from small to huge – No inventory too large" %}</li>
+              <li>{% trans "Powerful, customizable reports" %}</li>
+            </ul>
+        </div>
+        <div class="col-sm-5">
+            <img src="{% static 'img/landing/server-inventory/banner1.png' %}"
+                 alt="{% trans 'Hardware Inventory' %}" class="img-responsive img-restrict center-block">
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block maincontent %}
+    <section class="row is-table-row">
+        <div class="col-sm-12">
+            <h3 style="font-weight:400;" class="flat-bottom">{% trans "Auto Discover Your Software Inventory" %}</h3>
+            <p class="text-strong">{% trans "Device42’s software inventory software produces an accurate IT software inventory that is ALWAYS audit-ready" %}</p>
+            <p>{% trans "Populate your software inventory quickly and effortlessly with an extensive range of auto-discovery tools that support physical, virtual, hybrid, and cloud server  infrastructures." %}</p>
+            <ul class="lead-small bullet-blue light-weight">
+                <li>{% trans "Discover software inventory on any operating system: Windows, Linux, UNIX, Mac, or BSD" %}</li>
+                <li>{% trans "Run discovery with Device42’s software inventory tool on demand, or schedule discovery to run automatically so your inventory is always up-to-date" %}</li>
+                <li>{% trans "Discover anything with Device42’s software inventory tools: Multiple discovery protocols supported (e.g. WMI & WinRM, SSH, SNMP, Modbus, CDP, and many more)" %}</li>
+                <li>{% trans "Get software inventory from your blade chassis - Device42’s software inventory software includes native support for blades" %}</li>
+                <li>{% trans "Inventory your blade chassis - Device42’s server inventory software includes native support" %}</li>
+                <li>{% trans "Utilize Device42’s powerful RESTful API to automate software inventory management " %}</li>
+                <li>{% trans "Use Device42’s software inventory tool as is, or build on any of the included sample scripts for custom discoveries" %}</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="row is-table-row">
+        <div class="col-sm-9">
+          <h3 style="font-weight:400;" class="flat-bottom">{% trans "Software Inventory & License Management" %}</h3>
+          <p>
+              <strong>{% trans 'Device42 locates your devices automatically, making it easy to document and inventory the software running across physical or virtual servers, blades, clusters, switches or any other device types.' %}</strong>
+          </p>
+          <br>
+          <p>{% trans "Software inventory management has never been easier. Device42 features easy to use, multi-edit data entry pages which allow you to add and modify software components from a single page." %}</p>
+          <ul class="lead-small bullet-blue light-weight">
+              <li>{% trans "View and manage all software license counts and expiration dates" %}</li>
+              <li>{% trans "Simply open a new tab to see all locations a specific software exists" %}</li>
+              <li>{% trans "Get inventory counts for a specific version, software component, or release number" %}</li>
+              <li>{% trans "Detect prohibited software, and identify purchased vs. installed software" %}</li>
+              <li>{% trans "Receive customizable notifications and alerts" %}</li>
+          </ul>
+        </div>
+        <div class="col-sm-3 v-top">
+            <img src="{% static 'img/landing/server-inventory/selectsoftware.png' %}"
+                     class="img-restrict center-block" style="max-width: 100% !important;">
+        </div>
+    </section>
+
+    <section class="row is-table-row landing-section">
+        <div class="col-sm-4">
+            <img src="{% static 'img/landing/server-inventory/relations.png' %}"
+                     class="img-restrict center-block" >
+        </div>
+        <div class="col-sm-8">
+          <h3 style="font-weight:400;" class="flat-bottom">{% trans "Track Relationships and Map Dependencies Between Your Software Inventory and Other IT Assets" %}</h3>
+          <p style="font-style: italic;">
+              {% trans 'Device42’s hardware inventory management software provides powerful operational dependency tracking and visualizations' %}
+          </p>
+          <p>{% trans "Device42’s hardware inventory tool produces detailed software and server Impact Charts:" %}</p>
+          <ul class="lead-small bullet-blue light-weight">
+              <li>{% trans "Display downward dependencies from Virtual Server Host or Blade Chassis to contained VM’s" %}</li>
+              <li>{% trans "Visualize all service connections between them" %}</li>
+              <li>{% trans "See a clear map of your operations and its interdependencies" %}</li>
+              <li>{% trans "Quickly understand the trickle-down effect of a service interruption if a blade or service were to become unavailable" %}</li>
+          </ul>
+        </div>
+    </section>
+
+{% endblock %}

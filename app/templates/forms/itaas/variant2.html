@@ -1,0 +1,73 @@
+    <section class="landing-form">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img class="logo" src="img/transparent-logo.png">
+                        <form role="form" class="no-padd" id="downloadForm" action="." method="POST">
+                          <div class="form_head">
+                            <h1>{% trans "<span><i>FREE</i></span> White Paper Download" %}</h1>
+                            <h2>{% blocktrans %}Device42's "How to create the Next-<br>Generation Data Center. IT As A Service"{% endblocktrans %}</h2>
+                          </div>
+                          <div class="form_body">
+                            <h2>{% trans "Learn how to harness the power of existing and new technology for maximum impact on your business." %}</h2>
+                            <h3>{% trans "Please fill out the following form and we will show you how." %}</h3>
+                            {% csrf_token %}
+                            {% for field in form %}
+                                <div class="form-group {% if field.errors %}has-errors{% endif %}">
+                                    <label class="control-label col-md-4 font-roboto" style="font-weight:400;text-align:left;"
+                                           for="id_{{ field.name }}">{{ field.label }}</label>
+                                    {{ field }}
+                                    {% if field.errors %}
+                                        {% for error in field.errors %}
+                                            <span class="text-danger text-strong">{{ error|escape }}</span>
+                                        {% endfor %}
+                                    {% endif %}
+                                    {% if field.help_text %}
+                                        <p class="help-block">{{ field.help_text|safe }}</p>
+                                    {% endif %}
+                                </div>
+                            {% endfor %}
+                            <input style="display:none" id="id_main" type="text" name="main" maxlength="64"/>
+                          </div>
+                          <div class="form_footer">
+                            <div class="col-md-6">
+                              <p>{% trans 'We respect your privacy and will not misuse or sell your personal information. Read our <a href="#">Privacy Policy' %}</a>
+                            </div>
+                            <div class="col-md-6">
+                              <input class="btn btn-primary btn-block-xs" type="submit" value="{% trans 'SEND MY DOWNLOAD LINK' %}">
+                            </div>
+                          </div>
+                        </form>
+                        <img class="logo" src="img/transparent-logo.png">
+                    </div>
+                    <div class="col-md-6">
+                    	<h1>IT as a Service</h1>
+                    	<h2>How to Create the Next-Generation<br>Data Center Your Business Needs</h2>
+                    	<p><b><i>The next-generation data center will not only be simpler and more manageable, but will also more easily align with company's business needs.</i></b></p>
+                    	<h3>Learn how the next generation data center addresses these common problems, and more:</h3>
+                    	<div class="bullets">
+
+		                    	<ul>
+		                    		<li>Siloed Teams</li>
+		                    		<li>Complexity at every level</li>
+		                    		<li>Opacity that creates risk</li>
+		                    	</ul>
+
+		                    	<ul>
+		                    		<li>Inability to gauge impact</li>
+		                    		<li>Labor intensive audits</li>
+		                    	</ul>
+
+		                    	<ul>
+		                    		<li>Compliance Requests</li>
+		                    		<li>Inability to respond to business needs</li>
+		                    	</ul>
+
+	                    </div>
+	                    <img class="workflow" src="img/workflow.png">
+                    </div>
+                </div>
+            </div>
+
+    </section>

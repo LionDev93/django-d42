@@ -1,0 +1,42 @@
+[head.title]
+Device42 - the powerful Excel replacement capacity planning tool you've been searching for.
+
+[head.description]
+Device42 is a powerful, comprehensive replacement for Excel capacity planning with agentless autodiscovery, resource utilization, and more. Map out your entire physical and virtual infrastructure!
+
+[landing.title]
+Don't Fight with Excel Capacity Planning Any Longer!
+
+[landing.image_format]
+gif
+
+[landing.content]
+
+Device42 is the powerful Replacement for Excel capacity planning that helps you manage IT capacity in real-time with comprehensive autodiscovery, resource utilization, and more!
+
+- Auto-generated rack layouts with drag and drop
+- Powerful "What-if" scenarios and flexible reporting - everything Excel capacity planning lacks!
+- Color-coded room layouts with heatmaps for easy Excel capacity planning
+- Web-based with no flash and with SVG exports that lets you import in Visio
+- Real-time power and environmental monitoring with charts and alerts
+- Map your physical, virtual and cloud networks automatically with agentless discovery.
+
+
+[feature[1].title]
+Drag'n'Drop Rack and Room Layouts with What-if Scenarios
+[feature[1].image_format]
+gif
+[feature[1].content]
+Device42 puts the Excel capacity planning tools you need at your fingertips: autodiscovery spans across legacy and newer systems alike, highlighting dependencies between physical, virtuals, and applications.
+
+[feature[2].title]
+Put Excel Capacity Planning Behind You! 
+[feature[2].content]
+Collect your complete inventory like serial #, hardware model, OS and build info, installed software, IPs and connections, services and mapping between services across machines automatically!
+
+[feature[3].title]
+Automated Data Center Management, RESTful APIs, Webhooks, Integrations!
+[feature[3].image_format]
+png
+[feature[3].content]
+With Device42, you are no longer on your own! Leverage out-of-the-box integrations with Puppet, Chef, SCCM, Infoblox, Splunk, Excel, ServiceNow and more! Use real-time data to reduce your MTTR, and make Excel capacity planning a thing of the past!

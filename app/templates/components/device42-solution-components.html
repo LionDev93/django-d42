@@ -1,0 +1,71 @@
+{% load static i18n %}
+
+<style>
+    .components .img-responsive {
+        max-width: 45% !important;
+    }
+    .icons {
+        min-height: 280px;
+    }
+    .component-text {
+        margin: 0 5px;
+    }
+</style>
+
+<div class="row text-center vert-offset-top-1">
+    <h2>{% trans "Device42 Solution Components" %}</h2>
+</div>
+
+<div class="components row text-center vert-offset-top-5">
+    <div class="col-xs-6 col-sm-3 icons">
+        <img class="img-responsive center-block"
+             src="{% static 'img/icons/landing/cmdb.jpg' %}"
+             alt="CMDB">
+        <p class="component-text">{% trans "A clear view into your IT ecosystem to identify, manage, and verify all configuration items (CI) in your environment." %}</p>
+    </div>
+    <div class="col-xs-6 col-sm-3 icons">
+        <img class="img-responsive center-block"
+             src="{% static 'img/icons/landing/ipam.jpg' %}"
+             alt="IPAM">
+        <p class="component-text">{% trans "Track IP addresses, VLANs, subnets, mac addresses, and provision IP addresses" %}</p>
+    </div>
+    <div class="col-xs-6 col-sm-3 icons">
+        <img class="img-responsive center-block"
+             src="{% static 'img/icons/landing/software.jpg' %}"
+             alt="SOFTWARE">
+        <p class="component-text">{% trans "Auto-discover, track, and manage network services and software." %}</p>
+    </div>
+    <div class="col-xs-6 col-sm-3 icons">
+        <img class="img-responsive center-block"
+             src="{% static 'img/icons/landing/dcim.jpg' %}"
+             alt="DCIM/ITAM">
+        <p class="component-text">{% trans "Auto-discover, visualize and manage hardware and software assets in physical, virtual and cloud networks." %}</p>
+    </div>
+</div>
+
+<div class="components row text-center vert-offset-top-1 vert-offset-bottom-3">
+    <div class="col-xs-6 col-sm-3 icons">
+        <img class="img-responsive center-block"
+             src="{% static 'img/icons/landing/password.jpg' %}"
+             alt="PASSWORD">
+        <p class="component-text">{% trans "Auto-discover, track, and manage network services and software" %}</p>
+    </div>
+    <div class="col-xs-6 col-sm-3 icons">
+        <img class="img-responsive center-block"
+             src="{% static 'img/icons/landing/cabling.jpg' %}"
+             alt="CABLING">
+        <p class="component-text">{% trans "Track, manage and visualize patch panel and switch port connections" %}</p>
+    </div>
+    <div class="col-xs-6 col-sm-3 icons">
+        <img class="img-responsive center-block"
+             src="{% static 'img/icons/landing/power.jpg' %}"
+             alt="POWER">
+        <p class="component-text">{% trans "Discover, track, and visualize data center rooms, monitor power & environment, PDU control, alerts and notifications." %}</p>
+    </div>
+    <div class="col-xs-6 col-sm-3 icons">
+        <img class="img-responsive center-block"
+             src="{% static 'img/icons/landing/impact.jpg' %}"
+             alt="IMPACT">
+        <p class="component-text">{% trans "Discover and visualize the interdependencies of software, hardware, and personnel." %}</p>
+    </div>
+</div>

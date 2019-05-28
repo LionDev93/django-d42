@@ -1,0 +1,776 @@
+{% extends 'base/_base.html' %}
+{% load i18n static %}
+{% block title %}{% trans "Features" %}{% endblock %}
+{% block meta %}
+    <meta name="description" content="{% trans 'Featured highlights and screenshots of Device42' %}.">
+{% endblock %}
+{% block styles %}
+  <style>
+    .featurette {
+      margin: 50px 0px !important;
+    }
+
+    .features-banner-img {
+      width: 250px;
+      height: auto;
+    }
+
+    .featurette-heading {
+        margin-top: 20px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .secondary-menu {
+      text-align: center;
+      border-bottom: 2px solid #d6d8d7;
+    }
+
+    @media(max-width: 992px){
+      .secondary-menu {
+        display: none;
+      }
+    }
+
+    .secondary-menu.fixed {
+      position: fixed;
+      background: white;
+      z-index: 999;
+      top: 53px;
+      width: 100%;
+    }
+
+    .secondary-content  {
+      display: inline-block;
+    }
+
+    .secondary-menu-list {
+      display: inline-block;
+      list-style: none;
+      margin: 0;
+      padding: 0px;
+    }
+
+    .secondary-menu-list-item {
+      display: inline-block;
+      text-align: center;
+      zoom: 1;
+      vertical-align: middle;
+      height: 100%;
+      width: auto;
+      min-width: 100px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .secondary-menu-list-item:before {
+      display: none;
+    }
+
+    .secondary-menu-link {
+      padding: 1.5rem 0;
+      color: #706F6F;
+      display: block;
+    }
+
+    .secondary-menu-link:focus, .secondary-menu-link:hover {
+      color: #706F6F;
+      text-decoration: none;
+    }
+
+    <!--.secondary-menu-list-item:hover, .secondary-menu-list-item.active {-->
+      <!--color: #706F6F;-->
+      <!--border-bottom: 3px solid #ab00dc;-->
+    <!--}-->
+
+    .secondary-menu-list-item:after {
+      content: "";
+      background-color: #22a3df;
+      padding: 1.5px;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      line-height: 3px;
+      font-size: 2em;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      right: 50%;
+      visibility: hidden;
+      transition: all 0.2s linear;
+    }
+
+    .secondary-menu-list-item:hover:after {
+          visibility: visible;
+        left: 6px;
+        right: 6px;
+    }
+
+    .secondary-menu-list-item.active:after {
+      visibility: visible;
+      content: "";
+      background-color: #eb8f34;
+      font-size: 30px;
+      padding: 1.5px;
+      line-height: 3px;
+      position: absolute;
+      bottom: 0;
+      left: 6px;
+      right: 6px;
+    }
+
+    #top {
+      padding: 2rem 0;
+      background: rgba(234, 234, 234, 1);;
+      text-align: center;
+    }
+
+    #top a img {
+      width: 100%;
+      height: 250px;
+    }
+
+    #overview {
+      padding: 2rem 0;
+      background: rgba(234, 234, 234, 1);;
+    }
+
+    #auto_discovery, #adm, #ipam, #integrations, #description {
+      padding: 40px 0;
+      background: white;
+    }
+
+    #dcim, #security, #itam, #api {
+      padding: 40px 0;
+      background: rgba(234, 234, 234, 1);
+    }
+
+    .d-flex {
+      display: flex;
+    }
+
+    .full-block {
+      width: 100%;
+    }
+
+    .height-block {
+      height: 270px;
+      width: auto;
+    }
+
+    .m-t-50 {
+      margin-top: 50px;
+    }
+    .m-t-0 {
+      margin-top: 0px;
+    }
+    .m-t-30 {
+      margin-top: 30px;
+    }
+
+    .checkmark-style li:before {
+      content: "\2714";
+      margin-left: -24px;
+      margin-right: 12px;
+      position: relative;
+      vertical-align: text-top;
+      display: inline-block;
+      font-weight: 100;
+      font-size: 15px;
+      color: #22a3df;
+    }
+
+    .features-button {
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 767px){
+      .secondary-menu {
+        display: none;
+      }
+    }
+  </style>
+{% endblock %}
+{% block body_scripts %}
+<script type="text/javascript">
+    $(function() {
+        D42.tools.loadJs('//fast.wistia.com/assets/external/E-v1.js', true);
+    });
+    function goto_overview(){
+      $(document).ready(function() {
+        $('html, body').animate({
+          scrollTop: $('#overview').offset().top - 110
+        }, 500);
+      })
+    }
+    function goto_autodiscovery(){
+      $(document).ready(function() {
+        $('html, body').animate({
+          scrollTop: $('#auto_discovery').offset().top - 110
+        }, 500);
+      })
+    }
+    function goto_dcim(){
+      $(document).ready(function() {
+        $('html, body').animate({
+          scrollTop: $('#dcim').offset().top - 110
+        }, 500);
+      })
+    }
+    function goto_adm(){
+      $(document).ready(function() {
+        $('html, body').animate({
+          scrollTop: $('#adm').offset().top - 110
+        }, 500);
+      })
+    }
+    function goto_security(){
+      $(document).ready(function() {
+        $('html, body').animate({
+          scrollTop: $('#security').offset().top - 110
+        }, 500);
+      })
+    }
+    function goto_ipam(){
+      $(document).ready(function() {
+        $('html, body').animate({
+          scrollTop: $('#ipam').offset().top - 110
+        }, 500);
+      })
+    }
+    function goto_itam(){
+      $(document).ready(function() {
+        $('html, body').animate({
+          scrollTop: $('#itam').offset().top - 110
+        }, 500);
+      })
+    }
+    function goto_integrations_api(){
+      $(document).ready(function() {
+        $('html, body').animate({
+          scrollTop: $('#integrations').offset().top - 110
+        }, 500);
+      })
+    }
+
+    $(window).scroll(function () {
+        var cur_pos = $(window).scrollTop();
+
+        if(cur_pos > ($("#description").offset().top - 115)){
+          $(".secondary-menu").addClass("fixed");
+        }else{
+          $(".secondary-menu").removeClass("fixed");
+        }
+
+        if(cur_pos > ($("#overview").offset().top - 115)){
+          $(".secondary-menu-list-item").siblings().removeClass("active");
+          $("#overview_link").addClass("active");
+        }else{
+          $(".secondary-menu-list-item").siblings().removeClass("active");
+        }
+
+        if(cur_pos > ($("#auto_discovery").offset().top - 115)){
+          $(".secondary-menu-list-item").siblings().removeClass("active");
+          $("#auto_discovery_link").addClass("active");
+        }
+
+        if(cur_pos > ($("#dcim").offset().top - 115)){
+          $(".secondary-menu-list-item").siblings().removeClass("active");
+          $("#dcim_link").addClass("active");
+        }
+
+        if(cur_pos > ($("#adm").offset().top - 115)){
+          $(".secondary-menu-list-item").siblings().removeClass("active");
+          $("#adm_link").addClass("active");
+        }
+
+        if(cur_pos > ($("#security").offset().top - 115)){
+          $(".secondary-menu-list-item").siblings().removeClass("active");
+          $("#security_link").addClass("active");
+        }
+
+        if(cur_pos > ($("#ipam").offset().top - 115)){
+          $(".secondary-menu-list-item").siblings().removeClass('active');
+          $("#ipam_link").addClass("active");
+        }
+
+        if(cur_pos > ($("#itam").offset().top - 115)){
+          $(".secondary-menu-list-item").siblings().removeClass('active');
+          $("#itam_link").addClass("active");
+        }
+
+        if(cur_pos > ($("#integrations").offset().top - 115)){
+          $(".secondary-menu-list-item").siblings().removeClass('active');
+          $("#integrations_link").addClass("active");
+        }
+    });
+</script>
+{% endblock %}
+{% block site_section_features %}active{% endblock %}
+{% block body %}
+    <header class="row head-home bg-info">
+        <div class="container">
+            <div class="row featurette">
+                <div class="col-sm-5">
+                    <img src="{% static 'img/components/study-a/callouts/cmdb-for-cloud-era.png' %}"
+                             class="img-responsive center-block features-banner-img"
+                             alt="{% trans 'Device42 Features' %}">
+                </div>
+                <div class="col-sm-7">
+                    <h1 class="featurette-heading">{% trans "Device42 Features" %}</h1>
+                    <h4>{% trans "Highlights & Screenshots" %}</h4>
+                    <a href="/schedule_demo/" class="btn btn-warning btn-block-xs features-button" style="margin-top: 50px !important;">{% trans "SCHEDULE A DEMO" %}</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="secondary-menu">
+      <div class="secondary-content">
+        <ul class="secondary-menu-list">
+          <li class="secondary-menu-list-item" id="overview_link">
+            <a onclick="goto_overview()" class="secondary-menu-link">
+              {% trans "OVERVIEW" %}
+            </a>
+          </li>
+          <li class="secondary-menu-list-item" id="auto_discovery_link">
+            <a onclick="goto_autodiscovery()" class="secondary-menu-link">
+              {% trans "AUTO DISCOVERY" %}
+            </a>
+          </li>
+          <li class="secondary-menu-list-item" id="dcim_link">
+            <a onclick="goto_dcim()" class="secondary-menu-link">
+              {% trans "DCIM" %}
+            </a>
+          </li>
+          <li class="secondary-menu-list-item" id="adm_link">
+            <a onclick="goto_adm()" class="secondary-menu-link">
+              {% trans "ADM" %}
+            </a>
+          </li>
+          <li class="secondary-menu-list-item" id="security_link">
+            <a onclick="goto_security()" class="secondary-menu-link">
+              {% trans "SECURITY" %}
+            </a>
+          </li>
+          <li class="secondary-menu-list-item" id="ipam_link">
+            <a onclick="goto_ipam()" class="secondary-menu-link">
+              {% trans "IPAM" %}
+            </a>
+          </li>
+          <li class="secondary-menu-list-item" id="itam_link">
+            <a onclick="goto_itam()" class="secondary-menu-link">
+              {% trans "ITAM" %}
+            </a>
+          </li>
+          <li class="secondary-menu-list-item" id="integrations_link">
+            <a onclick="goto_integrations_api()" class="secondary-menu-link">
+              {% trans "INTEGRATIONS & API" %}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <section id="description">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6" style="margin-top: 30px;">
+            <div class="embed-responsive embed-responsive-16by9" style="padding-bottom:50%;">
+                <div>
+                    <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                        <span class="wistia_embed wistia_async_igc5qfvoyr popover=true popoverAnimateThumbnail=true videoFoam=true popoverBorderColor=22a3df popoverBorderWidth=2" style="display:inline-block;height:100%;width:100%">&nbsp;</span>
+                    </div>
+                </div>
+            </div>
+            <h4 class="text-primary font-stack-roboto text-center">{% trans "90 Second Overview" %}</h4>
+          </div>
+          <div class="col-md-6">
+            <h2 style="margin-top: 0px;">{% trans "Comprehensive IT Infrastructure Management" %}</h2>
+            <p>{% trans "Device42 includes everything you need to automate documentation of your infrastructure:" %}</p>
+            <ul class="checkmark-style">
+              <li>{% trans "A feature-packed CMDB with powerful auto discovery and intelligent application dependency mapping (ADM)" %}</li>
+              <li>{% trans "A suite of Data Center Infrastructure Management (DCIM) tools" %}</li>
+              <li>{% trans "Powerful Asset Management (ITAM) features" %}</li>
+              <li>{% trans "IP Address Management (IPAM)" %}</li>
+              <li>{% trans "...and a well documented RESTful API and webhooks to support your infrastructure automation efforts" %}</li>
+            </ul>
+            <br />
+            <a href="/features/cmdb" class="btn btn-warning btn-block-xs features-button">{% trans "TAKE THE TOUR" %}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="top">
+      <div class="container">
+        <h2 style="margin-bottom: 50px;">{% trans "Device42 Feature Highlights & Screenshots" %}</h2>
+        <div class="row">
+          <div class="col-sm-4">
+            <a href="{% static 'img/sections/features/feat_contdel.png' %}" data-featherlight="image">
+                <img src="{% static 'img/sections/features/feat_contdel.png' %}"
+                     class="img-responsive center-block"
+                     alt="{% trans 'Web-based automatic rack diagrams' %}">
+            </a>
+          </div>
+          <div class="col-sm-4">
+            <a href="{% static 'img/sections/features/search.png' %}" data-featherlight="image">
+                <img src="{% static 'img/sections/features/search.png' %}"
+                     class="img-responsive center-block"
+                     alt="{% trans 'Web-based automatic rack diagrams' %}">
+            </a>
+          </div>
+          <div class="col-sm-4">
+            <a href="{% static 'img/sections/features/discovery/continuous_it_infrastructure.png' %}" data-featherlight="image">
+                <img src="{% static 'img/sections/features/discovery/continuous_it_infrastructure.png' %}"
+                     class="img-responsive center-block"
+                     alt="{% trans 'Web-based automatic rack diagrams' %}">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="overview">
+      <div class="container">
+        <h2>{% trans "Device42: A Powerful CMDB with Auto Discovery, Application Dependency Mapping, DCIM, ITAM, IPAM, and more!" %}</h2>
+        <p>{% trans "Discoveries are run continuously on a schedule, automatically detecting changes to your infrastructure as they are made, keeping your CMDB up to date. Device42’s CMDB can track everything you own including IP and Non-IP based devices and assets, hardware, software, the inter-dependencies between them all, and even resource utilization!" %}</p>
+        <br />
+        <p><b>{% trans "Easily Document Everything from Buildings and Their Room Layouts, to Racks, to the Network and Power Cables That Connect to Them:" %}</b></p>
+        <ul class="checkmark-style">
+          <li>{% trans "Start at the building level, and click to jump to a completely customizable visual room layout" %}</li>
+          <li>{% trans "Click again to zoom into a rack to view photo-realistic devices in Device42’s racks, and hover your mouse for quick view of any CI details" %}</li>
+          <li>{% trans "Click any device to get detailed information, or move servers or patch panel connections with simple drag-n-drop." %}</li>
+        </ul>
+        <br />
+        <p><b>{% trans "Device42 Makes Cloud migrations easier, too!" %}</b></p>
+        <ul class="checkmark-style">
+          <li>{% trans "Start with a website and view dependencies from the top down, or a database and go from the bottom up to begin creating move groups" %}</li>
+          <li>{% trans "Use interdependency information in concert with resource utilization features to assist in right-sizing your move groups to your target cloud instances, making planning breeze" %}</li>
+          <li>{% trans "Color coded rack heatmaps illustrate available space (U’s), power, or temperature" %}</li>
+          <li>{% trans "RestFUL APIs or the UI can be used to quickly bring your patch panel (or any other) documentation under control." %}</li>
+        </ul>
+      </div>
+    </section>
+    <section id="auto_discovery">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-xs-6">
+                <a href="{% static 'img/sections/features/thumbs/network_discover_v3_thumb.jpg' %}" data-featherlight="image">
+                  <img src="{% static 'img/sections/features/thumbs/network_discover_v3_thumb.jpg'' %}"
+                       class="img-responsive full-block"
+                       alt="{% trans 'Auto Populate Objects' %}">
+                </a>
+                <br />
+                <a href="{% static 'img/sections/features/device_details.png' %}" data-featherlight="image">
+                    <img src="{% static 'img/sections/features/device_details.png' %}"
+                         class="img-responsive full-block"
+                         alt="{% trans 'Auto Populate Objects' %}">
+                </a>
+              </div>
+              <div class="col-xs-6">
+                <a href="{% static 'img/sections/features/add_password_autodiscovery.png' %}" data-featherlight="image">
+                    <img src="{% static 'img/sections/features/add_password_autodiscovery.png' %}"
+                         class="img-responsive full-block m-t-50"
+                         alt="{% trans 'Auto Password Auto Discovery' %}">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h2>{% trans "Device42 Auto Discovers Network Connected Hardware, Devices, Software, Services - And Also Imports Data From Any Existing System" %}</h2>
+            <ul class="checkmark-style">
+              <li>{% trans "Automatically discover all your network devices with SNMP [Firewalls, Switches, Load Balancers]" %}</li>
+              <li>{% trans "Integrations and universal bulk import tools can bring in data from spreadsheets, or natively from many third party softwares." %}</li>
+              <li>{% trans "Powerful RESTful APIs so you can use your favorite scripting platforms to create and keep your documentation up-to date." %}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="dcim">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>{% trans "DCIM Features Include Powerful Visuals with Drag and Drop and Tree Views" %}</h2>
+            <p>{% trans "Visual cable management makes recording and tracing cable connections as easy as point and click. Device42 makes searching easy, sorting simple (e.g. by IP), and provides for powerful filtering (e.g. by subnet)." %}</p>
+            <br />
+            <ul class="checkmark-style">
+              <li>{% trans "Quickly determine what MAC address is connected to a switch port, and easily see the associated device" %}</li>
+              <li>{% trans "View impacts from the application, device, rack, room or building level" %}</li>
+              <li>{% trans "Device trees expand to reveal nested branches that quickly show you all devices in a rack, all virtual instances contained within a physical server, or all the blades in a chassis!" %}</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-xs-6">
+                <a href="{% static 'img/sections/features/cable_management.png' %}" data-featherlight="image">
+                  <img src="{% static 'img/sections/features/cable_management.png' %}"
+                       class="img-responsive full-block"
+                       alt="{% trans 'Patch Panel Cable Management' %}">
+                </a>
+              </div>
+              <div class="col-xs-6">
+                <a href="{% static 'img/sections/features/room.png' %}" data-featherlight="image">
+                    <img src="{% static 'img/sections/features/room.png' %}"
+                         class="img-responsive full-block"
+                         alt="{% trans 'Room layouts with heat maps' %}">
+                </a>
+              </div>
+            </div>
+            <br />
+            <div class="row">
+              <div class="col-xs-6">
+                <a href="{% static 'img/sections/features/device_tree.png' %}" data-featherlight="image">
+                  <img src="{% static 'img/sections/features/thumbs/device_tree_thumb.png' %}"
+                       class="img-responsive full-block"
+                       alt="{% trans 'Device Tree' %}">
+                </a>
+              </div>
+              <div class="col-xs-6">
+                <a href="{% static 'img/sections/features/racks.png' %}" data-featherlight="image">
+                    <img src="{% static 'img/sections/features/racks.png' %}"
+                         class="img-responsive full-block"
+                         alt="{% trans 'Web-based automatic rack diagrams' %}">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="adm">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-xs-6">
+                <a href="{% static 'img/sections/features/application_dependency_mapping.png' %}" data-featherlight="image">
+                  <img src="{% static 'img/sections/features/application_dependency_mapping.png' %}"
+                       class="img-responsive full-block"
+                       alt="{% trans 'Application Dependency Mapping' %}">
+                </a>
+              </div>
+              <div class="col-xs-6">
+                <a href="{% static 'img/sections/features/app-map/automated_service_impact_discovery.png' %}" data-featherlight="image">
+                    <img src="{% static 'img/sections/features/app-map/automated_service_impact_discovery.png' %}"
+                         class="img-responsive height-block"
+                         alt="{% trans 'Automated Service Impact Discovery' %}">
+                </a>
+              </div>
+            </div>
+            <br />
+            <div class="row">
+              <div class="col-xs-6">
+                <a href="{% static 'img/sections/features/power_unit.png' %}" data-featherlight="image">
+                  <img src="{% static 'img/sections/features/power_unit.png' %}"
+                       class="img-responsive full-block"
+                       alt="{% trans 'Power Unit' %}">
+                </a>
+              </div>
+              <div class="col-xs-6">
+                <a href="{% static 'img/sections/features/impact.png' %}" data-featherlight="image">
+                    <img src="{% static 'img/sections/features/impact.png' %}"
+                         class="img-responsive full-block"
+                         alt="{% trans 'Impact Charts' %}">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h2 class="m-t-0">{% trans "Application Dependency Mapping (ADM)" %}</h2>
+            <p>{% trans "Dependency and impact visuals are auto-generated from user-defined Application components from the bottom up. Visualize your inter-dependency details right down to load balanced services.  Device42's Netflow collector is a powerful tool that adds another viewpoint for a deeper level of detail to dependency auto-discovery information from your environment." %}</p>
+            <br />
+            <ul class="checkmark-style">
+              <li>{% trans "See impact topologies from an application, device, rack, room or the building level" %}</li>
+              <li>{% trans "Use topology views to discover dependencies and when planning your migration" %}</li>
+              <li>{% trans "Find everything that needs to move as a unit, and rightsize the target cloud instance for your move group with Device42’s resource utilization features" %}</li>
+              <li>{% trans "Impress your boss with the visuals or we’ll take you out for beer on us (yes, really*)" %}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="security">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="m-t-0">{% trans "Secure Where It Matters Most: Granular Permissioning and Secure Password Management, Too." %}</h2>
+            <ul class="checkmark-style">
+              <li>{% trans "Multitenancy allows Device42 admins to define who can access the system and what they can do" %}</li>
+              <li>{% trans "Get as granular as desired with individual and/or group level permissions, defining exactly who can (or can’t) view, edit, add, or delete what resources" %}</li>
+              <li>{% trans "Device42 securely stores passwords, too. All are encrypted (AES256) always [yes, even during and in backups], and permissioning is as granular as you’d like it to be" %}</li>
+              <li>{% trans "All password access is audited." %}</li>
+            </ul>
+          </div>
+          <div class="col-md-6 m-t-50">
+            <div class="row">
+              <div class="col-xs-6">
+                <a href="{% static 'img/sections/features/role_based_access.png' %}" data-featherlight="image">
+                  <img src="{% static 'img/sections/features/thumbs/role_based_access_thumb.png' %}"
+                       class="img-responsive full-block"
+                       alt="{% trans 'Role Based Access' %}">
+                </a>
+              </div>
+              <div class="col-xs-6">
+                <a href="{% static 'img/sections/features/password.png' %}" data-featherlight="image">
+                  <img src="{% static 'img/sections/features/thumbs/pass_thumb.png' %}"
+                       class="img-responsive full-block"
+                       alt="{% trans 'Centralized Password Management' %}">
+                </a>
+              </div>
+            </div>
+            <br />
+            <div class="row">
+              <div class="col-xs-6 col-xs-offset-3">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="ipam">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-xs-6">
+                <a href="{% static 'img/sections/features/subnet_tree_ipam.png' %}" data-featherlight="image">
+                  <img src="{% static 'img/sections/features/subnet_tree_ipam.png' %}"
+                       class="img-responsive full-block"
+                       alt="{% trans 'Subnet Tree IPAM' %}">
+                </a>
+              </div>
+              <div class="col-xs-6">
+                <a href="{% static 'img/sections/features/DNS.png' %}" data-featherlight="image">
+                    <img src="{% static 'img/sections/features/thumbs/DNS_thumb.png' %}"
+                         class="img-responsive center-block"
+                         alt="{% trans 'DNS Integration' %}">
+                </a>
+              </div>
+            </div>
+            <br />
+            <div class="row">
+              <div class="col-xs-6">
+                <a href="{% static 'img/sections/features/export.png' %}" data-featherlight="image">
+                    <img src="{% static 'img/sections/features/thumbs/export_thumb.jpg' %}"
+                         class="img-responsive full-block"
+                         alt="{% trans 'Export Your Data' %}">
+                </a>
+              </div>
+              <div class="col-xs-6">
+                <a href="{% static 'img/sections/features/network_visualization.png' %}" data-featherlight="image">
+                  <img src="{% static 'img/sections/features/network_visualization.png' %}"
+                       class="img-responsive full-block"
+                       alt="{% trans 'Switch Port Visualization' %}">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h2>{% trans "Device42 Includes Everything You Need to do IPAM Right!" %}</h2>
+            <ul class="checkmark-style">
+              <li>{% trans "Device42’s IPAM includes full IPv6 support" %}</li>
+              <li>{% trans "Track detailed VLANs and subnets information" %}</li>
+              <li>{% trans "Subnet ranges can be automatically calculated based on mask, and IP validation is automatic, too" %}</li>
+              <li>{% trans "Define and see what IPs are mapped (NAT rules) through your firewalls / routers / load balancers etc" %}</li>
+              <li>{% trans "Simply allow domain transfers from your DNS servers and schedule the auto-discovery and now DNS records are searchable & sortable, too" %}</li>
+              <li>{% trans "Support for A, AAAA, CNAME, MX & PTR records." %}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="itam">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>{% trans "The ITAM Features You Care About" %}</h2>
+            <ul class="checkmark-style">
+              <li>{% trans "Easy generation and printing of QR codes to track and manage the complete lifecycle of your IT assets and inventory" %}</li>
+              <li>{% trans "More than just mobile-friendly, Device42’s QR codes can be scanned right from your mobile device" %}</li>
+              <li>{% trans "Add custom fields for any custom key pair values, and leverage all data via Device42’s powerful RESTful APIs." %}</li>
+            </ul>
+            <p>{% trans "NO vendor lock-in, either - export YOUR data, anytime! Create Excel formatted reports of your data, or generate CSV files with columns for each resource you choose." %}</p>
+            <p><b>{% trans "Device42’s built-in ITAM includes all of the following, and more!:" %}</b></p>
+            <ul class="checkmark-style">
+              <li>{% trans "Easily add any device or custom attribute" %}</li>
+              <li>{% trans "Add any columns [like name, serial, mac, asset number etc.]" %}</li>
+              <li>{% trans "Automatic Warranty Lookup and Tracking" %}</li>
+              <li>{% trans "Complete Asset Lifecycle Management" %}</li>
+              <li>{% trans "Powerful [nearly universal] import tools" %}</li>
+              <li>{% trans "Mobile Friendly!" %}</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-xs-12 m-t-50">
+                <a href="{% static 'img/sections/features/change_device.png' %}" data-featherlight="image">
+                  <img src="{% static 'img/sections/features/change_device.png' %}"
+                       class="img-responsive full-block"
+                       alt="{% trans 'Change Device' %}">
+                </a>
+              </div>
+            </div>
+            <br />
+            <div class="row">
+              <div class="col-xs-4">
+                <a href="{% static 'img/sections/features/asset_mgmt.png' %}" data-featherlight="image">
+                  <img src="{% static 'img/sections/features/thumbs/asset_mgmt_thumb.png' %}"
+                       class="img-responsive full-block"
+                       alt="{% trans 'Inventory Management' %}">
+                </a>
+              </div>
+              <div class="col-xs-4">
+                <a href="{% static 'img/sections/features/import.png' %}" data-featherlight="image">
+                    <img src="{% static 'img/sections/features/thumbs/import.png' %}"
+                         class="img-responsive full-block"
+                         alt="{% trans 'Easy Import' %}">
+                </a>
+              </div>
+              <div class="col-xs-4">
+                <a href="{% static 'img/sections/features/device_tree.png' %}" data-featherlight="image">
+                    <img src="{% static 'img/sections/features/thumbs/device_tree_thumb.png' %}"
+                         class="img-responsive full-block"
+                         alt="{% trans 'Device Tree' %}">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="integrations">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 m-t-30">
+            <div class="row">
+              <div class="col-xs-6">
+                <a href="{% static 'img/sections/features/feat_webhooks.png' %}" data-featherlight="image">
+                    <img src="{% static 'img/sections/features/feat_webhooks.png' %}"
+                         class="img-responsive center-block">
+                </a>
+              </div>
+              <div class="col-xs-6">
+                <a href="{% static 'img/sections/features/history.png' %}" data-featherlight="image">
+                    <img src="{% static 'img/sections/features/thumbs/history_thumb.png' %}"
+                         class="img-responsive full-block">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h2 class="m-t-0">{% trans "Out of the Box Integrations with Popular 3rd Party Software, Powerful RESTful APIs and Webhooks for Custom Integrations & Automations" %}</h2>
+            <p>{% trans "Open APIs to automate your IT Infrastructure management. Easily integrate with other systems using RESTful APIs, and leverage Device42’s Webhooks to provide any other application with near-real-time data updates. Sort, search and filter audit logs of all changes, too." %}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  <div class="container">
+    <div class="row foot-nav">
+      <div class="col-xs-6 text-left"></div>
+      <div class="col-xs-6 text-right" style="margin-bottom: 2em;">
+        <small class="text-uppercase text-muted">Next</small><br>
+        <a href="/features/cmdb/">{% trans "CMDB for the Cloud Era" %} <i class="fa fa-chevron-right"></i></a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

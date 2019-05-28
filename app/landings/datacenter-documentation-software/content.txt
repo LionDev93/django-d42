@@ -1,0 +1,34 @@
+[head.title]
+Datacenter documentation software with agent-less auto-discovery
+
+[head.description]
+Device42 is a comprehensive datacenter documentation suite powered by agent-less auto-discovery.
+
+[landing.title]
+Complete Datacenter Documentation Software
+
+[landing.content]
+
+Device42 is a complete datacenter documentation solution that helps you unify your datacenter by ensuring that configuration records are accurate, providing a clear view into your IT ecosystem at all times!
+
+- Agent-less auto-discoveries to keep all your configuration items (CIs) up-to-date.
+- Unify data and processes across teams, as well as departments, creating company-wide alignment.
+- Powerful visualizations facilitate smart business decisions, quickly demonstrating the impacts of different CIs on other CIs of interest.
+- Out-of-the-box integrations with ITSM tools like JIRA, ServiceNow, Cherwell and more offers enhanced value from existing investments.
+- RESTful APIs allow for easy integrations with both homegrown and external tools, automations, and more!
+
+
+[feature[1].title]
+Complete Auto Discovery for Your Entire Network
+[feature[1].content]
+Device42 auto-discovers and builds dependencies between physical, virtuals, cloud infrastructure and applications. No need for multiple uni-tasking tools anymore!
+
+[feature[2].title]
+Go Beyond Documentation with Powerful Reporting and Visualizations
+[feature[2].content]
+Device42 comes with pre-configured CIs, meaning no need to spend time or money on expensive implementation services. Powerful visualizations and reports offer the business intelligence you're looking for! 
+
+[feature[3].title]
+Real-time IT Infrastructure Data with Integrations
+[feature[3].content]
+Go beyond traditional CMDBs using our out-of-the-box integrations with JIRA, ServiceNow, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, and more! Use RESTful APIs in real-time to reduce MTTRs and make faster decisions across daily IT operations.

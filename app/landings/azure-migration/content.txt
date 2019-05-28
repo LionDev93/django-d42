@@ -1,0 +1,42 @@
+[head.title]
+Azure migrations tool uses dependency mappings and agent-less autodiscovery to make Azure migrations easier!
+
+[head.description]
+Device42 is the comprehensive Azure migration tool. Ensure Azure migrations go smoothly with autodiscovered application and service details and auto-generated dependency diagrams and maps!
+
+
+[landing.title]
+
+Comprehensive Azure Migration Tool
+
+[landing.image_format]
+png
+
+[landing.content]
+
+Device42 is an Azure migration tool that features a complete, automatically generated repository of your application, service, and device relationships and dependencies that help you optimize migrations to the Microsoft Azure cloud!
+
+- Agentless services and application discovery combines data obtained via Windows (WMI), Linux (SSH), and SNMP protocols
+- Gain a complete understanding of your existing environment for planning your Azure Migration - Automatically!
+- Get a list of all deployed applications, manufacturer, version, and all details
+- Get a detailed map of all services, running or not, users, protocols & ports
+- Easily view application to server and application to application mapping - without packet captures!
+- View comprehensive application dependency maps even for machines that can't be directly accessed, built out with Netflow data!
+
+
+[feature[1].title]
+Automatic Service Impact Discovery
+[feature[1].image_format]
+png
+[feature[1].content]
+Device42 makes Azure migration simple by auto-discovering everything from legacy to newer systems, highlighting dependencies between your physical, virtuals and application layers - All with a single tool!
+
+[feature[2].title]
+Application Dependency Flow with Lists and Charts
+[feature[2].content]
+Azure migrations go more smoothly when you know the impact of all of your applications. Easy to consume list pages and charts can be imported and manipulated in Visio, too!
+
+[feature[3].title]
+Powerful Visualizations, Reporting and APIs
+[feature[3].content]
+Easily build move groups, automate Azure migration tasks, or report on any the dependency data in your desired format, whether it is excel, CSV or a direct DB connection. Flexible APIs let you consume your data your way or integrate Device42 with other products, as well!

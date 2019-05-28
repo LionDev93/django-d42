@@ -1,0 +1,33 @@
+[head.title]
+Comprehensive SNMP discovery tool with agent-less auto-discovery
+
+[head.description]
+Device42 is a comprehensive SNMP discovery tool with agent-less auto-discovery. Scan your entire network in minutes!
+
+[landing.title]
+Quickly map your entire network with Device42's SNMP discovery
+
+[landing.content]
+
+Map your physical, virtual and cloud networks automatically with agentless SNMP discovery.  Device42 quickly and thoroughly discovers your entire infrastructure, automatically correlating the details
+
+- SNMP discovery quickly maps out your entire network!
+- SNMP (v1/v2c/v3) discovery support for network and server devices
+- SSH/WMI autodiscovery for Linux, *NIX, and Windows
+- Native hypervisor discovery uses APIs such as VMWare, Hyper-V, OpenStack, and more
+- Map your cloud vendor instances across Amazon Web Services, Azure, Google Compute Engine, etc.
+
+[feature[1].title]
+Automatic SNMP discovery for All Networks
+[feature[1].content]
+Device42's automatic SNMP discovery spans from legacy new, highlighting dependencies between your physical, virtual, and application layers. No need to use multiple tools to put together information anymore!
+
+[feature[2].title]
+Comprehensive data collection and auto-correlation
+[feature[2].content]
+SNMP discovery collects your complete inventory: serial #, hardware model, OS and build info, installed software, IPs and connections, services and mapping between services across machines. Data from various auto-discovery methods is automatically correlated!
+
+[feature[3].title]
+Real-time map of your IT infrastructure with integrations
+[feature[3].content]
+SNMP discovery includes out-of-the-box integrations with Puppet, Chef, JIRA, SCCM, Infoblox, Splunk, ServiceNow and more. Real-time SNMP discovery can reduce MTTR and help inform IT operations decision making, too!

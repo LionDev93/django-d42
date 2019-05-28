@@ -1,0 +1,36 @@
+[head.title]
+Comprehensive Application Toplogy Mapping Tool with Agentless Autodiscovery
+
+
+[head.description]
+Device42 is a comprehensive Application Toplogy Mapping Tool with Agentless Autodiscovery. Scan Your Entire IT Infrastructure in Minutes!
+
+
+[landing.title]
+Comprehensive Agentless Application Toplogy Mapping Tool
+
+
+[landing.content]
+The Device42 Application Toplogy Mapping Tool enables native hypervisor, SNMP, WMI, and SSH discovery, comprehensively identifying and tracking all of your physical and logical components, relationships, and interdependencies!
+
+- Complete host and guest discovery: hardware & software on Windows, Linux, and *NIX/BSD
+- Full network autodiscovery: switches, routers, firewalls, load balancers
+- Support for all common hypervisors: VMware, Hyper-V, Xen, KVM
+- Discover VLANs, subnets, and CDP / LLDP neighbors
+- Complete cloud and hypervisor discovery with custom app discovery schedules - Scan your entire IT infrastructure in minutes!
+
+
+[feature[1].title]
+Complete App Discovery, VM, and Cloud Discovery
+[feature[1].content]
+Device42's Application Toplogy Mapping Tool connects to your hypervisor and cloud platforms, collecting host and guest details. Network scans are scheduled & on-demand, support for all popular platforms!
+
+[feature[2].title]
+Load Balancer and Network Discovery
+[feature[2].content]
+The Device42 SNMP Application Toplogy Mapping Tool connects to your F5's and other load balancers, mapping dependencies between your physicals, virtuals, and applications.
+
+[feature[3].title]
+Comprehensive App Discovery with External Integrations, and REST APIs!
+[feature[3].content]
+Much more than just an Application Toplogy Mapping Tool, Device42 integrates with Puppet, Chef, SCCM, Infoblox, Splunk, ServiceNow and more. Bring in data discovered from other systems, and use REST APIs to fuel your automation!

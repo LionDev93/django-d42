@@ -1,0 +1,37 @@
+[head.title]
+Comprehensive hardware inventory tool with agent-less auto-discovery!
+
+[head.description]
+Device42 is a comprehensive hardware inventory tool with powerful agent-less hardware inventory auto-discovery!
+
+[landing.title]
+Hardware Inventory Tool with Autodiscovery
+[landing.image_format]
+png
+[landing.content]
+
+Device42 provides comprehensive IT software and hardware inventory management capabilities, including powerful inventory auto-discovery with fully configurable asset types. Easily accommodate any IT asset type within in your infrastructure!
+
+- Hardware inventory tools use agent-less auto-discovery to keep all your inventory up-to-date 
+- Optional agent-based hardware inventory tool included for remote, high-security, and/or disconnected assets
+- Hardware inventory tools support physical, virtual, and cloud infrastructure
+- Discover software and hardware inventory on any operating system: Windows, Linux, UNIX, Mac, or BSD
+- Device42's hardware inventory tools integrate with IT tools like JIRA, ServiceNow, Cherwell and more!
+- Know your support expiry and more with automatic contract management for various vendors.
+
+
+[feature[1].title]
+Complete Hardware Inventory Autodiscovery
+[feature[1].content]
+Device42's hardware inventory auto-discovery covers across legacy and newer systems alike, discovering hardware inventory and dependencies between physical, virtuals, cloud infrastructure and applications. No need to use multiple tools to put together information anymore.
+
+[feature[2].title]
+Support Entitlement Tracking and Management for Hardware Inventory
+[feature[2].content]
+Device42 helps you auto-discover your warranty information for your hardware inventory so you know when your support expires. Know when it's time to renew, or quickly find support information related to any piece of your hardware inventory!
+
+
+[feature[3].title]
+Real-time map of your IT infrastructure with Integrations
+[feature[3].content]
+Go beyond traditional hardware inventory tools using our out of box integrations with JIRA, Confluence, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, ServiceNow and many more! Use this real-time map to reduce your MTTR, and make faster business decisions!

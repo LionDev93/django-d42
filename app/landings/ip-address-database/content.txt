@@ -1,0 +1,34 @@
+[head.title]
+Comprehensive IP address database with agent-less auto-discovery
+
+[head.description]
+Device42 is a comprehensive IP address database tool with agent-less auto-discovery.
+
+[landing.title]
+Comprehensive IP address database
+
+[landing.content]
+
+The Device42 IP address database provides an easy to use console for centralized IP visibility and control.
+	
+- IPv4/IPv6 IP address database and management
+- Complete SSH/WMI/SNMP (v1/v2c/v3) network and server autodiscovery
+- Support for overlapping IP ranges and nested subnet management
+- Auto-assignment of IPs to any device using APIs and/or integrations
+- Automatic correlation of and updates to autodiscovered data!
+- ...and much, much more!
+
+[feature[1].title]
+Complete autodiscovery across networks and IP address database
+[feature[1].content]
+Device42 autodiscovers across legacy and newer systems, highlighting dependencies between physical, virtuals and applications. Autodiscovery populates your IP address database with subnets, VLANs, network inventory, switch port mappings.
+
+[feature[2].title]
+Overlapping IP ranges with visualizations
+[feature[2].content]
+Re-use IPs across different network segments? Device42 handles overlapping IP ranges! Subnet tree and usage charts provide powerful visualization and better operational insight.
+
+[feature[3].title]
+Automate IP address database functions with Device42's RESTful APIs and integrations
+[feature[3].content]
+Take advantage of out-of-the-box integrations: Ansible, Foreman, Puppet, Chef, SCCM, Infoblox, JIRA, ServiceNow, vRealize, and many more! Automatically assign IP's in your provisioning and orchestration workflows.

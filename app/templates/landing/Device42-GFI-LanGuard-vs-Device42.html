@@ -1,0 +1,277 @@
+{% extends "base/_base-landing.html" %}
+{% load i18n static %}
+{% block meta %}
+	<meta name="description" content="{% trans 'Device42 GFI LanGuard VS Device42' %}"/>
+{% endblock %}
+
+{% block styles %}
+    <style>
+      p.lead {
+        font-family: 'Roboto Condensed', sans-serif !important;
+        text-align: center;
+        font-size: 25px !important;
+        margin: 0px !important;
+      }
+      .center-read-label {
+        text-align: center;
+        font-size: 35px;
+        font-weight: 500 !important;
+        margin: 10px 0px;
+        font-family: 'Roboto Condensed', sans-serif !important;
+        color: #2e2f2f;
+      }
+      p.text-strong {
+        color: #2e2f2f;
+      }
+      .landing-section p {
+        font-size: 22px;
+        font-family: 'Roboto Condensed', sans-serif !important;
+      }
+      .table-responsive {
+        max-width: 800px;
+        margin: auto;
+      }
+      .table-responsive table {
+        margin-bottom : 0px
+      }
+      .feature-bottom-label {
+        font-size: 15px !important;
+        color: #22a3e2;
+        font-weight: 500 !important;
+      }
+      .checkmark-style li:before {
+          content: "\2714";
+          margin-left: -24px;
+          margin-right: 12px;
+          position: relative;
+          vertical-align: text-top;
+          display: inline-block;
+          font-weight: 100;
+          font-size: 15px;
+          color: #22a3df;
+      }
+      .sub-heading {
+        color: #35ade4;
+        font-family: 'Roboto Condensed', sans-serif !important;
+        font-size: 35px;
+      }
+      p.lead span {
+        font-size: 18px;font-style: italic;
+      }
+    </style>
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript">
+    $(function() {
+       $("[data-toggle='tooltip']").tooltip();
+    });
+    </script>
+{% endblock %}
+{% block title %}{% trans "Device42 vs. GFI LanGuard" %}{% endblock %}
+
+{% block landingHeadingText %}{% trans "Device42 vs. GFI LanGuard" %}{% endblock %}
+
+{% block landingLeadText %}{% trans "Looking for GFI LanGuard alternatives? Or for a powerful CMDB that integrates with your ITSM system?" %}{% endblock %}
+
+{% block landingfeature %}
+<p class="center-read-label">{% trans "Device42 is the CMDB you’ve been looking for." %}</p>
+<hr>
+<section class="landing-section">
+  <p class="lead" style="text-align: left;">{% trans "GFI LanGuard offers a framework that is mainly centered around patch management & deployment with some asset inventory functionality." %}</p>
+  <br>
+  <p class="lead text-strong" style="text-align: left;">{% trans "Device42 offers a full-fledged CMDB product with ‘True’ Auto-Discovery <span>(discovery of complete, actionable data)</span>, comprehensive Network and IT asset management (ITAM) capabilities PLUS:" %}</p>
+</section>
+<section class="row landing-section">
+  <div class="col-md-5">
+    <ul class="checkmark-style">
+      <li>{% trans "Powerful agentless auto-discovery" %}</li>
+      <li>{% trans "A full CMDB with configurable asset types" %}</li>
+      <li>{% trans "DCIM functionality" %}</li>
+      <li>{% trans "Resource Utilization" %}</li>
+      <li>{% trans "RESTful APIs and Webhooks" %}</li>
+      <li>{% trans "Seamless integration with your ITSM suite" %}</li>
+      <li>{% trans "A holistic approach to IT infrastructure: matching Device42’s single-product functionality can’t be done with any combination of GFI Languard products" %}</li>
+    </ul>
+  </div>
+  <div class="col-md-7">
+    <a href="{% static 'img/landing/solution_components.png' %}"
+                   data-featherlight="image">
+      <img src="{% static 'img/landing/solution_components.png' %}" class="img-responsive center-block" alt="{% trans 'Solution Components' %}">
+    </a>
+  </div>
+</section>
+{% endblock %}
+
+{% block maincontent %}
+<hr>
+  <section class="row flat-top landing-section">
+    <div class="col-sm-10 col-sm-offset-1">
+        <p class="text-center text-strong" style="color: #22a3df;">{% trans "The table below highlights similarities and differences between Device42 and GFI LanGuard:" %}</p>
+        <div class="table-responsive">
+            <table class="table table-condensed table-hover d42-sw-compare">
+            <thead>
+              <tr>
+                <th class="table-title"><p class="dark-blue text-left alt-text" style="margin:0;font-size:24px;">{% trans "Features" %}</p></th>
+                <th>{% trans "Device42" %}</th>
+                <th>{% trans "GFI LanGuard" %}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="comp-feature">{% trans "Discovery Included in Core product" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "CMDB" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "ITAM" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "IPAM" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "DCIM" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Password Management" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Cloud and On-Premise Option" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-exclamation-triangle" data-toggle="tooltip" data-placement="top" title="GFI Cloud® only appears to be available for SMB's."></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Agentless Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-exclamation-triangle" data-toggle="tooltip" data-placement="top" title="Agents appear to be required for most product functionality, but can be remotely deployed."></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Optional Agent-Based Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Automatic Service/Application Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><a href="http://manuals.gfi.com/en/languard/content/acm/topics/scanning_your_network/available_scanning_profiles.htm" data-toggle="tooltip" data-placement="top" title="Discovery is limited to simple Application enumeration [No services], and patch levels and vulnerabilities are assessed only for software that is on the GFI-maintained list.">
+                  <i class="fa fa-2x fa-exclamation-triangle"></i></a></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Resource Utilization" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Native Windows WMI & *nix (ssh) Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "SNMP Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><a href="http://manuals.gfi.com/en/languard/content/acm/topics/installing_gfi_languard/system_requirements.htm#Agent_and_Agent-less_computers" data-toggle="tooltip" data-placement="top" title="SNMP v1 and v2c only (no v3 or SNMP over TLS)">
+                  <i class="fa fa-2x fa-exclamation-triangle"></i></a></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Native Load Balancer Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Native VMware Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Native Other Virtualization (Hyper-V, Xen, KVM, LXC)" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><a href="https://www.gfi.com/products-and-solutions/network-security-solutions/gfi-languard/specifications/support-for-virtual-environments" data-toggle="tooltip" data-placement="top" title='"Supports and runs on, but doesn`t natively discover these platforms"'>
+                  <i class="fa fa-2x fa-exclamation-triangle"></i></a></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Native Cloud Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Netflow Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "RESTful APIs" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Webhooks to drive automation" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="feature-bottom-label">{% trans "*All feature data deduced from GFI Software’s website and available marketing materials. Please let us know if something isn’t right and we’ll gladly update it." %}</p>
+    </div>
+</section>
+
+  <section class="row landing-section" style="padding-bottom: 0px;">
+    <div class="col-md-12">
+      <h2 class="sub-heading">{% trans "Device42’s Comprehensive Solution" %}</h2>
+      <p class="alt-font">{% trans 'No combination of products from GFI Software can currently match the comprehensive functionality Device42’s CMDB with ADM, DCIM, ITAM, and IPAM. Their LanGuard product is mainly geared at vulnerability and patch management, and only includes a rudimentary CMDB with no ability to discover and record interdependencies. A separately installed web-based management and reporting dashboard is required to view and manage data from multiple sites.  End-users report setup and configuration of the product are also extremely complex, even for the simplest deployments.' %}</p>
+      <br>
+      <p class="alt-font" style="margin: 0px;">{% trans 'In contrast, Device42 is fully integrated with no standalone modules (though some components are licensed separately). Device42 is truly a one-stop single source of truth because it includes a fully integrated suite of enterprise DCIM features:' %}</p>
+    </div>
+  </section>
+
+  <section class="row landing-section" style="padding-top: 0px;">
+    <div class="col-md-3">
+      <ul class="bullet-blue">
+        <li>{% trans "A CMDB" %}</li>
+        <li>{% trans "IPAM" %}</li>
+        <li>{% trans "Password Management" %}</li>
+        <li>{% trans "Certificate Management" %}</li>
+        <li>{% trans "Multi-Tenancy" %}</li>
+        <li>{% trans "Capacity Planning" %}</li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <ul class="bullet-blue">
+        <li>{% trans "Power Monitoring & Control" %}</li>
+        <li>{% trans "Inventory Lifecycle Management" %}</li>
+        <li>{% trans "Automatic Rack Diagrams" %}</li>
+        <li>{% trans "Cable Management" %}</li>
+        <li>{% trans "Drag-and-drop Room Layouts" %}</li>
+        <li>{% trans "Full Audit Trails" %}</li>
+      </ul>
+    </div>
+    <div class="col-md-5">
+      <ul class="bullet-blue">
+        <li>{% trans "Application Dependency Mapping (ADM)" %}</li>
+        <li>{% trans "Purchase Tracking" %}</li>
+        <li>{% trans "Asset Transfers and Lifecycle Tracking" %}</li>
+        <li>{% trans "Spreadsheet / CSV Import of CI’s and Attributes" %}</li>
+        <li>{% trans "QR / Barcode Generation" %}</li>
+        <li>{% trans "“What-if” scenarios" %}</li>
+      </ul>
+    </div>
+</section>
+<section class="landing-section">
+  <p style="font-style: italic;">{% trans "Device42’s Advanced Visualizations, powerful, customizable reporting facilities, and advanced, well documented RESTful APIs work together to provide a second-to-none data management experience. Device42 will help to make your data either easier to see and understand, faster to manipulate, and/or more convenient to quantify - at a price that will surprise you." %}</p>
+</section>
+{% include 'partials/try-free-callout.html' %}
+{% endblock %}
+

@@ -1,0 +1,66 @@
+    $total_width: 388;
+    $total_height: 388;
+
+        .sprite-atlassiancom {
+        background-size: (($total_width / 128) * 100%) (($total_height / 128) * 100%);
+        @include image('sprites/sprite-customers.png');
+        background-position: ((0 / ($total_width - 128)) * -100%) ((0 / ($total_height - 128)) * -100%);
+        width: 128px;
+        height: 128px;
+        }
+        .sprite-concurcom {
+        background-size: (($total_width / 128) * 100%) (($total_height / 128) * 100%);
+        @include image('sprites/sprite-customers.png');
+        background-position: ((-130 / ($total_width - 128)) * -100%) ((0 / ($total_height - 128)) * -100%);
+        width: 128px;
+        height: 128px;
+        }
+        .sprite-homeawaycom {
+        background-size: (($total_width / 128) * 100%) (($total_height / 128) * 100%);
+        @include image('sprites/sprite-customers.png');
+        background-position: ((0 / ($total_width - 128)) * -100%) ((-130 / ($total_height - 128)) * -100%);
+        width: 128px;
+        height: 128px;
+        }
+        .sprite-livingsocialcom {
+        background-size: (($total_width / 128) * 100%) (($total_height / 128) * 100%);
+        @include image('sprites/sprite-customers.png');
+        background-position: ((-130 / ($total_width - 128)) * -100%) ((-130 / ($total_height - 128)) * -100%);
+        width: 128px;
+        height: 128px;
+        }
+        .sprite-optuscomau {
+        background-size: (($total_width / 128) * 100%) (($total_height / 128) * 100%);
+        @include image('sprites/sprite-customers.png');
+        background-position: ((-260 / ($total_width - 128)) * -100%) ((0 / ($total_height - 128)) * -100%);
+        width: 128px;
+        height: 128px;
+        }
+        .sprite-singtelcom {
+        background-size: (($total_width / 128) * 100%) (($total_height / 128) * 100%);
+        @include image('sprites/sprite-customers.png');
+        background-position: ((-260 / ($total_width - 128)) * -100%) ((-130 / ($total_height - 128)) * -100%);
+        width: 128px;
+        height: 128px;
+        }
+        .sprite-sprintcom {
+        background-size: (($total_width / 128) * 100%) (($total_height / 128) * 100%);
+        @include image('sprites/sprite-customers.png');
+        background-position: ((0 / ($total_width - 128)) * -100%) ((-260 / ($total_height - 128)) * -100%);
+        width: 128px;
+        height: 128px;
+        }
+        .sprite-ucsbedu {
+        background-size: (($total_width / 128) * 100%) (($total_height / 128) * 100%);
+        @include image('sprites/sprite-customers.png');
+        background-position: ((-130 / ($total_width - 128)) * -100%) ((-260 / ($total_height - 128)) * -100%);
+        width: 128px;
+        height: 128px;
+        }
+        .sprite-wdccom {
+        background-size: (($total_width / 128) * 100%) (($total_height / 128) * 100%);
+        @include image('sprites/sprite-customers.png');
+        background-position: ((-260 / ($total_width - 128)) * -100%) ((-260 / ($total_height - 128)) * -100%);
+        width: 128px;
+        height: 128px;
+        }

@@ -1,0 +1,171 @@
+{% extends "base/_base-landing.html" %}
+{% load i18n static %}
+{% block meta %}
+	<meta name="description" content="{% trans 'Device42 is a powerful IP Address management solution that integrates IT Infrastructure management.' %}"/>
+{% endblock %}
+
+{% block styles %}
+    <style>
+      .center-read-label {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500 !important;
+        margin: 30px 0px;
+        font-family: 'Roboto Condensed', sans-serif !important;
+      }
+      .landing-section p {
+        font-size: 24px;
+        font-family: 'Roboto Condensed', sans-serif !important;
+      }
+    </style>
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript">
+    $(function() {
+       $("[data-toggle='tooltip']").tooltip();
+    });
+    </script>
+{% endblock %}
+{% block title %}{% trans "CA CMDB w/ Service Management vs. Device42" %}{% endblock %}
+
+{% block landingHeadingText %}{% trans "CA CMDB w/ Service Management vs. Device42" %}{% endblock %}
+
+{% block landingLeadText %}{% trans "Looking for an alternative to CA CMDB/Service Management ITSM tools, or for a CMDB that integrates with your favorite ITSM suite?" %}{% endblock %}
+
+{% block landingfeature %}
+<p class="center-read-label">{% trans "Read below to find out why Device42 is the right choice!" %}</p>
+<hr>
+<section class="row landing-section">
+  <p class="text-center"><strong>{% trans "Device42 offers a full-fledged CMDB product with Auto-Discovery that natively and seamlessly integrates with your favorite ITSM tools" %}</strong> {% trans "[at no extra cost]." %}</p>
+  <br>
+  <p>{% trans "On other hand with CA service desk, you can build a CMDB - but it generally involves professional services and many man hours to configure a CMDB. With Device42, you get a plug-n-play CMDB that is ready to go and can be extended further to manage custom attributes as per your environment." %}</p>
+  <br>
+  <p>{% trans "You can also integrate Device42 with many other products with our wide selection of FREE, pre-built integrations: Atlassian’s JIRA, Servicenow,  Confluence, and JIRA Service Desk for ITSM, automation tools like Ansible and Puppet, SIEM tools like Splunk and Logstash, as well as many more -- and, unlike the CA Software’s offering," %} <strong>{% trans "Device42’s Core product includes autodiscovery." %}</strong></p>
+</section>
+
+<section class="row flat-top flat-bottom">
+    <div class="col-xs-12">
+        <h4 class="lead-small text-muted" style="font-weight: bold;font-style:italic;">{% trans "The table below outlines similarities and differences between the CA Service Management and Device42" %}:</h4>
+    </div>
+</section>
+
+<section class="row flat-top landing-section">
+    <div class="col-sm-10 col-sm-offset-1">
+
+        <div class="table-responsive">
+            <table class="table table-condensed table-hover d42-sw-compare">
+            <thead>
+              <tr>
+                <th class="table-title"><p class="dark-blue text-left alt-text" style="margin:0;font-size:24px;">{% trans "Features" %}</p></th>
+                <th>{% trans "Device42" %}</th>
+                <th>{% trans "CA Service Management®" %}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="comp-feature">{% trans "Integrated Solution" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><a href="https://www.ca.com/us/products/product-list.html?intcmp=headernav" data-toggle="tooltip" data-placement="top" title="CA requires purchase of a separate product for nearly every function they offer. In having so many products, they don't specialize in any one area, either. "><i class="fa fa-2x fa-times"></i></a></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Agentless Auto Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Optional Agent-Based Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Resource Utilization" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Cloud Option" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "On-Premise Option" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "CMDB (Configuration Management Database)" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "DCIM (Datacenter Infrastructure Management)" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "IPAM (IP Address Management)" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "ITSM (IT Service Management [trouble ticketing])" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Automatic Service/Application Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Native Public/Private Cloud Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check" data-toggle="tooltip" data-placement="top" title="{% trans 'Device42 is a single solution of comprehensive, unified capabilities that makes the daily management IT infrastructure possible using a centralized solution and a single version of the “truth' %}.”"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Netflow Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check" data-toggle="tooltip" data-placement="top" title="{% trans 'Device42 is a single solution of comprehensive, unified capabilities that makes the daily management IT infrastructure possible using a centralized solution and a single version of the “truth' %}.”"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "RESTful APIs" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Orchestrate Automation" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Webhooks" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+</section>
+
+<section class="row landing-section">
+    <div class="col-xs-12">
+      <h3 class="sub-heading">{% trans "Device42 advantages:" %}</h3>
+      <p class="alt-font">{% trans 'As can be seen in the table above, Device42 (D42) offers a number of significant advantages vs. CA’s Service Management:' %}</p>
+      <ul class="lead-small bullet-blue light-weight">
+        <li>{% trans "Integrated Product:  D42 was designed from the ground-up to be a single integrated tool with a CMDB, DCIM, auto discovery and more; everything you need to understand your infrastructure - and nothing you don’t." %}</li>
+        <li>{% trans "Optional Agent-Based Discovery:  This is a critical capability if discovery must occur in sensitive network segments." %}</li>
+        <li>{% trans "Auto Discovery:  Device42 automatically discovers devices, installed software, services, and dependencies. CA S.M. doesn’t include any discovery. " %}</li>
+        <li>{% trans "Range of Discovery Platforms:  D42 discovers load balancers, and components located in a multitude of virtualization platforms, and public and private cloud platforms" %}</li>
+        <li>{% trans "Resource Utilization: Wheather migrating to a new datacenter, public or private cloud, or other digital transformation, resource utilization provides the utilization insights you need to right-size your migration targets to their workloads" %}</li>
+        <li>{% trans "Webhooks:  Any event that generates an audit log can also trigger a webhook, orchestrating automation across your infrastructure" %}</li>
+        <li>{% trans "SIEM Integrations: Discovered data can automatically populate logging platforms and other tools" %}</li>
+        <li>{% trans "Pricing:  CA’s pricing isn’t transparent, and isn’t listed on their website like Device42 pricing" %}</li>
+      </ul>
+      <hr>
+      <p style="font-weight: 500;">{% trans 'Try Device42’s Discovery for yourself. Experience the power of Device42’s holistic view of your IT Infrastructure, which includes a single, comprehensive package that can manage your Data Center (DCIM), IP addresses (IPAM) and passwords in addition to ITAM (IT asset management) and a CMDB, <span style="font-style: italic;">all at a price that will surprise you.</span>' %}</p>
+    </div>
+</section>
+{% endblock %}
+

@@ -1,0 +1,127 @@
+{% extends "base/_base-landing.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'The Perfect JIRA Inventory Plugin CMDB' %}"/>
+{% endblock %}
+{% block title %}{% trans "The Perfect JIRA Inventory Plugin CMDB" %}{% endblock %}
+
+{% block styles %}
+    <style>
+      p.lead span {
+        font-size: 18px;
+      }
+    </style>
+{% endblock %}
+
+{% block script %}
+    <script type="text/javascript">
+        $(function () {
+            $("i.fa").tooltip();
+        });
+    </script>
+{% endblock %}
+
+
+{% block landingHeadingText %}{% trans "The Perfect JIRA Inventory Plugin CMDB" %}{% endblock %}
+{% block landingfeature %}
+    <section class="row">
+        <div class="col-xs-12 col-sm-8">
+          <p class="lead">{% trans "Sync your configuration items (CIs) from Device42 <span>[devices, racks, PDUs, parts, etc.]</span> to JIRA or JIRA Service Desk with the Device42 JIRA Inventory Plugin. When creating a new issue, service ticket, or custom workflow, you can choose CIs from Device42 to associate.<br>The CIs are added as custom fields in JIRA, and can also be added to list views and edit pages, and also are searchable." %}</p>
+        </div>
+        <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0">
+            <p class="infobox lead-small bg-alt text-dark-blue font-stack-roboto">
+                <em>{% trans "If you are looking for an integrated JIRA Inventory Plugin that adds a CMDB to your JIRA or JIRA Service Desk applications, Device42 is the perfect solution!" %}</em>
+            </p>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block maincontent %}
+    <section>
+        <p class="h2 lead">{% trans "If you are in the market for a CMDB, there are several reasons to choose Device42 as your JIRA Inventory Plugin:" %}</p>
+        <div class="media">
+            <div class="media-left">
+                <i class="fa fa-check-square-o fa-2x"></i>
+            </div>
+            <div class="media-body">
+                <p class="">{% trans "You don’t need to spend a lot of time designing your CI’s and their interrelationships. Device42 offers pre-defined CIs and relationships that will work “out of the box” for most companies, and also offers extensive customization features where needed." %}</p>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-left">
+                <i class="fa fa-check-square-o fa-2x"></i>
+            </div>
+            <div class="media-body">
+                <p class="">{% trans "Device42 offers strong auto discovery features that you can use to populate most of the CMDB automatically." %}</p>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-left">
+                <i class="fa fa-check-square-o fa-2x"></i>
+            </div>
+            <div class="media-body">
+                <p class="">{% trans "Great visualizations including application dependency maps, room and rack layout views, network topology maps, power and IP connectivity, powerful reporting, plus the ability to product custom automated JIRA workflows are all included, and more." %}</p>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-left">
+                <i class="fa fa-check-square-o fa-2x"></i>
+            </div>
+            <div class="media-body">
+                <p class="">{% trans "And probably most important: Device42 provides a single source of truth for all of IT because it is not just a CMDB. It’s also a full DCIM tool, a full IPAM tool, and also offers power and network cable management (both with great visualizations), and a full password manager, too - and we’re always adding new features!" %}</p>
+            </div>
+        </div>
+    </section>
+
+    <p class="lead vert-offset-top-1 flat-bottom">{% trans "The following are some of the features of the Device42 JIRA Inventory Plugin:" %}</p>
+    <section class="row padded">
+        <div class="col-sm-8">
+            <h3 class="sub-heading">{% trans "Link CMDB items to issues in JIRA" %}</h3>
+            <p>{% trans "Once Device42 is synced with JIRA, users can select any of the CIs to associate with issues in JIRA. Currently the sync encompasses devices, power units, parts, and racks. When new issues are created in JIRA, users can select the CIs from a drop-down list or search for CIs by name to refine the selection list." %}</p>
+        </div>
+        <div class="col-sm-4">
+            <img src="{% static 'img/landing/Create-JIRA-issue.png' %}" class="img-responsive img-xs-restrict"
+                 alt="{% trans 'JIRA Integration' %}"/>
+        </div>
+    </section>
+
+    <section class="row padded">
+        <div class="col-sm-6">
+            <img src="{% static 'img/landing/JIRA-Test-Ticket.png' %}" class="img-responsive img-xs-restrict"
+                 alt="{% trans 'JIRA Test Ticket' %}"/>
+        </div>
+        <div class="col-sm-6">
+            <br><br>
+            <h3 class="sub-heading">{% trans "Create Custom JIRA Workflows with Device42 Custom Fields and Powerful Conditional, Validator, and POST Functions" %}</h3>
+            <p>{% trans "Mix and match to create custom workflows and powerful automation!" %}</p>
+            <p>{% trans "Validate against Device42 Custom Fields and/or trigger conditions based upon data entered into them. You can also combine Conditions and Validators as you see fit, while also filtering both the data your Custom Field(s) make available to the user, as well as what *can be entered* into the fields … and that’s not all … workflow transitions can be configured to send a POST to Device42, currently able to request the next available IP in a specified subnet." %}</p>
+        </div>
+    </section>
+
+    {% include 'partials/try-free-callout.html' %}
+
+    <section class="row padded">
+        <div class="col-sm-6">
+            <h3 class="sub-heading">{% trans "View CI details from JIRA issues" %}</h3>
+            <p>{% trans "Once the Device42 - JIRA connection is established, easily see details from Device42 (such as serial #, asset #, and hardware & model numbers) for that CI in JIRA, including associated rack info. " %}</p>
+            <p>{% trans "Conversely, the CIs in JIRA can be linked directly to Device42 page for that Configuration Item, enabling easy viewing or editing of the device or rack details in Device42." %}</p>
+        </div>
+        <div class="col-sm-6">
+            <img src="{% static 'img/landing/Device42_CI_details_in_JIRA.png' %}" class="img-responsive img-thumbnail"
+                 alt="{% trans 'CI Details in JIRA' %}"/>
+        </div>
+
+    </section>
+    <section class="row image-left-4x8 padded">
+        <div class="col-sm-5">
+            <img src="{% static 'img/landing/JIRA-search-by-CI.png' %}" class="img-responsive img-thumbnail"
+                 alt="{% trans 'CI Details in JIRA' %}"/>
+        </div>
+        <div class="col-sm-7">
+            <h3 class="sub-heading">{% trans "Search JIRA issues by CI names" %}</h3>
+            <p>{% trans "Search for issues using the name of the CIs (as synced from the Device42 instance), and quickly locate all JIRA issues that are associated with a particular device, power unit, part, or rack." %}</p>
+        </div>
+    </section>
+{% endblock %}

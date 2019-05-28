@@ -1,0 +1,87 @@
+{% extends "base/_base.html" %}
+{% load i18n static %}
+{% block title %}{% trans "Register For Webinar" %}{% endblock %}
+{% block og_meta %}
+    <meta property="og:title" content="Map your infrastructure in minutes – from physical to virtual to the cloud">
+    <meta property="og:description" content="Map your infrastructure in minutes – from physical to virtual to the cloud">
+{% endblock %}
+{% block meta %}
+    <meta name="description" content="Map your infrastructure in minutes – from physical to virtual to the cloud">
+    <meta name="keywords" content="register, webinar">
+{% endblock %}
+
+{% block styles %}
+<style>
+    body{
+    }
+    .content {
+      text-align: center;
+      padding-top: 20px;
+
+    }
+    .time-available {
+      margin-bottom: 40px;
+    }
+    .time-available img {
+      width: 100px;
+      display: inline-block;
+    }
+    .time-available .time{
+      display: inline-block;
+      padding-top: 10px;
+      vertical-align: middle;
+    }
+    .time-available .time p{
+      font-size: 24px;
+      font-weight: 700;
+      color: #246e90;
+      margin: 0;
+    }
+    .main-content {
+      background-color: #f2f2f2;
+    }
+    @media screen and (min-width: 768px){
+      .content .confirm_desc{
+        font-size: 24px;
+      }
+    }
+    @media screen and (max-width: 768px){
+      .content .confirm_desc{
+        font-size: 18px;
+        margin-top: 20px;
+      }
+    }
+
+</style>
+{% endblock %}
+
+{% block body %}
+      <div class="row">
+        <div class="col-md-12 content">
+          <img src="{% static 'img/landing/circle_check.png' %}" width="120"/>
+          <h1>Registration complete!</h1>
+          <p class="confirm_desc">You'll receive an email confirmation with <br>instructions on how to gain access to <br>the webinar.</p>
+          <div class="time-available">
+            <img src="{% static 'img/landing/calendar.png' %}" />
+            <div class="time">
+              <p>Tuesday, December 5th</p>
+              <p>10 am EST</p>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock %}
+
+{% block body_scripts %}
+<script type="text/javascript">
+    videoSrc = 'https://www.youtube.com/embed/X9zirQ-HZEw?rel=0';
+
+    $("#videoModal").on('show.bs.modal', function() {
+        $("#videoModal iframe").attr('src', videoSrc + '&amp;autoplay=1');
+    });
+
+    $("#videoModal").on('hidden.bs.modal', function() {
+        $("#videoModal iframe").removeAttr('src');
+    });
+</script>
+{% endblock %}

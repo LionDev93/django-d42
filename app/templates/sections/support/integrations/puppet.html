@@ -1,0 +1,113 @@
+{% load i18n static %}
+<h2>{% trans "Device42 Integrates with Puppet." %}</h2>
+<h4 class="prelist">{% trans "Quickly and Easily Sync Puppet Facts to Device42!" %}</h4>
+<h3>{% trans "The Device42 / Puppet Integration can gather any of the following CI attributes from your Puppet master, and custom attributes, too:" %}</h3>
+<section class="row">
+    <div class="col-xs-12 col-sm-3">
+        <ul class="checklist font-stack-roboto">
+            <li>{% trans "Node Name" %}</li>
+            <li>{% trans "Node Type" %}</li>
+            <li>{% trans "Virtual or Physical" %}</li>
+            <li>{% trans "Virtual Subtype" %}</li>
+        </ul>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+        <ul class="checklist font-stack-roboto">
+            <li>{% trans "Operating System and Version" %}</li>
+            <li>{% trans "CPU Count (Physical)" %}</li>
+            <li>{% trans "CPU Core Count" %}</li>
+            <li>{% trans "CPU Power" %}</li>
+        </ul>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+        <ul class="checklist font-stack-roboto">
+            <li>{% trans "Memory Details (RAM)" %}</li>
+            <li>{% trans "HDD Count" %}</li>
+            <li>{% trans "HDD Size" %}</li>
+            <li>{% trans "Puppet node ID (if Puppetmaster)" %}</li>
+        </ul>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+        <ul class="checklist font-stack-roboto">
+            <li>{% trans "MAC Address" %}</li>
+            <li>{% trans "Customer" %}</li>
+            <li>{% trans "Service Level" %}</li>
+            <li>{% trans "Notes" %}</li>
+        </ul>
+    </div>
+</section>
+<div class="row image-right-8x4 {% if vcenter %}is-table-row{% endif %} is-table-row">
+    <div class="col-sm-4">
+        <a href="{% static 'img/sections/support/integrations/puppet/puppet-01.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/puppet/puppet-01.png' %}"
+                 class="img-responsive center-block img-border" alt="{% trans 'Puppet Integration' %}">
+        </a>
+        <br>
+        <a href="{% static 'img/sections/support/integrations/puppet/puppet-03.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/puppet/puppet-03.png' %}"
+                 class="img-responsive center-block img-border" alt="{% trans 'Puppet Integration' %}">
+        </a>
+    </div>
+    <div class="col-sm-8">
+        <h3>{% trans "Leverage Device42 as a Puppet ENC (External Node Classifier) for Two Way Data Sync!" %}</h3>
+        <p><b>{% trans "Control your Puppet node’s classifications right within Device42." %}</b></p>
+        <p>{% trans 'Device42 itself can also be leveraged as a <a href="/blog/2017/10/using-device42-for-puppet-external-node-classification-enc/">Puppet ENC</a> (external node classifier). Teaming ENC’s with the Device42-Puppet integration, you can now both populate Device42 with data from your Puppet master, and at the same time control node classifications with the Puppet ENC Integration from Device42!' %}</p>
+        <p>{% trans "With Device42 & Puppet, you’ll never miss a beat -- Any changes that are made to your infrastructure are reflected immediately within Device42, and any changes to node classifications are pushed back out to Puppet!" %}</p>
+        <p>{% trans "Each time Puppet performs a configuration task on its nodes, Puppet will also check for and apply the relevant classification as stored by the Device42 ENC custom field. Device42 can also be configured to sync any changes that were made by Puppet to the CIs as part of that job." %}</p>
+        <p>{% trans "Visualizations are spot on, reports are accurate, and inventory counts are always up-to-date. With Puppet & Device42, this can be an easily achieved reality. You’ll impress your boss ... and your boss’s boss!" %}</p>
+    </div>
+</div>
+<div class="row image-left-4x8 {% if vcenter %}is-table-row{% endif %} is-table-row">
+    <div class="col-sm-4">
+        <a href="{% static 'img/sections/support/integrations/puppet/puppet-02.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/puppet/puppet-02.png' %}"
+                 class="img-responsive center-block img-border" alt="{% trans 'Puppet Integration' %}">
+        </a>
+    </div>
+    <div class="col-sm-8">
+        <h3>{% trans "Visualize Details of Your Puppet’s Configurations With Custom Fields in Device42!" %}</h3>
+        <p><b>{% trans "Device42 is the go-to source for up-to-date details about your entire deployment." %}</b></p>
+        <p>{% trans 'Are there specific or custom CI details you want to keep track of? No problem! Create one or more custom fields in Device42, and map the content of any string and/or count array field over to them using your integration’s setting.yaml file. If it’s in your Puppet master’s .yaml file, you can see it in Device42. For more details on custom fields in Puppet, check out our <a href="/blog/2017/09/device42-puppetchef-integration-now-supports-extended-custom-ci-attributes/">Puppet Integration: Extended Custom CI Attributes</a> blog post.' %}</p>
+        <p>{% trans "Once the initial sync has been performed, you can get details about almost any device your Puppet Master controls, including the Puppet master itself, from Device42. A few clicks or a quick search by name is all it takes, and you’ll have all the details - deployment date, date last updated, CPU, Memory, Network, OS, Software and Services … the list goes on." %}</p>
+        <p>{% trans "Need to quickly see how many web servers you’ve deployed with puppet? Simply search for httpd, the apache service, and in seconds, view all the instances that are running that particular web server. Narrow it further by version, if necessary, and easily produce a short list of machines in need of updates. With Puppet & Device42, your toolbox just got a lot more useful." %}</p>
+    </div>
+</div>
+<div class="row image-right-8x4 {% if vcenter %}is-table-row{% endif %} is-table-row">
+    <div class="col-sm-4">
+        <a href="{% static 'img/sections/support/integrations/puppet/puppet-04.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/puppet/puppet-04.png' %}"
+                 class="img-responsive center-block img-border" alt="{% trans 'Puppet Integration' %}">
+        </a>
+    </div>
+    <div class="col-sm-8">
+        <h3>{% trans "Understand Your Deployment’s Interdependencies with Device42!" %}</h3>
+        <p><b>{% trans "Quickly and easily view the details of your deployment, connections, and interdependencies." %}</b></p>
+        <p>{% trans "You put in the hours capturing the inner workings and subtle nuances of your infrastructure in code. Now everything appears as though it’s working as expected … but how can you easily show management the breadth of the accomplishment?" %}</p>
+        <p>{% trans "<i>Visualize the entirety - or a subset - of your deployment</i> right in Device42, and be sure everything looks exactly as you’d expect. Ensure the right number of server instances are exposing the right services on the right IP’s. See your physical, cloud, or hybrid layout and all of your infrastructure’s dependency details any time." %}</p>
+    </div>
+</div>
+<div class="row image-left-4x8 {% if vcenter %}is-table-row{% endif %} is-table-row">
+    <div class="col-sm-4">
+        <a href="{% static 'img/sections/support/integrations/puppet/puppet-05.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/puppet/puppet-05.png' %}"
+                 class="img-responsive center-block img-border" alt="{% trans 'Puppet Integration' %}">
+        </a>
+    </div>
+    <div class="col-sm-8">
+        <h3>{% trans "Eliminate Disconnects between DevOps & Security." %}</h3>
+        <p><b>{% trans "Remediate Faster, and Let Device42 Generate On-Demand Compliance Reports!" %}</b></p>
+        <p>{% trans "Locate and remediate vulnerabilities across your infrastructure faster with Device42 & Puppet. You can quickly query Device42 for a list of servers running vulnerable software, and Puppet can take care of removing or updating the vulnerable build." %}</p>
+        <p>{% trans "Showing your security team that remediations are complete is as easy as running an on demand report in Device42 - or, schedule the report. Simply specify the security team’s inbox and let Device42 handle communicating the rest." %}</p>
+    </div>
+</div>
+
+<hr>
+<p>{% blocktrans %}<a href="https://github.com/device42/puppet_to_device42_sync_py/archive/master.zip" target="_blank">Download</a> the Puppet sync integration script for Device42 …
+{% endblocktrans %}</p>
+<p>{% blocktrans %}<a href="https://github.com/deusofnull/d42-puppet-enc-integration/archive/master.zip" target="_blank">Download</a> the Puppet ENC (External Node Classifier) integration for Device42!
+{% endblocktrans %}</p>

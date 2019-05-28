@@ -1,0 +1,29 @@
+{% load i18n %}
+{% load staticfiles %}
+<div {% if id %}id="{{ id }}" {% endif %}class="row featurette {% if vcenter %}is-table-row{% endif %}">
+
+    <div class="col-sm-8">
+        <h2 class="featurette-heading">{% trans "QR codes & Asset Tags" %}</h2>
+        <p><b>{% trans "with smart phone support for inventory management" %}</b></p>
+        <p class="">{% trans "Say goodbye to traditional barcode readers - use your mobile devices for ITAM procedures. With an optimized web portal for mobile devices, view device and asset inventory while you walk down the aisles of your data center." %}</p>
+        <ul class="checklist">
+            <li>{% trans "Print customized QR codes and auto-assign customizable asset numbers" %}</li>
+            <li>{% trans "Manage an unlimited number of Non-IP Assets" %}</li>
+            <li>{% trans "Ensure that asset audits are both fast and accurate " %}</li>
+        </ul>
+    </div>
+
+    <div class="col-sm-4">
+        <a href="{% static 'img/sections/features/itam/qr-codes.png' %}" data-featherlight="image">
+            <img class="img-responsive vert-offset-top-2 center-block img-border"
+                 src="{% static 'img/sections/features/itam/qr-codes.png' %}"
+                 alt="{% trans 'QR codes & Asset Tags' %}">
+        </a>
+        <a href="{% static 'img/sections/features/itam/phone.png' %}" data-featherlight="image">
+            <img class="img-responsive vert-offset-top-2 center-block img-border"
+               src="{% static 'img/sections/features/itam/phone.png' %}"
+               alt="{% trans 'QR codes & Asset Tags' %}">
+        </a>
+    </div>
+
+</div>

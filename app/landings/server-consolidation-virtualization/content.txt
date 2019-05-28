@@ -1,0 +1,40 @@
+[head.title]
+Consolidate and virtualize servers and services easily with comprehensive agentless autodiscovery, dependency mappings, and resource utilization!
+
+[head.description]
+Device42 makes server consolidation and virtualization simpler with true autodiscovery, powerful application dependency mapping, and resource utilization.
+
+[landing.title]
+Simplify Server Consolidation and Virtualization with Device42
+
+[landing.image_format]
+png
+
+[landing.content]
+Your applications, devices, and servers including their relationships and dependencies are automatically discovered making server consolidation and virtualization a breeze!
+
+- Agentless server and application dependencies discovery uses native Windows (WMI) and Linux (SSH) protocols
+- Discover all of your deployed servers and applications, their authors and version numbers
+- Automatically discover all server and service dependencies, running or not, protocols & ports
+- Easily view application to server and application to application dependencies
+- Cloud recommendation engine helps you consolidate and virtualize services to the cloud with ease
+- View comprehensive application dependency maps even for machines that can't be directly accessed, built out with Netflow data!
+
+
+[feature[1].title]
+Automated Impact Discovery
+[feature[1].image_format]
+png
+[feature[1].content]
+Server consolidation and virtualization planning is much easier when your existing hardware and software is automatically discovered. Device42 discovers all physical and logical components, their relationships, and their interdependencies!
+
+[feature[2].title]
+Easily Locate Ideal Candidates for Consolidation and Virtualization 
+[feature[2].content]
+Easy to understand resource utilization, power, and environmental monitoring make identifying server consolidation and virtualization candidates simple. Quickly locate under-utilized servers and services, and virtualize with ease!
+
+[feature[3].title]
+Powerful Visualizations, Reporting, and APIs
+[feature[3].content]
+Locate under-utilized servers and services and report on dependency data in your desired format: Excel, CSV, or even utilize a direct external database connection. Flexible APIs let you manipulate data and integrate Device42 with other products, with ease!
+

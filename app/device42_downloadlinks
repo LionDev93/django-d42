@@ -1,0 +1,61 @@
+drop table rajlog_pricingcontact;
+\q
+ALTER TABLE rajlog_downloadmodel ADD column clicky_cookie character varying(128);
+ALTER TABLE rajlog_downloadmodel ADD column intercom_id character varying(128);
+ALTER TABLE rajlog_schedulemodel  ADD column clicky_cookie character varying(128);
+ALTER TABLE rajlog_schedulemodel  ADD column intercom_id character varying(128);
+/q
+\q
+ALTER TABLE rajlog_otherdownloads ADD column email varchar(75);
+ALTER TABLE rajlog_otherdownloads ADD column subscribe_newseletter bool;
+UPDATE rajlog_otherdownloads set subscribe_newseletter = 'f' where subscribe_newsletter = null;
+UPDATE rajlog_otherdownloads set subscribe_newseletter = 'f';
+ALTER TABLE rajlog_otherdownloads ALTER COLUMN subscribe_newseletter set not null;
+\s
+\s
+\q
+drop TABLE rajlog_otherdownloads 
+\q
+ALTER TABLE rajlog_otherdownloads ADD column subscribe_newsletter bool;
+UPDATE rajlog_otherdownloads set subscribe_newsletter = 'f' where subscribe_newsletter = null;
+ALTER TABLE rajlog_otherdownloads ALTER COLUMN subscribe_newsletter set not null;
+ALTER TABLE rajlog_otherdownloads ADD column email varchar(75);
+ALTER TABLE rajlog_otherdownloads ADD column name varchar(256);
+ALTER TABLE rajlog_otherdownloads ADD column address varchar(256);
+ALTER TABLE rajlog_otherdownloads ADD column address2 varchar(256);
+ALTER TABLE rajlog_otherdownloads ADD column city varchar(64);
+ALTER TABLE rajlog_otherdownloads ADD column state varchar(32);
+ALTER TABLE rajlog_otherdownloads ADD column country varchar(32);
+ALTER TABLE rajlog_otherdownloads ADD column zipcode varchar(16);
+ALTER TABLE rajlog_otherdownloads ADD column referred_from varchar(32);
+ALTER TABLE rajlog_otherdownloads ADD column interested_in varchar(1024);
+UPDATE rajlog_otherdownloads set subscribe_newsletter = 'f' where subscribe_newsletter = null;
+UPDATE rajlog_otherdownloads set subscribe_newsletter = 'f'
+UPDATE rajlog_otherdownloads set subscribe_newsletter = 'f';
+UPDATE rajlog_otherdownloads set subscribe_newsletter = 'f';
+drop TABLE rajlog_otherdownloads 
+;
+drop table device42_otherdownloads
+;
+\q
+\d device42_download;
+\d device42_downloadmodel;
+
+exit()
+\
+\q
+select * from device42_idsprocessed
+;
+select * from device42_downloadmodel;
+select * from device42_idsprocessed
+;
+\d device42_contactmodel;
+alter table device42_contactmodel drop column timestamop;
+alter table device42_contactmodel drop column timestamp;
+alter table device42_contactmodel add column time_linked timestamp with time zone;
+select * from device42_contactmodel;
+select * from device42_idsprocessed;
+select * from device42_contactmodel;
+\d device42_schedulemodel;
+select * from device42_schedulemodel;
+\s device42_downloadlinks;

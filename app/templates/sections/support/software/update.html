@@ -1,0 +1,60 @@
+{% load i18n static custom_tags %}
+<div class="row">
+    <div class="col-md-12">
+        <h2>{% trans "Update for Device42 Software" %}</h2>
+        <p class="font-stack-condensed text-muted">{% trans "Please note that the following form is for our current customers only.  If you are a trial user, please open a support ticket to get the update file." %}</p>
+        <div class="well well-sm">
+            <div class="row">
+                <div class="col-md-12">
+                    <form action="." method="POST" role="form" >{% csrf_token %}
+                    <h3 class="text-strong flat-top">{% trans "Device42 Appliance" %}</h3>
+                    <hr class="flat-top">
+                    <p>{% if False %}<input type="radio" name="update_type" value="regular" checked />{% endif %} <span class="label label-success">{% trans "Latest Version" %}</span> <code><strong>15.15.01.1553860812</strong></code> <a class="small"
+                            href="https://www.device42.com/blog/tag/release/"
+                            target="_blank">{% trans "Release Notes" %}</a></p>
+                    <p class="font-stack-alt">
+                      {% blocktrans %}The following update is for v15.00.00 and above. If you are on a version prior to 15.00.00, please <a href="https://support.device42.com/hc/en-us/requests/new" target="_blank">open a support ticket</a> with your current version and we will work with you to get you updated.{% endblocktrans %}
+                    </p>
+                    <p class="font-stack-alt">
+                      {% blocktrans %}Updates that include database changes might result in extended upgrade times, especially on large DBs. Please review all release notes subsequent to your current server version for upgrade considerations.{% endblocktrans %}
+                    </p>
+
+                    {% if False %}
+                    <hr class="flat-top">
+                    <p><input type="radio" name="update_type" value="beta" > <span class="label label-default">{% trans "Beta Version" %}</span> <code><strong>15.14.01.BETA</strong></code> <a class="small"
+                            href="https://www.device42.com/blog/tag/release/"
+                            target="_blank">{% trans "Release Notes" %}</a></p>
+                    <p class="font-stack-alt">
+                      {% blocktrans %}The following update is a beta release with our upcoming changes to Discovery Dashboard and Quality Scores.  This release should only be used in a non-production server and upgrades from this beta will not be supported.  We strongly recommend taking a snapshot on your hypervisor before applying this update.  Please <a href="https://support.device42.com/hc/en-us/requests/new" target="_blank">contact support</a> with your feeback.{% endblocktrans %}
+                    </p>
+                    {% endif %}
+
+                    <div class="col-sm-8 col-sm-offset-2">
+                    <input style="display:none;" type="text" name="main" maxlength="64">
+                        <label for="email" class="col-xs-2">{% trans "Email" %}</label>
+
+                        <input type="email" class="form-control" name="email" required="required"
+                               placeholder="{% trans 'Work Email' %}">
+                        {% if error == 'regular' %}<span class="text-danger text-strong">Not a valid work email address.</span>{% endif %}
+
+                        <div class="form-group col-xs-16">
+                            <label class="control-label col-md-12 font-roboto" style="font-weight:400;text-align:left;" for="id_I_agree_to_EULA">I agree to <a target="_blank" href="/eula/">EULA</a> and <a target="_blank" href="/privacy/">Privacy Policy</a></label>
+                            <div class="field-wrap">
+                                <input class="form-checkbox" id="id_I_agree_to_EULA" name="I_agree_to_EULA" required="required" type="checkbox">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-sm btn-primary form-control" name="download" value="update-regular">{% trans "Send Update Link" %}</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                {% url "legal_privacy" as legal_privacy %}
+                <p class="small text-muted text-strong">{% blocktrans %}We respect your privacy and will not misuse or sell your personal information. Please read our <a href="{{legal_privacy}}" target="_blank">privacy policy</a>.{% endblocktrans %}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+[head.title]
+Device42 - the powerful software capacity planning tool you've been looking for!
+
+[head.description]
+Device42 is a powerful, comprehensive software capacity planning tool with agentless autodiscovery, resource utilization, and more. Map out your entire physical and virtual infrastructure!
+
+[landing.title]
+Software Capacity Planning with Device42
+
+
+[landing.image_format]
+gif
+
+[landing.content]
+Device42 is the powerful software capacity planning tool that helps you manage IT capacity in real-time, featuring comprehensive autodiscovery, resource utilization, and more!
+
+- Includes all of the software capacity planning tools you need like powerful license management, flexible reporting, purchase tracking, and more!
+- Counts of all software owned and in use for easy software capacity planning
+- Web-based with no flash and with SVG exports that lets you import in Visio
+- Manage any license type: Per CPU, per seat, per user, etc.
+- Map your physical, virtual and cloud networks automatically with agentless discovery.
+
+
+[feature[1].title]
+Rack and Room layouts with What-if Scenarios
+[feature[1].image_format]
+gif
+[feature[1].content]
+Device42 puts the software capacity planning tools you need at your fingertips: autodiscovery spans across legacy and newer systems alike, highlighting dependencies between physical, virtuals, and applications.
+
+[feature[2].title]
+Real-time software capacity planning with Monitoring and Control
+[feature[2].content]
+Collect your complete inventory like serial #, hardware model, OS and build info, installed software, IPs and connections, services and mapping between services across machines. Data from various auto-discovery methods is automatically correlated.
+
+[feature[3].title]
+Automated Data Center Management, RESTful APIs, Webhooks, Integrations!
+[feature[3].image_format]
+png
+[feature[3].content]
+Leverage out-of-the-box integrations with Puppet, Chef, SCCM, Infoblox, Splunk, JIRA, ServiceNow and more! Use real-time data to reduce your MTTR, and make faster software capacity planning decisions in your daily operations.

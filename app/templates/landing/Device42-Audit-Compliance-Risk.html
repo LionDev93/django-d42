@@ -1,0 +1,164 @@
+{% extends "base/_base-landing-v3.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Sox, HIPAA, Software License, Hardware, Network, and IT Audits, Compliance, Security and Risk Assessments' %}" />
+{% endblock %}
+{% block title %}{% trans "Audit, Compliance and Risk" %}{% endblock %}
+
+
+{% block styles %}
+<style>
+    .cta-free-trial {
+        padding: 24px 5px;
+        text-transform: none !important;
+        background-color: #ffc90e;
+        color: #130dff !important;
+        border: none !important;
+    }
+    #top-container h1 {
+        margin-bottom: 0px;
+    }
+</style>
+{% endblock %}
+
+{% block landingHeadingText %}
+    {% trans "Audit, Compliance and Risk" %}
+{% endblock %}
+{% block landingSubHeadText %}
+    <em class="h3 flat-top flat-bottom">{% trans "(Sox, HIPAA, Software License, Hardware, Network, and IT Audits, Compliance, Security and Risk Assessments)" %}</em>
+{% endblock %}
+
+{% block key_benefits %}
+    <section class="row landing-section">
+        <div class="col-sm-7" style="vertical-align: top;">
+
+            <h3 class="text-strong">{% trans "Key Benefits:" %}</h3>
+            <p><em>{% trans "Device42’s self-documenting CMDB can help you make all audits a breeze!" %}</em></p>
+            <div class="row">
+                <ul>
+                    <li>{% trans "Ease the burden and cost implications of all audit types" %}</li>
+                    <li>{% trans "Goodbye spreadsheets...hello automated audit compliance management!" %}</li>
+                    <li>{% trans "Shift from reactive to proactive audit management" %}</li>
+                    <li>{% trans "Device42’s automated virtual appliance makes audits of all types easier, and reliable" %}
+                        <ul class="bullet-gray flat-top">
+                            <li>{% trans "Ensure all SW, HW, devices, and configurations are accounted for, and license compliance" %}</li>
+                            <li>{% trans "Support all common license types (per user, device, CPU, client, or key based)" %}</li>
+                        </ul>
+                    </li>
+                    <li>{% trans "Manage costs while ensuring maximum ROI" %}</li>
+                    <li>{% trans "Know your deployments are patched, up to date, and secure" %}</li>
+                </ul>
+            </div>
+
+            <div style="width: 100%;">
+
+                <div class="text-center" style="width: 30%; float: left; margin-left: 10%;">
+                    <div style="max-width:50%; margin-left:auto; margin-right:auto; margin-top:24px; height:auto !important;"
+                         class="clearfix">
+                        <div class="embed-responsive embed-responsive-16by9" style="margin-bottom: 5px;">
+                            <div class="wistia_responsive_wrapper"
+                                 style="height:100%; left:0; position:absolute; top:0; width:100%;">
+                                <script src="//fast.wistia.com/embed/medias/igc5qfvoyr.jsonp" async></script>
+                                <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                                <div class="wistia_responsive_padding"
+                                     style="padding:60% 0 0 0; position:relative;">
+                                    <div class="wistia_responsive_wrapper"
+                                         style="height:100%; left:0; position:absolute; top:0; width:100%;">
+                                        <span class="wistia_embed wistia_async_igc5qfvoyr popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block; height:100%; width:100%">&nbsp;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="text-primary font-stack-roboto text-center h4" style="margin-top: 0px !important; margin-bottom: 0px !important;">{% trans "90 Second Overview" %}</span>
+                </div>
+
+                <div class="vert-offset-top-1" style="width: 55%; float: left; margin-left: 5%;">
+                    <p>{% blocktrans %}<strong>You’re in good company!</strong><br> Many global companies use Device42, <em>and they love us!</em>{% endblocktrans %}</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <a href="{% url 'download' %}">
+                <img src="{% static 'img/sections/features/app-map/set-it-all-in-one-place.jpg' %}"
+                     alt="{% trans 'Audit, Compliance and Risk' %}"
+                     style="max-width: 90% !important;"
+                     class="img-responsive center-block vert-offset-bottom-1">
+            </a>
+            <a class="btn center-block cta-free-trial h3 img-border"
+                href="{% url 'download' %}">{% trans "Get your FREE, fully-functional trial NOW!" %}</a>
+        </div>
+    </section>
+{% endblock %}
+
+{% block good_company %}
+{% endblock %}
+
+{% block key_features %}
+    <section class="row image-right-5x7 is-table-row vert-offset-top-0 landing-section flat-bottom">
+        <div class="col-sm-7">
+            <h3 class="text-strong">{% trans "Key Features:" %}</h3>
+            <ul>
+                <li><strong>{% trans "Lean on Device42 for audits of all types" %}</strong>
+                    <ul class="bullet-gray flat-top">
+                        <li>{% trans "Ensure an accurate, and always up-to-date inventory of all assets, physical and virtual" %}</li>
+                        <li>{% trans "Track license agreements, contracts, and get alerts and reminders on upcoming expiration dates" %}</li>
+                        <li>{% trans "Detect prohibited or out of date software, and identify purchased vs. installed software" %}</li>
+                    </ul>
+                </li>
+                <li><strong>{% trans "Device42 means compliance" %}</strong>
+                    <ul class="bullet-gray flat-top">
+                        <li>{% trans "License compliance – identify over-licensed, unlicensed, and expired licenses" %}</li>
+                        <li>{% trans "Standards assurance – identify prohibited and approved software" %}</li>
+                        <li>{% trans "Cost management – report license costs and minimize under-licensed software" %}</li>
+                    </ul>
+                </li>
+                <li><strong>{% trans "Device42 means security" %}</strong>
+                    <ul class="bullet-gray flat-top">
+                        <li>{% trans "Know which physical, virtual, and cloud devices have software vulnerabilities" %}</li>
+                        <li>{% trans "Be alerted when new vulnerabilities are discovered" %}</li>
+                        <li>{% trans "View vulnerabilities by device (and lots of other views) to help create patching plans" %}</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-5 vert-offset-bottom-1" style="vertical-align: top; padding-top: 40px;">
+            <a href="{% url 'download' %}">
+                <img class="featurette-image img-responsive center-block"
+                     alt="{% trans 'Audit, Compliance and Risk' %}"
+                     src="{% static 'img/sections/product/mascot_checklist.png' %}">
+            </a>
+        </div>
+    </section>
+{% endblock %}
+
+{% block maincontent %}
+    <section class="row landing-section flat-top">
+        <div class="col-sm-7">
+            <h3 class="text-strong" style="color: black !important;">{% trans "PLUS:" %}</h3>
+            <ul>
+                <li><strong>{% trans "Powerful, Agentless Device Discovery" %}</strong>
+                    <ul class="bullet-gray flat-top">
+                        <li>{% trans "Native WMI for Windows & SSH for *nix, BSD, and Mac" %}</li>
+                        <li>{% trans "SNMP for network devices like routers, switches, and load balancers" %}</li>
+                        <li>{% trans "Native Discovery for popular hypervisors and their guest VMs, cloud platforms, blades" %}</li>
+                    </ul>
+                </li>
+                <li>{% blocktrans %}<strong>Application Dependency Mapping (ADM)</strong> discovers (with or without agents) all your application dependencies{% endblocktrans %}</li>
+                <li>{% blocktrans %}Optional <strong>remote collectors</strong> - no complicated span ports necessary, ever!{% endblocktrans %}</li>
+                <li>{% blocktrans %}Device42 <strong>automatically generates dependency flow diagrams</strong>, charts, and list views that identify the relationships and interdependencies between devices, servers, applications, and application components{% endblocktrans %}</li>
+                <li>{% blocktrans %}<strong>See listening services</strong>, on what ports, and all open ports on each server{% endblocktrans %}</li>
+                <li>{% blocktrans %}<strong>Discover data</strong> on servers that can’t be accessed directly with netflow and NMAP{% endblocktrans %}</li>
+            </ul>
+        </div>
+        <div class="col-sm-5">
+            <a href="{% url 'download' %}">
+                <img src="{% static 'img/sections/product/icons_cog_collection.png' %}"
+                    alt="{% trans 'Audit, Compliance and Risk' %}"
+                    class="img-responsive center-block">
+            </a>
+        </div>
+    </section>
+{% endblock %}

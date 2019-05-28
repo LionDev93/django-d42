@@ -1,0 +1,310 @@
+{% extends "base/_base-landing-v2.html" %}
+{% load i18n static %}
+{% block head_scripts %}
+    <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
+{% endblock %}
+{% block scripts %}
+<script>
+    jQuery(function ($) {
+        $('.scroll_down').click(function() {
+            $('html, body').animate({
+                scrollTop: $(".section_2").offset().top - 50
+            }, 1000);
+        });
+        var baloon = $('.scroll_down img');
+        function runIt() {
+            baloon.animate({top:'+=20'}, 1000);
+            baloon.animate({top:'-=20'}, 1000, runIt);
+        }
+        runIt();
+    });
+</script>
+{% endblock %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Device42 is an easier Nlyte alternative. Here’s why you should consider switching…' %}"/>
+{% endblock %}
+{% block title %}{% trans "An Easier Alternative to Nlyte" %}{% endblock %}
+{% block maincontent %}
+    <section class="section_1">
+
+        <div class="container">
+            <div class="arrow_left"></div>
+            <div class="arrow_right"></div>
+            <div class="person"></div>
+        </div>
+        <div class="top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>{% trans "Looking for an alternative to Nlyte?" %}</h1>
+                        <p>{% trans "We’re here to help! " %}</p>
+                        <p>{% trans "We’ve put together some info highlighting key differences between Nlyte & Device42’s DCIM [Data Center Infrastructure Management] solutions." %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container bottom">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>{% trans "Let’s get started" %}</p>
+                    <div class="scroll_down">
+                        <img src="{% static 'img/landing-v2/scroll.png' %}">
+                    </div>
+                    <p class="small">{% trans "Scroll down to learn more!" %}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section_2">
+        <div class="container">
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <h4>{% trans "1. Getting Started" %}</h4>
+                <h2>{% trans "Device42 is <i>much easier to use</i> than Nlyte" %}</h2>
+                <div class="col-md-6">
+                    <p>{% trans "<b><i>Device42</i></b> Setup is <u>simple and fast:</u>" %}</p>
+                    <ul>
+                        <li>{% trans "Import and boot the virtual appliance. " %}</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <p>{% trans "Don’t struggle through Nylte’s:" %}</p>
+                    <ul>
+                        <li>{% trans "Lengthy implementation process" %}</li>
+                        <li>{% trans "Nlyte User Training Classes" %}</li>
+                        <li>{% trans "Complicated user guide" %}</li>
+                    </ul>
+                </div>
+                <div class="col-md-12">
+                  <p>{% trans "<b>Device42’s Auto-discovery</b> will get nearly all your data into the system in an afternoon." %}</p>
+                  <p><b>{% trans "Nlyte <i>DOES <u>NOT INCLUDE</u></i> Auto-Discovery." %}</b></p>
+                </div>
+              </div>
+              <div class="col-md-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section_5 section_8">
+        <div class="top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>{% trans "2. Device42 is much easier on your budget. " %}</h4>
+                        <h2>{% trans "Device42 offers 90% of Nlyte’s DCIM Functionality ... at around 20% of the cost." %}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3">
+                  <img src="{% static 'img/landing-v2/assets-experience-1.png' %}">
+                </div>
+                <div class="col-md-6">
+                  <h2 style="padding-top: 0px !important;">{% trans "Device42’s DCIM features include:" %}</h2>
+                  <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <ul>
+                            <li>{% trans "Power Monitoring & Control" %}</li>
+                            <li>{% trans "Visual Rack & Room Layouts" %}</li>
+                            <li>{% trans "Capacity Planning" %}</li>
+                            <li>{% trans "and everything else you NEED in a DCIM tool" %}</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2"></div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <img src="{% static 'img/landing-v2/assets-experience-2.png' %}">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                  <h4>{% trans "PLUS" %}</h4>
+                  <div class="col-md-6">
+                    <p>{% trans "<b><i>Device42’s awesome core features:</i></b>" %}</p>
+                      <ul>
+                          <li>{% trans "Powerful Reporting and Alerting" %}</li>
+                          <li>{% trans "Great Visualizations" %}</li>
+                          <li>{% trans "Custom fields & Form layouts" %}</li>
+                          <li>{% trans "RESTful API and Webhooks" %}</li>
+                      </ul>
+                  </div>
+                  <div class="col-md-6">
+                      <p>{% trans "<b><i>And tons of out of the box integrations:</i></b>" %}</p>
+                      <ul>
+                          <li>{% trans "Monitoring tools" %}</li>
+                          <li>{% trans "Automation tools" %}</li>
+                          <li>{% trans "Ticketing (ITSM) tools" %}</li>
+                          <li>{% trans "Configuration Management (CM) Tools" %}</li>
+                      </ul>
+                  </div>
+                  <div class="col-md-12">
+                    <p>{% trans "...and skip out on navigating [and paying for!] a maze of features you don’t need." %}</p>
+                  </div>
+                </div>
+                <div class="col-md-2"></div>
+              </div>
+            </div>
+        </div>
+        <div class="container bottom">
+
+        </div>
+    </section>
+
+    <section class="section_4">
+        <div class="top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>{% trans "3. Maintaining your data" %}</h4>
+                        <h2>{% trans "Device42’s DCIM solution ALSO includes a feature-packed CMDB<br>...with Continuous Discovery" %}</h2>
+                        <p>{% trans "While many enterprise tools claim to have auto-discovery built-in, <b>there are key differences:" %}</b></p>
+                        <p>{% trans "<b>Device42 is agentless</b> — You don’t have to find every device and put an agent on it. Device42 finds them for you." %}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="{% static 'img/landing-v2/section3-img.png' %}">
+                    </div>
+                </div>
+                <div class="row">
+                    <h2>{% trans "<b>Device42 takes a Holistic approach</b> — connecting directly to your:" %}</h2>
+                    <div class="col-md-6">
+                        <ul>
+                            <li>{% trans "<b>Hypervisors and virtual devices</b> (VMware, HyperV, Citrix, Xen, Openstack, Cloudstack, and more)" %}</li>
+                            <li>{% trans "<b>Cloud devices</b> (Amazon, Azure, Joyent, Linode, Digital Ocean and more)" %}</li>
+                            <li>{% trans "<b>Network devices</b> (physical <b>and</b> virtual)" %}</li>
+                            <li>{% trans "<b>Blade systems" %}</b></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul>
+                            <li>{% trans "<b>Cisco</b> UCS" %}</li>
+                            <li>{% trans "<b>Environmental Systems</b> (CRACs, Environmental Sensors)" %}</li>
+                            <li>{% trans "<b>Management Systems</b> (IPMI, iDRAC)" %}</li>
+                            <li>{% trans "<b>DNS Servers</b> (Windows, Linux & Unix OS’s)" %}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>{% trans "....correlating the interrelationships and dependencies automatically." %}</p>
+                        <p>{% trans "e.g., if Device42 finds a device's MAC address on a switch port, it correlates that with the VM, which is on a blade, sitting in a particular slot in a chassis. It then finds what <b>services are on that machine, and calculates the dependencies</b> on other machines and services on your network." %}</p>
+                        <p>{% trans "On the other hand, the Nlyte <b>relies on external tools for auto-discovery</b>, increasing cost and complexity. Furthermore, Nlyte stops at the physical infrastructure, possibly overlooking what makes up a large portion of today’s virtualized & cloud based modern data centers. And while Device42 doesn’t support generators or chillers, Nlyte still uses Intel DCM for power. Device42 tried Intel DCM, and due to its limitations, instead wrote our own power logic." %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom" style="padding-bottom: 100px;"></div>
+    </section>
+
+    <section class="section_5">
+        <div class="top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>{% trans "4. Everything you need, in one place. " %}</h4>
+                        <h2>{% trans "Choosing Device42 means choosing a complete solution." %}</h2>
+                        <p>{% trans "<b>Nlyte relies on connectors to 3rd party CMDBs</b> in an effort to match the native functionality of Device42." %}<br>
+                        <p>{% trans "The modern IT infrastructure requires a modern tool -- <b>not a patchwork of disparate systems.</b>" %}</p>
+                        <p>{% trans "With the prevalence of virtualization, containers, cloud computing, and software-defined networks..." %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{% static 'img/landing-v2/section5-img.png' %}">
+                    </div>
+                    <div class="col-md-6">
+                        <p>{% trans "IT infrastructure is orders of magnitude more complex than it was 10 years ago. Too much time is wasted trying to manage different tools." %}</p>
+                        <p><em>{% trans "It is no longer practical to manage your IT infrastructure using separate tools for:" %}</em></p>
+                        <ul>
+                            <li>{% trans "ITAM - IT Asset Management" %}</li>
+                            <li>{% trans "IPAM - IP Address Management" %}</li>
+                            <li>{% trans "ADM - Application Dependency Management" %}</li>
+                            <li>{% trans "SLM - Software License Management" %}</li>
+                            <li>{% trans "CCM - Cloud Configuration Management" %}</li>
+                        </ul>
+                    </div>
+                </div>
+                <br><br>
+                <div class="row left_right">
+                    <div class="col-md-6 img">
+                        <img class="up" src="{% static 'img/landing-v2/section5-img2.png' %}">
+                    </div>
+                    <div class="col-md-6 text">
+                        <p>{% trans "<b>The interrelationships are too important and too complex</b> --<br> they can only be adequately captured by an integrated tool <i>like Device42</i>." %}</p>
+                        <p>{% trans "Device42 looks at your IT Infrastructure holistically. A single, powerful console allows management of your Data Center [DCIM], IP Addresses [IPAM] and Passwords in addition to IT Asset Management [ITAM] with a built-in CMDB." %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container bottom">
+
+        </div>
+    </section>
+
+    <section class="section_7">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>More, more, more, & … less.</h1>
+                    <p>Integrations, Webhooks, and an extremely powerful RESTful API</p>
+                    <p><b>A true enterprise DCIM Solution should not be isolated.</b></p>
+                    <p>Many enterprise class tools make integrating time consuming and/or expensive.</p>
+                    <p>With Device42, you get a plethora of integrations out of the box, plus webhooks & REST APIs that make it a breeze to integrate with other tools.</p>
+
+                    <h1>...not more money. Device42 is simply more affordable.</h1>
+                    <p>With Nlyte, you have a large initial product cost, and a <b>large implementation cost as well.</b></p>
+                    <p>Device42 doesn’t believe an enterprise class product should require expensive professional services.</p>
+                    <p>We also believe that the value you’ll get from Device42 far outweighs the cost.</p>
+
+                    <p>And more than a thousand happy users in more than 40 countries agree.</p>
+                    <p>If our auto-discovery and collaboration features can save your team just ten hours per month, Device42 will more than pay for itself.</p>
+                    <hr>
+                    <div class="try">
+                        <h1>{% trans "Try Device42 for Free" %}</h1>
+                        <span>{% trans "and if you aren’t completely satisfied, we’ll refund your money." %}</span>
+                        <a href="https://www.device42.com/download/">
+                            {% trans "Try it now" %}
+                        </a>
+                        <p>{% trans "Making the switch is easy with migration utilities and imports." %}</p>
+                        <hr>
+                        <div class="partners">
+                            <span>OUR CUSTOMERS</span>
+                            <div class="col-md-2 col-sm-2">
+                                <div style="width:120px;height:40px;" class="sprite-stackoverflow grayscale"></div>
+                            </div>
+                            <div class="col-md-2 col-sm-2">
+                                <div style="width:120px;height:40px;" class="sprite-sprint grayscale"></div>
+                            </div>
+                            <div class="col-md-2 col-sm-2">
+                                <div style="width:120px;height:40px;" class="sprite-verizon grayscale"></div>
+                            </div>
+                            <div class="col-md-2 col-sm-2">
+                                <div style="width:120px;height:40px;" class="sprite-atlassian grayscale"></div>
+                            </div>
+                            <div class="col-md-2 col-sm-2">
+                                <div style="width:120px;height:40px;" class="sprite-mercedesbenz grayscale"></div>
+                            </div>
+                            <div class="col-md-2 col-sm-2">
+                                <div style="width:120px;height:40px;" class="sprite-avaya grayscale"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

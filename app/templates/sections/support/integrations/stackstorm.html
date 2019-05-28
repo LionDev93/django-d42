@@ -1,0 +1,67 @@
+{% load i18n static %}
+<h2>{% trans "Device42 Integration with StackStorm" %}</h2>
+<p>{% trans 'StackStorm is a powerful if-this-then-that type tool that helps you automate your workflows and changes to your infrastructure based on predefined “trigger” criteria taking place anywhere across your environment. Device42 is an ideal companion for this type of tool because you need a single source of truth to correctly and reliably orchestrate these automated workflows.' %}</p>
+
+<div class="row image-left-7x5 is-table-row">
+    <div class="col-sm-7">
+        <h3>{% trans "Push, Pull, And Trigger" %}</h3>
+        <p><strong>{% trans "Push data to Device42, Pull data from, or kick off a job with Webhooks." %}</strong></p>
+        <p>{% trans "Stackstorm allows you to both utilize the always up-to-date information in your Device42 CMDB instance as both a source of data, and at the same time, a source of triggers to drive automation via Device42’s powerful webhook functionality." %}</p>
+        <p>{% trans "Webhooks allow you to easily kick off jobs across your organization in response to any change in Device42 that creates an audit log entry. That can be anything from one or more device, network, software, or application additions, changes, or deletions. With Stackstorm + Device42, orchestrating complex automation has never been simpler." %}</p>
+    </div>
+    <div class="col-sm-5">
+        <a href="{% static 'img/sections/support/integrations/stackstorm/device42_stackstorm.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/stackstorm/device42_stackstorm.png' %}"
+                 class="img-responsive center-block"
+                 alt="{% trans 'StackStorm Integration' %}">
+        </a>
+    </div>
+</div>
+<div class="row image-right-5x7 is-table-row">
+    <div class="col-sm-7">
+        <h3>{% trans 'Next Level “If-This-Then-That”' %}</h3>
+        <p><strong>{% trans "Turn nightmare scenarios into a good night’s sleep." %}</strong></p>
+        <p>{% trans "Imagine a network switch fails at 3AM. The stuff of nightmares... Or so it once was. With Device42 & Stackstorm, you could immediately reroute traffic in response to an event occurring on a device, such as the absence of an expected service." %}</p>
+        <p>{% trans "Taking it a step further, you can awake to an automatically created trouble ticket in your ITSM system that records work to be done, or if an escalation chain is configured, a certain set of events can trigger a page or text message to support staff." %}</p>
+        <p>{% trans "The possibilities at hand when Device42’s Webhooks are utilized with StackStorm Actions are only limited by your imagination, making any automation task from routine to Goldberg-like more easily realizable." %}</p>
+    </div>
+    <div class="col-sm-5">
+        <a href="{% static 'img/sections/support/integrations/stackstorm/if_this_then_that.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/stackstorm/if_this_then_that.png' %}"
+                 class="img-responsive center-block"
+                 alt="{% trans 'StackStorm Integration' %}">
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h3>{% trans "Custom Actions Against Any Number of Devices" %}</h3>
+        <p><strong>{% trans "Find your exact targets with any combination of CI attributes." %}</strong></p>
+        <p>{% trans "Need a list of all devices running the FreeBSD operating system? Powerful filters featuring everything from a room name, room_id, service levels, device tags, device types (physical, virtual, blade, etc), and more are available out of the box." %}</p>
+        <p>{% trans "This makes it simple to automatically deploy updates to all servers running Windows Server 2012, or to push a new software package to hundreds or thousands of servers running CentOS." %}</p>
+        <p>{% trans "With optional filter parameters, filtering for specific devices is a breeze. If you tag devices according to function, getting a list of all 'web' servers and pushing out a new configuration file is as simple as querying for 'web'." %}</p>
+        <a href="{% static 'img/sections/support/integrations/stackstorm/stackstorm-1.png' %}" data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/stackstorm/stackstorm-1.png' %}"
+                class="img-responsive"
+                alt="{% trans 'StackStorm Integration' %}">
+        </a>
+    </div>
+</div>
+<div class="row image-right-5x7 is-table-row">
+    <div class="col-sm-7">
+        <h3>{% trans "Automatically Assign and Reserve the Next IP" %}</h3>
+        <p><strong>{% trans "Get the IP and Mark it as used - Automatically." %}</strong></p>
+        <p>{% blocktrans %}With the <code>device42.suggest_next_ip</code> call, a subnet can be specified by name, VLAN, by the actual subnet in slash notation <code>(192.168.1.0/24)</code>. Do you use VRF Groups? No problem - Request by <code>vrf_group</code> or <code>vrf_group_id</code>.{% endblocktrans %}</p>
+        <p>{% blocktrans %}In addition, if this isn’t a test run, pass the <code>reserved_ip=yes</code> flag, and the IP suggestion becomes a reservation.{% endblocktrans %}</p>
+    </div>
+    <div class="col-sm-5">
+        <a href="{% static 'img/sections/support/integrations/stackstorm/ip.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/stackstorm/ip.png' %}"
+                 class="img-responsive center-block"
+                 alt="{% trans 'StackStorm Integration' %}">
+        </a>
+    </div>
+</div>

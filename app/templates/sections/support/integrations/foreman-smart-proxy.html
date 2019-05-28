@@ -1,0 +1,42 @@
+{% load i18n static %}
+<h2>The Foreman-Device42 DHCP Smart-Proxy</h2>
+<h4 class="prelist">{% trans "Add a new Device42 DHCP provider to Foreman with this smart-proxy plugin!" %}</h4>
+
+<div class="row">
+    <div class="col-md-12">
+        <h3>{% trans "The Device42 Smart-Proxy plugin for Foreman help you orchestrate commissioning of new hosts:" %}</h3>
+        <h4 class="prelist">{% trans "Import your Device42 subnets into Foreman in one click!" %}</h4>
+        <p>{% trans "The smart-proxy plugin transparently passes DHCP requests to Device42’s API, and Foreman gets the next available IP address on your chosen subnet. The new CI record, including name, IP, and MAC is then recorded in Device42 - automatically!" %}</p>
+    </div>
+</div>
+<div class="row">
+  <div class="col-sm-6 padded">
+    <h3>{% trans "Foreman-configured CI’s are input into Device42 automatically!" %}</h3>
+    <p><a href="https://theforeman.org/manuals/1.1/index.html#4.3SmartProxies" target="_blank">{% trans "Setting up the Device42-Foreman Smart-Proxy" %}</a> {% trans "only takes a minute." %}</p>
+    <p>{% trans "Once done, the next free IP is a simple DHCP request away, and your Foreman automation built CI’s are automatically documented!" %}</p>
+  </div>
+  <div class="col-sm-6">
+    <a href="{% static 'img/landing/foreman-smart-proxy.png' %}"
+       data-featherlight="image">
+        <img src="{% static 'img/landing/foreman-smart-proxy.png' %}"
+             alt="{% trans 'Foreman Smart Proxy' %}" class="center-block img-responsive">
+    </a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <a href="{% static 'img/landing/views-deployments-foreman.png' %}"
+       data-featherlight="image">
+      <img src="{% static 'img/landing/views-deployments-foreman.png' %}"
+           alt="{% trans 'Views Deployment Foreman' %}" class="center-block img-responsive">
+    </a>
+  </div>
+  <div class="col-sm-6 padded">
+    <h3>{% trans "Device42 helps you understand your entire deployment!" %}</h3>
+    <p>{% trans "Always know the state of your deployment at a glance!" %}</p>
+    <p>{% trans "Device42’s auto-discovery ensures you can always see your entire infrastructure, including: devices, applications, services, and connections. Whether provisioned by Foreman or not, it’s all in one easy to understand and centralized location!" %}</p>
+  </div>
+</div>
+<hr>
+<h3 class="vert-offset-bottom-1 text-strong text-default text-center"><a href="https://github.com/theforeman/smart_proxy_dhcp_device42" class="btn btn-warning">Download</a> {% trans "the Foreman Smart-Proxy Plugin today!" %}</h3>
+

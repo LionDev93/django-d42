@@ -1,0 +1,44 @@
+[head.title]
+Better RISC Networks Cloudscape alternative with autodiscovery, cloud pricing, and automated application dependency mappings!
+
+[head.description]
+Device42 is a better RISC Networks Cloudscape alternative featuring agent-less auto-discovery, resource utilization, cloud recommendations, and more, all without the need for expensive packet captures!
+
+[landing.title]
+Device42 Autodiscovery Beats RISC Networks CloudScape!
+
+
+[landing.image_format]
+png
+
+[landing.content]
+
+Looking for an easier CloudScape alternative that's also more affordable? Get faster and more accurate discoveries plus intelligent cloud migration insights with Device42!
+
+- Device42's agentless discovery combines data obtained via Windows (WMI) and Linux (SSH) protocols, then augments it with Netflow.
+- Get workload sizing suggestions and accurate AWS and Azure instance pricing information based on your actual resource utilization with the cloud recommendation engine!
+- Discover application, service, and device relationships and dependencies across physical and virtual, whether on-premises or in the cloud!
+- Device42 discovers your services (running or not), their user accounts, protocols, & ports.
+- All deployed applications, manufacturer, and version number details are automatically captured.
+- Powerful visualizations make it easy to understand your application to application, app to server, and other dependency mappings!
+
+
+
+[feature[1].title]
+Application Dependency Flow Lists and Charts!
+[feature[1].image_format]
+png
+[feature[1].content]
+Don't let RISC Networks Cloudscape leave you in the dark. Know the impact of any application, whether contemplating a migration or a change control. List pages and charts can be imported into Visio, as well!
+
+
+[feature[2].title]
+Cloud Recommendation Engine with Resource Utilization!
+[feature[2].content]
+Device42 comprehensive cloud recommendation engine with resource utilization and deep discovery give more detail vs. Cloudscape, including application install folders, folder permissions, registry keys, and even complete configuration files!
+
+
+[feature[3].title]
+Powerful Visualizations, DOQL, and APIs give you flexibility RISC Can't Touch!
+[feature[3].content]
+Device42 also includes powerful APIs and flexible webhooks to power your custom automations. What do you want to automate today?

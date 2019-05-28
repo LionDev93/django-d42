@@ -1,0 +1,143 @@
+{% extends "base/_base-landing-v1.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% blocktrans %}It is a good idea to compare alternative CMDB tools like Riada's Insight for Jira, and possibly other tools. There are a wide variety available, but Device42 is among the best.{% endblocktrans %}"/>
+    <meta name="keywords"
+          content="device42, vs, compare, comparison, riada, insight, jira, device, management, core, asset, ipam, itam, cmdb, functions, features, cloud, discovery, autodiscovery, app, mapping, appmapping, application, map, diagram, discover, depedency, dcim, ticketing, plugin, addon, enterprise, free, trial, tool, tools" />
+{% endblock %}
+{% block title %}{% trans "ServiceNow Integration" %}{% endblock %}
+{% block scripts %}
+    <script>
+        $(function () {
+            $("[data-toggle='tooltip']").tooltip();
+        });
+    </script>
+{% endblock %}
+
+{% block styles %}
+  <style>
+    .table-responsive {
+      max-width: 900px;
+      text-align: left;
+    }
+    hr{
+      margin: 0px;
+    }
+    table {
+      margin-bottom: 0px !important;
+    }
+    p.small-font {
+      font-size: 15px;
+      color: #22a3df;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Roboto Condensed', sans-serif !important;
+    }
+    form label {
+      display: none;
+    }
+    form p {
+      display: inline-block;
+    }
+    form p input {
+      padding: 5px;
+      color: #246d8f;
+    }
+    .d-table {
+      display: table;
+      width: 100%;
+    }
+    .d-table-cell {
+      text-align: center;
+      display: table-cell;
+    }
+    .d-table-submit {
+      padding: 10px;
+      margin-top: 50px !important;
+      width: 250px;
+    }
+    .sub-heading {
+        color: #35ade4;
+        font-family: 'Roboto Condensed', sans-serif !important;
+        font-size: 35px;
+        margin-top: 0px;
+    }
+    hr {
+        margin-top: 22px;
+        margin-bottom: 22px;
+        border: 0;
+        border-top: 1px solid #eee;
+    }
+    .right-corner-sidebar {
+        float: right;
+        margin-right: 20px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+  </style>
+{% endblock %}
+
+{% block landingHeadingText %}{% trans "Device42 to ServiceNow Express Integration" %}{% endblock %}
+{% block landingfeature %}
+<section class="row padded">
+  <div class="col-md-12">
+    <form action="." method="post" role="form" class="text-center right-corner-sidebar">
+      {% csrf_token %}
+      <input type="hidden" name="flag" value="download" />
+      <button class="btn btn-sm btn-primary" type="submit">Download ServiceNow Express<br>Integration</button>
+    </form>
+    <p class="lead" style="margin-bottom: 0px;">{% trans 'Using the <a href="https://github.com/device42/device42_to_servicenow_express">Device42-ServiceNow Express Sync Script</a> integration, ServiceNow Express users can synchronize Device42’s enhanced asset management and tracking capabilities to their ServiceNow Express instance. This synchronization can be manually refreshed at any time by re-running the script, and can also scheduled (via crontab or similar) for regular, automatic refreshes.' %}</p>
+  </div>
+</section>
+{% endblock %}
+
+{% block maincontent %}
+    <section class="row landing-section">
+      <div class="col-md-9">
+        <h3 class="sub-heading">{% trans "Sync your CIs from Device42 to ServiceNow Express" %}</h3>
+        <p>{% trans "Once you sync your Device42 CMDB to ServiceNow Express, any CIs you configured to sync will be available in ServiceNow Express. CI data can be refreshed manually at any time, or kept up-to-date by scheduling automatic syncs." %}</p>
+      </div>
+      <div class="col-md-3">
+        <a href="{% static 'img/sections/support/integrations/servicenow/servicenow-express-1.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/servicenow/servicenow-express-1.png' %}" class="img-responsive center-block" alt="{% trans 'ServiceNow Express Integration' %}">
+        </a>
+      </div>
+    </section>
+
+    <section class="row landing-section">
+      <div class="col-md-12">
+        <h3 class="sub-heading">{% trans "View CI details in ServiceNow Express" %}</h3>
+        <p>{% trans "Once synced, users of ServiceNow Express can see imported details from Device42 (name, serial #, model, service level, tags, mac addresses, cpu details, RAM, HD, OS info, and more) for that CI, and can then tie those assets to related service requests. View problems associated with a CI with a simple click." %}</p>
+      </div>
+    </section>
+
+    <section class="row landing-section">
+      <div class="col-md-9">
+        <h3 class="sub-heading">{% trans "View Service and Software information imported from Device42" %}</h3>
+        <p>{% trans "Services and Software information can also be synced from Device42 to ServiceNow Express. Synced software information includes all relevant licensing information, and supplementary information such as tags, category, vendor, a description, and any aliases that might be in use. Synced Service information includes service name, description, category, tags, and the associated vendor as well." %}</p>
+        <p>{% trans "Detailed Vendor information can also be synced from Device42. This data includes the Vendor’s name, notes, the vendor’s home page and contact information, and escalation information for troubleshooting and support contacts." %}</p>
+        <p>{% trans "Let Device42 populate Software, Service, and Vendor information into your ServiceNow Express instance. Use this imported information to create custom service request workflows and tailor them to each department's needs!" %}</p>
+      </div>
+      <div class="col-md-3">
+        <a href="{% static 'img/sections/support/integrations/servicenow/servicenow-express-2.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/servicenow/servicenow-express-2.png' %}" class="img-responsive center-block" alt="{% trans 'ServiceNow Express Integration' %}">
+        </a>
+      </div>
+    </section>
+
+    <section class="row landing-section">
+      <div class="col-md-12">
+        <h3 class="sub-heading">{% trans "Associate imported CIs when creating new ServiceNow Express requests" %}</h3>
+        <p>{% trans "When a creating a new request in ServiceNow Express, users can select configuration items synced from Device42. They can then be managed natively within ServiceNow Express, utilizing the Kanban Style Visual Task Boards, and drag and drop task management you’ve gotten used to. Assign teams and create task checklists related to CI’s imported from Device42." %}</p>
+      </div>
+    </section>
+    <hr>
+    <section class="landing-section">
+      <h3 class="text-strong text-default">{% trans "Download our ServiceNow Express script today!" %}</h3>
+      <p class="vert-offset-bottom-1 font-stack-roboto">{% trans 'The latest script can be found on our <a href="https://github.com/device42/device42_to_servicenow_express" target="_blank" class="ext-link">Github repo</a> — and while you are there, check out all of our other open source integrations, too!' %}</p>
+    </section>
+{% endblock %}

@@ -1,0 +1,299 @@
+{% extends "base/_base-landing.html" %}
+{% load i18n static %}
+{% block meta %}
+	<meta name="description" content="{% trans 'A better VMware Application Dependency Planner (ADP) Alternative' %}"/>
+{% endblock %}
+
+{% block styles %}
+    <style>
+      h1 {
+        font-size: 35px !important;
+      }
+      p.lead {
+        font-family: 'Roboto Condensed', sans-serif !important;
+        font-size: 25px !important;
+        margin: 0px !important;
+        font-weight: 500;
+        font-style: italic;
+      }
+      p.lead.small {
+        font-weight: 300;
+        font-size: 18px;
+      }
+      .center-read-label {
+        text-align: center;
+        font-size: 35px;
+        font-weight: 500 !important;
+        margin: 10px 0px;
+        font-family: 'Roboto Condensed', sans-serif !important;
+        color: #2e2f2f;
+      }
+      p.text-strong {
+        color: #2e2f2f;
+      }
+      .small {
+        font-size: 18px;
+        font-weight: 300;
+      }
+      .landing-section p {
+        font-size: 22px;
+        font-family: 'Roboto Condensed', sans-serif !important;
+      }
+      .table-responsive {
+        max-width: 800px;
+        margin: auto;
+      }
+      .table-responsive table {
+        margin-bottom : 0px
+      }
+      .feature-bottom-label {
+        font-size: 15px !important;
+        color: #22a3e2;
+        font-weight: 500 !important;
+      }
+      .checkmark-style li:before {
+          content: "\2714";
+          margin-left: -24px;
+          margin-right: 12px;
+          position: relative;
+          vertical-align: text-top;
+          display: inline-block;
+          font-weight: 100;
+          font-size: 15px;
+          color: #22a3df;
+      }
+      .landing-section p.sub-heading {
+        font-family: 'Roboto', sans-serif !important;
+        font-size: 20px !important;
+        font-style: italic;
+        font-weight: 500;
+        margin-top: 10px;
+        color: #a2a2a2;
+      }
+      p.lead span {
+        font-size: 18px;font-style: italic;
+      }
+      h2.sub-heading {
+        color: #32b5f3 !important;
+      }
+    </style>
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript">
+    $(function() {
+       $("[data-toggle='tooltip']").tooltip();
+    });
+    </script>
+{% endblock %}
+{% block title %}{% trans "A better VMware Application Dependency Planner (ADP) Alternative" %}{% endblock %}
+
+{% block landingHeadingText %}{% trans "A better VMware Application Dependency Planner (ADP) Alternative" %}{% endblock %}
+
+{% block landingLeadText %}{% trans 'The more complete replacement for VMware Application Discovery Manager <span class="small">(aka VMware ADM)</span> you’ve been searching for' %}{% endblock %}
+
+{% block landingfeature %}
+
+<section class="landing-section">
+  <p class="alt-font">{% trans "Device42’s ADM focuses on complete and accurate discovery, identifying all the details about what you have running in your environment today, and clearly highlighting the interdependencies. Device42’s core product also includes a CMDB to store and organize its findings as well as other important details about your environment, and more." %}</p>
+  <p class="alt-font">{% trans 'VMware Application Dependency Planner (aka ADP, previously VMware ADM / VMware Application Discovery Manager)  is limited to discovering your virtual IT inventory only, including “virtual machines, hosts, clusters, datastore folders, and virtual networks”.' %}</p>
+  <p class="alt-font">{% trans "Device42 is fully integrated with no standalone modules (though some components are licensed separately). Device42 is truly a one-stop single source of truth because it includes a fully integrated suite of enterprise DCIM features, as well: " %}</p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <ul class="checkmark-style">
+        <li>{% trans "A CMDB" %}</li>
+        <li>{% trans "Power Monitoring & Control" %}</li>
+        <li>{% trans "IPAM" %}</li>
+        <li>{% trans "Password Management" %}</li>
+        <li>{% trans "Certificate Management" %}</li>
+        <li>{% trans "Multi-Tenancy" %}</li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <ul class="checkmark-style">
+        <li>{% trans "Capacity Planning" %}</li>
+        <li>{% trans '“What-if” scenarios' %}</li>
+        <li>{% trans "Inventory Lifecycle Management" %}</li>
+        <li>{% trans "Automatic Rack Diagrams" %}</li>
+        <li>{% trans "Cable Management" %}</li>
+        <li>{% trans "Drag-and-drop Room Layouts" %}</li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <ul class="checkmark-style">
+        <li>{% trans "Full Audit Trails" %}</li>
+        <li>{% trans "Asset Transfers" %}</li>
+        <li>{% trans "Asset Lifecycle Tracking" %}</li>
+        <li>{% trans "Purchase Tracking" %}</li>
+        <li>{% trans "QR / Barcode Generation" %}</li>
+        <li>{% trans "Spreadsheet and .CSV Import of CI’s and Attributes" %}</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block maincontent %}
+  <section class="row flat-top landing-section">
+    <div class="col-sm-10 col-sm-offset-1">
+        <p class="text-center text-strong">{% trans 'Though Device42 and VMware ADP <span class="small">(previously VMware ADM / VMware Application Discovery Manager)</span> have much in common, some key features differentiate the two:' %}</p>
+        <div class="table-responsive">
+            <table class="table table-condensed table-hover d42-sw-compare">
+            <thead>
+              <tr>
+                <th class="table-title"><p class="dark-blue text-left alt-text" style="margin:0;font-size:24px;">{% trans "Solution Comparison" %}</p></th>
+                <th>{% trans "Device42’s ADM" %}</th>
+                <th>{% trans 'VMware Application<br> Dependency Planner<br> <span class="small" style="font-size: 15px;">(aka VMware ADP)</span>' %}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="comp-feature">{% trans "Cloud and On Premise Option" %}</td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-exclamation-triangle" data-toggle="tooltip" data-placement="top" title="Only on the VMware Cloud Platform"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Native Windows and Linux Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Native VMware Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Native Hyper-V, Xen, KVM, LXC Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Native Cloud Platform Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Application Dependency Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Performance Metrics for Right-Sizing" %}</td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-exclamation-triangle" data-toggle="tooltip" data-placement="top" title="Per VMware's FAQ: 'Usage metrics' or 'Discover behavior' feature was turned off in the last release of ADM (before ADP) due to inaccurate reports, and performance issues. We don't plan to turn this feature on, as this will require quite a bit of effort from development/testing/support point of view. The USAGE_METRIC and USAGE_METRIC_BASELINE tables are directly affected by 'Discovery Behavior' and will not be populated at all."></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "SNMP Support" %}</td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Mainframe support" %}</td>
+                <td class="text-center"><i class="fa fa-times"></i></td>
+                <td class="text-center"><i class="fa fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Agent-less Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Optional Agent Based Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "No Complicated Span Ports" %}</td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Netflow Based Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+                <td class="text-center">
+                  <a href="http://ftpsite.vmware.com/download/rlspsrl/ADP/2.0/ADP%20Frequently%20Asked%20Questions%20v1.0.pdf"><i class="fa fa-check"></i></a></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "XLS/XLSX Spreadsheet Imports" %}</td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Webhooks" %}</td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "RESTful APIs" %}</td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-times"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="feature-bottom-label">{% trans "*All feature data deduced from GFI Software’s website and available marketing materials. Please let us know if something isn’t right and we’ll gladly update it." %}</p>
+    </div>
+</section>
+
+  <section class="row landing-section" style="padding-bottom: 0px;">
+    <div class="col-md-12">
+      <h2 class="sub-heading">{% trans "Device42 ADM: A better alternative to VMware Application Dependency Planner" %}</h2>
+      <p class="alt-font">{% trans 'A complete solution [as compared to Device42’s feature set] is not available from VMWare. The VMWare Application Dependency Planner (aka ADP, previously VMware ADM / VMware Application Discovery Manager) only works with virtual servers and other virtual hardware running only on the required VMware products [A new or existing deployment consisting of VMware vSphere connected to VMware vCenter Operations Manager & vCenter Site Recovery Manager, all three of which are utilized by VMware’s Application Dependency Planner (ADP) to discovery virtual application dependencies]. Lastly, for “the most detailed and up-to-date discovery”, VMware requires the configuration of complicated span ports [promiscuous monitoring] to be performed on both hypervisors and supporting physical network hardware.' %}</p>
+      <br>
+      <p class="alt-font" style="margin: 0px;">{% trans 'Both ADP (ADM) products do have a number of similar use cases and benefits. Some of the more common use cases, and their supporting features are found below:' %}</p>
+    </div>
+  </section>
+
+  <section class="row landing-section" style="padding-top: 0px;">
+    <div class="col-md-7">
+      <p class="sub-heading">{% trans "Common Application Dependency Mapping (ADM / ADP) Benefits & Use Cases:" %}</p>
+      <ul class="checkmark-style">
+        <li>{% trans "Discover and consolidate or decommission unused servers" %}</li>
+        <li>{% trans "Eliminate the majority of manual infrastructure documentation" %}</li>
+        <li>{% trans "Orchestrate migration planning after discovery of applications & dependencies" %}</li>
+        <li>{% trans "Provide information relevant to creation of planning for a DR site (disaster recovery) and/or creation of DR procedures" %}</li>
+        <li>{% trans "Troubleshoot more efficiently with shorter MTTR" %}</li>
+        <li>{% trans "Reduce audit time & effort significantly" %}</li>
+      </ul>
+    </div>
+    <div class="col-md-5">
+      <p class="sub-heading">{% trans "Common Features:" %}</p>
+      <ul class="checkmark-style">
+        <li>{% trans "Advanced visualizations" %}</li>
+        <li>{% trans "Powerful, customizable reporting" %}</li>
+        <li>{% trans "IP address, MAC, Subnet, and other network details" %}</li>
+        <li>{% trans "Dependency diagrams" %}</li>
+        <li>{% trans "High level of well organized detail" %}</li>
+        <li>{% trans "Customizable fields" %}</li>
+      </ul>
+    </div>
+</section>
+{% include 'partials/try-free-callout.html' %}
+<section class="row landing-section">
+  <div class="col-md-8">
+    <h3 style="color: #000000;">{% trans "Device42’s ADM Tracks Relationships and Maps Dependencies Between Your Hardware and Software Inventory, and Other IT Assets" %}</h3>
+    <p>{% trans "Device42’s software Application Dependency Mapping (ADM) and inventory management features provides the powerful ability to automatically map, track, and visualize operational dependencies. " %}</p>
+    <br>
+    <p class="text-strong">{% trans "Device42’s software inventory tool produces detailed software and server impact charts:" %}</p>
+    <ul>
+      <li>{% trans "Display downward dependencies from Virtual Server Host or Blade Chassis to contained VM’s" %}</li>
+      <li>{% trans "Visualize all service connections between them" %}</li>
+      <li>{% trans "See a clear map of your operations and its interdependencies" %}</li>
+      <li>{% trans "Quickly understand the trickle-down effect of a service interruption if a blade or service were to become unavailable" %}</li>
+    </ul>
+  </div>
+  <div class="col-md-4">
+      <a href="{% static 'img/landing/sql-migration/banner.png' %}" data-featherlight="image">
+        <img class="img-responsive center-block" alt="{% trans 'VMWare Application Discovery Planner' %}"
+             src="{% static 'img/landing/sql-migration/banner.png' %}">
+      </a>
+  </div>
+</section>
+
+<section class="landing-section">
+  <p style="font-style: italic;">{% trans "Device42’s Advanced Visualizations, powerful, Customizable Reporting facilities, and its advanced, well documented RESTful APIs work together to provide an enhanced data management experience: by helping to make your data either easier to see and understand, faster to manipulate, and/or more convenient to quantify. All of these features, too, are available at a price that will surprise you." %}</p>
+</section>
+{% endblock %}
+

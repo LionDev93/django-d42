@@ -1,0 +1,33 @@
+[head.title]
+Comprehensive CMDB discovery tool with agent-less auto-discovery
+
+[head.description]
+Device42 is a comprehensive CMDB discovery tool with agent-less auto-discovery and lets you scan your complete network in minutes.
+
+[landing.title]
+Comprehensive CMDB Discovery Tool
+
+[landing.content]
+
+Map your physical, virtual and cloud networks automatically with Device42's agent-less CMDB discovery tool.  Quickly and thoroughly discover your entire network using a variety of auto-discovery methods, automatically correlating the information!
+
+- TCP port scan and other mapping tools quickly map out the network
+- SNMP Discovery (v1/v2c/v3) for network and server devices
+- SSH/WMI discovery for Linux/Unix and Windows
+- Discover Hypervisors via APIs such as Hyper-V, VMWare, OpenStack and more
+- Connect to cloud vendors like Amazon Web Services, Azure, Google Compute Engine, and many more!
+
+[feature[1].title]
+Complete Auto Discovery for All Networks
+[feature[1].content]
+Device42 CMDB discovery tool spans from legacy to newer systems and builds dependencies between physical, virtuals and applications. No need to use multiple tools to put together information anymore.
+
+[feature[2].title]
+Comprehensive Data Collection and Auto-correlation
+[feature[2].content]
+Collect your complete inventory with the CMDB discovery tool from serial #'s, model, OS, installed software, IPs, connections, and more! Data from various auto-discovery methods is automatically correlated.
+
+[feature[3].title]
+Real-time Map of your IT Infrastructure with Integrations
+[feature[3].content]
+Using our out of box integrations with JIRA, Confluence, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, ServiceNow and many more. Use this real-time map to reduce your MTTR and to make faster decisions in your daily IT operations.

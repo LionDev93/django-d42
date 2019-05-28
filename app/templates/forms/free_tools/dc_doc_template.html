@@ -1,0 +1,122 @@
+{% extends 'base/_base-landing.html' %}
+{% load i18n static %}
+{% block title %}{% trans "Ultimate Data Center Documentation Template" %}{% endblock %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Ultimate Data Center Documentation Template' %}"/>
+{% endblock %}
+{% block site_section_product %}active{% endblock %}
+{% block head_scripts %}
+    <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
+{% endblock %}
+{% block body_scripts %}
+
+  <style>
+    .form_head {
+      padding: 25px 15px;
+    }
+  </style>
+{% endblock %}
+{% block landingHeadingText %}{% endblock %}
+{% block calloutTryFree %}{% endblock %}
+{% block maincontent %}
+    <section class="landing-form">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <h1>{% trans "Start Documenting Your Data Center Today!" %}</h1>
+                    <h2>{% trans "Download Device42’s Ultimate Template" %}</h2>
+                    <p>{% trans "<b><i>IT organizations the world over are under pressure to ensure everything gets documented, while at the same time, budgetary support for documentation could be non-existent.</i></b>" %}</p>
+                    <h3 class="vert-offset-top-2">{% trans "Download the Ultimate Data Center Documentation Template by Device42 for FREE and document your data center today:" %}</h3>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <ul>
+                                <li>{% trans "Understand your datacenter" %}</li>
+                                <li>{% trans "Track branch office configurations" %}</li>
+                                <li>{% trans "Track hardware and software licenses" %}</li>
+                                <li>{% trans "Track license renewals & simplify audits" %}</li>
+                                <li>{% trans "100% free & completely customizable!" %}</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3">
+                            <ul>
+                                <li>{% trans "Rack tracking" %}</li>
+                                <li>{% trans "Cable tracking" %}</li>
+                                <li>{% trans "VLANs and networks" %}</li>
+                                <li>{% trans "HTTP domains" %}</li>
+                                <li>{% trans "SSL certificates" %}</li>
+                            </ul>
+                        </div>
+                      <div class="col-sm-3">
+                            <ul>
+                                <li>{% trans "Equipment tracking" %}</li>
+                                <li>{% trans "Server roles" %}</li>
+                                <li>{% trans "IP addresses" %}</li>
+                                <li>{% trans "Licenses" %}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+
+                    <form role="form" id="downloadForm" action="." method="POST" style="margin-top: 42px !important; margin-bottom: 15px !important;">
+                    	<div class="form_head">
+		                    <h1 style="font-size: 26px !important; margin: 0 !important; color: white;">{% trans "<span><i>FREE</i></span> Template Download" %}</h1>
+                      </div>
+
+                      <div class="form_body">
+                          <h2 style="margin: 0; font-weight: 200;">{% trans "Download now, <b>FREE!</b>" %}</h2>
+                        <style>
+                         .form_body {
+                                     padding:15px 10px;
+                                    }
+                        </style>
+
+                        <!--[if lte IE 8]>
+                                  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+                        <![endif]-->
+                                  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+                                  <script>
+                                    hbspt.forms.create({
+	                                  portalId: "433338",
+	                                  formId: "08742b82-0d87-44ec-a7da-cf390fdf591c"
+                                  });
+                                  </script>
+                          <h4 style="margin-top: 25px; margin-bottom: 35px;">{% trans "Please fill out the form to get your XLSX." %}</h4>
+
+                              <div class="form-group" height="450px">
+
+                              </div>
+
+                              <input style="display:none" id="id_main" type="text" name="main" maxlength="128"/>
+                      </div>
+                      <div class="form_footer">
+                        <style>
+                          .form_footer {
+                            padding: 35px 15px; margin-bottom: 55px;
+                          }
+                        </style>
+                        <i><p>We will not misuse or sell your info.
+                          <br>
+                          <a href="https://www.device42.com/privacy/" target="_blank" > Privacy Policy.</a></i></p></div>
+                      </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <img src="{% static 'img/branding/graphics/home-gfx.png' %}"
+                           class="center-block"
+                           style="max-width: 100% !important;">
+                </div>
+                <div class="col-md-4">
+                  <img src="{% static 'img/landing/free_tools_landing.png' %}"
+                           class="padded img-responsive">
+                </div>
+            </div>
+        </div>
+
+    </section>
+{% endblock %}

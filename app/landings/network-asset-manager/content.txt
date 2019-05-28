@@ -1,0 +1,39 @@
+[head.title]
+Comprehensive network asset manager software with agent-less auto-discovery
+
+[head.description]
+Device42 is a comprehensive network asset manager software with agent-less auto-discovery.
+
+[landing.title]
+Comprehensive Network Asset Manager
+
+[landing.image_format]
+png
+
+[landing.content]
+
+Device42 software provides comprehensive network asset manager capabilities including powerful auto-discovery with fully configurable asset types. Easily accommodate any IT asset type within in your infrastructure.
+
+- Agent-less auto-discoveries help you discover and inventory manage network assets, ensuring data is always up-to-date
+- Support for physical, virtual and cloud infrastructure for efficient network asset manager of both hardware and software 
+- Discover hardware and software inventory on any operating system: Windows, Linux, UNIX, Mac, or BSD
+- Out-of-the-box integrations with ITAM/ITSM tools like JIRA, ServiceNow, Cherwell and more 
+- Know your support expiry and more with automatic contract management for various vendors
+- Easier audits with comprehensive reports and visualization tools
+
+
+[feature[1].title]
+Complete Network Asset Manager Software with Auto-discovery
+[feature[1].content]
+Device42 auto-discovery spans across legacy and newer systems alike, building a complete network inventory and highlighting dependencies between physical, virtuals, cloud infrastructure and applications.
+
+[feature[2].title]
+Network Asset Manager Support Entitlement Tracking and Management
+[feature[2].content]
+Device42 helps you auto-discover your warranty information from various vendors to know when does your support expire. Know in advance when your server support is up for renewal and information for a support call when a server is down.
+
+
+[feature[3].title]
+Real time Infrastructure and network asset manager with Integrations
+[feature[3].content]
+Go beyond traditional inventory tools using our out of box integrations with JIRA, Confluence, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, ServiceNow and many more you can use this real-time map to reduce your mean time to recovery and make faster decisions in your daily IT operations.

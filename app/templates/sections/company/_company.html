@@ -1,0 +1,161 @@
+{% extends 'base/_base.html' %}
+{% load i18n static custom_tags %}
+{% block title %}{% trans "About Us" %}{% endblock %}
+{% block styles %}
+    <style>
+        img.face-photo {
+              max-width: 150px;
+              width: 150px;
+        }
+    </style>
+{% endblock %}
+{% block site_section_company %}active{% endblock %}
+{% block meta %}
+    <meta name="description" content="{% trans 'About Device42 - Comprehensive Data Center Documentation Software' %}"/>
+{% endblock %}
+{% block body %}
+    <header class="row head-home bg-primary">
+        <div class="container">
+            <div class="row featurette">
+                <div class="col-md-12">
+                    <h1 class="flat-top">{% trans "About Device42" %}</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="row bg-info company-page">
+        <div class="container">
+             <div class="row flat-top">
+                    <div class="col-xs-12 font-stack-roboto padded">
+                        <p>{% trans "Device42 Inc., a leader in the Configuration Management Database (CMDB), Application Dependency Mapping (ADM) and DCIM Software Marketplace, delivers comprehensive, low cost solutions that helps companies automatically maintain an up-to-date inventory of their IP-based Devices and non-IP Assets, whether physical, logical, or virtual. Device42 provides customers with understanding and advanced visualization of their infrastructure and its inter-dependencies, and centralizes data center knowledge into a single source of truth making IT ecosystems clearly visible, understandable, and controllable." %}</p>
+                        <p>{% trans "From its inception in 2010, Device42 has listened closely to customer needs and designed solutions that exceed customer expectations. As a result, a rapidly growing number of companies of all shapes and sizes use Device42 in over 50 countries." %}</p>
+                        <p class="text-italic ">{% trans "Read the latest & follow our growth on the" %} <a href="https://www.device42.com/blog/" target="_blank">{% trans "Device42 Blog" %}</a>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <div class="row">
+        <div class="container vert-offset-top-1">
+            <div class="row is-table-row">
+                <div class="col-sm-2">
+                    <img src="{% static 'img/branding/company/raj.png' %}"
+                         class="img-responsive img-circle center-block face-photo"
+                         alt="Raj Jalan">
+                    <h4 class="text-uppercase text-center">Raj Jalan</h4>
+                    <h5 class="flat-top text-uppercase text-center">{% trans "Founder & CEO" %}</h5>
+                </div>
+                <div class="col-sm-10 font-stack-condensed">
+                    <p>{% trans "Raj Jalan, previously an IT consultant for numerous companies, recognized that many corporate data centers lacked the visibility and control they require to most effectively manage both planned and unplanned changes within their IT infrastructure." %}</p>
+                    <p>{% trans "When Raj looked for DCIM tools to help, he found very expensive, non-integrated point solutions that simply didn't deliver the functionality that data center managers require. This motivated him to start Device42." %}</p>
+                    <p>{% trans "Today, as CEO, Raj’s experience and insight continue to fuel Device42’s technology innovation and corporate growth." %}</p>
+                    <p>{% trans "When he’s not working, Raj enjoys running, photography, and board games -- with “Settlers of Catan” being his favorite." %}</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row is-table-row">
+                <div class="col-sm-2">
+                    <img src="{% static 'img/branding/company/steve.png' %}"
+                         class="img-responsive img-circle center-block face-photo"
+                         alt="Steve Shwartz">
+                    <h4 class="text-uppercase text-center">Dr. Steve Shwartz</h4>
+                    <h5 class="flat-top text-uppercase text-center">{% trans "Co-founder & Executive Chairman" %}</h5>
+                </div>
+                <div class="col-sm-10 font-stack-condensed">
+                    <p>{% trans "Steve is a serial entrepreneur who has had the good fortune to participate in multiple IPO's and M&A exits as a founder, co-founder and investor." %}</p>
+                    <p>{% trans "Steve started his career as a research faculty member in the Yale University Computer Science Dept Artificial Intelligence program and was a co-founder of two companies in the artificial intelligence area, one of which had an IPO." %}</p>
+                    <p>{% trans "He then created Esperant, one of the leading business intelligence tools of the 1990’s.  Esperant was named 'Product of the Year' by two national business publications, was translated into numerous languages, and was sold in 80 countries worldwide." %}</p>
+                    <p>{% trans "He was one of the early investors in Tangoe which was one of top 5 IPO's of 2011, served on the Board for 6 years, and was CTO for the 3 years around the public offering." %}</p>
+                    <p>{% trans "Prior to joining Tangoe, Steve ran the Transcentive division and served as Global CTO of Computershare, a $2B financial services company after Computershare bought Transcentive." %}</p>
+                    <p>{% trans "Steve enjoys playing golf and basketball when he’s not behind the desk." %}</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row is-table-row">
+                <div class="col-sm-2">
+                    <img src="{% static 'img/branding/company/al.png' %}"
+                         class="img-responsive img-circle center-block face-photo"
+                         alt="Raj Jalan">
+                    <h4 class="text-uppercase text-center">Al Rossini</h4>
+                    <h5 class="flat-top text-uppercase text-center">{% trans "COO" %}</h5>
+                </div>
+                <div class="col-sm-10 font-stack-condensed">
+                    <p>{% trans "Prior to Device42, Al Rossini provided executive-level sales and technical solution leadership at numerous private and public sector organizations. In these roles, Al’s management insight was instrumental in repeatedly enabling record sales growth, successful margin expansion, global team building, and successful product/service introductions." %}</p>
+                    <p>{% trans "Al’s proven expertise and practical experience are vital assets in Device42’s rapid, scalable, growth in global markets." %}</p>
+                    <p>{% trans "Al is an avid skier, cyclist, and regularly enjoys a competitive basketball game -- when he’s not tethered to his laptop." %}</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row is-table-row">
+                <div class="col-sm-2">
+                    <img src="{% static 'img/branding/company/ryan.png' %}"
+                         class="img-responsive img-circle center-block face-photo"
+                         alt="Ryan Burke">
+                    <h4 class="text-uppercase text-center">Ryan Burke</h4>
+                    <h5 class="flat-top text-uppercase text-center">{% trans "VP Alliances and Partnerships" %}</h5>
+                </div>
+                <div class="col-sm-10 font-stack-condensed">
+                    <p>{% trans "Before joining the Device42 team, Ryan held sales and consulting leadership roles at various IT consultancies and enterprise software firms, starting with NTT Data in Boston. Ryan’s broad experience in enterprise technology makes him a valuable resource to Device42 partners and customers in their efforts to leverage Device42 software in support of digital transformation." %}</p>
+                    <p>{% trans "Ryan was a varsity track and field athlete at Boston College, but as a licensed skydiver, most of his recent 10ks have been logged jumping out of planes." %}</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row is-table-row">
+                <div class="col-sm-2">
+                    <img src="{% static 'img/branding/company/joe.jpg' %}"
+                         class="img-responsive img-circle center-block face-photo"
+                         alt="Joe Schmitt">
+                    <h4 class="text-uppercase text-center">Joe Schmitt</h4>
+                    <h5 class="flat-top text-uppercase text-center">{% trans "VP of Software Development" %}</h5>
+                </div>
+                <div class="col-sm-10 font-stack-condensed">
+                    <p>{% trans "Joe Schmitt began his software development journey in the 80's, programming the on the Apple II. He began professionally writing healthcare algorithms in 370 assembly, and has been riding the waves of the software evolution ever since. He has held leadership positions for software product firms for over 25 years, and spent several years running his own consulting company solving critical business issues." %}</p>
+                    <p>{% trans "In his free time, he enjoys studying Judo, and solving everyday problems by engineering and building novel solutions." %}</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row is-table-row">
+                <div class="col-sm-2">
+                    <img src="{% static 'img/branding/company/garr.png' %}"
+                         class="img-responsive img-circle center-block face-photo"
+                         alt="Garrett Long">
+                    <h4 class="text-uppercase text-center">Garrett Long</h4>
+                    <h5 class="flat-top text-uppercase text-center">{% trans "VP Alliances and Partnerships" %}</h5>
+                </div>
+                <div class="col-sm-10 font-stack-condensed">
+                    <p>{% trans "Garrett Long has over 20 years experience in the technology, communications and outsourcing business. He has held roles spanning network architecture, management consulting, and business development including serving in executive capacity as a CTO." %}</p>
+                    <p>{% trans "Despite all that, he’s a pretty cool guy, and someone you should have a drink with if you get the chance." %}</p>
+                </div>
+            </div>
+          <hr>
+            <div class="row is-table-row">
+                <div class="col-sm-2">
+                    <img src="{% static 'img/branding/company/lomax.jpg' %}"
+                         class="img-responsive img-circle center-block face-photo"
+                         alt="Jason Lomax">
+                    <h4 class="text-uppercase text-center">Jason Lomax</h4>
+                    <h5 class="flat-top text-uppercase text-center">{% trans "VP of Customer Success" %}</h5>
+                </div>
+                <div class="col-sm-10 font-stack-condensed">
+                    <p>{% trans "Jay has been in the Software/SaaS and IT industries for over 18 years. He is the head of our Customer Success team which includes Product Support, Customer Service, as well as our IT Organization." %}</p>
+                    <p>{% trans "In his spare time Jay enjoys spending time with his three children, family and friends as well as golfing, dining out and traveling." %}</p>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{% trans "Device42's Open Source Contributions" %}</h3>
+                </div>
+                <div class="panel-body bg-info">
+                    <p>{% trans "We have open sourced some of our work to help fellow System and Network Engineers & Administrators better manage their infrastructure and related documentation. These open source projects may be utilized independently or in conjunction with Device42 software." %}</p>
+                    <p>{% blocktrans %}More Info @ <a href="https://www.github.com/device42" target="_blank">Device42 open-source software</a>{% endblocktrans %}</p>
+                    <p>{% blocktrans %}We strive to improve Device42's CMDB DCIM software. If you find an issue or have a suggestion, please email us at <a href="mailto:support@device42.com">support@device42.com</a>{% endblocktrans %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

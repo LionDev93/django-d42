@@ -1,0 +1,40 @@
+[head.title]
+Stop your CMDB tool search right here: Device42 auto-discovers your hardware, software and app and service dependencies!
+
+[head.description]
+Device42 takes CMDB tools to the next level, offering powerful dependency mapping that auto-discovers your application and service dependencies, generating powerful dependency maps, automatically! Other tools can't keep up!
+
+
+[landing.title]
+Don't Fight with Visio for Dependency Mapping!
+
+[landing.image_format]
+png
+
+
+[landing.content]
+Generic and/or open-source CMDB software leaves a lot to be desired when it comes to auto-discovery and dependency mapping. If you're looking to understand and control your infrastructure, let Device42 generate dependency maps that highlight key relationships and interdependencies for you!
+
+- Agentless service and application dependency discovery via native Windows (WMI) and Linux (SSH) protocols, and via SNMP for network hardware
+- Device42 discovers all of your deployed hardware, software, manufacturers, and versions and stores details in a built in CMDB
+- Complete server and service dependencies, protocols, and ports are all discovered automatically
+- Easily view application to application and to server dependency maps
+- View comprehensive application dependency maps even for machines that can't be directly accessed, built out with Netflow data!
+
+
+[feature[1].title]
+Go Beyond the Every-day CMDB with Automatic Dependency Maps!
+[feature[1].image_format]
+png
+[feature[1].content]
+Device42 dependency mapping tools run laps around most CMDBs on the market, auto-discovering hardware, software, and application dependencies. View dependency maps that identify and track all of your physical and logical components, relationships, and more!
+
+[feature[2].title]
+Application Dependency Maps, Lists, and Flow Diagrams
+[feature[2].content]
+Enjoy automatic dependency mapping with easy to understand maps that higlight the impacts of each application component. Easy to consume list pages and maps are Visio compatible, too!
+
+[feature[3].title]
+Device42 Integrates with Your Other Tools!
+[feature[3].content]
+Not only can Device42 import existing data from Excel, CSV, and more, but with RESTful APIs you can also automate and integrate with your favorite IT tools, too: JIRA, ServiceNow, BMC, Ansible, Puppet, Chef, and more!

@@ -1,0 +1,42 @@
+[head.title]
+View your application and service dependencies with the Device42 dependencies diagram tool!
+
+
+[head.description]
+The Device42 dependencies diagram tool uses comprehensive autodiscovery to automatically map your application and service dependencies!
+
+
+[landing.title]
+Detailed Dependencies Diagrams, Automatically!
+
+
+[landing.image_format]
+png
+
+
+[landing.content]
+The Device42 dependencies diagram tool automatically discovers your entire IT infrastructure, generating dependencies diagrams that highlight relationships between your hardware, software, and applications!
+
+- Agentless service and application dependency discovery via native Windows (WMI) and Linux (SSH) protocols, and via SNMP for network hardware
+- Device42 discovers all of your deployed applications, application dependencies, manufacturers, and versions
+- Dependencies diagrams show you your service dependencies, in-use protocols, and ports
+- Easily view application to application and to server dependencies diagrams
+- View comprehensive application dependencies diagrams even for machines that can't be directly accessed, built out with Netflow data!
+
+
+[feature[1].title]
+Automated Service Impact Discovery
+[feature[1].image_format]
+png
+[feature[1].content]
+Device42 discovers hardware, software, and application dependencies. View dependencies diagrams to identify and track all of your physical and logical components, relationships, and their interdependencies.
+
+[feature[2].title]
+Application Dependencies Diagrams, Lists, and Dependency Flow Diagrams
+[feature[2].content]
+Automatic application discovery creates dependency maps and flowcharts that highlight the impact of any discovered application, whether contemplating a migration or a change control. Easy to consume list pages and flowcharts are Visio compatible, too!
+
+[feature[3].title]
+Powerful Dependencies Diagram Visualizations, Reporting and APIs!
+[feature[3].content]
+Easily build move groups, or report on any application dependencies in your desired format - Excel, CSV, or a direct connection to an external database. Flexible APIs let you manipulate data your way and integrate Device42 with other products, too!

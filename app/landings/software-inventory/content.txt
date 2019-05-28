@@ -1,0 +1,38 @@
+[head.title]
+Comprehensive software inventory with agent-less auto-discovery
+
+[head.description]
+Device42 is a comprehensive software inventory tool with agent-less auto-discovery.
+
+[landing.title]
+Comprehensive Software Inventory Tool
+
+[landing.image_format]
+png
+[landing.content]
+
+Device42 provides comprehensive IT software inventory management capabilities including powerful, software inventory auto-discovery with fully configurable asset types. Easily accommodate any IT asset type within in your infrastructure.
+
+- Software Inventory tools use agent-less auto-discoveries to keep all your inventory up-to-date with an optional agent for remote assets.
+- Support for physical, virtual and cloud software inventory and hardware inventory
+- Discover software inventory no matter the operating system: Windows, Linux, UNIX, Mac, or BSD!
+- Software inventory tools integrate with IT tools like JIRA, ServiceNow, Cherwell and many more. Get the most from your existing investments!
+- Powerful, customizable visualization and reports
+
+
+
+[feature[1].title]
+Complete Auto Discovery for All Networks
+[feature[1].content]
+Device42 auto-discovery spans from legacy to newer systems and builds inventory and dependencies between physical, virtuals, cloud infrastructure and applications. No need to use multiple tools to put together information anymore.
+
+[feature[2].title]
+Software Inventory & License Management
+[feature[2].content]
+View and manage all software license counts and expiration dates. Manage your license keys along with software relations to devices or users. Software inventory tools can manage complex licensing models including cpu bound, user bound or machine bound licenses.
+
+
+[feature[3].title]
+Real-time Map of Your IT Infrastructure with Integrations
+[feature[3].content]
+Go beyond traditional inventory tools using our out of box integrations with JIRA, Confluence, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, ServiceNow and many more!

@@ -1,0 +1,40 @@
+[head.title]
+Don't compare open source CMDBs - Get the best instead!
+
+[head.description]
+When it comes to CMDBs, look beyond open-source. Why? Open source can't keep up! Device42 CMDB discovers your application and service dependencies, generating powerful dependency maps, automatically!
+
+
+[landing.title]
+Stop your search for open source CMDB comparisons right here.
+
+[landing.image_format]
+png
+
+
+[landing.content]
+Device42's CMDBs beat open source hands down, automatically discovering your entire infrastructure, and generating dependency maps that highlight key relationships and interdependencies!
+
+- Agentless service and application dependency discovery via native Windows (WMI) and Linux (SSH) protocols, and via SNMP for network hardware
+- Device42 discovers all of your deployed hardware, software, manufacturers, and versions
+- Automatically discover all server and service dependencies, protocols & ports
+- Easily view application to application and to server dependency maps
+- View comprehensive application dependency maps even for machines that can't be directly accessed, built out with Netflow data!
+
+
+[feature[1].title]
+Automated Dependency Map Creation!
+[feature[1].image_format]
+png
+[feature[1].content]
+The Device42 CMDB runs laps around open source, auto-discovering hardware, software, and application dependencies. View dependency maps that identify and track all of your physical and logical components, relationships, and more!
+
+[feature[2].title]
+Application Dependency Maps, Lists, and Flow Diagrams
+[feature[2].content]
+Device42's CMDB auto-discovers and maps impacts of each discovered application. Easy to consume list pages and maps are Visio compatible, too!
+
+[feature[3].title]
+Device42 Imports from Open Source CMDB's!
+[feature[3].content]
+Not only can Device42 import existing data from Excel, CSV, and more, with RESTful APIs that let you manipulate your data in any which way - But Device42 also integrates with open source CMDB's, and other products, too!

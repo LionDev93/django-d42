@@ -1,0 +1,35 @@
+[head.title]
+Comprehensive hardware asset management tool with agent-less auto-discovery
+
+[head.description]
+Device42 is a comprehensive hardware asset management tool with agent-less auto-discovery!
+
+[landing.title]
+Comprehensive Hardware Asset Management
+[landing.image_format]
+png
+[landing.content]
+Device42 provides comprehensive IT hardware asset management capabilities that include powerful auto-discovery, fully configurable asset types, and so much more!
+
+- Hardware asset management uses agent-less autodiscovery to automatically keep your inventory up-to-date - optional agent for remote assets
+- Physical, virtual and cloud hardware asset management are all supported. Track and manage your entire hardware asset inventory!
+- Complete hardware asset management on any operating system: Windows, Linux/*NIX, Mac, or BSD
+- Out of box integrations with popular CM tools, ITSM tools, SIEM tools, (and many more!)
+- Know and manage hardware asset support expiration dates, with automatic contract management, too!
+- Easier hardware asset management audits with comprehensive reporting and advanced visualization tools
+
+[feature[1].title]
+Hardware Asset Management Tool Autodiscovers All Network Hardware
+[feature[1].content]
+Device42's hardware asset management tools use auto-discovery to build a complete inventory: dependencies between physical, virtual, and cloud infrastructure, and applications - all with one tool!
+
+[feature[2].title]
+Hardware Asset Management Includes Support Entitlement Tracking
+[feature[2].content]
+Device42 hardware asset management downloads your warranty information from various vendors so you know when your support expires - Always know when support is due for renewal!
+
+
+[feature[3].title]
+Real-time Map of Your IT Infrastructure with Integrations
+[feature[3].content]
+Go beyond traditional hardware asset management tools using our out of box integrations with JIRA, Confluence, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, ServiceNow, and many more!

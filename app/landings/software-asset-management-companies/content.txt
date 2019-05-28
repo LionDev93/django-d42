@@ -1,0 +1,38 @@
+[head.title]
+Comprehensive software asset management company with agent-less auto-discovery
+
+[head.description]
+When looking for software asset management companies, look no further than Device42 - comprehensive software asset management with agent-less auto-discovery!
+
+[landing.title]
+Looking for Software Asset Management Companies?
+[landing.image_format]
+png
+[landing.content]
+
+Look no further! Device42 provides comprehensive software asset management company capabilities including powerful auto-discovery. Easily accommodate any IT asset type within in your infrastructure.
+
+- Agent-less auto-discoveries to keep all your inventory up-to-date with an optional agent for remote assets.
+- Support for physical, virtual and cloud infrastructure to track complete  hardware and software inventory
+- Discover software inventory on any operating system: Windows, Linux, UNIX, Mac, or BSD 
+- Out of box integrations with ITSM tools like JIRA, ServiceNow, Cherwell, and many more help you get the most from your existing investments
+- Manage complex licensing models including CPU bound, user bound, and machine bound licenses
+- Powerful, customizable visualization and reports, plus fully configurable asset types!
+
+
+[feature[1].title]
+Device42 Software Asset Management Company Offers Complete Auto-discovery for All Networks
+[feature[1].content]
+Device42 auto-discovery spans from legacy to newer systems and builds inventory and dependencies between physical, virtuals, cloud infrastructure and applications. No need to use multiple tools to put together information anymore.
+
+
+[feature[2].title]
+Software Asset Management and License Management
+[feature[2].content]
+Your search for software asset management companies is over! View and manage all of your software licenses, expiration dates, license keys, and track software relationships to devices and users!
+
+
+[feature[3].title]
+Real-time map of your IT infrastructure with integrations
+[feature[3].content]
+Go beyond traditional inventory tools using our out of box integrations with JIRA, Confluence, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, ServiceNow and many more.

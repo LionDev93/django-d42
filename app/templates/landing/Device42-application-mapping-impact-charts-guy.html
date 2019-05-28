@@ -1,0 +1,249 @@
+﻿{% extends "base/_base-landing-v4.html" %}
+{% load i18n static %}
+{% block title %}{% trans "Application Dependency Mapping (ADM)" %}{% endblock %}
+{% block og_meta %}
+    <meta property="og:title" content="Device42 Application Dependency and Service Impact Mapping">
+    <meta property="og:description" content="Device 42: Map your IT application dependencies, service / daemon dependencies with continuous and agentless autodiscovery of your data center and IT environment.">
+{% endblock %}
+{% block meta %}
+    <meta name="description" content="Device42 includes a premier agentless application dependency mapping tool that continuously updates IT application dependencies, service / daemon dependencies, and the inventory of your data center and IT infrastructure.">
+{% endblock %}
+
+{% block styles %}
+<style>
+    body{
+      font-family: "Ubuntu Condensed";
+    }
+    .cta-free-trial {
+      padding: 10px 0;
+      text-transform: none !important;
+      background-color: #ffc90e;
+      color: #130dff !important;
+      margin-left: -15px;
+      margin-right: -15px;
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+    #top-container h1 {
+        margin-bottom: 5px;
+    }
+    .vplayer {
+        display: inline-block;
+        position: relative;
+    }
+    .vplayer button {
+        display: inline-block;
+        position: absolute;
+        top: 28%;
+        left: 35%;
+    }
+    .landing-page .title {
+        font-family: "Ubuntu Condensed";
+        font-size: 35px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 0.0em;
+    }
+    .landing-page em.h3 {
+        font-family: "Ubuntu Condensed";
+        font-style: normal;
+        font-size: 20px;
+        color: #696969;
+        letter-spacing: 0.5px;
+        font-weight: 700;
+    }
+    .landing-page h3.subtitle {
+      font-weight: 700;
+      font-size: 25px;
+      font-style: normal;
+      color: rgb(149, 154, 156);
+    }
+    ul.bullet-blue li:before {
+        color: #22a3df;
+        content: '\2605';
+        font-size: 1em;
+        vertical-align: top;
+    }
+    ul.bullet-blue ul.bullet-gray li:before {
+        color: #8f919d;
+        content: '\2022';
+        font-size: 2em;
+    }
+    @media screen and (min-width: 768px){
+      p {
+        font-size: 16px;
+      }
+      .video-desc {
+        width: 60%;
+        float: left;
+      }
+    }
+    @media screen and (max-width: 768px){
+      p {
+        font-size: 14px;
+      }
+      .video-desc {
+        width: 60%;
+        float: right;
+      }
+    }
+
+</style>
+{% endblock %}
+
+{% block key_benefits %}
+    <section class="row landing-section">
+        <div class="col-sm-8" style="vertical-align: top;">
+
+            <h1 class="title">
+              {% trans "Application Dependency Mapping (ADM)" %}
+              <small class="prelist light-weight"></small>
+            </h1>
+
+            <em class="h3 flat-top flat-bottom">{% blocktrans %}Device42’s comprehensive CMDB and powerful ADM make migrations easier, with automatic application mapping uncovering hidden issues <span style="font-style: italic;">before</span> they can cause needless downtime{% endblocktrans %}</em>
+
+            <h3 class="text-strong subtitle">{% trans "Key Benefits:" %}</h3>
+            <div class="row">
+                <ul class="bullet-blue">
+                    <li>{% trans "Simplify change management with easy verification of all servers/application dependencies" %}</li>
+                    <li>{% trans "Bolster your IT automation and staff efficiency with a single source of truth" %}</li>
+                    <li>{% trans "Prioritize and confidently retire or consolidate assets during your migrations" %}</li>
+                    <li>{% trans "Enable faster, and easier troubleshooting of application performance issues" %}</li>
+                    <li>{% trans "Provide valuable insight long after migrations" %}</li>
+                    <li>{% trans "Facilitate fast recovery from a security event" %}</li>
+                    <li>{% trans "Rely on Device42 to efficiently and successfully manage your migrations!" %}</li>
+                </ul>
+            </div>
+
+            <div class="row vert-offset-top-3" style="width: 100%;">
+
+                        <div style="width: 20%; float: left; margin-left: 5%;">
+                            <a class="vplayer" href="#" data-toggle="modal" data-target="#videoModal"><img src="https://img.youtube.com/vi/X9zirQ-HZEw/default.jpg"><button class="btn btn-danger btn-sm"><i class="fa fa-play" style="color: white;"></i></button></a>
+                        </div>
+
+                        <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+                            <div class="modal-dialog">
+
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <div>
+                                    <div class="embed-responsive embed-responsive-16by9" style="border: none !important; border-radius: unset !important;">
+                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/X9zirQ-HZEw?rel=0" frameborder="0" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="vert-offset-top-0 text-center video-desc">
+                            <p style="letter-spacing: 1px;">{% blocktrans %}<strong>You're in good company!</strong><br> Many global companies use<br> Device42 for ADM, <em>and they love us!</em>{% endblocktrans %}</p>
+                        </div>
+
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <a href="{% url 'download' %}">
+                <img class="img-responsive center-block animated"
+                     style="max-width: 90% !important; margin-bottom: 10px;"
+                     src="{% static 'img/sections/features/app-map/set-it-all-in-one-place.jpg' %}"
+                     alt="{% trans 'Application Dependency Mapping (ADM)' %}">
+            </a>
+            <p>{% trans "Our virtual appliance, agentless auto-discovery, remote collectors, and universal import tools will make your migrations easy, simple, and secure!" %}</p>
+            <a class="btn center-block cta-free-trial h3"
+                href="{% url 'download' %}">{% trans "Get your FREE, fully-functional trial NOW!" %}</a>
+        </div>
+    </section>
+{% endblock %}
+
+{% block good_company %}
+{% endblock %}
+
+{% block key_features %}
+    <section class="row image-right-5x7 is-table-row vert-offset-top-0 landing-section">
+        <div class="col-sm-7">
+            <h3 class="text-strong subtitle">{% trans "Key Features:" %}</h3>
+            <ul class="bullet-blue">
+                <li>{% trans "Discover services and applications with agentless autodiscovery, which combines data obtained via Windows (WMI) and Linux (SSH) protocols, and SNMP" %}</li>
+                <li>{% trans "Complement the above native-protocol deep application discovery with Netflow and nmap discoveries" %}</li>
+                <li>{% trans "Discover popular hypervisors, public & private cloud platforms, and more using their native APIs" %}</li>
+                <li>{% trans "Produce a list of all installed applications, manufacturer / owner, version number and function" %}</li>
+                <li>{% trans "View a list of all services, running or not, users, protocols & ports" %}</li>
+                <li>{% trans "Build application dependency diagrams that quickly communicate application to device relationships and service dependencies" %}</li>
+                <li>{% trans "View application to server mappings and application to application mapping" %}</li>
+                <li>{% trans "See services listed by device or user, and devices by service" %}</li>
+                <li>{% trans "Autodiscover services running on network devices, protocols & ports" %}</li>
+                <li>{% trans "Pull in inventory data from tools like Puppet, Chef, Microsoft SCCM, monitoring systems, and more!" %}</li>
+                <li>{% trans "Run powerful pre-built reports against your infrastructure, or customize and schedule them to deliver results to your inbox" %}</li>
+                <li>{% trans "Leverage webhooks and the powerful RESTful APIs for automation" %}</li>
+            </ul>
+        </div>
+        <div class="col-sm-5" style="vertical-align: top; padding-top: 40px;">
+            <a href="{% url 'download' %}">
+                <img class="featurette-image img-responsive center-block"
+                     alt="{% trans 'Application Dependency Mapping (ADM)' %}"
+                     src="{% static 'img/generic/ApplicationDependencyFlowCharts.png' %}">
+            </a>
+        </div>
+    </section>
+{% endblock %}
+
+{% block maincontent %}
+    <section class="row image-left-7x5 landing-section">
+        <div class="col-sm-7">
+            <h3 class="text-strong subtitle">{% trans "PLUS:" %}</h3>
+            <ul class="bullet-blue">
+                <li class="flat-bottom"><strong>{% trans "Automated Service Impact Discovery" %}</strong>
+                    <ul class="bullet-gray flat-top">
+                        <li>{% trans "Create a map of services including all open ports & listening ports with auto-discovery" %}</li>
+                        <li>{% trans "Understand business impacts before moving applications" %}</li>
+                        <li>{% trans "Discover remote connections on Windows, Linux, and BSD" %}</li>
+                    </ul>
+                </li>
+                <li class="flat-bottom"><strong>{% trans "Application Dependency Flow" %}</strong>
+                    <ul class="bullet-gray flat-top">
+                        <li>{% trans "See the relationships between application components" %}</li>
+                        <li>{% trans "Visualize automatically discovered and generated dependencies, defined from the bottom up" %}</li>
+                    </ul>
+                </li>
+                <li class="flat-bottom"><strong>{% trans "Application Impact Lists" %}</strong>
+                    <ul class="bullet-gray flat-top">
+                        <li>{% trans "Understand interdependencies and connections" %}</li>
+                        <li>{% trans "See details about the organizational groups using applications" %}</li>
+                        <li>{% trans "Reduce risk and potential downtime during cutovers, upgrades, and migrations" %}</li>
+                    </ul>
+                </li>
+                <li class="flat-bottom"><strong>{% trans "Visual Application Impacts" %}</strong>
+                    <ul class="bullet-gray flat-top">
+                        <li>{% trans "Visualize applications, hardware component (racks, servers, devices, etc.), and facilities (rooms, buildings) relationships" %}</li>
+                        <li>{% trans "Understand where to look when troubleshooting an outage, performance, or security issue" %}</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-5">
+            <a href="{% url 'download' %}">
+                <img class="img-responsive center-block animated"
+                     src="{% static 'img/sections/features/app-map/automated_service_impact_discovery.png' %}"
+                     alt="{% trans 'Application Dependency Mapping (ADM)' %}">
+            </a>
+        </div>
+{% endblock %}
+
+{% block landingSubCTAtext %}
+    {% trans "Making the switch is easy with migration utilities and imports" %}
+{% endblock %}
+
+{% block body_scripts %}
+<script type="text/javascript">
+    videoSrc = 'https://www.youtube.com/embed/X9zirQ-HZEw?rel=0';
+
+    $("#videoModal").on('show.bs.modal', function() {
+        $("#videoModal iframe").attr('src', videoSrc + '&amp;autoplay=1');
+    });
+
+    $("#videoModal").on('hidden.bs.modal', function() {
+        $("#videoModal iframe").removeAttr('src');
+    });
+</script>
+{% endblock %}

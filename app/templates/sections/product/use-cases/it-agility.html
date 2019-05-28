@@ -1,0 +1,58 @@
+{% extends 'base/_base-use-cases.html' %}
+{% load i18n static %}
+{% block title %}{% trans "Use Case: IT Agility" %}{% endblock %}
+
+{% block meta %}
+<meta name="description"
+      content="{% trans 'IT Agility - Responsiveness to Service Issues / Change Requests' %}"/>
+{% endblock %}
+{% block site_section_features %}active{% endblock %}
+{% block pageTitle %}{% trans "IT Agility" %}{% endblock %}
+{% block challengeBody %}
+  <p class="lead text-strong">{% trans "<strong>IT Agility</strong>: Responsiveness to Service Issues & Change Requests" %}</p>
+  <p class="lead">{% trans "Speed of processing of ITSM tickets is one measure of IT agility. As much as 75% of the time required to process tickets involves time-consuming research." %}</p>
+  <p class="lead">{% trans "Let Device42 help you link your trouble tickets directly to the devices and/or software products they concern, and reach resolution faster!" %}</p>
+  <p class="lead prelist">{% trans "Device42 gives you instant access to the answers you need:" %}</p>
+
+  <ul class="checkmark-style">
+    <li>{% trans 'What users will be impacted if I have to take down a network/server/storage component?' %}</li>
+    <li>{% trans 'What is my warranty on a piece of equipment, and who do I call for service?' %}</li>
+    <li>{% trans 'What is the remote IP address? What are the authentication credentials?' %}</li>
+    <li>{% trans 'What subnet / IP address should I assign to minimize fragmentation?' %}</li>
+    <li>{% trans 'Where is the device on this ticket, and what is the admin password?' %}</li>
+  </ul>
+{% endblock %}
+{% block challengeRight %}
+  <img src="{% static 'img/components/study-a/use-cases/IT Agility.png' %}" class="img-inline-right"
+           alt="{% trans 'IT Agility' %}"/>
+{% endblock %}
+{% block body %}
+  <div class="row">
+    <div class="col-md-12 solution-area" style="padding: 0px;">
+      <h2>{% trans 'Solution' %}</h2>
+      <p>{% trans 'When you open a ticket in your ITSM system, Device42 is right there to with the information you need. Pop up an application dependency diagram to view the users and applications that are dependent on a piece of equipment. Don’t try to locate warranty contracts in a dusty cabinet! All the warranty information is right there in your ticket along with contact information, the device’s service tag & serial number, and anything else you need.' %}</p>
+      <p>{% trans 'Tired of playing “who knows the password”?  You don’t have to do that any more with Device42! When planning IP allocations, view network diagrams and fragmentation charts, click the “What’s the next available IP button”, or have your script or automation request the next free IP from Device42’s RESTful API!' %}</p>
+      <p class="prelist">{% trans 'Device42 <a href="/integrations" target="_blank">also integrates</a> with many popular ITSM solutions:' %}</p>
+      <ul class="checkmark-style">
+        <li><a href="/integrations/jira" target="_blank">Atlassian JIRA</a> & <a href="/integrations/confluence" target="_blank">Confluence</a></li>
+        <li><a href="/integrations/service-now" target="_blank">ServiceNow</a> & <a href="/integrations/servicenow-express" target="_blank">ServiceNow Express</a></li>
+        <li><a href="/integrations/zendesk" target="_blank">ZenDesk</a></li>
+        <li><a href="/integrations/bmc-remedy" target="_blank">BMC Remedy</a></li>
+      </ul>
+      {% url "tours_patch_cable_management" as tours_patch_cable_management %}
+      {% url "integrations" as integrations %}
+      {% url "download" as download %}
+      <h5 class="lead font-stack text-center vert-offset-top-2">{% blocktrans %}Check out our <a
+        href="{{integrations}}">integrations</a> page, and <a href="{{download}}">download</a> a free 30-day trial
+        today!{% endblocktrans %}</h5>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <h5><a href="{% url 'use_cases' %}" class="dir-arrow text-capitalize"><i
+        class="fa fa-chevron-left"></i> {% trans "Back to Use Cases" %}</a></h5>
+    </div>
+  </div>
+{% endblock %}
+

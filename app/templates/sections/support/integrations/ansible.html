@@ -1,0 +1,148 @@
+{% load i18n static %}
+{% block styles %}
+    <style>
+        .download-btn {
+            background-color: #ecebeb;
+            width: 100%;
+            border: none;
+            font-size: 16px;
+            color: #445463;
+        }
+        .download-btn:hover {
+            background-color: #cccbcb;
+        }
+    </style>
+{% endblock %}
+<h2>{% trans "Ansible Lookup Plugin" %}</h2>
+<div class="row is-table-row">
+    <div class="col-md-12">
+        <h4 style="color: #246e90;"><strong>{% trans "Fuel Ansible with the accurate infrastructure details autodiscovered by Device42!" %}</strong></h4>
+    </div>
+</div>
+<div class="row is-table-row">
+    <div class="col-md-12">
+        <p style="font-size: 16px;">{% blocktrans %}The core of Ansible is a simple automation language that both describes and can carry out repeatable building and provisioning of IT application infrastructures.{% endblocktrans %}</p>
+    </div>
+</div>
+<div class="row is-table-row">
+    <div class="col-sm-8">
+
+      <p style="font-size: 16px;">{% blocktrans %}It is very powerful, yet can be easier for a beginner to learn than some of its alternatives, as it doesn't require one to be an accomplished programmer to use it — as <a href="https://www.ansible.com/it-automation" target="_blank">Ansible’s website</a> puts it, Ansible <em>"...doesn't require a grad-level computer science degree to read."</em>{% endblocktrans %}</p>
+
+        <p style="margin-top: 30px;font-size: 14pt;"><strong><em>{% blocktrans %}Device42 currently offers three Ansible integrations:{% endblocktrans %}</em></strong></p>
+        <p style="padding-left: 10px;">{% trans "1. <strong>Static Inventory Script:</strong> generate static lists of hosts from Device42" %}</p>
+        <p style="padding-left: 10px;">{% trans "2. <strong>Dynamic Inventory Script:</strong> dynamically generate host lists from Device42" %}</p>
+        <p style="padding-left: 10px;">{% trans "3. <strong>Lookup Plugin:</strong> call it from your playbook to fetch a host’s IP addresses & password from Device42 [great when scripts need to SSH to a host!]" %}</p>
+
+    </div>
+    <div class="col-sm-4">
+        <div class="center-block xs-center" style="height:60px;width:200px;max-width:100%;">
+            <img src="{% static 'img/branding/transparent-logo.png' %}" alt="{% trans 'Device42 logo' %}"
+                 class="img-responsive">
+        </div>
+        <div class="sprite-ansible center-block xs-center" style="height:60px;width:200px;"></div>
+        <div class="center-block text-center" style="width:300px;max-width:100%;margin-top: 40px;">
+            <a href="https://github.com/device42/ansible_device42" target="_blank" class="btn btn-sm download-btn">STATIC INVENTORY SCRIPT</a>
+            <a href="https://github.com/device42/ansible_device42" target="_blank" class="btn btn-sm download-btn">DYNAMIC INVENTORY SCRIPT</a>
+            <a href="https://github.com/device42/ansible_lookup_plugin/archive/master.zip" target="_blank" class="btn btn-sm download-btn">ANSIBLE LOOKUP SCRIPT</a>
+        </div>
+        <div class="center-block text-center">
+            <a style="font-size: 18pt;"><strong><em>Download Now</em></strong></a>
+        </div>
+    </div>
+</div>
+<div class="row image-right is-table-row">
+    <div class="col-sm-6">
+        <h3><strong>{% trans "Avoid repetitive tasks." %}</strong></h3>
+        <p><em>{% trans "...Automate them with Ansible & Device42!" %}</em></p>
+        <p>{% trans "Now, with Device42 integration, Ansible has near real-time access to your infrastructure’s inventory, making it an even more capable automation solution." %}</p>
+        <p>{% trans "Need a list of hosts for anything from routine auditing activities to automated updates? Ansible can pull data in near-real time from Device42’s API. Continuous Discovery ensures that Device42 delivers accurate, up-to-date results whenever they’re needed." %}</p>
+    </div>
+    <div class="col-sm-6">
+        <a href="{% static 'img/sections/support/integrations/ansible/avoid_repetitive_tasks.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/ansible/avoid_repetitive_tasks.png' %}"
+                 class="img-responsive center-block"
+                 alt="{% trans 'Ansible Integration' %}">
+        </a>
+    </div>
+</div>
+<div class="row image-left-7x5 is-table-row">
+    <div class="col-sm-7">
+        <h3><strong>{% trans "Inventory data from the source!" %}</strong></h3>
+        <p><em>{% trans "Generate accurate Static or Dynamic inventory lists for use with Ansible!" %}</em></p>
+        <p>{% trans "The Ansible-Device42 Static Inventory Script can be used to create and pre-populate an inventory file based on Device42’s Configuration Items for use by Ansible." %}</p>
+        <p>{% trans "The Dynamic Inventory Script can be used dynamically in conjunction with the $ansible command, generating a real-time inventory based on data within Device42." %}</p>
+        <p>{% trans "Need to SSH into a host for final provisioning, to automate a package update, or for any other reason? By embedding the Ansible lookup script within your playbooks, you can easily get a hosts IP addresses and password, on demand!" %}</p>
+    </div>
+    <div class="col-sm-5">
+        <a href="{% static 'img/sections/support/integrations/ansible/get_inventory_data.jpg' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/ansible/get_inventory_data.jpg' %}"
+                 class="img-responsive center-block"
+                 alt="{% trans 'Ansible Integration' %}">
+        </a>
+    </div>
+</div>
+<div class="row image-right is-table-row">
+    <div class="col-sm-6">
+        <h3><strong>{% trans "Use With Any Ansible Command." %}</strong></h3>
+        <p><strong><em>{% trans "Execute any Ansible action that requires a list of hosts!" %}</em></strong></p>
+        <p>{% blocktrans %}Ansible will also happily execute and use the output of any program that outputs a valid JSON dictionary of hosts to stdout. Therein lies the magic of <a href='https://github.com/device42/ansible_device42' target='_blank'>Device42’s dynamic inventory script</a>, powering Ansible with near-realtime lists of hosts to power any Ansible command!{% endblocktrans %}</p>
+        <p>{% blocktrans %}Hint: The dynamic inventory script is especially powerful when combined with Device42’s <a href='https://github.com/device42/ansible_lookup_plugin/tree/netports' target='_blank'>Ansible lookup plugin</a>!{% endblocktrans %}</p>
+        <p>{% blocktrans %}Reference the <a href='http://docs.ansible.com/ansible/latest/index.html' target='_blank'>Ansible documentation</a> for automation examples and ideas!{% endblocktrans %}</p>
+    </div>
+    <div class="col-sm-6">
+        <a href="{% static 'img/sections/support/integrations/ansible/automation_with_ansible.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/ansible/automation_with_ansible.png' %}"
+                 class="img-responsive center-block"
+                 alt="{% trans 'Ansible Integration' %}">
+        </a>
+    </div>
+</div>
+<div class="row image-left-7x5 is-table-row">
+    <div class="col-sm-7">
+        <h3><strong>{% trans "Device42 + Ansible" %}</strong></h3>
+        <p><strong><em>{% trans "Leverage CI’s in your CMDB for easier automation" %}</em></strong></p>
+        <p>{% trans "No matter the use case, there’s no longer a need to manually create lists of machines to perform your desired action against." %}</p>
+        <p>{% trans "Whether you are pushing out new software to all the hosts in your environment, refreshing SSH keys, updating configurations, or just verifying a setting. All these tasks are made easier with the Device42 + Ansible static & dynamic inventory scripts." %}</p>
+    </div>
+    <div class="col-sm-5">
+        <a href="{% static 'img/sections/support/integrations/ansible/ansible.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/ansible/ansible.png' %}"
+                 class="img-responsive center-block"
+                 alt="{% trans 'Ansible Integration' %}">
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <pre class="prettyprint lang-bsh wrap">
+            [devtest@MMA-CentOS d42inv]$ ./autoInv_d42.py --list
+            {"production": ["freebsd-93-001", "rundeck-001", "oracle-7-001", "centos-68-001", "localhost.localdomain", "centos-7-001", "ubuntu-1404-001.device42.pbt", "centos-7-002.device42.pvt", "ansible-001.device42.pvt"]}
+        </pre>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h3>{% trans "Go ahead and download one or all of our Ansible integrations today!" %}</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <p>{% blocktrans %}
+            The Ansible-Device42 inventory scripts can be found on the <a href="https://github.com/device42/ansible_device42" target="_blank" class="ext-link">Ansible Inventory GitHub page</a>.
+        {% endblocktrans %}</p>
+        <p>{% blocktrans %}
+            Find the Ansible Lookup Plugin at its <a href="https://github.com/device42/ansible_lookup_plugin/archive/master.zip" target="_blank" class="ext-link">Github page, here</a>.
+        {% endblocktrans %}</p>
+    </div>
+    <div class="col-md-6">
+        <div class="center-block text-center" style="width:400px;max-width:100%;margin-bottom: 40px;">
+            <a href="https://github.com/device42/ansible_device42" target="_blank" class="btn btn-sm download-btn">ANSIBLE-DEVICE42 INVENTORY SCRIPTS</a>
+            <a href="https://github.com/device42/ansible_lookup_plugin/archive/master.zip" target="_blank" class="btn btn-sm download-btn">ANSIBLE-DEVICE42 LOOKUP PLUGIN</a>
+        </div>
+    </div>
+</div>

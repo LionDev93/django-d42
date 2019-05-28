@@ -1,0 +1,135 @@
+{% extends 'base/_base.html' %}
+{% load i18n %}
+{% load static from staticfiles %}
+{% load include_partial %}
+{% block title %}{% trans "An Easier Alternative to HP uCMDB" %}{% endblock %}
+{% block site_section_compare %}active{% endblock %}
+{% block meta %}
+    <meta name="description"
+          content="Device42 is an HP uCMDB alternative. Here's why you should consider switching…"/>
+{% endblock %}
+{% block body %}
+    <header class="row head-home bg-primary">
+        <div class="container">
+            <div class="row">
+                <h1>Device42 &mdash; {% trans "An Easier Alternative to HP uCMDB" %}</h1>
+                <h4 class="text-white text-italic">{% trans "We’ve put together some information that highlights key differences between HP uCMDB and Device42." %}</h4>
+            </div>
+        </div>
+    </header>
+
+    <article class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>{% blocktrans %}Device42 is easier than the <em>way-too-complicated</em> HP uCMDB{% endblocktrans %}</h3>
+                <p>{% trans "Tired of having to struggle your way through clunky and complex HP uCMDB user guides, training classes, and lengthy implementation plans? With Device42, you don’t have to. Configuration Item (CI) relationships are predefined, and Auto-discovery will get nearly all your data into the system in an afternoon." %}</p>
+                <p>{% trans "You get awesome core features like powerful reporting, great visualizations, and integrations with monitoring, automation, and ticketing tools without having to navigate a maze of features you don’t need." %}</p>
+                <p>{% trans "And if you ever want to enhance Device42 beyond the core CMDB, you can do that with custom fields, custom form layouts, Webhooks, and a rich, REST-based API." %}</p>
+            </div>
+        </div>
+        <div class="row is-table-row">
+            <div class="col-xs-6 col-xs-offset-3 col-sm-5 col-sm-offset-1 text-center padded">
+                <a href="{% static 'img/sections/compare/web-based-rack-layout-with-drag-and-drop.gif' %}"
+                   data-featherlight="image">
+                    <img class="img-responsive img-border center-block"
+                         src="{% static 'img/sections/compare/web-based-rack-layout-with-drag-and-drop.gif' %}"
+                         alt="{% trans 'Simplicity' %}">
+                </a>
+            </div>
+            <div class="col-xs-6 col-xs-offset-3 col-sm-5 col-sm-offset-0 text-center padded">
+                <a href="{% static 'img/sections/compare/patch-panel-create-connection.gif' %}"
+                   data-featherlight="image">
+                    <img class="img-responsive img-border center-block"
+                         src="{% static 'img/sections/compare/patch-panel-create-connection.gif' %}"
+                         alt="{% trans 'Simplicity' %}">
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>{% trans "Device42 helps you manage your IT Infrastructure as a whole" %}</h3>
+                <p>{% trans "With the advent of virtualization, containers, cloud computing, and software-defined networks, your IT infrastructure is orders of magnitude more complex than it was 10 years ago. It is no longer practical to manage your IT infrastructure using separate tools for asset management (ITAM), IP management (IPAM), cloud management, application dependency management (ADM), and software license management (SLM). The interrelationships are too important and too complex, and can only be adequately captured by a single integrated tool like Device42." %}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 padded">
+                <p class="text-strong">{% trans "uCMDB uses DDMA and DDMI for auto-discovery, which is based on fingerprinting (nmap) and agent based discovery. Using these discovery techniques is not optimal. Device42 provides agent-less auto-discovery that works with variety of devices and APIs and automatically builds a comprehensive Configuration Management Database." %}</p>
+            </div>
+            <div class="col-md-6">
+                <table class="table table-hover d42-sw-compare">
+                    <thead>
+                    <tr>
+                        <th class="table-title">
+                            <p class="dark-blue text-left alt-text"
+                            style="margin:0;font-size:24px;">{% trans "Features" %}</p>
+                        </th>
+                        <th class="product-heading blue">{% trans "Device42" %}</th>
+                        <th class="product-heading blue">{% trans "HP uCMDB" %}<sup>&reg;</sup></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="comp-feature">{% trans "Agent-less AutoDiscovery" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "ITAM" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "IPAM" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "DCIM" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "ITSM" %}</td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>{% trans "Device42 looks at your IT Infrastructure holistically and gives you a single console to manage your Data center (DCIM), IP addresses (IPAM) and passwords in addition to ITAM (IT asset management) and a CMDB. And it’s extensible, too. Besides the built in functionality already mentioned, powerful capacity planning functionality, and automatically generated visualizations, Device42 is extensible. Add on the Power Monitoring & Control license to monitor and control smart PDUs and environmental sensors across your datacenter. Enterprise Application Mapping adds on powerful functionality that automatically creates customized views and lists that clearly demonstrate the relationships and dependencies between the applications and application components running in your environment." %}</p>
+            </div>
+        </div>
+        <div class="row is-table-row">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 text-center padded">
+                <a href="{% static 'img/sections/compare/ip-address-tracking-software.png' %}"
+                   data-featherlight="image">
+                    <img class="img-responsive img-border center-block"
+                         src="{% static 'img/sections/compare/ip-address-tracking-software.png' %}"
+                         style="max-height:400px;"
+                         alt="{% trans 'Visualizations' %}">
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Device42 <em>{% trans "Integrates" %}</em></h3>
+                <p>{% trans "Device42’s powerful, built in functionality aside, a true CMDB should not be an isolated application. You likely have monitoring tools, automation tools, ticketing tools, finance tools, and so on that can benefit from the information in your CMDB. Many enterprise CMDBs make these integrations time consuming and expensive, while others duplicate information, undermining the purpose of a Single Source of Truth. With Device42, you get powerful out-of-the-box integrations, plus well documented RESTful APIs that make building  integrations and custom workflows with your other tools a breeze." %}</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>{% blocktrans %}Device42 <em>is more affordable</em>{% endblocktrans %}</h3>
+                <p>{% trans "HP uCMDB has both a large initial product cost and a large implementation cost. Device42 is much more budget-friendly. Device42 requires no professional services or training of any kind, and there are no implementation costs. The value you’ll get from Device42 far outweighs its cost, and more than a thousand happy users in over 50 countries agree. If our auto-discovery and data federation features save your team just ten hours per month, Device42 more than pays for itself!" %}</p>
+            </div>
+        </div>
+
+        {% include 'partials/try-free-callout.html' %}
+    </article>
+{% endblock %}

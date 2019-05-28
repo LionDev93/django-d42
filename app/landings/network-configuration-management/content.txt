@@ -1,0 +1,34 @@
+[head.title]
+Device42 Makes Network Configuration Management Easier with agent-less auto-discovery
+
+[head.description]
+Device42 is a full-featured network configuration management software with agent-less auto-discovery.
+
+[landing.title]
+Device42 Makes Network Configuration Management Easier!
+
+[landing.content]
+
+Device42 software makes network configuration management easier. Device42 auto-discovers and manages your entire network configuration, providing a clear view of your entire IT landscape.
+
+- Agent-less auto-discoveries to manage your network configuration items (CIs), ensuring they're always up-to-date
+- Powerful visualizations to make quick business decisions and quickly find impacts of different CIs to other CIs
+- Provides accurate, unified data, helping ensure teams, departments, and processes are aligned, company-wide
+- Manage network configurations natively by leveraging Device42's out-of-the-box integrations with CM, SIEM, ITSM, and ITAM tools from popular vendors
+- REST APIs mean building quick integrations with homegrown and external tools alike, from another CMDB, automation, or another tools couldn't be simpler
+
+
+[feature[1].title]
+Complete Network Configuration Management Auto-discovery
+[feature[1].content]
+Device42 auto-discovery spans across legacy and newer systems alike, discovering and mapping dependencies between your physical, virtual, and cloud infrastructures and applications.
+
+[feature[2].title]
+Network Configuration Management for the Cloud Era 
+[feature[2].content]
+The Device42 CMDB includes powerful reporting and visualizations, and pre-configured CIs so there is no need to spend time or money on expensive implementation services. Discover any physical, virtual or service dependencies you want to capture!
+
+[feature[3].title]
+Real-time Map of Your IT Infrastructure
+[feature[3].content]
+Go beyond traditional network configuration management with out-of-the-box integrations with JIRA, Confluence, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, ServiceNow and more. Use this real-time map to reduce your MTTR, and for faster decision making in your daily IT operations.

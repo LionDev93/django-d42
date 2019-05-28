@@ -1,0 +1,123 @@
+{% extends 'base/_base.html' %}
+{% load i18n static %}
+{% block title %}{% trans "Use Case: Mergers and Acquisitions" %}{% endblock %}
+
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Mergers and acquisitions are a lot more than paperwork and a name change. When companies merge, each company will initially have its own supporting IT Infrastructure that comes along with it. ' %}"/>
+{% endblock %}
+{% block styles %}
+  <style type="text/css">
+    p {
+      font-family: "Roboto Condensed", sans-serif !important;
+    }
+    .highlight-area {
+      border: 5px solid #31a3e0;
+      padding: 20px;
+    }
+    .highlight-area h2 {
+      margin-top: 0px;
+    }
+    .solution-area h2 {
+      margin-top: 0px;
+    }
+    .solution-area p {
+      font-size: 20px;
+      font-family: "Roboto Condensed",sans-serif !important;
+    }
+    .use-case ol {
+      padding: inherit;
+    }
+    .checkmark-style {
+      margin: 0px !important;
+      font-weight: 300;
+      color: #717171;
+    }
+    .checkmark-style li {
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+    .checkmark-style li:before {
+      content: "\2714";
+      margin-left: -24px;
+      margin-right: 12px;
+      position: relative;
+      vertical-align: text-top;
+      display: inline-block;
+      font-weight: 100;
+      font-size: 15px;
+    }
+  </style>
+{% endblock %}
+{% block body %}
+    <header class="row bg-primary head-home">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{% trans "Mergers and Acquisitions" %}</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container use-case">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>{% trans 'Challenge' %}</h2>
+            </div>
+            <div class="col-xs-8">
+                <p class="lead text-strong">{% trans "Mergers and acquisitions are a lot more than paperwork and a name change. When companies merge, each company will initially have its own supporting IT Infrastructure that comes along with it. There will likely be a lot of duplication of both hardware and services between the two infrastructures, with each company relying on the services from their own Active Directory domains, e-mail servers & services, and web hosting arrangements, just to name a few." %}</p>
+                <p class="lead text-strong">{% trans "Now that the companies are merging, their data-centers need to merge as well. It needs to be decided what services from each infrastructure are critical, and will remain, and which will be consolidated or eliminated. There may be two different answers for both the short term and long term, as well. Because of this, the process involves in depth planning, testing, and careful execution, as neither party was likely at all familiar with the others infrastructure before the merger or acquisition. There is also can exist much risk and many unknowns when merging AD forests and domain trusts, for example, as this grants various access rights across unfamiliar domains." %}</p>
+            </div>
+            <div class="col-xs-4">
+                <img src="{% static 'img/components/study-a/use-cases/Mergers and Acquisition.png' %}" class="img-inline-right" alt="{% trans 'Mergers and Acquisitions' %}"/>
+            </div>
+            <div class="col-xs-8">
+                <p class="lead text-italic">{% trans "You need agility and visibility to smoothly handle mergers and to consolidate assets from acquisitions. Whether your goal is to migrate one or both infrastructures to the public cloud, to a private cloud platform like OpenStack or Kubernetes, to combine the two into one of the existing data-centers, or to migrate everything to an entirely new facility, you need to be able to answer questions such as" %}:</p>
+                <ul class="checkmark-style">
+                    <li>{% trans "Where are the existing physical, virtual, and cloud devices for each infrastructure" %}</li>
+                    <li>{% trans "How are the devices currently networked (VLANs, IP blocks) within each data center" %}</li>
+                    <li>{% trans "Routing & connectivity between the facilities before, during, and after cutover" %}</li>
+                    <li>{% trans "Will there be IP re-use, or will IP space be renumbered, and are enough IPs available" %}</li>
+                    <li>{% trans "What storage components are currently in use and their underlying connectivity" %}</li>
+                    <li>{% trans "What services and software is running and what specifically needs to move" %}</li>
+                    <li>{% trans "What is running on all the machines to be migrated, and their interdependencies" %}</li>
+                    <li>{% trans "What users depend on services that will be migrated and notification if necessary" %}</li>
+                    <li>{% trans "Where are all the credentials (passwords, SSH Keys, etc.)" %}</li>
+                    <li>{% trans "Are all configurations and config files known and correct for the new facility" %}</li>
+                    <li>{% trans "Licensing for all software in use at each facility" %}</li>
+                </ul>
+            </div>
+            <div class="col-xs-4">
+                <p class="lead text-italic">{% trans "If migrating to another physical data-center, as well as the above, you must also consider" %}:</p>
+                <ul class="checkmark-style">
+                    <li>{% trans "Power supply to the facility (both utility & generator availability)" %}</li>
+                    <li>{% trans "Power wiring for redundancy and circuit balancing" %}</li>
+                    <li>{% trans "Network wiring" %}</li>
+                    <li>{% trans "Tracking vendor service and warranty contracts" %}</li>
+                    <li>{% trans "Logistics regarding equipment in transit from one data center to the new facility" %}</li>
+                    <li>{% trans "Determination of what will be kept, retired, replaced, or consolidated" %}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 solution-area">
+                <h2>{% trans 'Solution' %}</h2>
+                <p>{% blocktrans %}If you are using Device42, all this information is available in easy-to-understand visualizations, charts, graphs, and reports. If you have just acquired or are soon to acquire a new data center in a merger or acquisition, Device42’s <a href="{{ URL_PREPEND }}/features/device-discovery/">auto-discovery capabilities</a> can help identify all the IT assets and how they are interconnected. {% endblocktrans %}</p>
+                {% url "features_app_mapping" as features_app_mapping %}
+                <p>{% blocktrans %}Pop up an <a href="{{features_app_mapping}}">application dependency diagram</a> to view what users and applications are dependent on a piece of equipment. Don’t struggle trying to find warranty contracts; all the warranty information is right there in the ticket along with who to call, the device serial number, and everything else you need. Tired of playing <em>“who knows the password”</em>? You don’t have to do that anymore if you have Device42. When planning IP allocations, view network diagrams and fragmentation charts or just click the <em>“What’s the next available IP”</em> button, courtesy of  Device42 IPAM. No need to log onto every server to check the config - Device42 discovers configurations for popular applications.{% endblocktrans %}</p>
+                {% url "tours_patch_cable_management" as tours_patch_cable_management %}
+                <p>{% blocktrans %}Device42 also <a href="{{tours_patch_cable_management}}">tracks all cabling</a>, including both electrical and network. Network SNMP discovery inventories switches, routers, and firewalls, and can even work out IP to MAC relationships to map MAC addresses to physical ports. VLAN’s and subnets can also be discovered, and are tracked along with CDP/LLDP neighbors. Keeping track of devices in transit is no problem. Device42 tracks physical equipment transfers, too.{% endblocktrans %}</p>
+                <p>{% trans "The comprehensive ITAM (IT Asset Management) system bundled with Device42 tracks the entire asset lifecycle from purchase to decommissioning, making it easy to produce reports showing devices near end of life.  The Software License Management add-on module can track a variety of license formats from per-seat to per CPU, and can identify over-licensed, unlicensed, and expired licenses, ensuring you don’t spend more than you have to and that you remain in compliance." %}</p>
+                <p class="text-strong text-muted">{% trans "If you utilize automation tools like Puppet, Chef, or Ansible in your environments, you can get visibility into these tools in Device42 via APIs." %}</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-xs-12">
+                <h5><a href="{% url 'use_cases' %}" class="dir-arrow text-capitalize"><i
+                        class="fa fa-chevron-left"></i> {% trans "Back to Use Cases" %}</a></h5>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

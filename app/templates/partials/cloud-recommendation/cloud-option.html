@@ -1,0 +1,16 @@
+{% load i18n %}
+{% load staticfiles %}
+<div {% if id %}id="{{ id }}" {% endif %}class="row featurette {% if vcenter %}is-table-row{% endif %}">
+    <div class="col-md-6">
+        <h3>{% trans "CRE Makes Sense of Your Cloud Options" %}</h3>
+        <p>{% trans "Skip drawn-out, manual user interview processes: CI’s and relationships are automatically discovered, so there’s no wondering about accuracy." %}</p>
+        <p>{% trans "AC" %}</p>
+        <p>{% trans "Consider all of your options: and choose the best combination of cloud and local workloads to meet your user’s, budget, and availability needs and requirements!" %}</p>
+        <p>{% trans "Explore scale up or scale-down cloud scenarios easily: Simply supply CRE the percentage you’d like to scale by and see pricing information for your hypothetical DR site or your 200% larger production site ... in one click!" %}</p>
+    </div>
+    <div class="col-md-offset-1 col-md-5">
+        <img class="img-responsive center-block animated"
+             src="{% static 'img/sections/features/cloud-recommendation/cloud-option.png' %}"
+             alt="{% trans 'CRE Makes Sense of Your Cloud Options' %}">
+    </div>
+</div>

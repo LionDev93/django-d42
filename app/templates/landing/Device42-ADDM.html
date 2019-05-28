@@ -1,0 +1,212 @@
+{% extends "base/_base-landing.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Find information that will help familiarize you with the commonalities between Device42 & BMC Discovery, and will also highlight some of the main differences between the two solutions.' %}"/>
+{% endblock %}
+{% block title %}{% trans "Device42: A better ADDM alternative" %}{% endblock %}
+
+{% block styles %}
+<style>
+    body{
+    }
+    .cta-free-trial {
+        padding: 24px 0;
+        text-transform: none !important;
+        background-color: #ffc90e;
+        color: #130dff !important;
+    }
+    .checkmark-style li:before {
+        content: "\2714";
+        margin-left: -24px;
+        margin-right: 12px;
+        position: relative;
+        vertical-align: text-top;
+        display: inline-block;
+        font-weight: 100;
+        font-size: 15px;
+        color: #22a3df;
+      }
+</style>
+{% endblock %}
+
+{% block landingHeadingText %}{% trans "Device42: A better ADDM alternative" %}{% endblock %}
+{% block landingfeature %}
+
+<article class="container vert-offset-top-1">
+      <p><i>{% trans "Bringing a powerful CMDB in house with ADDM (aka ADM, aka Application Dependency Mapping) advanced discovery features is a great idea. Below, you will find information that will help familiarize you with the commonalities between Device42 & BMC Discovery (formerly BMC ADDM), and that will also highlight some of the main differences between the two solutions." %}</i></p>
+      <p>{% trans 'Device42’s ADM focuses on complete and accurate discovery, identifying all the details about what you have running in your environment today, and clearly highlighting the interdependencies.  Similarly, ADDM automatically discovers your IT inventory and the details around it, including <i>“software, hardware, network, storage, and versions”.</i> ' %}</p>
+      <p>{% trans "Both ADM (ADDM) products have a number of similar use cases and benefits. Some of the more common use cases, and their supporting features are found below:" %}</p>
+      <div class="row">
+          <div class="col-sm-6">
+              <h4>{% trans "Common Application Dependency Mapping (ADM / ADDM) Benefits & Use Cases:" %}</h4>
+              <ul class="checkmark-style font-stack-condensed">
+                  <li>{% trans 'Discover, consolidate, and decommission servers' %}</li>
+                  <li>{% trans 'Identify old, inefficient servers & save on operating expense' %}</li>
+                  <li>{% trans 'Orchestrate migration planning after discovery of applications & dependencies' %}</li>
+                  <li>{% trans 'Troubleshoot more efficiently with shorter MTTR' %}</li>
+                  <li>{% trans 'Reduce audit time & effort significantly' %}</li>
+                  <li>{% trans 'Eliminate the majority of manual infrastructure documentation' %}</li>
+              </ul>
+          </div>
+          <div class="col-sm-6">
+              <h4>{% trans "Common Features" %}:</h4>
+              <ul class="checkmark-style font-stack-condensed">
+                  <li>{% trans 'Advanced visualizations' %}</li>
+                  <li>{% trans 'Powerful, customizable reporting' %}</li>
+                  <li>{% trans 'IP address, MAC, Subnet, and other network details' %}</li>
+                  <li>{% trans 'Dependency diagrams' %}</li>
+                  <li>{% trans 'High level of well organized detail' %}</li>
+                  <li>{% trans 'Customizable fields' %}</li>
+                  <li>{% trans 'Integrations with 3rd party software' %}</li>
+              </ul>
+          </div>
+      </div>
+      <h4 class="vert-offset-top-1">{% trans 'Though Device42 and ADDM have much in common, some key features differentiate the two:' %}</h4>
+      <table class="table table-hover table-striped">
+          <thead>
+          <tr>
+              <th class="h4 text-dark-blue text-strong">{% trans "Solution Comparison" %}</th>
+              <th class="h4 text-default text-center text-strong">Device42’s ADM</th>
+              <th class="h4 text-default text-center text-strong">ADDM (BMC Discovery)</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+              <td class="comp-feature alt-font">{% trans "Cloud and On Premise Option" %}</td>
+              <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+          </tr>
+          <tr>
+              <td class="comp-feature alt-font">{% trans "Native Windows and Linux Discovery" %}</td>
+              <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+          </tr>
+          <tr>
+              <td class="comp-feature alt-font">{% trans "Native VMware Discovery" %}</td>
+              <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+          </tr>
+          <tr>
+              <td class="comp-feature alt-font">{% trans "Native Hyper-V, Xen, KVM, LXC Discovery" %}</td>
+              <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+          </tr>
+          <tr>
+              <td class="comp-feature alt-font">{% trans "Native Cloud Platform Discovery" %}</td>
+              <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+          </tr>
+          <tr>
+              <td class="comp-feature alt-font">{% trans "Application Dependency Discovery" %}</td>
+              <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+          </tr>
+          <tr>
+              <td class="comp-feature alt-font">{% trans "SNMP Support" %}</td>
+              <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+          </tr>
+          <tr>
+              <td class="comp-feature alt-font">{% trans "Mainframe support" %}</td>
+              <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+          </tr>
+          <tr>
+              <td class="comp-feature alt-font"><b>{% trans "Agent-less Discovery" %}</b></td>
+              <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+          </tr>
+          <tr>
+              <td class="comp-feature alt-font"><b>{% trans "<i>Optional</i> Agent Based Discovery" %}</b></td>
+              <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+          </tr>
+          <tr>
+              <td class="comp-feature alt-font"><b>{% trans "Nmap & Netflow Based Discovery" %}</b></td>
+              <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+          </tr>
+          <tr>
+              <td class="comp-feature alt-font"><b>{% trans "XLS/XLSX Spreadsheet Imports" %}</b></td>
+              <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+          </tr>
+          <tr>
+              <td class="comp-feature alt-font"><b>{% trans "Webhooks" %}</b></td>
+              <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+          </tr>
+          <tr>
+              <td class="comp-feature alt-font"><b>{% trans "RESTful APIs" %}</b></td>
+              <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+          </tr>
+          </tbody>
+      </table>
+      <hr>
+      <h2>{% trans 'The Device42 ADM Solution: A better alternative to ADDM' %}</h2>
+      <section class="row">
+        <div class="col-xs-12 col-sm-4">
+          <a href="{% static 'img/landing/sql-migration/banner.png' %}"
+                   data-featherlight="image">
+              <img src="{% static 'img/landing/sql-migration/banner.png' %}" class="img-responsive center-block" alt="{% trans 'ADDM' %}">
+          </a>
+        </div>
+        <div class="col-xs-12 col-sm-8">
+          <p class="lead text-strong">{% trans "Device42’s ADM Tracks Relationships and Maps Dependencies Between Your Hardware and Software Inventory, and Other IT Assets" %}</p>
+          <p>{% trans "Device42’s software Application Dependency Mapping (ADM) and inventory management features provides the powerful ability to automatically map, track, and visualize operational dependencies." %}</p>
+          <br>
+          <p>{% trans "Device42’s software inventory tool produces detailed software and server Impact Charts:" %}</p>
+          <br>
+          <p>{% trans "Display downward dependencies from Virtual Server Host or Blade Chassis to contained VM’s" %}</p>
+          <ul class="bullet-blue tight font-stack-condensed">
+              <li>{% trans "Visualize all service connections between them" %}</li>
+              <li>{% trans "See a clear map of your operations and its interdependencies" %}</li>
+              <li>{% trans "Quickly understand the trickle-down effect of a service interruption if a blade or service were to become unavailable" %}</li>
+          </ul>
+          <p>{% trans "A complete solution from BMC requires the purchase and integration of numerous standalone components including their Discovery product (ADDM), their CMDB product, plus Riverbed Netflow and a storage discovery product. " %}</p>
+        </div>
+      </section>
+      <p>{% trans "In contrast, Device42 is fully integrated with no standalone modules (though some components are licensed separately).  Device42 is truly a one-stop single source of truth because it includes a fully integrated suite of enterprise DCIM features: " %}</p>
+      <section class="row">
+          <div class="col-xs-12 col-sm-4">
+              <ul class="bullet-blue tight font-stack-condensed">
+                  <li>{% trans "A CMDB" %}</li>
+                  <li>{% trans "Power Monitoring & Control" %}</li>
+                  <li>{% trans "IPAM" %}</li>
+                  <li>{% trans "Password Management" %}</li>
+                  <li>{% trans "Certificate Management" %}</li>
+                  <li>{% trans "Multi-Tenancy" %}</li>
+              </ul>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+              <ul class="bullet-blue tight font-stack-condensed">
+                  <li>{% trans "Capacity Planning" %}</li>
+                  <li>{% trans "<i>“What-if”</i> scenarios" %}</li>
+                  <li>{% trans "Inventory Lifecycle Management" %}</li>
+                  <li>{% trans "Automatic Rack Diagrams" %}</li>
+                  <li>{% trans "Cable Management" %}</li>
+                  <li>{% trans "Drag-and-drop Room Layouts" %}</li>
+              </ul>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+              <ul class="bullet-blue tight font-stack-condensed">
+                  <li>{% trans "Full Audit Trails" %}</li>
+                  <li>{% trans "Asset Transfers" %}</li>
+                  <li>{% trans "Asset Lifecycle Tracking" %}</li>
+                  <li>{% trans "Purchase Tracking" %}</li>
+                  <li>{% trans "QR / Barcode Generation" %}</li>
+                  <li>{% trans "Spreadsheet / CSV Import of CI’s and Attributes" %}</li>
+              </ul>
+          </div>
+      </section>
+      <p><i>{% trans 'Device42’s Advanced Visualizations, powerful, Customizable Reporting facilities, and its advanced, well documented RESTful APIs work together to provide an enhanced data management experience: by helping to make your data either easier to see and understand, faster to manipulate, and/or more convenient to quantify. All of these features, too, are available at a price that will surprise you.' %}</i></p>
+      <p>{% trans 'Download a 30-day free trial of Device42 today, and see why customers in over 50 countries are proud to say “We use Device42!”' %}</p>
+  </article>
+
+{% endblock %}
+
+{% block maincontent %}
+
+{% endblock %}

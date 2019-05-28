@@ -1,0 +1,97 @@
+{% load i18n static %}
+<div {% if id %}id="{{ id }}" {% endif %}class="row featurette image-right-4x8 {% if vcenter %}is-table-row{% endif %}">
+
+            <div class="col-sm-6">
+                <a href="{% static 'img/sections/features/itam/asset-relationships.png' %}"
+                   data-featherlight="image">
+                    <img src="{% static 'img/sections/features/itam/asset-relationships.png' %}"
+                         alt="{% trans 'Track relationships between assets' %}"
+                         class="img-responsive img-border center-block">
+                        </a>
+            </div>
+       <div class="col-sm-12">
+                <h2>{% trans "Virtual machines, containers and cloud inventory" %}</h2>
+         <p><b>{% trans "Effortlessly enumerate data from your physical, virtual, and cloud hosts." %}</b></p>
+         <p>{% trans "Device42 includes Cloud and vServer discovery that supports all widely used hypervisors and cloud providers. Built upon native vendor API’s, you can run on-demand or scheduled jobs to reach and grab data from your Hosts and VMs alike, keeping your inventory up to date with new deployments and changes to your virtual and cloud environments, accurately tracking everything from services down to blade layouts to wiring - and more!" %}</p>
+
+       </div>
+</div>
+
+
+
+<div class="row is-table-row image-left featurette">
+            <div class="col-sm-4">
+                           <a href="{% static 'img/sections/features/itam/contract-management.png' %}"
+           data-featherlight="image">
+            <img class="img-responsive center-block img-border"
+                src="{% static 'img/sections/features/itam/contract-management.png' %}"
+                alt="{% trans 'Support Contracts Management' %}">
+        </a>
+            </div>
+
+
+
+<div class="col-sm-10">
+        <h2 class="featurette-heading">{% trans "Manage Purchases and Support Contracts" %}</h2>
+        <p><b>{% trans "Centrally manage all IT contract information for devices, hardware, and software assets within the enterprise infrastructure." %}</b></p>
+        <p>{% trans "Track the entire lifecycle of your IP and non-IP based assets from purchase to their day of decommissioning." %}</p>
+        <p>{% trans "Device42 also offers automated warranty lookups! Customers can query Device42 for their assets, then automatically retrieve warranty information from vendors -- which is simultaneously added into the Device42 database. Simply request vendor API keys, and pull in warranty information from Dell, HP, IBM & Lenovo!" %}</p>
+        <ul class="checklist">
+            <li>{% trans "Track purchases and contracts for all asset types" %}</li>
+            <li>{% trans "Generate and schedule reports based on purchase data" %}</li>
+            <li>{% trans "Receive contract expiration reminders to ensure timely renewals" %}</li>
+            <li>{% trans "Easily create reports to support IT audits" %}</li>
+        </ul>
+    </div>
+
+
+
+</div>
+
+    <div class="row is-table-row featurette">
+            <div class="col-sm-12">
+                <h2>{% trans "Integrate with ITSM tools <small><em>(change history)</em></small>" %}</h2>
+                <p>{% trans "More effectively manage IT service details and quality of response with detailed info provided from Device42 to integrations such as JIRA, Zendesk and ServiceNow. Leverage Device42 as your single source of truth" %}.</p>
+                <p>{% trans "Select Configurations Items to associate them when creating service requests. Sync data such as devices, power units, parts and racks then search for and navigate to requests that include CI from Device42. All changes can be viewed through a detailed audit log with a defined source of change and the properties that were updated." %}</p>
+            </div>
+        </div>
+        <div class="row is-table-row featurette">
+            <div class="col-sm-12">
+                <h2>{% trans "Scalability" %}</h2>
+                <p>{% trans "Device42 was designed from the ground up to be scalable and versatile. Using auto-discovery, environments of all sizes can have all desired data scanned and updated as needed, ensuring no properties are out of date. Our Virtual Appliance supports many popular hypervisors, so you are up and running in minutes, highly availability, and can count on reliable performance." %}</p>
+            </div>
+        </div>
+
+        <div class="row is-table-row featurette">
+            <div class="col-sm-6">
+                <h2>{% trans "Compliance and security" %}</h2>
+                <p>{% trans "Granular and detailed reporting is a powerful tool that provides insight into the daily operations of your IT and infrastructure. Create change history and password reports, keep all needed parties involved and up to date with device and password expiration audits. Easily maintain an environment focused on security and best practices. Expansive feature set to manage contracts and licensing based upon variables such as user count, licensed CPUs, and whether a given license is perpetual or subscription based." %}</p>
+            </div>
+            <div class="col-sm-6">
+                <h2>{% trans "Audits and reports at your fingertips" %}</h2>
+                <p>{% trans "Whether you use a PC or Mobile device, select anywhere between one and all objects from any list view and export data to a .csv or audit log. Be ready for any meeting or presentation on the fly. Bring along a rack audit of any selected racks and easily see all devices, power units, and locations information for each rack. Define on-demand or scheduled reports to view right from your browser, or export to a spreadsheet. Custom reports available for all objects within Device42." %}</p>
+            </div>
+        </div>
+        <div class="row is-table-row featurette">
+            <div class="col-md-12">
+                <h2>{% trans "Go beyond just assets with our fully integrated CMDB" %}</h2>
+                <p>{% trans "Device42’s CMDB becomes the single source of truth within your organization, which provides a clear view into your IT ecosystem. Identify, manage, and verify all configuration items (CI) in your environment. Track all IT assets and configurations within the company and its services in one place, ensuring configuration records are accurate for greater control over your infrastructure. Unify data and process across teams and across departments, fostering alignment companywide." %}</p>
+                <br>
+                <img class="img-responsive center-block col-sm-10 col-sm-offset-1" alt="{% trans 'Solution Components' %}"
+                     src="{% static 'img/sections/features/Solution-Components.png' %}">
+            </div>
+        </div>
+
+        {% include 'components/brands-you-trust.html' %}
+
+       <div class="row featurette">
+            <div class="col-xs-6 col-xs-offset-3">
+                <blockquote>
+                    Device42 is taking us from anarchy to organization.
+                    <hr>
+                    <cite>
+                        Matt Iles<br><span>Network Systems Manager<br>International School of Beijing</span>
+                    </cite>
+                </blockquote>
+            </div>
+        </div>

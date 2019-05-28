@@ -1,0 +1,72 @@
+{% extends "base/_base-landing.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Device42’s automated and agent-less application mapping makes server migrations easier, ensuring you know all of your dependencies and have all your configurations squared away ahead of time, uncovering the hidden issues before they cause unnecessary downtime.' %}"/>
+{% endblock %}
+{% block title %}{% trans "Digital Transformation" %}{% endblock %}
+
+{% block styles %}
+<style>
+    body{
+    }
+    .cta-free-trial {
+        padding: 24px 0;
+        text-transform: none !important;
+        background-color: #ffc90e;
+        color: #130dff !important;
+    }
+    h1 {
+        font-family: "Roboto Condensed", sans-serif !important;
+      }
+</style>
+{% endblock %}
+
+{% block landingHeadingText %}{% trans "Digital Transformation" %}{% endblock %}
+{% block landingSubHeadingText %}{% trans "﻿- Embrace Your Future with automation, the cloud, and ITaaS" %}{% endblock %}
+{% block landingfeature %}
+    <section class="row flat-bottom landing-section">
+        <div style="padding-bottom: 0px;" class="col-sm-7">
+          <h2 class="flat-bottom">{% trans "Embracing Your Digital Transformation" %}</h2>
+          <p>{% trans "The hybrid cloud deployments that power today’s digital business demands a new kind of infrastructure. IT Digital Transformation requires new IT delivery models, and entirely new IT processes. To begin your infrastructure’s digital transformation from its current state to a cloud and/or hybrid ITaaS model, <strong>you must first know what you have.</strong>" %}</p>
+          <br>
+          <h3 style="margin-bottom: 0px;">{% trans "Device42 helps you through your digital transformation, maintaining a complete and accurate picture of your infrastructure at all times by:" %}</h3>
+
+        </div>
+        <div class="col-sm-5">
+            <img src="{% static 'img/components/study-a/use-cases/change-management.png' %}"
+                 alt="{% trans 'Server Inventory' %}" class="img-responsive img-restrict center-block">
+        </div>
+    </section>
+
+    <section style="padding-top: 0px;" class="row is-table-row landing-section">
+        <div class="col-sm-12">
+          <ul style="padding-top: 0px;" class="lead-small bullet-blue light-weight">
+              <li>{% trans "Agent-lessly discovering all of your application dependencies via automated Application Dependency Mapping" %}</li>
+              <li>{% trans "Analyzing thousands of servers without installing software and without needing to configure expensive span ports" %}</li>
+              <li>{% trans "Automatically generating dependency flow diagrams that show the relationship between devices, applications, and application components" %}</li>
+              <li>{% trans "﻿Showing what services are listening on what ports, and all open ports on each machine" %}</li>
+          </ul>
+          <br>
+          <p>{% trans "Many business leaders fear an uncertain future. A recent digital transformation survey found that around 45% of leaders fear becoming obsolete in 3-5 years, and another full 48% have no idea what their industry might look like in 3 years time." %}</p>
+          <br>
+          <p>{% trans "For your business to to stay current, it must continuously transform and adapt. How will your business react to the recent cloud and ITaaS (IT as a Service) revolution, and take advantage of the opportunities it presents? Now is the time to embrace your digital transformation, and doing so is the key to avoiding being left behind as the latest round of disruption, and the threat that accompanies it comes to fruition. " %}</p>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block maincontent %}
+    <section class="row is-table-row landing-section">
+        <div class="col-sm-9">
+          <p><span style="font-style: italic;">{% trans "Lean on Device42 before, during, AND after your digital transformation." %}</span> {% trans "While planning, quickly determine who needs to be notified during each stage of your transformation. As your digital transformation gets underway, turn to Device42 for server credentials, and generate a new secure set for the newly migrated cloud application server. When your digital transformation is nearing completion, launch (and re-schedule) an auto-discovery, and allow Device42’s self-documenting CMDB to automatically map out all the changes, and verify all migration-related changes appear as they should." %}</p>
+          <br>
+          <p>{% trans "Every company is unique, and their IT organization must work to transform their IT delivery models, discovering the best strategy to align IT with the needs of their unique business. Only through well-planned digital transformation can a company continue to exceed ever-changing customer demands for increasing agility and efficiency, improved reliability, and lower price." %}</p>
+        </div>
+        <div class="col-sm-3">
+            <img src="{% static 'img/landing/digital-transformation/diagram.png' %}"
+                 alt="{% trans 'Server Inventory' %}" class="img-responsive img-restrict center-block">
+        </div>
+    </section>
+
+{% endblock %}

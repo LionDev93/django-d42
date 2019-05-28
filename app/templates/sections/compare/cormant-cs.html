@@ -1,0 +1,276 @@
+{% extends "base/_base.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Cormant is primarily a DCIM solution for Device42' %}"/>
+{% endblock %}
+{% block title %}{% trans "Device42 vs. Cormant CS" %}{% endblock %}
+{% block styles %}
+    <style>
+        .media-left i.fa {
+            color: #00b6ff;
+        }
+
+        .media-body {
+            vertical-align: middle !important;
+        }
+
+        ul.square-style {
+            font-weight: 300;
+        }
+
+        .blue-back.box {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .media {
+            margin-left: 24px;
+        }
+        #top-container ul{
+          font-family: "Roboto Condensed", sans-serif;
+        }
+        .table-title p {
+          font-weight: 300;
+        }
+
+        #top-container p {
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+        }
+
+        .table-desc {
+          font-size: 14px;
+          font-weight: 300 !important;
+          color: #0fb9ff;
+          text-align: center;
+        }
+
+        .table {
+          margin-bottom: 0px !important;
+        }
+
+        .d-flex {
+          display: flex;
+        }
+
+        .m-auto {
+          margin: auto;
+        }
+
+        @media (max-width: 768px) {
+          .d-flex {
+            display: block;
+          }
+        }
+    </style>
+{% endblock %}
+{% block script %}
+    <script type="text/javascript">
+        $(function () {
+            $("i.fa").tooltip();
+        });
+    </script>
+{% endblock %}
+{% block body %}
+<header class="row head-home bg-primary">
+    <div class="container">
+        <div class="row">
+            <h1>{% trans "Device42 vs. Cormant CS" %}</h1>
+        </div>
+    </div>
+</header>
+<article class="container vert-offset-top-1 landing-page">
+  <section class="row landing-section">
+    <p style="font-style: italic;">{% trans "Adding a powerful DCIM tool with drag’n’drop room and rack layouts, “What-if Scenarios”, capacity planning with resource utilization, and more is a great idea! Read below to find out why Device42 is the easier to learn -- and better -- choice!" %}</p>
+    <br>
+    <p>{% trans "The Cormant CS DCIM solution describes itself as “...a mature, complete IT infrastructure management solution for use in the Data Center (DCIM), work area and campus environments.”  Device42 does everything Cormant CS does, and so much more. Device42 takes you beyond the physical aspects of DCIM, providing complete and accurate discovery of your entire deployment. Device42 identifies all the details about what you have running in your environment, and clearly highlights the interdependencies!" %}</p>
+  </section>
+
+  {% include 'partials/try-free-callout.html' %}
+  <section class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+        <h4 class="lead-small text-muted" style="font-weight: bold;font-style:italic;">{% trans "Learn More:" %}</h4>
+        <div class="table-responsive">
+          <table class="table table-hover d42-sw-compare">
+            <thead>
+              <tr>
+                <th class="table-title"><p class="dark-blue text-left alt-text" style="margin:0;font-size:24px;">{% trans "Solution Comparison" %}</p></th>
+                <th>{% trans "Device42 Discovery" %}</th>
+                <th>{% trans "Cormant CS" %}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="comp-feature">{% trans "Easy to deploy virtual appliance" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><a href="https://cormant.com/resources/dcim-faqs/#Cormant-CS4" data-toggle="tooltip" data-placement="top" title="What are the technical requirements for deploying Cormant-CS? Cormant-CS is windows based and supports Windows server 2003/2008 as well as SQL 2005/2008. A virtual machine is fine. Depending on infrastructure size a dual core, 4GB RAM machine and upwards is required. Cormant-CS supports SQL clusters for the database."><i class="fa fa-2x fa-times"></i></a></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "CMDB" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "ITAM" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "DCIM" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Cloud and On-Premise Option" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Agent-less Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-exclamation-triangle" data-toggle="tooltip" data-placement="top" title="Limited -- Only via WMI & SNMP"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Optional Agent Based Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Application Dependency Discovery / Mapping (ADM)" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Advanced Visualizations" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Native Windows and Linux Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><a href="https://cormant.com/solutions/it-asset-management/" data-toggle="tooltip" data-placement="top" title='Cormant CS only offers native Windows WMI discovery, handling everything else through SNMP."'><i class="fa fa-2x fa-exclamation-triangle"></i></a></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Native VMware Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-exclamation-triangle"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Native Hyper-V, Xen, KVM, LXC Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-exclamation-triangle"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Native Cloud Platform Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-exclamation-triangle"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Power Monitoring" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Power Control" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-exclamation-triangle"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "SNMP Support" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Resource Utilization" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Netflow Discovery Support" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "XLS/XLSX Spreadsheet Imports" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title='XLS / XLSX too?'><i class="fa fa-2x fa-check"></i></a></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Custom Fields" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Webhooks" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "RESTful APIs" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><a href="https://cormant.com/resources/dcim-faqs/#Cormant-CS4" data-toggle="tooltip" data-placement="top" title='Web Services XML API  ...not RESTful.'><i class="fa fa-2x fa-times"></i></a></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "No Training / Prof. Setup Services Required!" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><a href="https://cormant.com/resources/dcim-faqs/#Cormant-CS4" data-toggle="tooltip" data-placement="top" title='"...However, we find that most customers are too busy with managing the “day-to-day” to actually find the time to do it all themselves. Cormant and our partner network offer both configuration and audit services in consultation with you to assist with configuring and ensuring information in Cormant-CS is accurate. Cormant and our partner network also offer training services."'><i class="fa fa-2x fa-exclamation-triangle"></i></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+  </section>
+  <p class="table-desc">{% trans "*All feature data deduced from product website and available marketing materials. Please let us know if something isn’t right and we’ll gladly update it." %}</p>
+  <br />
+  <hr>
+
+  <section class="landing-section">
+    <h3 class="text-strong">{% trans "The Device42’s Solution" %}</h3>
+    <p>{% trans "Device42 believes a complete solution is only complete if it’s easy to use. We don’t believe that professional services or training classes should be a necessary part of implementing a software solution. If you need a class to learn to use Cormant CS, aren’t you just exchanging one job for another?" %}</p>
+    <br>
+    <p>{% trans "Device42 not only makes it simple to model your buildings, rooms, and racks (photo-realistically) with easy-to-use drag and drop manipulation, but goes above and beyond by offering power and environmental monitoring, power control, and a complete capacity planning solution with resource utilization." %}</p>
+    <br>
+    <p>{% trans '...And that’s not all! Device42 discovers your entire infrastructure natively - something Cormant can’t claim - Using WMI, WinRM, SSH, SNMP, Netflow, and more to discover application, service, and hardware details and dependendencies.' %}</p>
+    <div class="row">
+      <div class="col-md-4">
+        <ul class="bullet-gray">
+          <li>{% trans "A CMDB" %}</li>
+          <li>{% trans "IPAM" %}</li>
+          <li>{% trans "Password Management" %}</li>
+          <li>{% trans "Certificate Management" %}</li>
+          <li>{% trans "Resource Utilization" %}</li>
+          <li>{% trans "Capacity Planning" %}</li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <ul class="bullet-gray">
+          <li>{% trans "Automatic Warranty Tracking" %}</li>
+          <li>{% trans "“What-if” scenarios" %}</li>
+          <li>{% trans "Inventory Lifecycle Management" %}</li>
+          <li>{% trans "Automatic Rack Diagrams" %}</li>
+          <li>{% trans "Cable Management" %}</li>
+          <li>{% trans "Drag-and-drop Room Layouts" %}</li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <ul class="bullet-gray">
+          <li>{% trans "Power Monitoring & Control" %}</li>
+          <li>{% trans "Full Audit Trails" %}</li>
+          <li>{% trans "Asset Lifecycle Tracking & Transfers" %}</li>
+          <li>{% trans "Purchase Tracking" %}</li>
+          <li>{% trans "QR / Barcode Generation" %}</li>
+          <li>{% trans "Spreadsheet / CSV Import of CI’s and Attributes" %}</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+  <br>
+  <p>{% trans "Device42’s Advanced Visualizations, powerful, customizable reporting facilities, and its advanced, well documented RESTful APIs and webhooks work together to provide an enhanced data management experience: by helping to make your data either easier to see and understand, faster to manipulate, and more convenient to quantify - All at a price that will surprise you." %}</p>
+
+  {% include 'partials/try-free-callout.html' %}
+</article>
+{% endblock %}

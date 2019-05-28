@@ -1,0 +1,106 @@
+{% load i18n static %}
+<div {% if id %}id="{{ id }}" {% endif %}class="row padded featurette image-{{ image|default:'right' }} {% if vcenter %}is-table-row{% endif %}">
+    <div class="col-md-6">
+        <br>
+        <a href="{% static 'img/sections/features/cmdb/RESTful-APIs.png' %}" data-featherlight="image">
+            <img class="img-responsive center-block img-rounded img-xs-restrict"
+             src="{% static 'img/sections/features/cmdb/RESTful-APIs.png' %}"
+             alt="{% trans 'Fast and Easy Integration' %}">
+        </a>
+    </div>
+    <div class="col-md-6">
+        <h3>{% trans "Fast and Easy Integrations" %}</h3>
+        <p>{% trans "Device42 includes a very granular and secure set of RESTful APIs for integration with other applications used to manage your IT infrastructure." %}</p>
+        <h4 class="text-italic text-muted">{% trans "Integrations Include:" %}</h4>
+    </div>
+</div>
+<div class="row is-table-row">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-6">
+        <h4 class="flat-bottom text-strong">{% trans "ITSM Integrations" %}</h4>
+        <h5>{% trans "...with Jira, Zendesk, and ServiceNow" %}</h5>
+        <ul class="checklist alt-font">
+            <li>{% trans "Link CIs from Device42 to your ITSM tickets" %}</li>
+            <li>{% trans "View or Edit CI details from ServiceNow requests" %}</li>
+            <li>{% trans "Search JIRA issues by CI name" %}</li>
+        </ul>
+    </div>
+    <div class="col-xs-12 img-group-inline-xs text-center image-cloud" style="display: table;">
+        <div class="one">
+          <img src="{% static 'img/customers/integrations/jira.png' %}" alt="{% trans 'JIRA' %}" class="img-responsive img-restrict">
+        </div>
+        <div class="three">
+          <img src="{% static 'img/customers/integrations/servicenow.png' %}" alt="{% trans 'ServiceNow' %}" class="img-responsive img-restrict">
+        </div>
+        <div class="two">
+          <img src="{% static 'img/customers/integrations/zendesk.png' %}" alt="{% trans 'Zendesk' %}" class="img-responsive img-restrict">
+        </div>
+    </div>
+</div>
+<div class="row is-table-row">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-6">
+        <h4 class="flat-bottom text-strong">{% trans "Configuration Management [CM] Integrations" %}</h4>
+        <h5>{% trans "...with Puppet, CHEF, ANSIBLE, and System Center " %}</h5>
+        <ul class="checklist alt-font">
+            <li>{% trans "Device42 utilizes system information data stored in puppet manifests to populate asset inventory" %}</li>
+            <li>{% trans "Streamline the task of provisioning, configuring, and maintaining servers" %}</li>
+            <li>{% trans "Eliminating the need to run redundant auto-discovery processes across the IT infrastructure" %}</li>
+        </ul>
+    </div>
+    <div class="col-xs-12 img-group-inline-xs text-center image-cloud" style="display: table;">
+        <div class="three">
+          <img src="{% static 'img/customers/integrations/puppetlabs.png' %}" alt="{% trans 'Puppet' %}" class="img-responsive img-restrict">
+        </div>
+        <div class="two">
+          <img src="{% static 'img/customers/integrations/chef.png' %}" alt="{% trans 'Chef' %}" class="img-responsive img-restrict">
+        </div>
+        <div class="one">
+          <img src="{% static 'img/customers/integrations/ansible.png' %}" alt="{% trans 'Ansible' %}" class="img-responsive img-restrict">
+        </div>
+        <div class="four">
+          <img src="{% static 'img/customers/integrations/sccm.png' %}" alt="{% trans 'System Center' %}" class="img-responsive img-restrict">
+        </div>
+    </div>
+</div>
+<div class="row is-table-row">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-6">
+        <h4 class="flat-bottom text-strong">{% trans "Automation Integrations with Webhooks and Device42’s RESTful API" %}</h4>
+        <h5>{% trans "...with StackStorm, Zapier, and any other if-this-then-that tool!" %}</h5>
+        <ul class="checklist alt-font">
+            <li>{% trans "Trigger events with Webhooks from Device42 based on just about any happening in your infrastructure" %}</li>
+            <li>{% trans 'Manipulate any CI within Device42 via its powerful <a href="https://api.device42.com/" target="_blank">RESTful API</a>' %}</li>
+            <li>{% trans "Direct, secure SQL access to the underlying database" %}</li>
+            <li>{% trans "Easily build custom integrations" %}</li>
+            <li>{% trans "Automate anything from common tasks to complex workloads" %}</li>
+          <li>{% trans 'Centrally <a href="https://www.device42.com/blog/2016/11/preventing-ddos-attacks-how-device42-can-help/" target="_blank">manage multiple DNS providers</a> from Device42' %}</li>
+        </ul>
+     </div>
+     <div class="col-xs-12 img-group-inline-xs text-center image-cloud" style="display: table;">
+        <div class="three">
+          <img src="{% static 'img/customers/integrations/stackstorm.png' %}" alt="{% trans 'Puppet' %}" class="img-responsive img-restrict">
+        </div>
+        <div class="two">
+          <img src="{% static 'img/customers/integrations/zapier.png' %}" alt="{% trans 'Chef' %}" class="img-responsive img-restrict">
+        </div>
+    </div>
+</div>
+<div class="row is-table-row">
+     <div class="col-xs-10 col-xs-offset-1 col-sm-6">
+        <h4 class="flat-bottom text-strong">{% trans "SIEM Integrations" %}</h4>
+        <h5>{% trans "...like Splunk and Logstash" %}</h5>
+        <ul class="checklist alt-font">
+            <li>{% trans "Link CMDB items to issues in JIRA" %}</li>
+            <li>{% trans "View CI details from JIRA issues" %}</li>
+            <li>{% trans "Search JIRA issues by CI names" %}</li>
+            <li>{% trans "Display racks and devices inside JIRA when adding/creating/modifying issues" %}</li>
+        </ul>
+        <p class="lead text-primary-dark left text-italic">{% trans "...With more always being developed!" %}</p>
+    </div>
+    <div class="col-xs-12 img-group-inline-xs text-center image-cloud" style="display: table;">
+        <div class="two">
+          <img src="{% static 'img/customers/integrations/logstash.png' %}" alt="{% trans 'Logstash' %}" class="img-responsive img-restrict">
+        </div>
+        <div class="four">
+          <img src="{% static 'img/customers/integrations/splunk.png' %}" alt="{% trans 'Splunk' %}" class="img-responsive img-restrict">
+        </div>
+    </div>
+</div>

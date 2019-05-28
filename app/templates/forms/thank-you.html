@@ -1,0 +1,183 @@
+{% extends 'base/_base.html' %}
+{% load i18n static %}
+{% block title %}{% trans "Thank you" %}!{% endblock %}
+{% block meta %}
+    <meta name="robots" content="noindex">
+{% endblock %}
+{% block body_scripts %}
+    {% if id == "0" or id == "1" or id == '6' %}
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 991611862;
+        var google_conversion_language = "en";
+        var google_conversion_format = "2";
+        var google_conversion_color = "ffffff";
+        var google_conversion_label = "gb1LCOzKnlgQ1pfr2AM";
+        var google_conversion_value = 1.00;
+        var google_conversion_currency = "USD";
+        var google_remarketing_only = false;
+        /* ]]> */
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+        <div style="display:inline;">
+            <img height="1" width="1" style="border-style:none;" alt=""
+                 src="//www.googleadservices.com/pagead/conversion/991611862/?value=1.00&amp;currency_code=USD&amp;label=gb1LCOzKnlgQ1pfr2AM&amp;guid=ON&amp;script=0"/>
+        </div>
+    </noscript>
+    <!--  Clickcease.com Conversion tracking-->
+<script type="text/javascript">
+    ccConVal = 0;
+    var script = document.createElement("script");
+    script.async = true;
+    script.type = "text/javascript";
+    var target = 'https://www.clickcease.com/monitor/cccontrack.js';
+    script.src = target; var elem = document.head; elem.appendChild(script);
+</script>
+<noscript>
+<a href="https://www.clickcease.com"><img src="https://monitor.clickcease.com/conversions/conversions.aspx?value=0" alt="Click Fraud Monitoring" /></a>
+</noscript>
+<!--  Clickcease.com Conversion tracking-->
+
+    {% endif %}
+{% endblock %}
+{% block body %}
+    <header class="row head-home bg-primary">
+        <div class="container">
+            <div class="row featurette">
+                <div class="col-md-12">
+                    <h1>{% trans "Thank You!" %}</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                {% if id == "0" %}
+                    {% if the_data %}
+                        <h3>{% blocktrans with the_data_name=the_data.name %}Thank you, {{ the_data_name }} for writing to us!{% endblocktrans %}</h3>
+                        <h4>{% blocktrans with the_data_email=the_data.email %}We will be replying to {{ the_data_email }} as soon we can.{% endblocktrans %}</h4>
+                    {% endif %}
+                    <hr>
+                    <h4>{% trans "Device42 Survey" %}</h4>
+                    <p>{% trans "Please fill out following survey to help us serve you better" %}!</p>
+                    <script charset="utf-8" src="//js.hsforms.net/forms/current.js"></script>
+                    <script>
+                        hbspt.forms.create({
+                            portalId: '433338',
+                            formId: 'ae0dc299-0521-40e6-9cea-b28859fbf31e'
+                        });
+                    </script>
+                {% elif id == "1" %}
+                    {% if the_data %}
+                        <h2>{% blocktrans with the_data_name=the_data.name %}Thank you, {{ the_data_name }}!{% endblocktrans %}
+                            <small>{% blocktrans with the_data_email=the_data.email %}We have emailed your download link to {{ the_data_email }}.{% endblocktrans %}</small>
+                        </h2>
+                    {% endif %}
+                    <p class="font-stack-condensed">{% trans "If you don't receive an email from support@corp.device42.com within next few minutes, please double check your email id or check your spam filter and otherwise write to us at" %}
+                        <a href="mailto:support@device42.com">support@device42.com</a>.</p>
+                    <hr>
+                    <h4>{% trans "Device42 Survey" %}</h4>
+                    <p>{% trans "Please fill out following survey to help us serve you better" %}!</p>
+                    <script charset="utf-8" src="//js.hsforms.net/forms/current.js"></script>
+                    <script>
+                        hbspt.forms.create({
+                            portalId: '433338',
+                            formId: 'ae0dc299-0521-40e6-9cea-b28859fbf31e'
+                        });
+                    </script>
+                {% elif id == "2" %}
+                    {% if the_data %}
+                        <h2>{% blocktrans with the_data_email=the_data.email %}We have emailed your update link to {{ the_data_email }} <small>(only if existing customer)</small>{% endblocktrans %}</h2>
+                    {% endif %}
+                    <h4>{% trans "If you don't receive an email from" %}
+                        <strong>support@corp.device42.com</strong> {% trans "within the next few minutes, please double check your email id and verify your spam filter settings.  If you continue to have issues, please email us directly at" %}
+                        <a href="mailto:support@device42.com">support@device42.com</a>.</h4>
+                    <hr>
+                    <h2>{% trans "Device42 Satisfaction Survey" %}</h2>
+                    <p>{% trans "Please fill out the following survey" %}
+                        <em>{% trans "(optional)" %}</em> {% trans "to help us serve you better" %}!</p>
+                    <script charset="utf-8" src="//js.hsforms.net/forms/current.js"></script>
+                    <script>
+                        hbspt.forms.create({
+                            portalId: '433338',
+                            formId: '3343400c-9409-47da-a681-791b0c4bafc9'
+                        });
+                    </script>
+                {% elif id == "3" %}
+                    <h4>{% blocktrans with the_data_email=the_data.email %}{{ the_data_email }} has been unsubscribed from future newsletters.{% endblocktrans %}</h4>
+                {% elif id == "4" %}
+                    <h3>{% trans "Survey" %}</h3>
+                    <p>{% trans "Please fill out the following survey to help us serve you better" %}!</p>
+                    <iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dGFEc2d5M19hb3dkX2hlWXJNb3h2UlE6MQ"
+                            width="700" height="1465" frameborder="0" marginheight="0" marginwidth="0"><i
+                            class="fa fa-spinner fa-spin"></i> {% trans "Loading..." %}</iframe>
+                {% elif id == "5" %}
+                    {% if the_data %}
+                        <h2>{% blocktrans with the_data_name=the_data.name %}Thank you {{ the_data_name }}!{% endblocktrans %}</h2>
+                        <p>{% trans "Your request has been added to the moderation queue" %}.</p>
+                        <hr>
+                        <h4>{% trans "Please fill out the following survey <em>optional</em> to help us serve you better!" %}</h4>
+                        <iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dGFEc2d5M19hb3dkX2hlWXJNb3h2UlE6MQ"
+                                width="700" height="1465" frameborder="0" marginheight="0" marginwidth="0"><i
+                                class="fa fa-spinner fa-spin"></i> {% trans "Loading..." %}</iframe>
+                    {% endif %}
+                {% elif id == "6" %}
+                    {% if the_data %}
+                        <h3>{% blocktrans with the_data_name=the_data.name %}Thank you, {{ the_data_name }} for writing to us!{% endblocktrans %}</h3>
+                        <h4>{% blocktrans with the_data_email=the_data.email %}We will be replying to {{ the_data_email }} as soon we can.{% endblocktrans %}</h4>
+                    {% endif %}
+                    <hr>
+                    <h4>{% trans "Device42 Survey" %}</h4>
+                    <p>{% trans "Please fill out following survey to help us serve you better" %}!</p>
+                    <script charset="utf-8" src="//js.hsforms.net/forms/current.js"></script>
+                    <script>
+                        hbspt.forms.create({
+                            portalId: '433338',
+                            formId: 'ae0dc299-0521-40e6-9cea-b28859fbf31e'
+                        });
+                    </script>
+                {% elif id == "9" %}
+                    <h2>{% trans "Thank you!" %}</h2>
+                    {% url 'home' as home %}
+                    <h4 class="text-primary-dark">{% blocktrans %}Click here to <a href="{{home}}">return to homepage</a>.{% endblocktrans %}</h4>
+                {% elif id == "10" %}
+                    <h2>{% trans "Thank you for submitting." %} {% trans "We will be reaching out within 1 business day with your special link and license." %}</h2>
+                    {% url 'home' as home %}
+                    <p class="h4 text-primary-dark">{% blocktrans %}Click here to <a href="{{home}}">return to homepage</a>.{% endblocktrans %}</p>
+                {% elif id == "11" %}
+                    <h2>{% trans "Your whitepaper should be in your inbox!" %}</h2>
+                    {% url 'home' as home %}
+                    <h4 class="text-primary-dark">{% blocktrans %}Click here to <a href="{{home}}">return to the homepage</a>.{% endblocktrans %}</h4>
+                {% elif id == "12" %}
+                    <h2>{% trans "We have emailed you a verification link, please confirm to get started." %}</h2>
+                    {% url 'home' as home %}
+                    <h4 class="text-primary-dark">{% blocktrans %}Click here to <a href="{{home}}">return to the homepage</a>.{% endblocktrans %}</h4>
+                {% elif id == "13" %}
+                    <h2>{% trans "Thank you for confirming your email. We are setting up your Cloud Instance and will email your login information soon." %}</h2>
+                    <hr>
+                    <h4>{% trans "Device42 Survey" %}</h4>
+                    <p>{% trans "Please fill out following survey to help us serve you better" %}!</p>
+                    <script charset="utf-8" src="//js.hsforms.net/forms/current.js"></script>
+                    <script>
+                        hbspt.forms.create({
+                            portalId: '433338',
+                            formId: 'ae0dc299-0521-40e6-9cea-b28859fbf31e'
+                        });
+                    </script>
+                {% elif id == "14" %}
+                    <h2>{% trans "Your XLS spreadsheet link is on the way." %}</h2>
+                    {% url 'home' as home %}
+                    <h4 class="text-primary-dark">{% blocktrans %}Click here to <a href="{{home}}">return to the homepage</a>.{% endblocktrans %}</h4>
+                {% else %}
+                    <h2>{% trans "Thank you for submitting" %}!</h2>
+                    {% url 'home' as home %}
+                    <p class="h4 text-primary-dark">{% blocktrans %}Click here to <a href="{{home}}">return to homepage</a>.{% endblocktrans %}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

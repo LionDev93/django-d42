@@ -1,0 +1,43 @@
+[head.title]
+Put an end to capacity planning headaches with Device42's comprehensive Linux capacity planning tools
+
+[head.description]
+Device42 automatically maps out your entire physical and virtual infrastructure and provides the tools and insight you need to make accurate Linux capacity planning forecasts every time!
+
+[landing.title]
+Accurate Linux Capacity Planning - Every Time!
+
+[landing.image_format]
+gif
+
+[landing.content]
+
+Device42 provides the insight you need to manage Linux capacity (and the rest of your IT infrastructure) with powerful tools like "what-if" scenarios, room and rack layouts, power consumption and real-time linux capacity planning.
+
+
+- Map your physical, virtual and cloud networks automatically with agentless discovery
+- Auto-generated rack layouts with intuitive drag and drop editing
+- Color coded room layouts with heat-maps for easy Linux capacity planning
+- Support for capacity planning across operating systems: Linux, Windows, BSD, and more
+- Real time power and environmental monitoring with charts and alerts
+- Powerful resource utilization monitoring with fully customizable alerting 
+
+
+[feature[1].title]
+Rack and Room layouts with What-if Scenarios
+[feature[1].image_format]
+gif
+[feature[1].content]
+Device42 auto-discovery spans from legacy to newer systems and builds dependencies between physical, virtuals and applications. No need to use multiple tools to put together information anymore.
+
+[feature[2].title]
+Real time Linux capacity planning with monitoring and control
+[feature[2].content]
+Collect your complete Linux inventory: serial #, hardware model, OS and build info, installed software, IPs and connections, services and mapping between services across machines. Data from various auto-discovery methods is automatically correlated.
+
+[feature[3].title]
+Automated data center management with integrations
+[feature[3].image_format]
+png
+[feature[3].content]
+Using our out of box integrations with JIRA, Confluence, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, ServiceNow and more, use the real-time map Device42 provides to forecast and plan capacity changes, reduce your mean time to recovery and make faster decisions across your IT operations!

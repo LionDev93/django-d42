@@ -1,0 +1,13 @@
+{% load i18n static %}
+<div {% if id %}id="{{ id }}" {% endif %}class="row featurette image-left-4x8 {% if vcenter %}is-table-row{% endif %}">
+    <div class="col-md-6">
+        <img class="img-responsive center-block animated"
+             src="{% static 'img/sections/features/app-map/impact-list.png' %}"
+             alt="{% trans 'Application Impact Lists' %}">
+    </div>
+    <div class="col-md-6">
+        <h2 class="featurette-heading">{% trans "Application Impact Lists" %}</h2>
+        <p>{% trans "Reduce risk and potential downtime during cutovers, upgrades, and migrations by understanding interdependencies and connections!" %}</p>
+        <p>{% trans 'Impact lists provide the necessary details about the organizational groups using the applications.' %}</p>
+    </div>
+</div>

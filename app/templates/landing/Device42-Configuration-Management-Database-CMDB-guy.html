@@ -1,0 +1,137 @@
+﻿{% extends "base/_base-landing-v3.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Creating and managing an accurate and up-to-date configuration management database (CMDB) is a vital component in effectively managing today’s data center and IT Infrastructure. Device42 software does just that and a lot more.' %}"/>
+{% endblock %}
+{% block title %}{% trans "Configuration Management Database | Device42" %}{% endblock %}
+{% block styles %}
+<style>
+    .cta-free-trial {
+        padding: 24px 0;
+        text-transform: none !important;
+        background-color: #ffc90e;
+        color: #130dff !important;
+    }
+</style>
+{% endblock %}
+
+{% block landingHeadingText %}
+    {% blocktrans %}The Configuration Management Database (CMDB)<br>that <em>truly works!</em>{% endblocktrans %}
+{% endblock %}
+
+{% block key_benefits %}
+    <section class="row landing-section">
+        <div class="col-sm-6">
+            <h3 class="text-strong">{% trans "Key Benefits:" %}</h3>
+            <ul class="bullet-blue">
+                <li>{% trans "Goodbye spreadsheets...hello automated IT management!" %}</li>
+                <li>{% trans "Easier and faster troubleshooting" %}</li>
+                <li>{% trans "Reduce risk of operational failures" %}</li>
+                <li>{% trans "Increase your team’s productivity" %}
+                    <ul class="bullet-gray flat-top">
+                        <li>{% trans "Focus on high value activities, and not manual processes" %}</li>
+                        <li>{% trans "Shift from reactive to proactive management" %}</li>
+                        <li>{% trans "Simplify management and justification of budget" %}</li>
+                    </ul>
+                </li>
+                <li>{% trans "Help prevent downtime and associated costs" %}</li>
+                <li>{% trans "Eliminate duplicate tools or manual processes" %}</li>
+                <li>{% trans "Provide a single view of all infrastructure in one place" %}</li>
+                <li>{% trans "Enhance reliability with faster detection and correction of improper configurations that could negatively impact performance" %}</li>
+                <li>{% trans "Help define and enforce formal policies and procedures that govern asset identification, status monitoring, and auditing" %}</li>
+                <li>{% trans "Improve IT asset management by utilizing proactive, preventative, and predictive measures" %}</li>
+                <li>{% trans "Boost agility through more accurate analysis of the impact of potential changes to hardware, software, firmware, documentation, testing procedures, etc." %}</li>
+                <li>{% trans "Simplify reconciliation and management of complex system and infrastructures" %}</li>
+                <li>{% trans "Improve utilization of existing capacity" %}</li>
+            </ul>
+        </div>
+        <div class="col-sm-6">
+            <a href="{% url 'download' %}">
+                <img src="{% static 'img/sections/features/cmdb/Solution-Components.png' %}"
+                     alt="{% trans 'Configuration Management Database (CMDB)' %}"
+                     class="img-responsive center-block vert-offset-bottom-3">
+            </a>
+            <a class="btn center-block cta-free-trial h3"
+                href="{% url 'download' %}">{% trans "Get your FREE, fully-functional trial NOW!" %}</a>
+        </div>
+    </section>
+{% endblock %}
+
+{% block key_features %}
+    <section class="row image-right-5x7 is-table-row vert-offset-top-2 landing-section">
+        <div class="col-sm-7">
+            <h3 class="text-strong">{% trans "Key Features:" %}</h3>
+            <ul class="bullet-blue">
+                <li>{% trans "Agentless autodiscovery of all your IT assets" %}</li>
+                <li>{% trans "Plug and play" %}</li>
+                <li>{% trans "Get a clear view into your IT ecosystem to identify and manage all configuration items (CI) in your environment" %}</li>
+                <li>{% trans "Ensure configuration records are always accurate with schedulable auto-discoveries" %}</li>
+                <li>{% trans "Unify data and processes across teams and departments" %}</li>
+                <li>{% trans "Highlight CI-to-CI impacts across your infrastructure" %}</li>
+                <li>{% trans "Generate powerful visualizations that help make educated business decisions easier" %}</li>
+                <li>{% trans "Integrate with tools like JIRA, ServiceNow, Puppet, Chef, etc." %}</li>
+                <li>{% trans "Device42 features powerful, well documented REST APIs for easy integration with home grown and external tools, whether a CMDB, automation, or an ITSM tool" %}</li>
+                <li>{% trans "Track your hardware, software, and more with comprehensive IT Asset Management (ITAM)" %}</li>
+            </ul>
+        </div>
+        <div class="col-sm-5">
+            <a href="{% url 'download' %}">
+                <img src="{% static 'img/sections/features/cmdb/key-features.png' %}"
+                     alt="{% trans 'Configuration Management Database (CMDB)' %}" 
+                     style="max-width: 90% !important;"
+                     class="img-responsive center-block">
+            </a>
+        </div>
+    </section>
+{% endblock %}
+
+{% block maincontent %}
+    <section class="row landing-section">
+        <div class="col-sm-6">
+            <h3>{% trans "Load CI's Fast with Powerful Auto-Discovery Tools" %}</h3>
+            <p>{% trans "Populate your CMDB fast with an extensive range of auto-discovery tools for physical, virtual, cloud, and hybrid infrastructures. Increase efficiency and maximize productivity by getting clear visibility into what you have while promoting transparency companywide." %}</p>
+            <ul>
+                <li>{% trans "Both agent based and agentless discovery supported" %}</li>
+                <li>{% trans "All discoveries can be scheduled so you're always up-to-date" %}</li>
+                <li>{% trans "Multiple protocols supported (e.g. SNMP, WMI, SSH, Modbus, ...)" %}</li>
+                <li>{% trans "Native support for popular virtualization & cloud platforms" %}</li>
+                <li>{% trans "Native support for blade chassis" %}</li>
+                <li>{% trans "Software License Management" %}</li>
+                <li>{% trans "Fast, flexible and easy to deploy" %}</li>
+            </ul>
+        </div>
+        <div class="col-sm-6">
+            <a href="{% url 'download' %}">
+                <img src="{% static 'img/sections/features/cmdb/impact-1.png' %}"
+                     alt="{% trans 'Configuration Management Database (CMDB)' %}"
+                     style="max-width: 60% !important;"
+                     class="img-responsive center-block">
+            </a>
+        </div>
+    </section>
+
+    <section class="row image-right-5x7 is-table-row landing-section">
+        <div class="col-sm-7">
+            <h3>{% trans "Pre-configured, auto-discovering CMDB" %}</h3>
+            <p>{% trans "With Device42’s powerful auto-discovery, you can easily map services, listening ports, and remote connections across Windows and *NIX machines." %}</p>
+            <p class="text-muted">{% trans "CI’s and relationships are pre-configured. There’s no lock-in; you can freely create your own custom CIs and relationships, too." %}</p>
+            <ul>
+                <li>{% trans "Know what services are listening on what ports" %}</li>
+                <li>{% trans "Automated service impact discovery" %}</li>
+                <li>{% trans "Model Buildings, Rooms, Racks, and more" %}</li>
+                <li>{% trans "Visualize all the dependencies for a particular machine" %}</li>
+                <li>{% trans "No need to configure span ports to get dependencies" %}</li>
+                <li>{% trans "Define users, groups, passwords, and object-level permissions" %}</li>
+            </ul>
+        </div>
+        <div class="col-sm-5">
+            <a href="{% url 'download' %}">
+                <img src="{% static 'img/sections/features/app-map/set-it-all-in-one-place.jpg' %}"
+                     alt="{% trans 'Configuration Management Database (CMDB)' %}"
+                     style="max-width: 90% !important;"
+                     class="img-responsive center-block">
+            </a>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'base/_base.html' %}
+{% load i18n static custom_tags %}
+{% block title %}Power collector for  DCIM {% endblock %}
+{% block site_section_software %}active{% endblock %}
+{% block meta %}
+    <meta name="description"
+          content="With Device42 Software you can do data center documentation, server room asset management, IP address management and dependency flow for your applications" />
+{% endblock %}
+{% block body_scripts %}
+<script>
+    $(function() {
+        $(".main-content").addClass("page-backdrop");
+        $("form#powerapp").on('submit', function() {
+            $("<i class='fa fa-cog fa-spin fa-muted' style='font-weight:400;color:inherit!important;margin-left:6px;'></i>").appendTo($("button[type='submit']"));
+        });
+    });
+</script>
+{% endblock %}
+{% block body %}
+    <header class="row head-home bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1>Device42 Power Appliance</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="row">
+        <div class="container">
+            <p class="lead text-danger padded">Please note that the following form is for D42 Users only</p>
+            <div class="row">
+                <div class="col-sm-8">
+                    <form class="clearfix" action="." method="POST" id="powerapp"
+                          role="form">{% csrf_token %}
+                        {% if form_errors %}
+                            <p class="text-danger text-strong">{% trans "Invalid request!" %}</p>
+                        {% endif %}
+                        <div class="form-group">
+                            <label class="control-label" for="id_email">{% trans "Email" %}:</label>
+                            <div class="field-wrap">
+                                <input id="id_email" type="email" name="email" maxlength="75" value="" autofocus="autofocus" required="required">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="id_platform">{% trans "Platform" %}:</label>
+                            <div class="field-wrap">
+                                <select name="platform" id="id_platform">
+                                    {% for platform in platforms %}
+                                    <option value="{{ platform }}">{{ platforms|get_item:platform }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group text-right">
+                            <button type="submit" class="btn btn-sm btn-warning">{% trans "Send Download Link" %}</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

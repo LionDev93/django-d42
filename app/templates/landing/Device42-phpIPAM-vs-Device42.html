@@ -1,0 +1,201 @@
+{% extends "base/_base-landing-v3.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% blocktrans %}Device42 is a comprehensive IT management software (virtual appliance). Plug & Play with open APIs. Rely on Device42 for automated IP Address Management!{% endblocktrans %}"/>
+{% endblock %}
+{% block title %}{% trans "Device42 vs. phpIPAM" %}{% endblock %}
+{% block styles %}
+<style>
+    .cta-free-trial {
+        padding: 24px 0;
+        text-transform: none !important;
+        background-color: #ffc90e;
+        color: #130dff !important;
+    }
+    #top-container h1 {
+        margin-bottom: 0px;
+    }
+</style>
+{% endblock %}
+{% block script %}
+    <script type="text/javascript">
+        $(function () {
+            $("i.fa").tooltip();
+        });
+    </script>
+{% endblock %}
+
+{% block landingHeadingText %}
+    {% trans "Device42 vs. phpIPAM" %}
+{% endblock %}
+{% block landingSubHeadText %}
+    <em class="h3 flat-top flat-bottom">{% trans "Looking for a better alternative to {php}IPAM?" %}</em><br>
+    <em class="h3 flat-top flat-bottom">{% trans "You’re in the right place!" %}</em>
+{% endblock %}
+
+{% block landingfeature %}
+    <section class="row landing-section">
+        <div class="col-sm-7">
+
+            <div class="row">
+                <ul>
+                    <li>{% trans "Eliminate manual IP address tracking spreadsheets, the frustration that comes with using them, and of course, the associated risks" %}</li>
+                    <li>{% trans "Enable distributed data center teams to easily manage subnets" %}</li>
+                    <li>{% trans "Provide instant, at-a-glance access to IP address information and diagrams" %}</li>
+                    <li>{% trans "Device42’s virtual appliance makes setup a breeze, and the powerful, agentless autodiscovery, remote collectors, and universal import tools make populating Device42 simple and fast, too" %}</li>
+                    <li>{% trans "Minimize problem resolution times and lower your MTTR metrics" %}</li>
+                    <li>{% trans "Save time by eliminating IP errors and streamlining IP management tasks" %}</li>
+                </ul>
+            </div>
+
+            <div class="row vert-offset-top-1" style="width: 100%;">
+
+                        <div class="text-center" style="width: 30%; float: left; margin-left: 5%;">
+                                <div style="max-width:50%; margin-left:auto; margin-right:auto; margin-top:24px; height:auto !important;" class="clearfix">
+                                    <div class="embed-responsive embed-responsive-16by9" style="margin-bottom: 5px;">
+                                        <div class="wistia_responsive_wrapper"
+                                            style="height:100%; left:0; position:absolute; top:0; width:100%;">
+                                            <script src="//fast.wistia.com/embed/medias/igc5qfvoyr.jsonp" async></script>
+                                            <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                                            <div class="wistia_responsive_padding"
+                                                style="padding:60% 0 0 0; position:relative;">
+                                                <div class="wistia_responsive_wrapper"
+                                                    style="height:100%; left:0; position:absolute; top:0; width:100%;">
+                                                    <span class="wistia_embed wistia_async_igc5qfvoyr popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block; height:100%; width:100%">&nbsp;</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="text-primary font-stack-roboto text-center h4" style="margin-top: 0px !important; margin-bottom: 0px !important;">{% trans "90 Second Overview" %}</span>
+                        </div>
+
+                        <div class="vert-offset-top-1" style="width: 65%; float: left;">
+                            <p>{% blocktrans %}<strong>You're in good company!</strong><br> <em>Many global companies use Device42 for IP<br> Address Management, and they LOVE US!</em>{% endblocktrans %}</p>
+                        </div>
+
+            </div>
+
+
+        </div>
+        <div class="col-sm-5">
+            <table class="table table-hover d42-sw-compare">
+                <thead>
+                <tr>
+                    <th class="table-title">
+                        <p class="dark-blue text-left alt-text"
+                           style="margin:0;font-size:24px;">{% trans "Features" %}</p>
+                    </th>
+                    <th class="product-heading blue">{% trans "Device42" %}</th>
+                    <th class="product-heading blue">{% trans "phpIPAM" %}<sup>&reg;</sup></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="comp-feature">{% trans "CMDB" %}</td>
+                    <td class="text-center"><i class="fa fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "VRF Group Management" %}</td>
+                    <td class="text-center"><i class="fa fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Comprehensive Device Info" %}</td>
+                    <td class="text-center"><i class="fa fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Integrated DNS & DHCP mgmt" %}</td>
+                    <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="Though not a DDI tool, Device42 features one-way DNS sync, and users can use both webhooks and RESTful APIs to automate their DNS and DHCP changes."><i class="fa fa-exclamation-triangle"></i></a></td>
+                    <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="PowerDNS Integration"><i class="fa fa-exclamation-triangle"></i></a></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Powerful REST APIs" %}</td>
+                    <td class="text-center"><i class="fa fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Advanced Visualizations" %}</td>
+                    <td class="text-center"><i class="fa fa-check"></i></td>
+                    <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="Simple rack visualizations aside, phpIPAM lacks Device42's Photo Realistic Rack Views, Automatically Generated Toplogy and Dependency Charts and diagrams, impact charts, and more."><i class="fa fa-times"></i></a></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Webhooks to Drive Automation" %}</td>
+                    <td class="text-center"><i class="fa fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-times"></i></td>
+                </tr>
+                </tbody>
+            </table>
+            <a class="btn center-block cta-free-trial h3"
+                href="{% url 'download' %}">{% trans "Get your FREE, fully-functional trial NOW!" %}</a>
+        </div>
+    </section>
+{% endblock %}
+
+{% block good_company %}
+{% endblock %}
+
+{% block key_features %}
+    <section class="row image-right-5x7 is-table-row vert-offset-top-2 landing-section">
+        <div class="col-sm-7">
+            <h3 class="text-strong">{% trans "Key Features:" %}</h3>
+            <p class="text-strong flat-bottom">{% trans "Device42’s IPAM capabilities include:" %}</p>
+            <ul class="checklist flat-top">
+                <li>{% trans "IPv4/IPv6 IP address management" %}</li>
+                <li>{% trans "Auto-discovery tools keep IP records accurate and always up-to-date" %}</li>
+                <li>{% trans "DNS integration allows full zone and record transfers for easy searching" %}</li>
+                <li>{% trans "Overlapping IP ranges and nested subgroups management" %}</li>
+                <li>{% trans "Graphic visualizations of network connectivity connections" %}</li>
+                <li>{% trans "Subnet tree view with nested subnets and IPs" %}</li>
+                <li>{% trans "Auto assignment of IPs to devices" %}</li>
+                <li>{% trans "Patch panel & cable management with easy drag and drop functionality" %}</li>
+                <li>{% trans "Powerful APIs enable IP search, find, and integration with other tools" %}</li>
+            </ul>
+        </div>
+        <div class="col-sm-5">
+            <a href="{% url 'download' %}">
+                <img src="{% static 'img/sections/features/cmdb/Solution-Components.png' %}"
+                     alt="{% trans 'phpIPAM vs Device42' %}"
+                     class="img-responsive center-block">
+            </a>
+        </div>
+    </section>
+{% endblock %}
+
+{% block maincontent %}
+    <section class="row landing-section">
+        <div class="col-sm-7">
+            <h3 class="text-strong" style="color: black !important;">{% trans "PLUS:" %}</h3>
+            <ul>
+                <li><strong>{% trans "A CMDB with Powerful, Agentless Device Discovery" %}</strong>
+                    <ul class="bullet-gray">
+                        <li>{% trans "Native WMI for Windows & SSH for *nix, BSD, and Mac" %}</li>
+                        <li>{% trans "SNMP for network devices like routers, switches, and load balancers" %}</li>
+                        <li>{% trans "Native Discovery for popular hypervisors and their guest VMs, cloud platforms, and blades" %}</li>
+                    </ul>
+                </li>
+                <li>{% blocktrans %}<strong>Application Dependency Mapping (ADM)</strong> discovers all your application dependencies{% endblocktrans %}
+                    <ul class="bullet-gray">
+                        <li>{% trans "See the services that are listening, on what ports, and all open ports on each server" %}</li>
+                        <li>{% trans "Get a list of all installed applications, manufacturer / owner, version and function" %}</li>
+                        <li>{% trans "Automatically generated dependency diagrams and topology charts quickly communicate interdependencies and application to server relationships" %}</li>
+                    </ul>
+                </li>
+                <li>{% blocktrans %}<strong>Remote collectors</strong> - discover from anywhere - no complicated span ports necessary, ever!{% endblocktrans %}</li>
+                <li>{% blocktrans %}<strong>DCIM functionality</strong> with drag and drop rack and room layouts, power monitoring and control{% endblocktrans %}</li>
+                <li>{% blocktrans %}<strong>Powerful pre-built reports</strong> with complete customizability{% endblocktrans %}</li>
+                <li>{% blocktrans %}Discover data on servers that can’t be accessed directly with <strong>netflow and NMAP</strong>{% endblocktrans %}</li>
+            </ul>
+        </div>
+        <div class="col-sm-5">
+            <a href="{% url 'download' %}">
+                <img src="{% static 'img/landing/phpipam/image1.png' %}"
+                     alt="{% trans 'phpIPAM vs Device42' %}"
+                     class="img-responsive center-block">
+            </a>
+        </div>
+    </section>
+{% endblock %}

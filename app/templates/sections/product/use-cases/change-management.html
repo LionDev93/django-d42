@@ -1,0 +1,147 @@
+{% extends 'base/_base.html' %}
+{% load i18n static %}
+{% block title %}{% trans "Change Management" %}{% endblock %}
+
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Computers running unsupported operating systems continue to function. However, using unsupported software may increase the risks of viruses and other security threats.' %}"/>
+{% endblock %}
+
+{% block styles %}
+<style>
+    .landing-section a {
+      color: #22a3df !important;
+      border: 0px !important;
+      text-decoration: underline !important;
+    }
+    .text-center {
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .center-ul {
+        margin: auto;
+        display: inline-table;
+      }
+    }
+    .center-ul a {
+      font-size: 24px;
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    p {
+      font-family: "Roboto Condensed", sans-serif !important;
+    }
+    .highlight-area {
+      border: 5px solid #31a3e0;
+      padding: 20px;
+    }
+    .highlight-area h2 {
+      margin-top: 0px;
+    }
+    .solution-area h2 {
+      margin-top: 0px;
+    }
+    .solution-area p {
+      font-size: 20px;
+      font-family: "Roboto Condensed",sans-serif !important;
+    }
+    .use-case ol {
+      padding: inherit;
+    }
+    .checkmark-style {
+      margin: 0px !important;
+      font-weight: 300;
+      color: #717171;
+    }
+    .checkmark-style li {
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+    .checkmark-style li:before {
+      content: "\2714";
+      margin-left: -24px;
+      margin-right: 12px;
+      position: relative;
+      vertical-align: text-top;
+      display: inline-block;
+      font-weight: 100;
+      font-size: 15px;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+    <header class="row bg-primary head-home">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{% trans "Change Management" %}</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container use-case">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>{% trans 'Challenge' %}</h2>
+            </div>
+            <div class="col-xs-8">
+                <p class="lead">{% trans "﻿The Change management  process often entails countless meetings in an attempt to determine the relevant data and dependencies, often still mistakenly overlooking or completely missing critical data points. Effective change management requires responsiveness. IT Agility, and most critically, accuracy." %}</p>
+                <p class="lead">{% trans "﻿Change management’s goal is to plan for [as opposed to react to]  the hurdles present in organizational change. The speed at which modern IT can undergo change has proved quite a challenge for the change management world, as they are still expected to manage change accurately, albeit at a much greater pace, and with ever increasing penalties in terms of cost of downtime for the always-growing user bases. There is no longer time for yet another ‘change management’ meeting if the agility of IT is to be matched." %}</p>
+            </div>
+            <div class="col-xs-4">
+                <img src="{% static 'img/sections/product/change-management.png' %}" class="img-inline-right"
+                         alt="{% trans 'Change Management' %}"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 solution-area">
+                <h2>{% trans 'Solution' %}</h2>
+                <p>{% trans "Keeping up with the pace of modern IT requires a modern toolset with the data change management needs ready and instantly available. Device42’s powerful CMDB with comprehensive auto discovery and application dependency mapping puts the data change management staff need to make important decisions quickly at their fingertips." %}</p>
+                <br>
+                <p class="text-strong">{% trans "Device42’s change management tools provide that ‘instant access’ to the important answers, such as:" %}</p>
+                <ul class="checkmark-style">
+                  <li>{% trans "What users will be impacted if I have to take down a network/server/storage component?" %}</li>
+                  <li>{% trans "What is the best maintenance window to minimize end user impact?" %}</li>
+                  <li>{% trans "Will any other services be impacted by this change, and if so, what are those dependencies?" %}</li>
+                  <li>{% trans "Do we have all the correct resources available to make the change efficiently?" %}</li>
+                  <li>{% trans "Have these changes been properly planned so we can minimize the potential for a rollback or possible downtime?" %}</li>
+                </ul>
+                <br>
+                <p>When you get a change request ticket, Device42 is the go-to change management tool, <a href='/features/integrations/'>right there with all the information you need</a>. Open an <a href='/features/application-mappings/'>application dependency diagram</a> to view what users and which applications depend on a piece of equipment. Accurate dependency diagrams help to ensure minimal disruption of services, while at the same time helping to ensure all required resources required for the change will be present. The <a href='/features/data-center-management/'>‘birds-eye’ view of the infrastructure</a> that Device42 provides allows change management to follow a standardized change-management procedure and ensure that the cost of the proposed changes is reasonable, are in the best interest if the business, and that all possible risks have been mitigated.</p>
+                <p>{% trans "Device42’s plethora of data helps change management handle a large volume of changes efficiently, helping boost their productivity. The better planning afforded also serves to decrease the amount of ‘urgent’ change requests, while Device42’s integrations introduce a degree of automation to the change management process. Device42 can integrate with many popular ITSM solutions, which can help to handle change requests with custom-tailored workflows. “Standard” changes can be automatically approved, while both “normal” and “urgent” changes can be properly routed to the correct personnel for approval." %}</p>
+                <br>
+                <p class="lead text-strong">{% trans "Device42 Integrates with your ITSM system for change management:" %}</p>
+                  <div class="row">
+                    <div class="col-md-4 text-center">
+                      <ul class="checkmark-style light-weight center-ul">
+                        <li><a href='/integrations/jira/'>Atlassian JIRA</a></li>
+                        <li><a href='/integrations/confluence/'>Atlassian Confluence</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-4 text-center">
+                      <ul class="checkmark-style light-weight center-ul">
+                        <li><a href='/integrations/service-now/'>ServiceNow </a></li>
+                        <li><a href='/integrations/servicenow-express/'>ServiceNow Express</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-4 text-center">
+                      <ul class="checkmark-style light-weight center-ul">
+                        <li><a href='/integrations/bmc-remedy/'>BMC Remedy</a></li>
+                        <li><a href='/integrations/zendesk/ '>ZenDesk</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                      <div class="col-xs-12">
+                          <h5><a href="{% url 'use_cases' %}" class="dir-arrow text-capitalize"><i class="fa fa-chevron-left"></i> {% trans "Back to Use Cases" %}</a></h5>
+                      </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,186 @@
+{% extends 'base/_base.html' %}
+{% load i18n static %}
+{% block title %}{% trans "Netcetera Group Ag. - Case Study" %}{% endblock %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Case studies for Device42 - with Netcetera Group Ag.' %}"/>
+{% endblock %}
+{% block styles %}
+  <style>
+    .secondary-menu {
+      text-align: center;
+    }
+
+    @media(max-width: 992px){
+      .secondary-menu {
+        display: none;
+      }
+    }
+
+    .secondary-menu.fixed {
+      position: fixed;
+      background: white;
+      z-index: 999;
+      top: 53px;
+      width: 100%;
+    }
+
+    .secondary-content  {
+      display: inline-block;
+    }
+
+    .secondary-menu-list {
+      display: inline-block;
+      list-style: none;
+      margin: 0;
+      padding: 0px;
+    }
+
+    .secondary-menu-list-item {
+      display: inline-block;
+      text-align: center;
+      zoom: 1;
+      vertical-align: middle;
+      height: 100%;
+      width: auto;
+      min-width: 100px;
+      cursor: pointer;
+      position: relative;
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+
+    .secondary-menu-list-item:before {
+      display: none;
+    }
+
+    .secondary-menu-link {
+      padding: 1.5rem 0;
+      color: #706F6F;
+      display: block;
+    }
+
+    .secondary-menu-link:focus, .secondary-menu-link:hover {
+      color: #706F6F;
+      text-decoration: none;
+    }
+
+    <!--.secondary-menu-list-item:hover, .secondary-menu-list-item.active {-->
+      <!--color: #706F6F;-->
+      <!--border-bottom: 3px solid #ab00dc;-->
+    <!--}-->
+
+    .secondary-menu-list-item:after {
+      content: "";
+      background-color: #22a3df;
+      padding: 1.5px;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      line-height: 3px;
+      font-size: 2em;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      right: 50%;
+      visibility: hidden;
+      transition: all 0.2s linear;
+    }
+
+    .secondary-menu-list-item:hover:after {
+          visibility: visible;
+        left: 6px;
+        right: 6px;
+    }
+
+    .secondary-menu-list-item.active:after {
+      visibility: visible;
+      content: "";
+      background-color: #eb8f34;
+      font-size: 30px;
+      padding: 1.5px;
+      line-height: 3px;
+      position: absolute;
+      bottom: 0;
+      left: 6px;
+      right: 6px;
+    }
+
+    .d-flex {
+      display: flex;
+    }
+  </style>
+{% endblock %}
+{% block body_scripts %}
+<script>D42.setSiteSection("customers");</script>
+{% endblock %}
+{% block body %}
+    <header class="row bg-primary head-home">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{% trans "Case Studies" %} - {% trans "Netcetera Group Ag." %}</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <br />
+                {% include 'sections/customers/_case-studies_left_col.html' %}
+            </div>
+            <div class="col-sm-9">
+                <br />
+                <div class="secondary-menu">
+                <div class="secondary-content">
+                  <ul class="secondary-menu-list">
+                    <li class="secondary-menu-list-item" id="testimonials_link">
+                      <a href="{% url 'customers_testimonials' %}" class="secondary-menu-link">
+                        {% trans "TESTIMONIALS" %}
+                      </a>
+                    </li>
+                    <li class="secondary-menu-list-item" id="customers_link">
+                      <a href="{% url 'customers' %}" class="secondary-menu-link">
+                        {% trans "CUSTOMERS" %}
+                      </a>
+                    </li>
+                    <li class="secondary-menu-list-item" id="case_studies_link">
+                      <a href="{% url 'customers_case_studies' %}" class="secondary-menu-link">
+                        {% trans "CASE STUDIES" %}
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+                <h3 class="text-muted">{% trans "Device42 User Case Study – Netcetera Group Ag." %}</h3>
+                <ul>
+                    <li><strong>{% trans "Company" %}</strong>: {% blocktrans %}<a href="https://www.netcetera.com/" target="_blank">Netcetera Group Ag</a>, <em>[holding D1 Solutions & Braingroup]</em>{% endblocktrans %}</li>
+                    <li><strong>{% trans "Industry" %}</strong>: {% trans "IT Software Solutions Sales" %}</li>
+                    <li><strong>{% trans "Location" %}</strong>: {% trans "Headquartered in Zurich, Switzerland" %}</li>
+                </ul>
+
+                <h2>{% trans "Netcetera specializes in supporting customers with tailored software in their core business. They have an experienced team of dedicated professionals that specialize in comprehending Customer’s existing systems and processes, no matter how complex, and offering IT solutions that provide customers continuing long term benefits." %}</h2>
+                <p>{% blocktrans %}Acting as a model in social responsibility, not only does Netcetera support socially valuable projects in the realms of culture, education, society and leisure time activities, but are committed to fostering new talent as well as promoting Switzerland as an ICT center of excellence. Mirroring their social reputation, Netcetera also has an excellent business reputation by tailoring software and embedded solutions to customers in a wide variety of industries. Providing expert consulting services, effective project management, and quality software development are just some of the pillars of their success.{% endblocktrans %}</p>
+                <p>{% trans "In the course of all of this, Netcetera found that they needed a more sophisticated tool to track their infrastructure, assets, both IP and non-IP, their software, and the all key dependencies and interrelationships among them." %}</p>
+                <p>{% trans "To efficiently serve their customers, they needed a solution that:" %}</p>
+                <ol>
+                    <li>{% trans "Could track all of their current and future assets" %}</li>
+                    <li>{% trans "Was powerful without being complex" %}</li>
+                    <li>{% trans "Offered higher functionality than both Racktables and Open Source alternatives while delivering good ROI" %}</li>
+                    <li>{% trans "Would grow with them, adapting to future needs as they develop" %}</li>
+                </ol>
+                <h3 class="text-muted">{% trans "The Implementation" %}</h3>
+                <p>{% trans "Prior to trying and then implementing Device42 at the recommendation of a new employee who was familiar with the software, Netcetera had tried documenting and tracking their infrastructure using a variety of Open Source solutions, having finally settled on RackTables." %}</p>
+                <p><em>“{% trans "We’ve used (among many other tools, of course) Racktables. But as it turned out, the functionality was far below our expectations. We were looking for a more sophisticated tool. We tried to adapt [Racktables] as much as possible to fit our needs, but we kept encountering show stopping difficulties in coding yet another solution. At the end of the day, Device42 offers a much higher set of functionality right out of the box (basically everything we were looking for). Although it was a kind of a cold start, we were able to configure and integrate Device42 to meet our needs very easily." %}“</em></p>
+                <p>{% trans "When asked about their experience implementing Device42, Netcetera reported:" %} <em>“{% trans "We start first with an import of data (exported from Racktables, fields mapped to Device42). After that, we started a clean-up effort in the DC, and entered any missing data. The ongoing maintenance has been included in our IT processes going forward in order to keep the data up-to-date. We can finally say our current data quality is fine, which is new for us!" %}”</em></p>
+                <h3 class="text-muted">{% trans "Comparing Device42" %}</h3>
+                <p>{% trans "With the trial implementation underway and the system operational, Netcetera provided the following feedback on the thought process that led them to try Device42:" %} <em>“{% trans "Of course we had looked into a few ITSM tools, which also offer Asset Management functionalities. We came to the conclusion, however, that it didn’t make any sense to introduce [and replace] another tool just for that." %}”</em></p>
+                <p>{% trans "When asked to talk about specific features of Device42 that really stuck out, Netcetera commented that they felt it important to mention," %} <em>“{% trans "We find ourselves using the  ‘Dependency-Diagram’ [feature] often ... This [features output] is really cool, and it helps to make a lot of decisions easily visible." %}”</em></p>
+                <h3 class="text-muted">{% trans "Post Implementation" %}</h3>
+                <p>{% trans "It didn’t take long for Netcetera to develop a genuine liking for Device42. It provided all the functionality they were looking for right out of the box, and did so at a price point that didn’t shock. From the ability to track and manage all of their assets, both IP and non-IP, to the vast library of integrations to Device42’s well documented RESTful API… Netcetera felt they had found just what they were looking for in Device42:" %} <em>“{% trans "We realized that [Device42’s out-of-the-box functionality] was just what we were looking for. Besides that, the TOC seems to be quite good, as well ... but this of course will be proven with time." %}”</em></p>
+                <p>{% trans "When asked about what insights Netcetera could offer others seeking to better manage their data center infrastructure, Netcetera shared," %} <em>“{% trans "... just download and have a look [at the] tool ... I would highly recommend Device42." %}”</em></p>
+                <p>{% trans "The benefits were clear to Netcetera after deploying Device42’s solution. Not only is lesser time now dedicated to maintaining their CMDB and CI details, but IT processes related to change management and asset management have seen boosts in efficiency. Device42’s offering of a higher quality product at lower TCO than competitors that clearly boosting Netcetera’s IT Operational efficiency represents a true win-win for everyone!" %}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

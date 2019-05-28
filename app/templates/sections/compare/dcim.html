@@ -1,0 +1,299 @@
+{% extends 'base/_base.html' %}
+{% load i18n static %}
+{% block title %}
+    {% trans "Choosing the right DCIM for your IT Infrastructure" %}
+{% endblock %}
+{% block meta %}
+    <meta name="description"
+          content="A simple comparison and overview of DCIM alternatives, along with reviews to help you make the right choice."/>
+{% endblock %}
+{% block styles %}
+<style>
+    .table > thead > tr > th {
+        vertical-align: middle !important;
+    }
+</style>
+{% endblock %}
+{% block site_section_compare %}active{% endblock %}
+
+{% block body %}
+    <header class="row bg-primary head-home">
+        <div class="container">
+            <div class="row">
+                <h1>{% trans "Choosing the Right DCIM" %}</h1>
+            <h4 class="text-white text-italic">{% trans "A simple comparison to help you make the right choice!" %}</h4>
+            </div>
+        </div>
+    </header>
+    <div class="row bg-info padded">
+        <div class="container">
+            <div class="infobox shadow-1 col-sm-10 col-sm-offset-1">
+                <p>{% trans "Thinking of making the switch from Excel to Device42 to handle DCIM?" %}</p>
+                <p>{% trans "We want to make your decision as easy as possible, so we’ve put together some info that will help you decide which option is best for you." %}</p>
+                <p>{% trans "Below, you will find information to help you compare Device42 against Excel as well as other popular DCIM players." %}</p>
+            </div>
+        </div>
+    </div>
+    <article class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="flat-top">{% trans "Simplicity" %}</h2>
+                <p>{% trans "At one end of the spectrum, Excel (maybe augmented by Visio) is the absolute simplest solution. It’s what you’ve been using for years, and it’s what you know best." %}</p>
+                <p>{% trans "The problem that many teams run into is that Excel can be <u>too simple</u>." %}</p>
+                <p>{% trans "You end up with lots and lots of sheets - copies because someone else had it open, different versions due to the same, etc. - and as you start tracking complex relationships between different data center objects, it becomes obvious Excel just can't handle it. And even if it could, the explosion of assets caused by virtualization, cloud computing, and software-defined networks and storage results in an unreasonably large manual effort to keep it up to date." %}</p>
+                <p>{% trans "On the other end, enterprise DCIM tools like Nlyte® and Sunbird DCIM® offer tons of features. While that may make them useful in some cases, it certainly doesn’t make them simple. Data Center Infrastructure Management (DCIM) is a broad term, and as such, there are many widely varying offerings on the market. In general, however, a capable, well rounded DCIM tool ‘suite’ needs to strike a balance between IT Asset and lifecycle management and facilities management. Common capabilities are capacity planning, robust, dynamic infrastructure visualization, real-time power and environmental monitoring and control, cable and connectivity management, change management, and the ability to integrate with external data sources." %}</p>
+            </div>
+        </div>
+
+        {% include 'partials/try-free-callout.html' %}
+
+        <div class="row">
+            <div class="col-md-12">
+                <p>{% trans "Device42 strikes a balance by including the features you really need in a DCIM tool. The chart below illustrates this by comparing some of these common features that you’ll find in enterprise DCIM tools against Excel, and features you’ll find in Device42:" %}</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+
+                <h3 class="text-center text-strong" style="color: #000;">{% trans "DCIM / ITAM Products" %}</h3>
+                <table class="table table-hover d42-sw-compare">
+                    <thead>
+                    <tr>
+                        <th class="table-title">
+                            <p class="dark-blue text-left alt-text"
+                                style="margin:0;font-size:24px;">{% trans "Features" %}</p>
+                        </th>
+                        <th class="product-heading blue">{% trans "Device42" %}</th>
+                        <th class="product-heading blue">{% trans "Excel" %}<sup>&reg;</sup></th>
+                        <th class="product-heading blue">{% trans "Nlyte DCIM" %}<sup>&reg;</sup></th>
+                        <th class="product-heading blue">{% trans "Sunbird DCIM" %}<sup>&reg;</sup></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="comp-feature">{% trans "Discovery Included in Core product" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "CMDB" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "ITAM" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "IPAM" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "DCIM" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "ITSM" %}</td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Dependency Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Power / Environmental  Monitoring" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Secure Password Management" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Cable Management" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Cloud and On-Premise Option" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Agentless Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="Requires Nlyte® Discover (available with 'the optional Inventory Mode')"><i class="fa fa-exclamation-triangle"></i></a></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "<em>Optional</em> Agent-Based Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="With SunBird®, agents MUST be used. There is no Agentless option."><i class="fa fa-exclamation-triangle"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Native Windows WMI & Linux, Unix, *nix (SSH)" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="Requires Nlyte® Discover (available with 'the optional Inventory Mode')"><i class="fa fa-exclamation-triangle"></i></a></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "SNMP Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="Requires Nlyte® Discover (available with 'the optional Inventory Mode')"><i class="fa fa-exclamation-triangle"></i></a></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Native Virtualization Discovery (VMware, Hyper-V, Xen, KVM, LXC)" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "RESTful APIs" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p class="small text-primary">{% trans "*All feature data deduced from respective product’s websites and available marketing materials. Please let us know if something isn’t right and we’ll gladly update it." %}</p>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <p>{% trans "Device42 was build with pre-defined relationships so you can get up and running quickly, and with powerful auto-discoveries so you never have to worry about your data being stale. On top of that, Device42 features a simple interface and powerful reporting so you never have to navigate a maze of features you don’t need." %}</p>
+                <p>{% trans "And if you ever want to enhance Device42 beyond the core DCIM, you can do that with custom fields, custom form layouts, and rich REST based API." %}</p>
+            </div>
+        </div>
+
+        <div class="row flat-bottom flat-top is-table-row">
+            <div class="col-sm-8">
+                <h2>{% trans "Auto-discovery" %}</h2>
+                <p>{% trans "Many enterprise tools claim to have auto-discovery built-in, but there are key differences:" %}</p>
+                <ul>
+                    <li><span class="prelist">{% trans "Device42 is agentless." %}</span> {% trans "You don’t have to find every device and put an agent on it. Device42 finds them for you without agents." %}
+                    </li>
+                    <li class="vert-offset-top-1"><span class="prelist">{% trans "Holistic approach." %}</span> {% trans "Device42 connects to your network devices, hypervisors (VMware, HyperV, Citrix, Xen, Openstack, Cloudstack, and more), Cloud platforms (Amazon, Azure, Joyent, Linode, Digital Ocean and more), blade systems, UCS, IPMI, DNS, Windows, Linux & Unix OS’s and correlates the interrelationships and dependencies automatically. For example, if Device42 finds a mac address on a switch port from a network device, it correlates that with a Windows VM which is on a blade sitting in a particular slot in a chassis. And it finds what services are on that machine and calculates the dependencies on other machines/services on your network." %}
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <a href="{% static 'img/sections/compare/vmware-auto-discovery.png' %}" data-featherlight="image">
+                    <img class="img-responsive center-block box-shadow"
+                         src="{% static 'img/sections/compare/vmware-auto-discovery.png' %}"
+                         alt="{% trans 'Choosing the Right DCIM' %}">
+                </a>
+            </div>
+        </div>
+
+        <div class="row is-table-row image-right-4x8">
+            <div class="col-sm-6">
+                <h2>{% trans "Power & Thermal Management" %}</h2>
+                <h5 class="text-italic font-stack-roboto text-primary-dark">{% trans "Power and thermal management in the data center has never been easier!" %}</h5>
+                <p>{% trans "Using Device42 software, data center managers can anticipate and avoid thermal- and power-related problems with proactive real-time and historical management capabilities" %}:</p>
+                <ul>
+                    <li>{% trans "Monitor your smart PDUs, UPSs, CRACs, branch circuits and other devices" %} </li>
+                    <li>{% trans "View reports and charts showing historical data" %}</li>
+                    <li>{% trans "View room- and rack-level color heat-maps showing infeed-level detail" %}</li>
+                    <li>{% trans "Setup automated alerts to warn you about anomalous conditions" %}</li>
+                    <li>{% trans "Monitor sensors (e.g. temperature and humidity) with historical data and alerts" %}</li>
+                    <li>{% trans "Power-On / Power-Off PDU ports" %}</li>
+                    <li>{% trans "Support for all SNMP-based power devices" %}</li>
+                </ul>
+            </div>
+            <div class="col-sm-6">
+                <a href="{% static 'img/sections/compare/device_energy.jpg' %}" data-featherlight="image">
+                    <img class="img-responsive center-block box-shadow"
+                         src="{% static 'img/sections/compare/device_energy.jpg' %}"
+                         style="max-width: 85% !important;"
+                         alt="{% trans 'Choosing the Right DCIM' %}">
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>{% trans "Visualizations" %}</h2>
+                <p>{% trans "Admit it - you manage a complex IT Infrastructure. Keeping that Visio file up-to-date hasn't happened recently and may never happen. Device42 provides infrastructure visualizations that make Visio-like diagrams available at your fingertips - all dynamically generated without manual effort." %}</p>
+                <p>{% trans "Complex service to service relationships, rack layouts, room capacity heatmaps, applications dependency maps, and IP and power chain maps are some of the things that Device42 provides and most of it is automatically laid out for you. These tools help you make effective business decisions with right data presented in the right way." %}</p>
+            </div>
+        </div>
+        <div class="row flat-top">
+            <div class="col-xs-5 col-sm-4 col-sm-offset-1">
+                <a href="{% static 'img/sections/features/app-map/automated_service_impact_discovery.png' %}" data-featherlight="image">
+                    <img class="img-responsive center-block"
+                         src="{% static 'img/sections/features/app-map/automated_service_impact_discovery.png' %}"
+                         style="max-height: 300px !important; width: auto !important;"
+                         alt="{% trans 'Choosing the Right DCIM' %}">
+                </a>
+            </div>
+            <div class="col-xs-7 col-sm-5 col-sm-offset-0">
+                <a href="{% static 'img/sections/features/app-map/visual-impacts.png' %}"
+                   data-featherlight="image">
+                    <img class="img-responsive center-block"
+                         src="{% static 'img/sections/features/app-map/visual-impacts.png' %}"
+                         style="max-height: 300px !important; width: auto !important;"
+                         alt="{% trans 'Choosing the Right DCIM' %}">
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>{% trans "Integrations" %}</h2>
+                <p>{% trans "A true CMDB should not be an isolated application. You likely have monitoring tools, automation tools, ticketing tools, finance tools, etc., all of which can benefit from the information in your CMDB. Many ‘enterprise CMDBs’ make these integrations time consuming and expensive. With Device42, you get a lot of integrations out of the box [free], plus REST APIs that make it a breeze to build custom integrations with other tools." %}</p>
+            </div>
+        </div>
+
+        {% include 'partials/integration-logos.html' %}
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>{% trans "Pricing" %}</h2>
+                <p class="flat-bottom"><span class="prelist text-primary">{% trans 'We get it' %}:</span> {% trans "Excel is ‘free’ (because you already most likely have it), and free is a great price." %}
+                </p>
+                <p class="flat-top">{% trans "But we believe that the value you'll get from Device42 far outweighs the cost." %}</p>
+                <p class="vert-offset-top-2">{% trans "And more than a thousand happy users in 50+ countries agree.<br> If our auto-discovery and collaboration features can save your team just ten hours per month, then Device42 will more than pay for itself." %}</p>
+            </div>
+        </div>
+
+        {% include 'partials/try-free-callout.html' %}
+    </article>
+{% endblock %}

@@ -1,0 +1,33 @@
+[head.title]
+Better BlueCat Networks / Bluecat Proteus alternative for IPAM with agentless auto-discovery
+
+[head.description]
+Device42 is a better BlueCat Networks / Bluecat Proteus alternative for IPAM, with agentless auto-discovery!
+
+[landing.title]
+Better BlueCat Proteus alternative for comprehensive IP address management (IPAM)
+
+[landing.content]
+
+Looking for a better BlueCat Networks / Bluecat Proteus alternative? Device42’s IPAM capabilities provide an intuitive console for centralized IP visibility and control. Device42 quickly and thoroughly discovers your entire network and automatically correlates the information.
+
+- IPv4/IPv6 IP address management
+- SNMP Discovery (v1/v2c/v3) for network and server devices
+- SSH/WMI discovery for Linux/Unix and Windows
+- Support for overlapping IP ranges and nested subnet management
+- Auto-assignment of IPs to devices using APIs and integrations
+
+[feature[1].title]
+Complete Auto Discovery for all networks
+[feature[1].content]
+Device42 autodiscovers hardware, software, network details, and dependencies, physical or virtual. IPv4/IPv6, subnets, VLANs, network devices, and device to switch port mappings are all auto-discovered and auto-updated.
+
+[feature[2].title]
+Overlapping IP ranges with visualizations
+[feature[2].content]
+Device42 makes managing complex networks with overlapping IP ranges easier than BlueCat networks. Subnet trees, usage charts, and other powerful visualizations provide operational insights.
+
+[feature[3].title]
+Automate your IP management with REST APIs and integrations
+[feature[3].content]
+More than just a better BlueCat networks replacement, Device42 integrates with Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, ServiceNow and more. Bring in data from BlueCat networsk or any other system, and automate everything with RESTful APIs!

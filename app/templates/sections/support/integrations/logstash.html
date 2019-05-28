@@ -1,0 +1,56 @@
+{% load i18n static %}
+<h2>{% trans "Device42 / Logstash (ELK) Integration" %}</h2>
+<h4>{% trans "<em>View Device42’s SIEM audit data in the same context as other changes from around your network, like events and triggers from other monitoring, logging, and/or security tools!</em>" %}</h4>
+<section class="row featurette image-{{ image|default:'right' }}-7x5 {% if vcenter %}is-table-row{% endif %} is-table-row">
+    <div class="col-sm-5">
+      <a href="{% static 'img/sections/support/integrations/logstash/logstash-device42_0.png' %}"
+           data-featherlight="image">
+        <img class="img-responsive center-block box-shadow" src="{% static 'img/sections/support/integrations/logstash/logstash-device42_0.png' %}" alt="{% trans 'Send Device42 logs to Logstash for better event correlation, and get better performance, too!' %}">
+      </a>
+    </div>
+    <div class="col-sm-7">
+        <h3>{% trans "Send Device42 logs to Logstash for better event correlation!" %}</h3>
+        <p class="lead-small">{% trans "When you ship your logs to Logstash / Kibana, you can visually audit logs and event flow using any of Kibana’s many dashboards." %}</p>
+        <p class="lead-small">{% trans 'You’ll also benefit from better event correlation when you send logs to Logstash since all your logs are now visible in the same, searchable place!' %}</p>
+        <p class="lead-small">{% trans "Correlating events around your infrastructure has never been easier!" %}</p>
+    </div>
+</section>
+<section class="row landing-section is-table-row">
+    <div class="col-sm-5">
+      <a href="{% static 'img/sections/support/integrations/logstash/logstash-device42_3.png' %}"
+           data-featherlight="image">
+        <img class="img-responsive center-block box-shadow" src="{% static 'img/sections/support/integrations/logstash/logstash-device42_3.png' %}" alt="{% trans 'Coordinate configuration changes with Device42 and Logstash!' %}">
+      </a>
+    </div>
+    <div class="col-sm-7">
+        <h3 class="alt-font sub-heading">{% trans "View log data in Device42 just like you always have!" %}</h3>
+        <p class="lead-small">{% trans "Once you’ve configured your logs to ship to Logstash, continue to use Device42 as usual. You’ll still be able to view your logs from within the Device42 UI just like you always have!" %}</p>
+      <p class="lead-small">{% trans "When you configure Device42 to send logs to Logstash <em>(the ELK Stack = Elasticsearch, Logstash, Kibana)</em>, your basic workflow remains unchanged!" %}</p>
+        <p class="lead-small">{% trans "Leverage the power of external SIEM, while all features within the Device42 interface continue to function as they always have." %}</p>
+    </div>
+</section>
+<section class="row featurette image-{{ image|default:'right' }}-7x5 {% if vcenter %}is-table-row{% endif %} is-table-row">
+    <div class="col-sm-5">
+      <a href="{% static 'img/sections/support/integrations/logstash/logstash-device42_4.png' %}"
+           data-featherlight="image">
+        <img class="img-responsive center-block box-shadow" src="{% static 'img/sections/support/integrations/logstash/logstash-device42_4.png' %}" alt="{% trans 'Visualize Your Deployment’s Relationships and Dependencies.' %}">
+      </a>
+    </div>
+    <div class="col-sm-7">
+        <h3>{% trans "Configuring external logging couldn’t be easier!" %}</h3>
+      <p class="lead-small">{% trans "Getting your Device42 logs to LogStash couldn’t be easier! Head over to <em>Tools → Webhooks → Actions</em>, where you can configure one or more webhooks to push events to your Logstash instance!" %}</p>
+        <p class="lead-small">{% trans 'We recommend you use logstash-input-http with webhooks. Learn more about configuring Logstash http in <a href="https://www.elastic.co/blog/introducing-logstash-input-http-plugin" target="_blank">this blog post</a>, and get more details in our <a href="https://docs.device42.com/external-integrations/external-logging/" target="_blank">SIEM / External Logging documentation</a>.' %}</p>
+    </div>
+</section>
+<hr>
+<div class="row">
+    <div class="col-md-12 vert-offset-bottom-2">
+        <center>
+          <h3>{% trans "Start correlating your Device42 Audit logs with the rest of your event data today!" %}</h3>
+          <p class="lead-small" style="margin-top: 0px;">{% trans 'If you aren’t already a Device42 user, <a href="http://www.device42.com/download/" target="_blank">download a free 30-day trial NOW!</a>' %}</p>
+          <p class="lead-small" style="margin-top: 0px;">{% trans 'For documentation on setting up the Logstash integration, <a href="https://docs.device42.com/external-integrations/external-logging/" target="_blank">see our documentation here.</a>' %}</p>
+          <p style="font-size: 80%;"><i>{% trans 'If you run into any unexpected behavior, bugs, or otherwise have questions, comments, or feature requests, feel free to reach out to <a href="mailto:support@device42.com">support@device42.com</a>' %}</i></p>
+        </center>
+    </div>
+</div>
+

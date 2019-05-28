@@ -1,0 +1,134 @@
+{% extends "base/_base-landing-v1.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% blocktrans %}It is a good idea to compare alternative CMDB tools like Riada's Insight for Jira, and possibly other tools. There are a wide variety available, but Device42 is among the best.{% endblocktrans %}"/>
+    <meta name="keywords"
+          content="device42, vs, compare, comparison, riada, insight, jira, device, management, core, asset, ipam, itam, cmdb, functions, features, cloud, discovery, autodiscovery, app, mapping, appmapping, application, map, diagram, discover, depedency, dcim, ticketing, plugin, addon, enterprise, free, trial, tool, tools" />
+{% endblock %}
+{% block title %}{% trans "BMC Remedy" %}{% endblock %}
+{% block scripts %}
+    <script>
+        $(function () {
+            $("[data-toggle='tooltip']").tooltip();
+        });
+    </script>
+{% endblock %}
+
+{% block styles %}
+  <style>
+    .table-responsive {
+      max-width: 900px;
+      text-align: left;
+    }
+    hr{
+      margin: 0px;
+    }
+    table {
+      margin-bottom: 0px !important;
+    }
+    p.small-font {
+      font-size: 15px;
+      color: #22a3df;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Roboto Condensed', sans-serif !important;
+    }
+    form label {
+      display: none;
+    }
+    form p {
+      display: inline-block;
+    }
+    form p input {
+      padding: 5px;
+      color: #246d8f;
+    }
+    .d-table {
+      display: table;
+      width: 100%;
+    }
+    .d-table-cell {
+      text-align: center;
+      display: table-cell;
+    }
+    .d-table-submit {
+      padding: 10px;
+      margin-top: 50px !important;
+      width: 250px;
+    }
+    .sub-heading {
+        color: #35ade4;
+        font-family: 'Roboto Condensed', sans-serif !important;
+        font-size: 35px;
+        margin-top: 0px;
+    }
+  </style>
+{% endblock %}
+
+{% block landingHeadingText %}{% trans "Better IT Service Management with the BMC Remedy + Device42 CMDB Plugin" %}{% endblock %}
+{% block landingfeature %}
+<section class="row padded">
+  <div class="col-md-12">
+    <p class="lead">{% trans "If you are using BMC Remedy for your ITSM or even as a part of your ITIL framework- one of the biggest challenges is keeping the configuration item info up-to-date." %}</p>
+    <p class="lead">{% trans "Device42’s powerful and agentless auto-discovery options make it super easy to automagically maintain the true state of all your hardware and software assets and all the metadata around it. With this plugin, you can now enhance your BMC Remedy workflow with real time asset data from Device42." %}</p>
+    <p class="lead" style="font-stlye: italic;">{% trans "Add this free module to your BMC Remedy installation and begin attaching the relevant Device42 CI to your BMC Remedy tickets today!" %}</p>
+  </div>
+</section>
+{% endblock %}
+
+{% block maincontent %}
+    <section class="row landing-section">
+      <div class="col-md-12">
+        <h3 class="sub-heading">{% trans "Connecting Device42 to BMC Remedy at a glance" %}</h3>
+        <ul>
+          <li>{% trans "Associate individual or multiple configuration items (CIs) from Device42, including devices, racks, parts, and PDUs with BMC Remedy tickets" %}</li>
+          <li>{% trans "View device name, type, and service level from Device42 directly in BMC Remedy" %}</li>
+          <li>{% trans "Click through from your BMC Remedy ticket to view the full CI details in Device42" %}</li>
+          <li>{% trans "Direct visibility and historical accountability into exactly which devices a ticket affected, even if the device has been moved, renamed, or retired" %}</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="row landing-section">
+      <div class="col-md-8">
+        <h3 class="sub-heading">{% trans "Link CMDB items and CI to issues in BMC Remedy" %}</h3>
+        <p>{% trans "Now you can associate auto-discovered IT assets (or Configuration Items; CI) including devices, parts, PDUs and racks from Device42 with BMC Remedy tickets. Within BMC Remedy, Device42 Configuration Items can be directly selected when creating a BMC Remedy ticket." %}</p>
+      </div>
+      <div class="col-md-4">
+        <a href="{% static 'img/sections/support/integrations/bmc-remedy/bmc-remedy-1.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/bmc-remedy/bmc-remedy-1.png' %}" class="img-responsive center-block" alt="{% trans 'BMC Remedy Integration' %}">
+        </a>
+      </div>
+    </section>
+
+    <section class="row landing-section">
+      <div class="col-md-4">
+        <a href="{% static 'img/sections/support/integrations/bmc-remedy/bmc-remedy-2.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/bmc-remedy/bmc-remedy-2.png' %}" class="img-responsive center-block" alt="{% trans 'BMC Remedy' %}">
+        </a>
+        <br>
+        <small><em>{% trans "Upon clicking View icon, device <br />NHCTDC1R4 opens in Device42" %}</em></small>
+      </div>
+      <div class="col-md-8">
+        <h3 class="sub-heading">{% trans "View CI details from BMC Remedy tickets" %}</h3>
+        <p>{% trans "Now you can associate auto-discovered IT assets (or Configuration Items; CI) including devices, parts, PDUs and racks from Device42 with BMC Remedy tickets. Within BMC Remedy, Device42 Configuration Items can be directly selected when creating a BMC Remedy ticket." %}</p>
+      </div>
+    </section>
+    <hr>
+    <section class="row landing-section">
+      <div class="col-md-8">
+        <h3 class="sub-heading">{% trans "Download the BMC Remedy / Device42 CMDB connector for better ITSM today!" %}</h3>
+      </div>
+      <div class="col-md-4">
+        <form action="." method="POST" role="form">
+          {% csrf_token %}
+          <input type="hidden" name="flag" value="download" />
+          <button class="btn btn-sm btn-primary center-block" type="submit">Download<br>BMC Integration<br>Package</button>
+        </form>
+      </div>
+    </section>
+{% endblock %}

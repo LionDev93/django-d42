@@ -1,0 +1,27 @@
+{% load i18n static %}
+<div class="row">
+    <section class="container" style="height:320px;">
+        <div class="home-carousel-c">
+            <div class="text">
+                <section class="rw-sentence">
+                    <div class="rw-lead">{% trans "We've got<br><span>you covered" %}</span></div>
+                    <div class="rw-words rw-words-1">
+                        {% trans '<span>DCIM<small>Next generation data center infrastructure management' %}.</small></span>
+                        {% trans '<span>Continuous Discovery<small><em>Say goodbye to traditional CMDBs!' %}</em></small></span>
+                        {% trans '<span>Easier IPAM<small>Manage IPv4 and IPv6 addresses with VRF groups and nested subnets' %}</small></span>
+                        {% trans '<span>Application dependency mappings<small>Automated and agentless' %}</small></span>
+                    </div>
+                </section>
+                <section class="rw-cta" style="display:none;">
+                    <h4>{% trans 'Get started with Device42 today!' %}</h4>
+                    <div class="center-block">
+                        <a href="{% url 'schedule_form' %}" class="btn btn-warning btn-block-xs"><i
+                                class="fa fa-clock-o fa-pull-left"></i>{% trans 'Schedule Online Demo' %}</a>
+                        <a href="{% url 'download' %}" class="btn btn-primary btn-block-xs"><i
+                                class="fa fa-download fa-pull-left"></i>{% trans 'Try Now' %}</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+</div>

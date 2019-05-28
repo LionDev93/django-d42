@@ -1,0 +1,41 @@
+[head.title]
+Device42's application mapping tools auto-discover your hardware, software, and application and service dependencies!
+
+
+[head.description]
+Device42 application mapping tools automatically discover your application and service dependencies, generating powerful dependency maps.
+
+
+[landing.title]
+Powerful Application Mapping Tools!
+
+[landing.image_format]
+png
+
+
+[landing.content]
+Device42 application mapping tools automatically discover your entire infrastructure, generating dependency maps that highlight key relationships and interdependencies
+
+- Agentless service and application dependency discovery via native Windows (WMI) and Linux (SSH) protocols, and via SNMP for network hardware
+- Device42 discovers all of your deployed hardware, software, manufacturers, and versions
+- Automatically discover all server and service dependencies, protocols & ports
+- Easily view application to application and to server dependency maps
+- View comprehensive application dependency maps even for machines that can't be directly accessed, built out with Netflow data!
+
+
+[feature[1].title]
+Automated Dependency Map Creation!
+[feature[1].image_format]
+png
+[feature[1].content]
+Device42 application mapping tools auto-discover hardware, software, and application dependencies. View dependency maps that identify and track all of your physical and logical components, relationships, and more!
+
+[feature[2].title]
+Application Dependency Maps, Lists, and Flow Diagrams
+[feature[2].content]
+Automatic application mapping tools auto-discover and maps impacts of each discovered application. Easy to consume list pages and maps are Visio compatible, too!
+
+[feature[3].title]
+Powerful Visualizations, Reporting, and APIs
+[feature[3].content]
+Easily build move groups, or report on any application dependencies in your desired format - Excel, CSV, or a direct connection to an external database. Flexible APIs let you manipulate data your way and integrate Device42 with other products, too!

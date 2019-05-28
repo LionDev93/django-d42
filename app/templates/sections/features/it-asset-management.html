@@ -1,0 +1,72 @@
+{% extends 'base/_base.html' %}
+{% load i18n static include_partial %}
+{% block title %}{% trans "IT Inventory & Asset Management" %}{% endblock %}
+{% block site_section_features %}active{% endblock %}
+{% block meta %}
+    <meta name="description"
+          content="IT Asset Management with an easy and intuitive web based tool that integrates IP address management as well."/>
+{% endblock %}
+{% block body %}
+    <header class="row head-home bg-info">
+        <div class="container">
+            <div class="row featurette is-table-row">
+                <div class="col-sm-8">
+                    <span class="section-label">{% trans "Features Tour" %}</span>
+                    <h1 class="featurette-heading">{% trans "IT Inventory & Asset Management Software" %}</h1>
+
+                    pass<p class="font-stack-condensed">{% trans "Device42 provides comprehensive IT asset management capabilities including powerful asset auto-discovery and configurable asset types to completely document all IT assets across your infrastructure deployment." %}</p>
+                    <ul class="font-stack-condensed tight">
+                        <li>{% trans "Agentless and/or agent-based continuous auto-discovery" %}</li>
+                        <li>{% trans "Physical and Virtual hardware and software inventory" %}</li>
+                        <li>{% trans "Inventory assets on premise and in the cloud" %}</li>
+                        <li>{% trans "Choose from predefined asset types or create custom types to suit your needs" %}</li>
+                        <li>{% trans "Track and visualize relationships between assets" %}</li>
+                        <li>{% trans "Auto-generate QR and/or barcodes, plus built-in smart phone support" %}</li>
+                        <li>{% trans "Automatic warranty checking, reporting and tracking" %}</li>
+                        <li>{% trans "Powerful, customizable reports" %}</li>
+                        <li>{% trans "Scalability, from small to huge" %}</li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <img class="featurette-image img-responsive img-border center-block"
+                         alt="{% trans 'IT Asset Management' %}"
+                         src="{% static 'img/sections/features/itam/it-asset-management.png' %}">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="row bg-warning feature-menu-wrap flat-top flat-bottom">
+        <div class="feature-menu">
+            <a href="#" data-jump="#autodisc" data-offset="top-nav">{% trans "Comprehensive Auto-discovery" %}</a>
+            <a href="#" data-jump="#assets" data-offset="top-nav">{% trans "Track relationships between assets" %}</a>
+            <a href="#" data-jump="#qrtags" data-offset="top-nav">{% trans "QR codes & Asset Tags" %}</a>
+            <a href="#" data-jump="#lifecycle" data-offset="top-nav">{% trans "Automated Warranty Check and Tracking" %}</a>
+            <a href="#" data-jump="#compliance" data-offset="top-nav">{% trans "Compliance Management" %}</a>
+        </div>
+    </div>
+
+    <div class="container featurette-wrap">
+        {% include_partial "partials/itam/continuous-auto-discovery.html" vcenter=True id="autodisc" %}
+        {% include_partial "partials/itam/track-relationships-between-assets.html" vcenter=True id="assets" image="left" %}
+        {% include_partial "partials/itam/qr-codes-and-asset-tags.html" vcenter=True id="qrtags" %}
+        {% include_partial "partials/itam/complete-asset-lifecycle-management.html" vcenter=True id="lifecycle" image="left" %}
+        {% include_partial "partials/itam/it-inventory-asset-software.html" vcenter=True id="compliance" image="right" %}
+
+        <div class="row foot-nav">
+            <div class="col-xs-6 text-left">
+                <small class="text-uppercase text-muted">{% trans 'Previous' %}</small>
+                <br>
+                <a href="{% url 'features_dcim' %}"><i
+                        class="fa fa-chevron-left"></i> {% trans 'Data Center Management' %}</a>
+            </div>
+            <div class="col-xs-6 text-right">
+                <small class="text-uppercase text-muted">{% trans 'Next' %}</small>
+                <br>
+                <a href="{% url 'features_ipam' %}">{% trans 'IP Address Management' %} <i
+                        class="fa fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

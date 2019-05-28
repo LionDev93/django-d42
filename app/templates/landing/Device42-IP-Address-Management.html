@@ -1,0 +1,105 @@
+{% extends "base/_base-landing.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Device42 is a powerful IP Address management solution that integrates IT Infrastructure management.' %}"/>
+{% endblock %}
+
+{% block styles %}
+    <style>
+      h1 {
+        font-family: "Roboto Condensed", sans-serif !important;
+      }
+    </style>
+{% endblock %}
+
+{% block title %}{% trans "IPAM - IP Address Management" %}{% endblock %}
+{% block landingHeadingText %}{% trans "IPAM - IP Address Management" %}{% endblock %}
+{% block landingLeadText %}
+    {% trans "Device42’s IP Address Management capabilities provide an easy to use, intuitive console for centralized IP visibility and control." %}
+{% endblock %}
+{% block landingfeature %}
+    <section class="row">
+        <div class="col-sm-7">
+            <h3 class="lead-title">{% trans "Device42’s IPAM capabilities include:" %}</h3>
+            <ul class="dash">
+                <li>{% trans "IPv4/IPv6 IP address management" %}</li>
+                <li>{% trans "Auto-discovery tools to keep IP records accurate and up-to-date" %}</li>
+                <li>{% trans "Overlapping IP ranges and nested subgroups management" %}</li>
+                <li>{% trans "Subnet tree view with nested subnets and IPs" %}</li>
+                <li>{% trans "Auto assignment of IPs to devices" %}</li>
+                <li>{% trans "Powerful APIs enable IP search, find, and integration with other tools" %}</li>
+                <li>{% trans "Graphic visualizations of network connectivity connections" %}</li>
+                <li>{% trans "Eliminate IP conflicts" %}</li>
+                <li>{% trans "Enable distributed data center teams to manage subnets" %}</li>
+                <li>{% trans "Provide instant access to IP address information and diagrams" %}</li>
+                <li>{% trans "Minimize problem resolution times" %}</li>
+                <li>{% trans "Save time by eliminating IP errors and streamlining IP management tasks" %}</li>
+            </ul>
+        </div>
+        <div class="col-sm-5">
+            <img src="{% static 'img/components/study-a/callouts/ip-address-management.png' %}" class="img-responsive center-block">
+        </div>
+    </section>
+{% endblock %} {% block maincontent %}
+    <section class="row landing-section">
+        <div class="col-sm-4">
+            <img src="{% static 'img/sections/product/mascot_checklist.png' %}" class="img-responsive center-block">
+        </div>
+        <div class="col-sm-8">
+            <h3 class="sub-heading">{% trans "Auto-assign IPs" %}</h3>
+            <p class="lead">{% trans "Take advantage of IP auto-assignment. Device42 finds the next available IP address for you, automatically. Worrying about that outdated IPAM.xlsx spreadsheet becomes a thing of the past." %}</p>
+            <div class="col-sm-5">
+              <img src="{% static 'img/landing/ip-tracking/auto_assign_ip.png' %}" class="img-responsive center-block img-border">
+            </div>
+        </div>
+    </section>
+    <section class="row landing-section">
+        <div class="col-sm-6 col-xs-12">
+            <h3 class="sub-heading">{% trans "Overlapping IP Ranges and Nested Subnets" %}</h3>
+            <p class="text-muted">{% trans "Device42’s IPAM software can:" %}</p>
+            <ul class="checklist">
+                <li>{% trans "Manage overlapping IP ranges with VRF groups" %}</li>
+                <li>{% trans "Create nested IPv4 and IPv6 subnets with a single click" %}</li>
+                <li>{% trans "Provide a subnet tree view with nested subnets & IPs" %}</li>
+                <li>{% trans "Assign subnets to customers or departments" %}</li>
+                <li>{% trans "Easily track usage per subnet" %}</li>
+                <li>{% trans "Keep accurate IP information using auto-discovery tools" %}</li>
+                <li>{% trans "Merge subnets into parents, or merge VLANs" %}</li>
+                <li>{% trans "Relocate subnets" %}</li>
+            </ul>
+        </div>
+        <div class="col-sm-6">
+            <img src="{% static 'img/generic/icons_cog_treelist.png' %}" class="img-responsive center-block">
+        </div>
+    </section>
+    <section class="row landing-section">
+        <div class="col-sm-4 hidden-xs">
+            <img src="{% static 'img/landing/ip-tracking/switch_impact_chart.png' %}"
+                 class="img-responsive center-block">
+        </div>
+        <div class="col-sm-8">
+            <h3 class="sub-heading">{% trans "Visualize Switch Port Relationships" %}</h3>
+            <p class="lead">{% trans "Device42's IP address manager builds graphic network visualizations of switch port to switch port connections. Auto-generated diagrams are based on auto-discovered and manually entered network data. In addition, diagrams also depict virtual devices detected on switch ports" %}.</p>
+        </div>
+    </section>
+    <section class="row landing-section">
+        <div class="col-sm-6">
+            <h3 class="sub-heading">{% trans "DNS Integration" %}</h3>
+            <p class="lead">{% trans "Transfer zones and zone records automatically from DNS servers for easy search and up-to-date documentation and correlation to IP addresses" %}.</p>
+        </div>
+        <div class="col-sm-6">
+            <img src="{% static 'img/landing/ip-tracking/dns-zone-entry.png' %}" class="img-responsive center-block img-border">
+        </div>
+    </section>
+    <section class="row landing-section image-right-4x8">
+        <div class="col-sm-8">
+            <h3 class="sub-heading">{% trans "IP Address Management from the Command Line" %}</h3>
+            <p class="lead">{% trans "Device42's IP address management tool provides simple API calls to find next available IP, search for an IP, or assign a new IP using scripting language" %}.</p>
+        </div>
+        <div class="col-sm-4">
+            <img class="img-responsive vert-offset-top-2 center-block img-border" src="{% static 'img/sections/features/cmdb/RESTful-APIs.png' %}">
+            <img class="img-responsive vert-offset-top-2 center-block img-border" src="{% static 'img/sections/features/ipam/ipam-curl-example.png' %}">
+        </div>
+    </section>
+{% endblock %}

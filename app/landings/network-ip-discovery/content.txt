@@ -1,0 +1,32 @@
+[head.title]
+Comprehensive, agent-less network and IP address discovery and management (IPAM)
+
+[head.description]
+Device42 automates discovery of all IP addresses on your networks.
+
+[landing.title]
+Discover Your Network and IP Addresses Automatically
+
+[landing.content]
+
+Hardware, software, IP addresses and subnets are automatically discovered across your entire network. Take IP address discovery to the next level with Device42's intuitive console, providing centralized IP visibility and control!
+
+- Discover and manage all IPv4 and v6 IP addresses, and the devices using them
+- Native protocols are used to discover details about your network and servers: WMI for Windows, SSH for Linux, and SNMP
+- Management of overlapping IP ranges and nested subnets is fully supported
+- Auto-assign the next unused IP to any device using RESTful APIs and integrations
+
+[feature[1].title]
+Complete Auto-Discovery for all networks
+[feature[1].content]
+Device42 auto-discovery spans from legacy to newer systems and builds dependencies between physical, virtuals and applications. IPv4/IPv6, subnets, VLANs, network device inventory, device to switch port mapping is all auto-discovered and constantly updated.
+
+[feature[2].title]
+Support for Overlapping IP Ranges and More
+[feature[2].content]
+Have same IPs across different network segments? Device42 lets you manage overlapping IP ranges. Subnet tree and usage charts give you powerful visualizations for quicker operational insights.
+
+[feature[3].title]
+Automated IPAM with RESTful APIs
+[feature[3].content]
+Out-of-the-box integrations with JIRA, Confluence, Puppet, Chef, SCCM, Infoblox, ServiceNow, vRealize, and more mean automated provisioning and IP address assignment are just two of nearly infinite orchestration workflow possibilities!

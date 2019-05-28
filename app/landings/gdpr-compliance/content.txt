@@ -1,0 +1,38 @@
+[head.title]
+Device42 can help you with GDPR Compliance
+
+[head.description]
+Device42's comprehensive IT infrastructure management and audit features, including powerful agent-less auto-discovery can help you get and stay GDPR compliant!
+
+[landing.title]
+Device42 Can Help You With GDPR Compliance! 
+[landing.image_format]
+png
+[landing.content]
+
+GDPR Compliance requirements take effect on May 25, 2018 - Device42's comprehensive IT inventory management and audit capabilities, including powerful auto-discovery and fully configurable asset types help you get and stay GDPR compliant!
+You’re required to comply with GDPR regulations if you:
+
+- Have a presence in an EU-Member Country
+- Processes personal data of (EU) European residents
+- Employ more than 250 persons
+- Or employ fewer than 250 persons, but process data that has an impact on the rights and freedoms of data subjects, is not occasional, or includes certain types of sensitive data
+<i>(This last one applies to pretty much everyone else!)</i>
+
+
+
+[feature[1].title]
+GDPR is About Protecting Personal Data, and Device42 can Help!
+[feature[1].content]
+Discover hardware and software on any operating system: Windows, Linux, Mac, or BSD. Multiple discovery protocols are supported, from WMI & WinRM to SSH to SNMP and more!
+
+[feature[2].title]
+Simplify GDPR Compliance!
+[feature[2].content]
+Device42’s GDPR compliance software also provides the powerful ability to track and visualize operational dependencies, and produces detailed software, service, and server impact charts.
+
+
+[feature[3].title]
+Integrated, Real-time Map of your IT Infrastructure
+[feature[3].content]
+Utilize Device42’s powerful RESTful API to automate your GDPR compliance efforts. Run discovery with Device42’s GDPR compliance tools on demand, or schedule discovery to run automatically so your inventory is always up-to-date!

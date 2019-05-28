@@ -1,0 +1,18 @@
+{% load i18n %}
+<div class="row padded vert-offset-bottom-1">
+    <div class="col-xs-10 col-xs-offset-1">
+      <form class="regist_form" role="form" action="" method="post">
+        <div class="try-free-callout flat-top flat-bottom xs-center d-table">
+              <div class="col-sm-8 d-table-cell" style="text-align: center;">
+                <h2>{% trans "Try Device42 FREE for 6 MONTHS" %}!</h2>
+                  {% csrf_token %}
+                  {{ form.as_p }}
+              </div>
+              <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-0 text-center">
+                  <input type="hidden" name="flag" value="form" />
+                  <input type="submit" class="btn btn-warning btn-xs text-strong center-block d-table-submit" value="{% trans 'Start Free Trial Now!' %}" />
+              </div>
+        </div>
+      </form>
+    </div>
+</div>

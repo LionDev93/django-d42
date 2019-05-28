@@ -1,0 +1,829 @@
+{% extends 'base/_base.html' %}
+{% load i18n static %}
+{% block title %}
+    {% trans "Device42 Alternatives" %}
+{% endblock %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'See how Device42 stacks up versus the competition.' %}'"/>
+{% endblock %}
+{% block styles %}
+<style>
+    .jump {
+        display: inline;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .table > thead > tr > th {
+        vertical-align: middle !important;
+    }
+    .w-14-td {
+        width: 14% !important;
+    }
+    .w-9-td {
+        width: 9% !important;
+    }
+    .w-10-td {
+        width: 10% !important;
+    }
+    @media (max-width: 992px) {
+        .w-9-td, .w-10-td {
+            font-size: 13px;
+        }
+        .w-12-td {
+            font-size: 14px;
+        }
+    }
+    .sub-desc{
+        font-family: "Roboto Condensed", sans-serif;
+        line-height: 2.0em;
+        letter-spacing: 0.5px;
+    }
+    .bottom_download {
+        font-size: 28px;
+        font-weight: 500 !important;
+        font-style: italic;
+    }
+    .bottom_download a{
+        color: #0666ff !important;
+        border-bottom: 2px solid #0666ff !important;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+    <header class="row bg-primary head-home">
+        <div class="container">
+            <div class="row">
+                <h1>{% trans "Device42 Alternatives" %}</h1>
+            </div>
+        </div>
+    </header>
+    <div class="row vert-offset-top-2">
+        <div class="container">
+            <div class="col-sm-12">
+                <p>{% trans "The modern data center often seamlessly spans multiple locations, physical and cloud, and often features software defined networks, virtualization, containers, cloud and hybrid deployments, and intricate high-availability configurations. This forward progress has brought with it complication, and it is no longer practical to manage your IT infrastructure using separate tools for asset management (ITAM), IP Management (IPAM), Cloud Management, Application Dependency Management (ADM), and Software License Management (SLM)." %}</p>
+                <h2>{% trans "Consult the comparisons below to find out how Device42 stacks up against the competition." %}</h2>
+                <p class="lead text-italic text-center">{% trans "Click on any of the competitors to see a detailed, 1:1 comparison." %}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row bg-warning flat-top flat-bottom">
+        <div class="feature-menu">
+            <p class="jump">{% trans "JUMP TO" %}:</p>
+            <a href="#" data-jump="#discovery" data-offset="top-nav">{% trans "Discovery / Migration Products" %}</a>
+            <a href="#" data-jump="#cmdb" data-offset="top-nav">{% trans "CMDB Products" %}</a>
+            <a href="#" data-jump="#dcim" data-offset="top-nav">{% trans "DCIM / ITAM Products" %}</a>
+            <a href="#" data-jump="#ipam" data-offset="top-nav">{% trans "IPAM Products" %}</a>
+        </div>
+    </div>
+
+    <div class="container featurette-wrap">
+        <div id="discovery" class="row featurette padded">
+            <div class="col-sm-12">
+
+                <h2 class="text-center featurette-heading">{% trans "Discovery / Migration Products" %}</h2>
+                <p class="text-center flat-bottom">{% trans "Without considering price*, few competitors stand up to Device42 in features or utility." %}</p>
+                <p class="flat-top small text-italic text-center">{% trans "*[that just wouldn’t be fair]" %}</p>
+                <table class="table table-hover d42-sw-compare vert-offset-top-1">
+                    <thead>
+                    <tr>
+                        <th class="table-title">
+                            <p class="dark-blue text-left alt-text"
+                               style="margin:0;font-size:24px;">{% trans "Features" %}</p>
+                        </th>
+                        <th class="product-heading blue w-14-td"><a href="{% url 'home' %}">{% trans "Device42" %}<sup>&reg;</sup></a></th>
+                        <th class="product-heading blue w-14-td"><a href="{% url 'compare_bmc_discovery' %}">{% trans "BMC Discovery" %}<sup>&reg;</sup></a></th>
+                        <th class="product-heading blue w-14-td"><a href="{% url 'compare_risc' %}">{% trans "RISC Cloudscape" %}<sup>&reg;</sup></a></th>
+                        <th class="product-heading blue w-14-td"><a href="{% url 'compare_cloudamize' %}">{% trans "Cloudamize" %}<sup>&reg;</sup></a></th>
+                        <th class="product-heading blue w-14-td"><a href="/vs/device42-vs-firescopeddm/">{% trans "FireScope DDM" %}<sup>&reg;</sup></a></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="comp-feature">{% trans "Discovery Included in Core product" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="Apparently you can buy a 'subscription' sans discovery: http://cloudscape.riscnetworks.com/qestions/"><i class="fa fa-check"></i></a></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "CMDB" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="Recommends a 3rd party CMDB integration"><i class="fa fa-times"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "ITAM" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "IPAM" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "DCIM" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Dependency Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="Only with installed agent."><i class="fa fa-exclamation-triangle"></i></a></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Resource Utilization" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Power / Environmental Monitoring" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Secure Password Management" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Cloud and On-Premise Option" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Agentless Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><a href="https://support.cloudamize.com/hc/en-us/articles/115003209967-Hypervisor-Support" data-toggle="tooltip" data-placement="top" title="Only for VMware and Hyper-V, and agentless discovery CANNOT discover full application inter-dependencies!We are not able to provide application inter-connectivity information for machines which do not have agents installed. You will not be able to use the Migration Planner to create move groups, view application-specific data, and build a migration plan."><i class="fa fa-exclamation-triangle"></i></a></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="FireScope requires deployment of agents for anything more than 'guess-based' discovery via netflow, and to obtain packet capture data."><i class="fa fa-exclamation-triangle"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "<em>Optional</em> Agent-Based Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="Agent isn't optional for full product functionality (dependency discovery)."><i class="fa fa-exclamation-triangle"></i></a></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "No Need for Expensive & Complex Span/Mirror Ports" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Automatic Service/Application Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="Service - But not application discovery."><i class="fa fa-exclamation-triangle"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Native Windows WMI & *nix (ssh) Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="RN only discovers Linux via SNMP, which isn't 'native' and isn't enabled by default (almost ever) on most Linux distributions."><i class="fa fa-exclamation-triangle"></i></a></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "SNMP Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Native Virtualization Discovery (VMware, Hyper-V, Xen, KVM, LXC)" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="Native VMware only"><i class="fa fa-exclamation-triangle"></i></a></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="VMware only; 'weak' implementation."><i class="fa fa-exclamation-triangle"></i></a></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="VMware & Agent based Hyper-V only."><i class="fa fa-exclamation-triangle"></i></a></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="VMWare only"><i class="fa fa-exclamation-triangle"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Native Public/Private Cloud Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Automatic Move Group Generation" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Integrated Netflow Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "RESTful APIs" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Webhooks to Drive Automation" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p class="small flat-top text-primary text-center">{% trans "*All feature data deduced from respective product’s websites and available marketing materials. Please let us know if something isn’t right and we’ll gladly update it." %}</p>
+            </div>
+        </div>
+
+        <div id="cmdb" class="row featurette padded">
+            <div class="col-sm-12">
+
+                <h2 class="text-center featurette-heading">{% trans "CMDB Products" %}</h2>
+                <p class="text-center text-italic">{% trans "Without considering price*, few competitors stand up to Device42 in features or utility." %}</p>
+
+                <table class="table table-hover d42-sw-compare vert-offset-top-1">
+                    <thead>
+                    <tr>
+                        <th class="table-title">
+                            <p class="dark-blue text-left alt-text"
+                               style="margin:0;font-size:24px;">{% trans "Features" %}</p>
+                        </th>
+                        <th class="product-heading blue w-9-td"><a href="{% url 'home' %}">{% trans "Device42" %}<sup>&reg;</sup></a></th>
+                        <th class="product-heading blue w-9-td"><a href="{% url 'compare_bmc_atrium' %}">{% trans "BMC Atrium" %}<sup>&reg;</sup></a></th>
+                        <th class="product-heading blue w-9-td"><a href="{% url 'compare_glpi' %}">{% trans "GLPi" %}<sup>&reg;</sup></a></th>
+                        <th class="product-heading blue w-9-td"><a href="/vs/itop-vs-device42/">{% trans "iTop" %}<sup>&reg;</sup></a></th>
+                        <th class="product-heading blue w-9-td"><a href="/vs/idoit-vs-device42-cmdb/">{% trans "i-doit" %}<sup>&reg;</sup></a></th>
+                        <th class="product-heading blue w-9-td"><a href="{% url 'compare_hp_ucmdb' %}">{% trans "HP uCMDB" %}<sup>&reg;</sup></a></th>
+                        <th class="product-heading blue w-9-td"><a href="{% url 'compare_insight_jira' %}">{% trans "Insight for Jira" %}<sup>&reg;</sup></a></th>
+                        <th class="product-heading blue w-9-td"><a href="{% url 'compare_servicenow' %}">{% trans "Servicenow" %}<sup>&reg;</sup></a></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="comp-feature">{% trans "Discovery Included in Core product" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "CMDB" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "ITAM" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "IPAM" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "DCIM" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "ITSM" %}</td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Dependency Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Secure Password Management" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Cloud and On-Premise Option" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Agentless Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "<em>Optional</em> Agent-Based Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="Agent's are not optional - they are the only"><i class="fa fa-exclamation-triangle"></i></a></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Automatic Service/Application Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="Top Down / 'semi-automatic' - Must provide a Service Entry Point / URL for each service."><i class="fa fa-exclamation-triangle"></i></a></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Native Windows WMI & *nix (ssh) Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "SNMP Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Native Virtualization Discovery (VMware, Hyper-V, Xen, KVM, LXC)" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><a href="http://wiki.servicenow.com/index.php?title=Discovery_for_VMware_vCenter#gsc.tab=0" data-toggle="tooltip" data-placement="top" title="Only VMware and only up to version 5.5"><i class="fa fa-exclamation-triangle"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Native Public/Private Cloud Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "RESTful APIs" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="JSON-RPC"><i class="fa fa-exclamation-triangle"></i></a></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Webhooks to Drive Automation" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p class="small flat-top text-primary text-center">{% trans "*All feature data deduced from respective product’s websites and available marketing materials. Please let us know if something isn’t right and we’ll gladly update it." %}</p>
+            </div>
+        </div>
+
+        <div id="dcim" class="row featurette padded">
+            <div class="col-sm-12">
+
+                <h2 class="text-center featurette-heading">{% trans "DCIM / ITAM Products" %}</h2>
+                <table class="table table-hover d42-sw-compare vert-offset-top-1">
+                    <thead>
+                    <tr>
+                        <th class="table-title">
+                            <p class="dark-blue text-left alt-text"
+                               style="margin:0;font-size:24px;">{% trans "Features" %}</p>
+                        </th>
+                        <th class="product-heading blue w-10-td"><a href="{% url 'home' %}">{% trans "Device42" %}<sup>&reg;</sup></a></th>
+                        <th class="product-heading blue w-10-td"><a href="/vs/netterrain-vs-device42/">{% trans "netTerrain" %}<sup>&reg;</sup></a></th>
+                        <th class="product-heading blue w-10-td"><a href="{% url 'compare_racktables' %}">{% trans "Racktables" %}<sup>&reg;</sup></a></th>
+                        <th class="product-heading blue w-10-td"><a href="{% url 'compare_nlyte' %}">{% trans "Nlyte DCIM" %}<sup>&reg;</sup></a></th>
+                        <th class="product-heading blue w-10-td"><a href="{% url 'compare_manageengine' %}">{% trans "ManageEngine Asset Explorer" %}<sup>&reg;</sup></a></th>
+                        <th class="product-heading blue w-10-td"><a href="{% url 'compare_sunbird' %}">{% trans "Sunbird DCIM" %}<sup>&reg;</sup></a></th>
+                        <th class="product-heading blue w-10-td"><a href="{% url 'compare_lansweeper' %}">{% trans "Lansweeper" %}<sup>&reg;</sup></a></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="comp-feature">{% trans "Discovery Included in Core product" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "CMDB" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "ITAM" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "IPAM" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="Requires a separate product - with limited functionality"><i class="fa fa-exclamation-triangle"></i></a></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "DCIM" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="Add-on with very limited functionality"><i class="fa fa-exclamation-triangle"></i></a></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "ITSM" %}</td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Dependency Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Power / Environmental Monitoring" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Secure Password Management" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Cable Management" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Cloud and On-Premise Option" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><span class="text-strong">?</span></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Agentless Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="With nlyte Discover (available with 'the optional Inventory Mode')"><i class="fa fa-exclamation-triangle"></i></a></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "<em>Optional</em> Agent-Based Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="MUST use agents w/ sunbird"><i class="fa fa-exclamation-triangle"></i></a></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Resource Utilization" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="With Nlyte System Utilization Monitoring add-on"><i class="fa fa-exclamation-triangle"></i></a></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="Since v6.0, Power IQ introduced server monitoring for the CPU, memory, and other performance indicators and makes this data available to third-party monitoring systems."><i class="fa fa-exclamation-triangle"></i></a></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Native Windows WMI & Linux, Unix, *nix (SSH) Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="With nlyte Discover (available with 'the optional Inventory Mode')"><i class="fa fa-exclamation-triangle"></i></a></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "SNMP Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="With nlyte Discover (available with 'the optional Inventory Mode')"><i class="fa fa-exclamation-triangle"></i></a></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Native Virtualization Discovery (VMware, Hyper-V, Xen, KVM, LXC)" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="Native VMware only"><i class="fa fa-exclamation-triangle"></i></a></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "RESTful APIs" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="Web Service API"><i class="fa fa-times"></i></a></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="Requires Separately purchased PowerIQ Add-on"><i class="fa fa-exclamation-triangle"></i></a></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Webhooks to Drive Automation" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p class="small flat-top text-primary text-center">{% trans "*All feature data deduced from respective product’s websites and available marketing materials. Please let us know if something isn’t right and we’ll gladly update it." %}</p>
+            </div>
+        </div>
+
+        <div id="ipam" class="row featurette padded">
+            <div class="col-md-12 col-lg-10 col-lg-offset-1">
+
+                <h2 class="text-center featurette-heading">{% trans "IPAM Products" %}</h2>
+                <p class="text-center text-italic">{% trans "Device42 has all of the most important features for managing your Network’s IP addresses, Subnets, VLANs, and VRF groups, but is not a DDI tool. If you need a DDI tool, Device42 integrates with Infoblox." %}</p>
+
+                <table class="table table-hover d42-sw-compare vert-offset-top-1">
+                    <thead>
+                    <tr>
+                        <th class="table-title">
+                            <p class="dark-blue text-left alt-text"
+                               style="margin:0;font-size:24px;">{% trans "Features" %}</p>
+                        </th>
+                        <th class="product-heading blue w-14-td"><a href="{% url 'home' %}">{% trans "Device42" %}<sup>&reg;</sup></a></th>
+                        <th class="product-heading blue w-14-td"><a href="{% url 'compare_infoblox' %}">{% trans "Infoblox" %}<sup>&reg;</sup></a></th>
+                        <th class="product-heading blue w-14-td"><a href="/vs/bluecat-vs-device42-ipam/">{% trans "Bluecat" %}<sup>&reg;</sup></a></th>
+                        <th class="product-heading blue w-14-td"><a href="{% url 'compare_solarwinds' %}">{% trans "SolarWinds IPAM" %}<sup>&reg;</sup></a></th>
+                        <th class="product-heading blue w-14-td"><a href="/vs/phpipam-vs-device42/">{% trans "phpIPAM" %}<sup>&reg;</sup></a></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="comp-feature">{% trans "CMDB" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "VRF Group Management" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Comprehensive Device Information" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Integrated DNS & DHCP Management" %}</td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="via a PowerDNS integration"><i class="fa fa-exclamation-triangle"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Powerful REST APIs" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="SOAP API"><i class="fa fa-exclamation-triangle"></i></a></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Advanced Visualizations" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Webhooks to Drive Automation" %}</td>
+                        <td class="text-center"><i class="fa fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                        <td class="text-center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p class="small flat-top text-primary text-center">{% trans "*All feature data deduced from respective product’s websites and available marketing materials. Please let us know if something isn’t right and we’ll gladly update it." %}</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <p class="text-italic">{% trans "Device42’s Advanced Visualizations, powerful, Customizable Reporting facilities, and advanced, well documented RESTful APIs work together to provide a second-to-none data management experience. Device42 will help to make your data either easier to see and understand, faster to manipulate, and/or more convenient to quantify - at a price that will surprise you." %}</p>
+            </div>
+        </div>
+
+        <div class="row vert-offset-top-3 vert-offset-bottom-2">
+            <div class="col-md-12 text-center">
+                <h4 class="sub-desc">{% trans "See why customers in over 50 countries are using Device42:" %}</h4>
+                <p class="bottom_download"><a href="{% url 'download' %}">Download Device42</a> today</p>
+                <h4 class="sub-desc">{% trans "It’s fully functional and completely free to try." %}</h4>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

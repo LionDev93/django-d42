@@ -1,0 +1,286 @@
+{% extends "base/_base-landing-v2.html" %}
+{% load i18n static %}
+{% block head_scripts %}
+    <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
+{% endblock %}
+{% block scripts %}
+<script>
+    jQuery(function ($) {
+        $('.scroll_down').click(function() {
+            $('html, body').animate({
+                scrollTop: $(".section_2").offset().top - 50
+            }, 1000);
+        });
+        var baloon = $('.scroll_down img');
+        function runIt() {
+            baloon.animate({top:'+=20'}, 1000);
+            baloon.animate({top:'-=20'}, 1000, runIt);
+        }
+        runIt();
+    });
+</script>
+{% endblock %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'The Device42 product uses a number of open source technologies in its stack and Device42 developers actively contribute to open source as well.' %}"/>
+{% endblock %}
+{% block title %}{% trans "Device42 — An Easier, More Powerful Alternative to RackTables" %}{% endblock %}
+{% block maincontent %}
+    <section class="section_1">
+        <div class="container">
+            <div class="arrow_left"></div>
+            <div class="arrow_right"></div>
+            <div class="person"></div>
+        </div>
+        <div class="top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>{% trans "Device42 — An Easier,<br>More Powerful Alternative to RackTables" %}</h1>
+                        <p>{% trans "We love open source at Device42. The Device42 product uses a number of open source technologies in its stack and Device42 developers actively contribute to open source as well. So please don’t look at the following comparison of Device42 and RackTables as a knock on open source software in general. Rather, we just want to provide an objective look at the key differences between this open source tool and Device42. We have also included some reviews from customers who have switched, and we sincerely hope you find this information helpful. If you don't have budget to buy Device42 - by all means, we recommend using the open source tool." %}</p>
+                        <p>{% trans "We’ve put together some info that will highlight the key differences between an Open Source solution like RackTables, and a Continuous Discovery Enterprise CMDB like Device42." %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container bottom">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>{% trans "Let's get started" %}</p>
+                    <div class="scroll_down">
+                        <img src="{% static 'img/landing-v2/scroll.png' %}">
+                    </div>
+                    <p class="small">{% trans "Scroll down to learn more!" %}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section_2">
+        <div class="container">
+            <div class="row">
+                <h4>{% trans "Both Racktables and Device42 can:" %}</h4>
+                <div class="col-md-6">
+                    <ul>
+                        <li>{% trans "List your device" %}</li>
+                        <li>{% trans "List all racks and enclosures" %}</li>
+                        <li>{% trans "Show where devices are racked" %}</li>
+                        <li>{% trans "Maintain physical ports of the devices and links between them" %}</li>
+                        <li>{% trans "Manage IP addresses, assign them to the devices and group them into networks" %}</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul>
+                        <li>{% trans "Document your NAT rules" %}</li>
+                        <li>{% trans "Describe your load balancing policy and store load balancing configuration" %}</li>
+                        <li>{% trans "Attach files to various objects in the system" %}</li>
+                        <li>{% trans "Create users, assign permissions and allow or deny any actions they can do" %}</li>
+                        <li>{% trans "Label everything and even everyone with flexible tagging system" %}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <h2>{% trans "But not only is Device42 easier to use, Device42 ALSO:" %}</h2>
+                <p>{% trans "...is a full featured CMDB, includes an enterprise password management system, IT Asset Management (ITAM) and lifecycle management, DCIM tools like power monitoring and rack utilization heat maps, both SSL and TLS certificate management, End of Life (EOL) & End of Support (EOS) tracking, integrated IPAM, Continuous Discovery with in depth Application Mapping, Software License Management, countless out of the box integrations, Webhook support, and a powerful, well documented RESTful API…" %}</p>
+                <p>{% trans "With the majority of these features <b><i>included</i></b> in our <b><i>core</i></b> product!" %}</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section_3">
+        <div class="top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>{% trans "Racktables Doesn’t Auto Discover." %}</h4>
+                        <h2>{% trans "Device42 is the only enterprise CMDB with Continuous Discovery" %}</h2>
+                        <p>{% trans "While many enterprise tools claim to have auto-discovery built-in, <b>there are key differences:" %}</b></p>
+                        <p>{% trans "<b>Device42 is agentless</b> — You don’t have to find every device and put an agent on it. Device42 finds them for you." %}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="{% static 'img/landing-v2/section3-img.png' %}">
+                    </div>
+                </div>
+                <div class="row">
+                    <p>{% trans "<b>Device42 takes a Holistic approach</b> — connecting directly to your:" %}</p>
+                    <div class="col-md-6">
+                        <ul>
+                            <li>{% trans "<b>Hypervisors and virtual devices</b> (VMware, HyperV, Citrix, Xen, Openstack, Cloudstack, and more)" %}</li>
+                            <li>{% trans "<b>Cloud devices</b> (Amazon, Azure, Joyent, Linode, Digital Ocean and more)" %}</li>
+                            <li>{% trans "<b>Network devices</b> (physical <b>and</b> virtual)" %}</li>
+                            <li>{% trans "<b>Blade systems" %}</b></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul>
+                            <li>{% trans "<b>Cisco</b> UCS" %}</li>
+                            <li>{% trans "<b>Environmental Systems</b> (CRACs, Environmental Sensors)" %}</li>
+                            <li>{% trans "<b>Management Systems</b> (IPMI, iDRAC)" %}</li>
+                            <li>{% trans "<b>DNS Servers</b> (Windows, Linux & Unix OS’s)" %}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>{% trans "....and correlates the interrelationships and dependencies automatically." %}</p>
+                        <p>{% trans "e.g., if Device42 finds a MAC address on a switch port from a network device, it correlates that with a VM which is on a blade sitting in a particular slot in a chassis. It finds what <b>services are on that machine, and calculates the dependencies</b> on other machines and services on your network." %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom"></div>
+    </section>
+
+    <section class="section_4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>{% trans "With RackTables" %}</h4>
+                    <p>{% trans "like most Open Source alternatives, <b>you’re on your own</b> to manually keep everything up to date, which we all know goes by the wayside way too often. This can be <b>worse than no documentation at all</b>. Trusting outdated and just plain wrong documentation can lead to bad decisions that result in embarrassing and costly outages. Device42 discovers changes to your infrastructure shortly after they’re made, automatically updating documentation on your behalf so it’s always up to date, and always correct." %}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="down">{% trans "Racktables Doesn’t Handle Room Layouts." %}</h3>
+                    <img src="{% static 'img/landing-v2/section4-img.png' %}">
+                    <p>{% trans "...and its rack layouts are primitive, also lacking drag-and-drop rack arrangement." %}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>{% trans "Compare a rack view in Racktables<br>to a Rack view in Device42:" %}</h3>
+                    <img src="{% static 'img/landing-v2/section4-img2.png' %}">
+                    <img src="{% static 'img/landing-v2/section4-img3.png' %}">
+                    <p>{% trans "<b>Besides the Primitive Visualizations, lack of photo realistic views, and missing features</b>, by all means, if you have no budget, use RackTables over a cobbled together Excel based solution… However, if you want a market leader in features, ease of use, discovery, <b><i>and price</i></b> - take a look at Device42." %}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section_5">
+        <div class="top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>{% trans "Everything you need, in one place." %}</h4>
+                        <h2>{% trans "Choosing Device42 means choosing a complete solution." %}</h2>
+                        <p>{% trans "RackTables just can’t match the functionality of Device42." %}<br>
+                        <b>{% trans "The modern IT infrastructure requires a modern tool.</b><br> With the advent of virtualization, containers, cloud computing, and software-defined networks..." %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{% static 'img/landing-v2/section5-img.png' %}">
+                    </div>
+                    <div class="col-md-6">
+                        <p>{% trans "IT infrastructure is orders of magnitude more complex than it was 10 years ago. Too much time is wasted trying to manage different tools.<br> It is no longer practical to manage your IT infrastructure using separate tools for:" %}</p>
+                        <ul>
+                            <li>{% trans "asset management" %}</li>
+                            <li>{% trans "IP management" %}</li>
+                            <li>{% trans "cloud management" %}</li>
+                            <li>{% trans "application dependency management" %}</li>
+                            <li>{% trans "software license management" %}</li>
+                        </ul>
+                    </div>
+                </div>
+                <br><br>
+                <div class="row left_right">
+                    <div class="col-md-6 img">
+                        <img class="up" src="{% static 'img/landing-v2/section5-img2.png' %}">
+                    </div>
+                    <div class="col-md-6 text">
+                        <p>{% trans "<b>The interrelationships are too important and too complex</b> --<br> they can only be adequately captured by an integrated tool like <i>Device42</i>." %}</p>
+                        <p>{% trans "Device42 looks at your IT Infrastructure holistically<br> and gives you a single console to manage your data center (DCIM),<br> IP addresses(IPAM) and passwords in addition to ITAM (IT asset management), and has a built-in CMDB." %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container bottom">
+
+        </div>
+    </section>
+
+    <section class="section_6">
+        <div class="container">
+            <div class="arrow_left"></div>
+            <div class="arrow_right"></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>{% trans "You get more with Device42." %}</h3>
+                </div>
+            </div>
+            <div class="row left_right">
+                <div class="col-md-6 img">
+                    <img class="up" src="{% static 'img/landing-v2/section6-img.png' %}">
+                </div>
+                <div class="col-md-6 text">
+                    <h4>{% trans "Integrations, Webhooks, and an extremely powerful RESTful API" %}</h4>
+                    <p>{% trans "A true enterprise class solution should not be isolated. You likely use monitoring tools, automation tools, ticketing (ITSM) tools, finance tools, and others that can benefit from the information in your CMDB." %}</p>
+                    <p>{% trans "Many tools make integrating time consuming and/or expensive, and some don’t support it at all. With Device42, you get a plethora of integrations out of the box, plus webhooks & REST APIs that make it a breeze to integrate with other tools." %}</p>
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{% static 'img/landing-v2/section6-img2.png' %}">
+                </div>
+                <div class="col-md-6">
+                    <h4>{% trans "Device42 is more affordable than you might think." %}</h4>
+                    <p>{% trans "<b>Though Open Source seems like a bargain at the beginning, the manual upkeep and constant attention it requires keeps costing you forever." %}</b></p>
+                    <p>{% trans "Device42 doesn’t believe an enterprise class product should require expensive professional services - and ours doesn’t. We also believe that the value you’ll get from Device42 far outweighs the cost." %}</p>
+                    <p>{% trans "And more than a thousand happy users in 33 countries agree. If our auto-discovery and collaboration features can save your team just ten hours per month, then Device42 will more than pay for itself." %}</p>
+                </div>
+                <div class="col-md-12">
+                    <img src="{% static 'img/landing-v2/section6-devider.png' %}">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section_7">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="try">
+                        <h1>{% trans "Try Device42 for Free" %}</h1>
+                        <span>{% trans "and if you aren’t completely satisfied, we’ll refund your money." %}</span>
+                        <a href="https://www.device42.com/download/">
+                            {% trans "Try it now" %}
+                        </a>
+                        <p>{% trans "Making the switch is easy with migration utilities and imports." %}</p>
+                        <hr>
+                        <div class="partners">
+                            <span>OUR CUSTOMERS</span>
+                            <div class="col-md-2 col-sm-2">
+                                <div style="width:120px;height:40px;" class="sprite-stackoverflow grayscale"></div>
+                            </div>
+                            <div class="col-md-2 col-sm-2">
+                                <div style="width:120px;height:40px;" class="sprite-sprint grayscale"></div>
+                            </div>
+                            <div class="col-md-2 col-sm-2">
+                                <div style="width:120px;height:40px;" class="sprite-verizon grayscale"></div>
+                            </div>
+                            <div class="col-md-2 col-sm-2">
+                                <div style="width:120px;height:40px;" class="sprite-atlassian grayscale"></div>
+                            </div>
+                            <div class="col-md-2 col-sm-2">
+                                <div style="width:120px;height:40px;" class="sprite-mercedesbenz grayscale"></div>
+                            </div>
+                            <div class="col-md-2 col-sm-2">
+                                <div style="width:120px;height:40px;" class="sprite-avaya grayscale"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

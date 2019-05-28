@@ -1,0 +1,25 @@
+{% load i18n static %}
+<div {% if id %}id="{{ id }}" {% endif %}class="row featurette image-right-4x8 {% if vcenter %}is-table-row{% endif %}">
+
+    <div class="col-sm-8">
+        <h2 class="featurette-heading">{% trans "Automated Warranty Check and Tracking" %}</h2>
+        <p><b>{% trans "Complete Asset Lifecycle Management" %}</b></p>
+        <p>{% trans "Centrally manage all IT contract information for devices, hardware, and software assets across the enterprise infrastructure. Track the entire lifecycle of your IP and non-IP based assets from purchase to their day of decommissioning." %}</p>
+        <p>{% trans "Device42 also offers automated warranty lookups! Customers can query Device42 for their assets, then automatically retrieve warranty information from vendors -- which is simultaneously added into the Device42 database. Simply request vendor API keys, and pull in warranty information from Dell, HP, IBM & Lenovo!" %}</p>
+        <ul class="checklist">
+            <li>{% trans "Track purchases and contracts for all asset types" %}</li>
+            <li>{% trans "Generate and schedule reports based on purchase data" %}</li>
+            <li>{% trans "Receive contract expiration reminders to ensure timely renewals" %}</li>
+            <li>{% trans "Easily create reports to support IT audits" %}</li>
+        </ul>
+    </div>
+
+    <div class="col-sm-4">
+        <a href="{% static 'img/sections/features/itam/asset-lifecycle.png' %}"
+           data-featherlight="image">
+            <img class="img-responsive center-block img-border"
+                src="{% static 'img/sections/features/itam/asset-lifecycle.png' %}"
+                alt="{% trans 'Asset Lifecycle Management' %}">
+        </a>
+    </div>
+</div>

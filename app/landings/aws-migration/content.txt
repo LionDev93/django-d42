@@ -1,0 +1,42 @@
+[head.title]
+Easier AWS Migrations using dependency mappings with agent-less autodiscover
+
+[head.description]
+Device42 is a comprehensive autodiscovery and mapping tool that helps you with AWS Migrations by mapping out dependencies between your applications and services automatically!
+
+
+[landing.title]
+
+Easier AWS Migration with Device42
+
+[landing.image_format]
+png
+
+[landing.content]
+
+Device42 makes AWS Migration easier by automatically generating a centralized repository of application, service, and device relationships and dependencies for optimized migrations to the Amazon AWS cloud!
+
+- Agentless services and application discovery combines data obtained via Windows (WMI) and Linux (SSH) protocols
+- Gain a complete understanding of your existing environment for planning your AWS Migration - Automatically!
+- Auto-discover all deployed applications, manufacturer, version, and all details
+- Get a detailed map of all services, running or not, users, protocols & ports
+- Easily view application to server and application to application mapping - without packet captures!
+- View comprehensive application dependency maps even for machines that can't be directly accessed, built out with Netflow data!
+
+
+[feature[1].title]
+Automatic Service Impact Discovery
+[feature[1].image_format]
+png
+[feature[1].content]
+Device42 makes AWS Migration simple by auto-discovering everything from legacy to newer systems, highlighting dependencies between your physical, virtuals and application layers - All with a single tool!
+
+[feature[2].title]
+Application Dependency Flow with Lists and Charts
+[feature[2].content]
+AWS Migrations go more smoothly, and choosing AWS migration groups is a breeze when you know the impacts and interdependency details of all of your applications.
+
+[feature[3].title]
+Powerful Visualizations, Reporting and APIs
+[feature[3].content]
+Easily build move groups, automate AWS Migration tasks, or report on any the dependency data in your desired format, whether it is excel, CSV or a direct DB connection. Flexible APIs let you consume your data your way or integrate Device42 with other products, as well!

@@ -1,0 +1,71 @@
+{% extends "base/_base.html" %}
+{% load i18n static %}
+{% block title %}{% trans 'Coloring Book Focused on IT' %}{% endblock %}
+{% block meta %}
+    <meta name="description" content="{% trans 'Coloring book focused on IT' %}">
+{% endblock %}
+
+{% block body_scripts %}
+<script type="text/javascript">
+    $(function() {
+        D42.tools.loadJs('//fast.wistia.com/assets/external/E-v1.js', true);
+    });
+</script>
+{% endblock %}
+
+{% block body %}
+    <header class="row head-home bg-primary">
+        <div class="container">
+            <div class="row featurette">
+                <div class="col-md-12">
+                    <h1 class="flat-top">{% trans "Coloring Book Focused on IT" %}</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 padded">
+                <img width="275px" src="{% static 'img/branding/coloringbookjpg-01_360.jpg' %}" class="img-responsive img-border center-block" alt="{% trans 'Get your free copy today!' %}">
+                <br>
+                <p class="">{% blocktrans %}Based on this idea from <a href="https://redd.it/4bm8d5" target="_blank" class="ext-link">/u/chocotaco1981</a> we've assembled a  <a href="https://www.reddit.com/r/sysadmin/comments/4gtkeh/share_your_ideas_for_an_itfocused_adult_coloring/" target="_blank" class="ext-link">Reddit-inspired IT focused coloring book!</a> We thought it would be a good way for some of us to vent or blow off steam after a lovely day of server crashes and support tickets, and it's proven to be just that and more!
+<br><br>
+Download the electronic version for free right here, or grab a <a href="https://www.amazon.com/Device42s-Information-Technology-Coloring-Book/dp/1535398183" target="_blank" class="ext-link">printed copy from Amazon!</a> And of course, we'll be giving them away in promotions and goodie bags in the future, too - so keep an eye out for us!
+<br><br>
+Enjoy, and while your coloring book download finishes, scroll down to check out our 90-second video to learn about Device42!{% endblocktrans %}</p>
+            <hr>
+                <div class="row">
+                    <div class="col-sm-7">
+                        <p>{% blocktrans %}<label class="label label-default">Current Version</label> <span style="font-family:monospace;"> <strong>v2</strong> (24 pages)</span>{% endblocktrans %}</p>
+                    </div>
+                    <div class="col-sm-5 text-right">
+                        <form action="." method="post">{% csrf_token %}
+                            <fieldset class="module aligned ">
+                                <input style="display:none;" id="id_main3" type="text" name="main3" maxlength="64"/>
+                                <button class="btn btn-warning btn-sm raised" value="submit" type="submit"
+                                        style="text-align: left;font-weight:700;vertical-align:middle;line-height:2em;"
+                                        name="_service_installer"><i class="fa fa-download fa-2x fa-pull-right" style="color:#fff;" aria-hidden="true"></i>Download<br>Coloring Book <small>(pdf)</small></button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
+                <div style="clear:both;"></div>
+                <h3 align="center">Got a minute? See what Device42 can do for you....</h3>
+
+                <div class="col-xs-3"></div>
+                <div class="col-xs-6">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <div>
+                            <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                                <span class="wistia_embed wistia_async_igc5qfvoyr popover=true popoverAnimateThumbnail=true videoFoam=true popoverBorderColor=22a3df popoverBorderWidth=2" style="display:inline-block;height:100%;width:100%">&nbsp;</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-3"></div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

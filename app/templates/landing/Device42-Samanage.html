@@ -1,0 +1,118 @@
+{% extends "base/_base-landing-v1.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% blocktrans %}Samanage integration with Device42{% endblocktrans %}"/>
+    <meta name="keywords"
+          content="device42, samanage, device, management, core, asset, ipam, itam, cmdb, functions, features, cloud, discovery, autodiscovery, app, mapping, appmapping, application, map, diagram, discover, depedency, dcim, ticketing, plugin, addon, enterprise, free, trial, tool, tools" />
+{% endblock %}
+{% block title %}{% trans "Samanage Integration" %}{% endblock %}
+{% block scripts %}
+    <script>
+        $(function () {
+            $("[data-toggle='tooltip']").tooltip();
+        });
+    </script>
+{% endblock %}
+
+{% block styles %}
+  <style>
+    .table-responsive {
+      max-width: 900px;
+      text-align: left;
+    }
+    hr{
+      margin: 0px;
+    }
+    table {
+      margin-bottom: 0px !important;
+    }
+    p.small-font {
+      font-size: 15px;
+      color: #22a3df;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Roboto Condensed', sans-serif !important;
+    }
+    form label {
+      display: none;
+    }
+    form p {
+      display: inline-block;
+    }
+    form p input {
+      padding: 5px;
+      color: #246d8f;
+    }
+    .d-table {
+      display: table;
+      width: 100%;
+    }
+    .d-table-cell {
+      text-align: center;
+      display: table-cell;
+    }
+    .d-table-submit {
+      padding: 10px;
+      margin-top: 50px !important;
+      width: 250px;
+    }
+    .sub-heading {
+        color: #35ade4;
+        font-family: 'Roboto Condensed', sans-serif !important;
+        font-size: 35px;
+        margin-top: 0px;
+    }
+  </style>
+{% endblock %}
+
+{% block landingHeadingText %}{% trans "Populate Samanage with Device42’s Comprehensive Autodiscovery" %}{% endblock %}
+{% block landingfeature %}
+<section class="row padded">
+  <div class="col-md-8">
+    <p class="lead" style="margin-bottom: 0px;">{% trans "Leverage Device42’s enhanced asset management and tracking capabilities and effortlessly sync data from Device42 to Samanage!" %}</p>
+  </div>
+  <div class="col-md-4">
+    <a href="https://github.com/device42/device42_samanage_sync/archive/master.zip" class="btn btn-sm btn-primary" id="samanage_download" target="_blank">Download Samanage<br>Integration Package</a>
+  </div>
+  <p class="col-md-12">{% trans "Stop wondering what you have deployed. Take advantage of comprehensive agentless autodiscovery with optional agents and remote collectors to help you automatically maintain an up-to-date inventory of your physical, virtual, and cloud servers, containers, network components, software and services, and all of your infrastructure’s critical relationships and interdependencies."%}</p>
+</section>
+{% endblock %}
+
+{% block maincontent %}
+    <section class="row landing-section">
+      <div class="col-md-9">
+        <h3 class="sub-heading">{% trans "Sync your CIs between Device42 and Samanage" %}</h3>
+        <p>{% trans "Skip tedious and error-prone manual CI data entry. Once you sync your Device42 CMDB with Samanage, any CIs that were configured to sync are then available in both systems!" %}</p>
+        <p>{% trans "If you’ll be concurrently using both systems, keep CI data up-to-date by scheduling automatic syncs <i>(refresh manually at any time, too)</i>!" %}</p>
+      </div>
+      <div class="col-md-3" style="text-align: right;">
+        <a href="{% static 'img/sections/support/integrations/samanage/samanage-1.png' %}" data-featherlight="image">
+          <img src="{% static 'img/sections/support/integrations/samanage/samanage-1.png' %}" class="img-responsive center-block" alt="{% trans 'Samanage Integration' %}">
+        </a>
+      </div>
+    </section>
+
+    <section class="row landing-section">
+      <div class="col-md-3">
+        <a href="{% static 'img/sections/support/integrations/samanage/samanage-2.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/samanage/samanage-2.png' %}" class="img-responsive center-block" alt="{% trans 'Samanage Integration' %}">
+        </a>
+      </div>
+      <div class="col-md-9">
+        <h3 class="sub-heading">{% trans "Associate imported CIs with Samanage service requests!" %}</h3>
+        <p>{% trans "When a creating a new ITSM ticket or service request in Samanage, users can associate configuration items synced from Device42, while samanage users can easily view the complete service history on any CI." %}</p>
+        <p>{% trans "Once imported, all CI’s are natively managed from within Samanage, utilizing the workflows you’re already accustomed to. Quickly and easily assign teams and create task checklists related to your imported CI’s!" %}</p>
+      </div>
+    </section>
+
+    <section class="row landing-section">
+      <div class="col-md-12">
+        <h3 class="sub-heading">{% trans "Sync hardware, software and services, vendor information, and more from Device42." %}</h3>
+        <p>{% trans "You’ve already got accurate CI details in Device42, so don’t re-enter them. Sync anything and everything you care about from software and services to service levels and customers (and much more) into your Samanage instance. Let Device42 handle discovery, and spend your valuable time on automation and custom workflows that are tailored to your company’s unique needs!" %}</p>
+        <p><i>{% trans "Beyond CI’s, sync notes, contacts, escalation procedures, and more - simply create the desired target fields in Samanage!" %}</i></p>
+      </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% load i18n static %}
+<div {% if id %}id="{{ id }}" {% endif %}class="row featurette image-left-4x8 {% if vcenter %}is-table-row{% endif %}">
+    <div class="col-md-6">
+        <img class="img-responsive center-block animated"
+             src="{% static 'img/sections/features/app-map/automated_service_impact_discovery.png' %}"
+             alt="{% trans 'Automated Service Impact Discovery' %}">
+    </div>
+    <div class="col-md-6">
+        <h2 class="featurette-heading">{% trans "Automated Service Impact Discovery" %}</h2>
+        <p>{% trans "Device42 creates a comprehensive map of your services, open and listening ports, and remote connections for Windows, Linux, and BSD machines." %}</p>
+        <ul class="checklist bullet-blue font-stack-condensed">
+            <li>{% trans 'Know what services are listening on what ports' %}</li>
+            <li>{% trans 'Understand business impacts before moving applications' %}</li>
+            <li>{% trans 'Visualize all the dependencies for a particular machine' %}</li>
+            <li>{% trans 'Get a list view of the service and its remote dependencies' %}</li>
+            <li>{% trans 'No need to configure expensive span ports to get dependencies between servers' %}</li>
+            <li>{% trans 'Be confident about retiring or consolidating assets!' %}</li>
+        </ul>
+    </div>
+</div>

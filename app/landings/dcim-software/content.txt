@@ -1,0 +1,46 @@
+[head.title]
+Device42 is powerful, automated DCIM Software, redefined!
+
+
+[head.description]
+Device42 is a powerful, automated DCIM Software featuring agentless autodiscovery.
+
+
+[landing.title]
+Device42 is Automated DCIM Software, Redefined!
+
+
+[landing.image_format]
+gif
+
+
+[landing.content]
+Device42 is a comprehensive DCIM Software that helps you manage and understand your data centers. Features include room and rack layouts, power consumption, real-time capacity planning, and more:
+
+- DCIM Software maps your physical, virtual and cloud networks automatically and agentlessly
+- Auto-generated, photo-realistic rack layouts feature drag'n'drop
+- Device42 DCIM software provides color-coded room layouts display heat-maps for easy capacity planning
+- DCIM software interface is web-based, including powerful visualizations and SVG exports that import directly to Visio
+- Resource utilization and real-time power and environmental monitoring with charts and alerts, and everything else you need in DCIM software!
+
+
+[feature[1].title]
+Powerful DCIM Software Tools Include Drag'n'drop Room and Rack Layouts with What-if Scenarios
+[feature[1].image_format]
+gif
+[feature[1].content]
+Device42 DCIM software auto-discovers across all of your systems, highlighting dependencies between physical, virtuals and applications. The only Software Tool you need to understand your infrastructure.
+
+
+[feature[2].title]
+Capacity Planning with Resource Utilization, Monitoring, and Control
+[feature[2].content]
+DCIM software collects all the details about your inventory including IPs and connections, services and interdependencies. Data is not only autodiscovered - it's also automatically correlated.
+
+
+[feature[3].title]
+Automated DCIM Software Includes Out-of-the-box Integrations!
+[feature[3].image_format]
+png
+[feature[3].content]
+Device42 DCIM software also features powerful integrations with the software you already use: Chef, Puppet, JIRA, MS SCCM, Infoblox, Splunk, ServiceNow and more. Use this real-time map for reduced MTTR and for faster decision making!

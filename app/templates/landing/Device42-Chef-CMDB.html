@@ -1,0 +1,123 @@
+{% extends "base/_base-landing.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Creating and managing an accurate and up-to-date configuration management database (CMDB) is a vital component in effectively managing today’s data center and IT Infrastructure. Device42 software does just that and a lot more.' %}"/>
+{% endblock %}
+{% block title %}{% trans "Device42: The Ideal CMDB for Chef Automations" %}{% endblock %}
+{% block script %}
+    <script type="text/javascript">
+        $(function () {
+            $("i.fa").tooltip();
+        });
+    </script>
+{% endblock %}
+
+{% block styles %}
+    <style>
+      .sub-heading {
+        margin-top: 0px;
+      }
+    </style>
+{% endblock %}
+
+
+{% block landingHeadingText %}{% trans "Device42: The Ideal CMDB for Chef Automations" %}{% endblock %}
+{% block landingfeature %}
+    <section class="row">
+        <div class="col-xs-12 col-sm-8">
+            <p class="lead">{% trans "A powerful, accurate CMDB is critical to automate tasks with Chef. Stop worrying about raw data imports and data quality issues. Automatically populate Device42's pre-configured CMDB with its powerful and flexible auto-discovery methods. With a well documented, easy to use REST API, automation tasks that involving any other ITSM and ITIL products are easier, too." %}</p>
+        </div>
+        <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0">
+            <p class="infobox lead-small bg-alt text-dark-blue font-stack-roboto">
+                <em>{% trans "If you are looking for an integrated CMDB to power your Chef automation or other automation projects, with its webhooks and powerful RESTful API, Device42 might be the perfect CMDB solution for you!" %}</em>
+            </p>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block maincontent %}
+    <section>
+        <p class="h2 lead">{% trans "If you are looking for a CMDB for Chef, there are several reasons to choose Device42:" %}</p>
+        <div class="media">
+            <div class="media-left">
+                <i class="fa fa-check-square-o fa-2x"></i>
+            </div>
+            <div class="media-body">
+                <p class="">{% trans "You don’t need to spend a lot of time designing your CI’s and their interrelationships. Device42 offers pre-defined CIs and relationships that will work “out of the box” for most companies, and also offers extensive customization features where needed." %}</p>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-left">
+                <i class="fa fa-check-square-o fa-2x"></i>
+            </div>
+            <div class="media-body">
+                <p class="">{% trans "Device42 offers strong auto discovery features that you can use to populate most of the CMDB automatically." %}</p>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-left">
+                <i class="fa fa-check-square-o fa-2x"></i>
+            </div>
+            <div class="media-body">
+                <p class="">{% trans "Everything a CMDB to compliment an automation tool like Chef needs, and more: A powerful, well documented, RESTful API, Webhooks to initiate automation from Device42, Native Integrations with all of your favorite tools, and a plethora of sample scripts to expand on " %}</p>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-left">
+                <i class="fa fa-check-square-o fa-2x"></i>
+            </div>
+            <div class="media-body">
+                <p class="">{% trans "And probably most important: Device42 provides a single source of truth for all of IT because it is not just a CMDB. It’s also a full DCIM tool, a full IPAM tool, and also offers power and network cable management (both with great visualizations), and a full password manager, too - and we’re always adding new features!" %}</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="row image-left-4x8 padded">
+        <div class="col-sm-4">
+          <a href="{% static 'img/landing/sql-migration/banner.png' %}" data-featherlight="image">
+            <img src="{% static 'img/landing/sql-migration/banner.png' %}" class="img-responsive center-block"
+                 alt="{% trans 'Ansible Automations' %}"/>
+          </a>
+        </div>
+        <div class="col-sm-8">
+            <h3 class="sub-heading">{% trans "Load CIs Fast with Powerful Auto-Discovery Tools" %}</h3>
+            <p>{% trans "Populate your CMDB fast with an extensive range of auto-discovery tools for physical, virtual, cloud, and hybrid infrastructures. Increase efficiency and maximize productivity by getting clear visibility into what you have while promoting transparency companywide." %}</p>
+            <ul>
+              <li>{% trans "All discovery tools are available both agentless or agent-based" %}</li>
+              <li>{% trans "All discoveries can be scheduled so you're always up-to-date" %}</li>
+              <li>{% trans "Multiple protocols supported (e.g. SNMP, WMI, SSH, Modbus, ...)" %}</li>
+              <li>{% trans "Native support for virtualization platforms" %}</li>
+              <li>{% trans "Native support for public and private cloud platforms" %}</li>
+              <li>{% trans "Native support for blade chassis" %}</li>
+              <li>{% trans "Granular, well documented APIs with sample scripts for custom discovery" %}</li>
+              <li>{% trans "Fast, flexible and easy to deploy" %}</li>
+            </ul>
+        </div>
+    </section>
+    <section class="row padded">
+        <div class="col-sm-6" style="padding-top: 30px;">
+            <h3 class="sub-heading">{% trans "Pre-configured CMDB" %}</h3>
+            <p>{% trans "No need for a long, drawn-out CI design process because CI’s and relationships are pre-configured. Device42 doesn’t simply lock you into an inflexible structure. You can freely create your own custom CIs and relationships to complement the built-in structure provided. Additionally, you can define user, groups, passwords, and object-level permissioning." %}</p>
+        </div>
+        <div class="col-sm-6">
+          <a href="{% static 'img/sections/features/cmdb/Solution-Components.png' %}" data-featherlight="image">
+            <img src="{% static 'img/sections/features/cmdb/Solution-Components.png' %}" class="img-responsive center-block"
+                 alt="{% trans 'Solution Components' %}"/>
+          </a>
+        </div>
+    </section>
+    <section class="row padded">
+        <div class="col-sm-5" style="padding-top: 30px;">
+            <a href="{% static 'img/sections/features/cmdb/RESTful-APIs.png' %}" data-featherlight="image">
+              <img src="{% static 'img/sections/features/cmdb/RESTful-APIs.png' %}" class="img-responsive center-block"
+                   alt="{% trans 'Restful Apis' %}"/>
+            </a>
+        </div>
+        <div class="col-sm-7">
+            <h3 class="sub-heading">{% trans "Everything an Automation Tool Like Chef Needs in a CMDB" %}</h3>
+            <p>{% trans "Device42 includes a well documented, secure and powerful RESTful API for integrations with other applications used to manage your IT infrastructure. Webhooks can be triggered for any event that triggers an Audit-Log entry, and on top of that, Device42 also offers out-of-the box integrations with all of your favorite tools. Custom integrations are a breeze, too!" %}</p>
+        </div>
+    </section>
+{% endblock %}

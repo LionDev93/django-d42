@@ -1,0 +1,233 @@
+{% extends "base/_base.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Case studies for Device42 with Dell EMC' %}"/>
+{% endblock %}
+{% block title %}{% trans "Dell EMC - Case Study" %}{% endblock %}
+
+{% block styles %}
+<style>
+    body{
+    }
+      a.btn {
+        width: 200px;
+      }
+      span.desc {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        font-weight: 100;
+        font-size: 15px;
+        text-align: center;
+        font-style: italic;
+        color: #b1b1b1;
+        width: 75%;
+      }
+      img.landing-logo {
+        width: 75%;
+      }
+      .m-80 {
+        margin-top: 80px;
+        margin-bottom: 30px;
+      }
+      .m-t-130 {
+        margin-top: 130px;
+      }
+
+      .thx-click {
+        font-size: 25px;
+        text-align: center;
+        font-style: italic;
+      }
+
+      @media(max-width: 767px){
+        .m-t-130 {
+          margin-top: 30px;
+        }
+      }
+
+      .secondary-menu {
+      text-align: center;
+    }
+
+    @media(max-width: 992px){
+      .secondary-menu {
+        display: none;
+      }
+    }
+
+    .secondary-menu.fixed {
+      position: fixed;
+      background: white;
+      z-index: 999;
+      top: 53px;
+      width: 100%;
+    }
+
+    .secondary-content  {
+      display: inline-block;
+    }
+
+    .secondary-menu-list {
+      display: inline-block;
+      list-style: none;
+      margin: 0;
+      padding: 0px;
+    }
+
+    .secondary-menu-list-item {
+      display: inline-block;
+      text-align: center;
+      zoom: 1;
+      vertical-align: middle;
+      height: 100%;
+      width: auto;
+      min-width: 100px;
+      cursor: pointer;
+      position: relative;
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+
+    .secondary-menu-list-item:before {
+      display: none;
+    }
+
+    .secondary-menu-link {
+      padding: 1.5rem 0;
+      color: #706F6F;
+      display: block;
+    }
+
+    .secondary-menu-link:focus, .secondary-menu-link:hover {
+      color: #706F6F;
+      text-decoration: none;
+    }
+
+    <!--.secondary-menu-list-item:hover, .secondary-menu-list-item.active {-->
+      <!--color: #706F6F;-->
+      <!--border-bottom: 3px solid #ab00dc;-->
+    <!--}-->
+
+    .secondary-menu-list-item:after {
+      content: "";
+      background-color: #22a3df;
+      padding: 1.5px;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      line-height: 3px;
+      font-size: 2em;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      right: 50%;
+      visibility: hidden;
+      transition: all 0.2s linear;
+    }
+
+    .secondary-menu-list-item:hover:after {
+          visibility: visible;
+        left: 6px;
+        right: 6px;
+    }
+
+    .secondary-menu-list-item.active:after {
+      visibility: visible;
+      content: "";
+      background-color: #eb8f34;
+      font-size: 30px;
+      padding: 1.5px;
+      line-height: 3px;
+      position: absolute;
+      bottom: 0;
+      left: 6px;
+      right: 6px;
+    }
+
+    .d-flex {
+      display: flex;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+  <header class="row bg-primary head-home">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <h1>{% trans "Case Studies" %} - {% trans "DELL EMC" %}</h1>
+              </div>
+          </div>
+      </div>
+  </header>
+  <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <br />
+                {% include 'sections/customers/_case-studies_left_col.html' %}
+            </div>
+            <div class="col-sm-9">
+                <br />
+                <div class="secondary-menu">
+                <div class="secondary-content">
+                  <ul class="secondary-menu-list">
+                    <li class="secondary-menu-list-item" id="testimonials_link">
+                      <a href="{% url 'customers_testimonials' %}" class="secondary-menu-link">
+                        {% trans "TESTIMONIALS" %}
+                      </a>
+                    </li>
+                    <li class="secondary-menu-list-item" id="customers_link">
+                      <a href="{% url 'customers' %}" class="secondary-menu-link">
+                        {% trans "CUSTOMERS" %}
+                      </a>
+                    </li>
+                    <li class="secondary-menu-list-item" id="case_studies_link">
+                      <a href="{% url 'customers_case_studies' %}" class="secondary-menu-link">
+                        {% trans "CASE STUDIES" %}
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+                <h3 class="text-muted">{% trans "Device42 User Case Study – DELL EMC" %}</h3>
+                <ul>
+                    <li><strong>{% trans "Organization" %}</strong>: {% blocktrans %}<a href="https://www.dellemc.com" target="_blank">Dell EMC</a>{% endblocktrans %}</li>
+                    <li><strong>{% trans "Solution" %}</strong>: {% trans "Streamline the discovery process for client modernization engagements, enabling the professional services organization to offer more highlevel services at lower costs" %}</li>
+                    <li><strong>{% trans "Operational challenge" %}</strong>: {% trans "Configuration management database (CMDB), application dependency mapping, and DCIM software from Device42 Inc." %}</li>
+                    <li><strong>{% trans "Benefits" %}</strong>: {% trans 'Dramatically reduced time for datacenter discovery tasks needed for datacenter modernization, enabling Dell EMC to spend more time analyzing and recommending ways to serve clients, and helps Dell EMC reduce risks involved with modernization by providing a more comprehensive accounting of IT resources and infrastructure, eliminating the potential for "forgotten" assets' %}</li>
+                </ul>
+                <div class="row">
+                  <div class="col-sm-offset-3 col-sm-6">
+                    <img src="{% static 'img/landing/dell_emc/dellemc.png' %}" class="img-responsive center-block landing-logo" alt="{% trans 'DELL EMC' %}">
+                  </div>
+                </div>
+                <h2>{% trans "Dell EMC, the union of Dell's and EMC's portfolios of infrastructure and expertise for IT and business transformation, offers a broad range of professional services to help enterprises modernize in today's fast-paced digital world." %}</h2>
+                <p>{% trans "This member of the Dell Technologies family of businesses brings extensive experience to organizations as they modernize their datacenters, rightsize or migrate workloads to the cloud, and gain visibility into their application, systems, and infrastructure topology. Dell EMC implements a variety of tools to help clients, which include public and private sector enterprises ranging from start-ups to Fortune 500 businesses. In particular, Dell EMC service engagements start the modernization process by offering application profiling and application dependency mapping, which provides the underlying discovery and visualization of resources that need to be modernized." %}</p>
+                <p>{% trans 'Quite often, this laborious process requires extensive review of paper and digital documentation and the manual accounting of resources. "A critical challenge we face is that if you just look at a host or a service, it may not directly or easily relate to the strategic mission of the business application," said Paul DiNicola, a senior consultant with Dell EMC`s Consulting Services. "In addition, different groups within the client organization may use different terminology to mean the same thing, so we need to not only account for resources but also interpret them in relation to an organization`s strategic goals."' %}</p>
+                <p>{% trans 'Senior executives, who may or may not completely understand the underlying technology, frequently drive the modernization process. In the end, the underlying discovery process requires not only resource accounting but also a business-level analysis of what applications and resources can, and should, be modernized. As a service provider in a competitive world that demands high performance, accuracy, and transparency, Dell EMC faced the ongoing challenge of providing quality services at reasonable rates.' %}</p>
+                <p>{% trans 'Dell EMC tried several tools to help streamline the discovery and mapping process. The company selected Device42 configuration management database (CMDB) and application dependency mapping technology.' %}</p>
+                <h3 class="text-muted">{% trans "The Implementation" %}</h3>
+                <p>{% trans "Datacenter modernization is critical for enterprises looking to streamline their IT, either because they are combining multiple resources from mergers and acquisitions or because they need to simply transform and digitize their business. But to effectively link application, systems, and infrastructure resources, or move them to the cloud, an enterprise must first know what exists and where it exists as well as the dependency of each component." %}</p>
+                <p>{% trans "Dell EMC automated discovery service collects information about the IT infrastructure resources within an organization. Device42 automates the process by providing a clear picture of infrastructure and interdependencies between the many layers of hardware, networks, and supported business applications and databases. The software offers datacenter/IT asset and inventory management, IP address management, password management and tracking management, patch panel cable management, power and environmental monitoring and control, hardware and software dependency mapping, and software licensing and management." %}</p>
+                <p>{% trans 'This automation enables Dell EMC analysts to spend more time addressing the real needs of a client enterprise — namely, what resources can and should be modernized and how they should be modernized. "Our analytics, with data from Device42 and other data we collect, enable us to quickly determine what applications would work in the cloud, which need to be reengineered, and what may need to be retired because it won`t go to the cloud," said DiNicola. "We can look at all the system application and dependency data and map it to the infrastructure so we can relate it all to the business application and strategic goals."' %}</p>
+                <p>{% trans 'Once installed, Device42 collects data and creates a dependency diagram on what users and system applications are dependent on a piece of equipment, as well as network capacity, power chain, cabling, room, and rack visualizations to provide a high-level view and detailed drilldowns. "Before Device42, for example, we would spend weeks just with a client`s networking people to make sure there were enough resources to upgrade," continued DiNicola. "Now, with the data and diagrams provided by Device42, we can go to a client more quickly and create different use cases. In addition, we can answer more questions and get to a deeper level of understanding that we might not have been able to get to before." This enables the Dell EMC analysts to create a business-friendly map of resources so nontechnical executives can visualize the relationships and dependencies between applications and therefore gain a better understanding of what is required for modernization.' %}</p>
+                <h3 class="text-muted">{% trans "Challenges" %}</h3>
+                <p>{% trans "Perhaps the biggest challenge that Dell EMC faces is the sheer volume of information needed to effectively help enterprises modernize, particularly in large organizations. The need to look at all resources requires analysis throughout an enterprise, meaning that the more complex the datacenter resources, the more invasive the discovery process needs to be. Unless all resources are considered, the modernization goal will not be met because there will be applications and systems that are forgotten. So a major task that Dell EMC undertakes is educating clients about what is required for migration. In addition, this means that the Device42 software must be installed across a client organization to be effective. Once that task is completed, however, data collection and analysis are comprehensive and worthwhile." %}</p>
+                <p>{% trans 'In addition, the need to undertake a comprehensive discovery process requires buy-in from a cost perspective. Having a tool such as Device42 gives Dell EMC a more predictable way to cost out projects up front, reducing the number of "surprises" during the engagement. "If you can`t bring in a tool and have a relationship where you know what the best approach is," said DiNicola, "it becomes a nightmare: You have to be able to understand and communicate `If we do x, here is my cost; if we do y, here is my cost.` This strengthens the service provider/client relationship."' %}</p>
+                <h3 class="text-muted">{% trans "Benefits" %}</h3>
+                <p>{% trans 'According to DiNicola, there are two main benefits with using Device42. One benefit is the time savings associated with the discovery process. The amount of time required to install and customize the software for a client is minor compared with the amount of time required for traditional methods of discovery, such as going through reams of paper and endless discussions with technical staff. The autodiscovery feature of Device42 dramatically reduces the engagement time needed for tasks such as application profiling and application dependency mapping. According to DiNicola, "We`ve been able to offer more services to our clients at a lower cost because the software enables us to integrate the discovery process for less. We also can offer our value-add services in a more effective and efficient manner, which also reduces cost to the client." In addition, Dell EMC can present more migration options to clients based on different permutations of the discovery analysis data.' %}</p>
+                <p>{% trans 'Another benefit is the reduction of risk. A big part of modernization is determining what type of workloads are appropriate for the different cloud types. "If you go to a financial institution and don`t understand all the components that go with migration, there are going to be problems and you are going to end up on the front page of the news," said DiNicola. "It is imperative that you understand all the key pieces that will impact the client so that the modernization is done properly and the new systems have the right response time and never have a negative impact on an organization`s customers." Having a tool such as Device42 helps Dell EMC fully understand the layers that are involved and associated interactions so that analysts can make the best recommendations for their clients` businesses.' %}</p>
+                <p>{% trans '"The discovery process is a very complicated task that requires a great deal of trust between Dell EMC and its clients," stated DiNicola. "Device42 software has been such a huge help in enabling us to do more that some clients have even wanted to keep it for future use in-house. We have a great partnership with Device42 and have been able to work out a way to make that happen. It`s good for the software supplier, Dell EMC and, most important, our clients."' %}</p>
+                <h3 class="text-muted">{% trans "Methodology" %}</h3>
+                <p>{% trans 'The project and company information contained in this document was obtained from multiple sources, including information supplied by Device42, questions posed by IDC directly to Dell EMC employees, and Device42 corporate documents.' %}</p>
+                <div class="row">
+                  <div class="col-sm-3">
+                  </div>
+                  <div class="col-sm-6">
+                    <img src="{% static 'img/landing/dell_emc/analyze_idc.png' %}" class="img-responsive center-block" alt="{% trans 'Analyze IDC' %}">
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,127 @@
+{% extends "base/_base-landing.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description" content="{% trans 'The Capacity Planning Challenge' %}"/>
+{% endblock %}
+
+{% block styles %}
+    <style>
+      p {
+        font-size: 20px;
+        font-family: "Roboto Condensed", sans-serif !important;
+      }
+      p.lead {
+        display:none;
+      }
+      .number-ul {
+        font-style: italic;
+        font-weight: 300;
+        color: #717171;
+        list-style-type: decimal;
+        padding-left: 15px;
+        font-size: 17px;
+      }
+      .number-ul li:before {
+        content: '';
+        width: 10px;
+      }
+      .checkmark-style {
+        margin: 0px !important;
+        font-weight: 300;
+        color: #717171;
+      }
+      .checkmark-style li{
+        font-size: 17px;
+      }
+      .checkmark-style li:before {
+        content: "\2714";
+        margin-left: -24px;
+        margin-right: 12px;
+        position: relative;
+        vertical-align: text-top;
+        display: inline-block;
+        font-weight: 100;
+        font-size: 15px;
+      }
+      p.strong {
+        font-weight: 400;
+      }
+      .w-100 {
+        width: 100%;
+      }
+      .m-b-20 {
+        margin-bottom: 20px;
+      }
+      .m-t-20 {
+        margin-top: 20px;
+      }
+      .m-t-40 {
+        margin-top: 40px;
+      }
+
+      @media screen and (max-width: 767px) {
+          .m-t-40.mobile-no {
+            margin-top: 0px !important;
+          }
+        }
+    </style>
+{% endblock %}
+
+{% block title %}{% trans "The Capacity Planning Challenge" %}{% endblock %}
+{% block landingHeadingText %}{% trans "The Capacity Planning Challenge" %}{% endblock %}
+{#{% block landingLeadText %}{% endblock %}#}
+
+{% block landingfeature %}
+    <section class="row landing-section">
+        <div class="col-sm-6" style="vertical-align: top;">
+            <p class="m-t-40 mobile-no">{% trans "﻿Capacity planning to strike the right balance between both future need and peak transient loads can prove a tricky undertaking. Too much capacity, and spend can quickly get out of control supporting idle machines, blowing your budget. Too little, and your company’s site or services can experience embarrassing downtime, leaving you to answer to angry customers and executives alike." %}</p>
+        </div>
+        <div class="col-sm-6">
+            <img class="img-responsive" alt="{% trans 'Data Center Documentation' %}" src="{% static 'img/landing/capacity-planning/banner.png' %}">
+        </div>
+    </section>
+{% endblock %}
+
+{% block maincontent %}
+    <section class="is-table-row" id="sect1">
+      <h2>{% trans "The Device42 Solution" %}</h2>
+      <p class="m-b-20">{% trans "Device42 allows you to make the most of existing capacity, or to create a ‘lights on’ capacity planning forecast by answering questions such as:" %}</p>
+      <div class="row w-100">
+        <div class="col-md-6">
+          <ul class="checkmark-style">
+            <li>{% trans "Where do I have rack space and power to put new equipment?" %}</li>
+            <li>{% trans "Are there power spikes in my colo cage that put us over the power limit?" %}</li>
+            <li>{% trans "Do I have space and power for 200 more machines?" %}
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="checkmark-style">
+            <li>{% trans "Do I have any zombie servers?" %}</li>
+            <li>{% trans "Do I have in service IP addresses that aren’t being used?" %}</li>
+            <li>{% trans "Where are all the spare parts located and when should I reorder?" %}</li>
+          </ul>
+        </div>
+      </div>
+      <ul class="checkmark-style">
+        <li>{% trans "Is a /24 subnet the ideal size to assign to an internal department to minimize fragmentation, and if so, which /24?" %}</li>
+      </ul>
+      <p class="m-t-20">{% trans "When it’s time to boost server capacity and figure out where to place one new server or a hundred, Device42 is right there with the ITIL capacity planning tools you need like advanced “What-if” scenarios that can find you the space and power resources you need, even helping you to figure out if you’ll come up short, and by how much. Locating un- and under-utilized servers is a breeze, and forget hunting for that outdated IPAM spreadsheet when trying to figure out what IPs are in use." %}</p>
+    </section>
+    <br>
+    <section class="row is-table-row" id="sect2">
+        <div class="col-sm-7">
+            <p class="strong">{% trans "Many capacity management tools on the market today focus solely on CPU utilization and trending data to find underutilized servers. We believe that utilization doesn’t tell the whole story because:" %}</p>
+
+            <ul class="clean number-ul">
+                <li>{% trans "You generally size capacity for peak times while normal utilization is low" %}</li>
+                <li>{% trans "You might have an application with constant high utilization that has no users" %}</li>
+                <li>{% trans "You might have a valid app that is business critical, but is low utilization" %}</li>
+            </ul>
+        </div>
+        <div class="col-sm-5">
+            <img class="img-responsive" alt="{% trans 'Rack elevation documentation' %}"
+                 src="{% static 'img/landing/capacity-planning/banner2.png' %}">
+        </div>
+    </section>
+    <p class="m-t-40">{% trans "Only when you combine Device42’s automated service to server or service to service mapping with Device42’s utilization and trends metrics can you find out exactly which servers have applications that are truly being utilized on your network, while at the same time easily identifying those that are just eating resources." %}</p>
+{% endblock %}

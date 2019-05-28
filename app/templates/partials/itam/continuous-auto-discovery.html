@@ -1,0 +1,53 @@
+{% load i18n static %}
+<div {% if id %}id="{{ id }}" {% endif %}>
+
+    <div class="col-sm-12">
+        <h2 class="featurette-heading">{% trans "Comprehensive Auto-discovery" %}</h2>
+        <p><b>{% trans "An accurate inventory that is <i>always</i> audit-ready" %}</b></p>
+        <p>{% trans "Populate your inventory quickly and effortlessly with an extensive range of auto-discovery tools that support physical, virtual, cloud, and hybrid infrastructures." %}</p>
+        <ul class="checklist">
+            <li>{% trans "Discovery tools are agentless and/or agent-based <small><i>(don’t compromise, mix and match!)</small></i>" %}</li>
+            <li>{% trans "All discoveries can be scheduled ensuring your inventory is always up-to-date" %}</li>
+            <li>{% trans 'Multiple discovery protocols supported <small><i>(SNMP, WMI, SSH, Modbus, IPMI, & more <a href="https://www.device42.com/features/device-discovery/" target="_blank">[full details]</a>)</small></i>' %}</li>
+            <li>{% trans "Native support for popular virtualization platforms, both public and private cloud included" %}</li>
+            <li>{% trans "Native support for blade chassis, load balancers, UCS, mid-range, mainframe, and more." %}</li>
+            <li>{% trans "Custom discovery and integration support with RESTful APIs, webhooks, sample scripts, and open-source tools." %}</li>
+        </ul>
+    </div>
+
+    <div class="col-sm-12">
+        <p><b>{% trans "Hardware inventory" %}</b></p>
+        <p>{% trans "Device42 locates and updates your devices automatically, making it easy to document physical, virtual, blade, clusters, switches or any other device types." %}</p>
+        <p>{% trans "Featuring easy to use, multi-edit data entry pages which allow you to add and modify hardware components from a single page. While editing a device, simply open a new tab to see all locations that part number exists, and inventory counts for that specific model or part number as well." %}</p>
+    </div>
+
+    <div class="col-sm-12">
+        <img class="img-responsive center-block img-border"
+             alt="{% trans 'Hardware Inventory' %}"
+             src="{% static 'img/sections/features/itam/hardware-inventory.png' %}">
+    </div>
+
+</div>
+<div {% if id %}id="{{ id }}" {% endif %}class="row featurette {% if vcenter %}is-table-row{% endif %}">
+
+    <div class="col-sm-8">
+        <p><b>{% trans "Software inventory" %}</b></p>
+        <p>{% trans "Device42’s powerful software discovery provides organizations a comprehensive, accurate profile of the software deployed on Windows and Linux machines across the entire IT infrastructure, from the server to the desktop." %}</p>
+        <ul class="checklist">
+            <li>{% trans "Compare current usage to license counts" %}</li>
+            <li>{% trans "Detect prohibited software" %}</li>
+            <li>{% trans "Track license agreements and expiration dates" %}</li>
+            <li>{% trans "Identify purchased vs. installed software" %}</li>
+            <li>{% trans "Provide customizable notification alerts" %}</li>
+            <li>{% trans "Ensure compliance & manage costs" %}</li>
+        </ul>
+        <p>{% trans "Device42 can track user, device and CPU based licensing models!" %}</p>
+    </div>
+
+    <div class="col-sm-4">
+        <img class="img-responsive vert-offset-top-2 center-block img-border"
+             src="{% static 'img/sections/features/itam/software-inventory.png' %}"
+             alt="{% trans 'Software Inventory' %}">
+    </div>
+
+</div>

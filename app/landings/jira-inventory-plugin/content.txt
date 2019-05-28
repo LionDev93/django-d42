@@ -1,0 +1,34 @@
+[head.title]
+Inventory Management Database for JIRA with agent-less auto-discovery
+
+[head.description]
+Device42 is a comprehensive Inventory Management Database for JIRA with agent-less auto-discovery.
+
+[landing.title]
+Inventory Management Database for JIRA
+
+[landing.content]
+
+Device42 CMDB is a single source of truth that ensures that Inventory records are accurate with powerful auto-discoveries and provides a clear view into your IT ecosystem. It comes with plugins for JIRA hosted, JIRA service desk and JIRA cloud to enhance the value of your ITSM.
+
+- Agent-less auto-discoveries to keep all your configuration items (CIs) up-to-date.
+- Helps you unify data and processes across teams, as well as departments, creating alignment companywide.
+- Powerful visualizations to make quick business decisions and quickly find impacts of different CIs to other CIs.
+- Out of box integrations with ITSM tools like JIRA, servicenow, Cherwell and many more help you enhance the value of your existing investments.
+- REST APIs to build quick integrations with homegrown and external tools whether it is another CMDB, automation or other tools.
+
+
+[feature[1].title]
+Complete Auto Discovery for all networks
+[feature[1].content]
+Device42 auto-discovery spans from legacy to newer systems and builds dependencies between physical, virtuals, cloud infrastructure and applications. No need to use multiple tools to put together information anymore.
+
+[feature[2].title]
+CMDB for JIRA with powerful reporting and visualizations
+[feature[2].content]
+Device42 comes with pre-configured CIs so there is no need to spend time or money on expensive implementation services. Coupled with advanced customizations, discover any physical, virtual or service dependencies you want to capture. Native integration with JIRA hosted, JIRA service desk and JIRA cloud to enhance your ITSM.
+
+[feature[3].title]
+Real time map of your IT infrastructure with integrations
+[feature[3].content]
+Go beyond traditional CMDBs using our out of box integrations with JIRA, Confluence, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, ServiceNow and many more you can use this real-time map to reduce your mean time to recovery and make faster decisions in your daily IT operations.

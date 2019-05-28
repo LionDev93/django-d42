@@ -1,0 +1,37 @@
+[head.title]
+Advanced network scanner with agentless autodiscovery
+
+
+[head.description]
+Device42 is a advanced network scanner with agentless autodiscovery. Scan your entire network in minutes!
+
+
+[landing.title]
+Advanced Network Scanner
+
+
+[landing.content]
+Looking for a better Advanced Network Scanner alternative? The Device42 network scanner enables SNMP, WMI, and SSH discovery, comprehensively identifying and tracking all of your physical and logical components, relationships, and interdependencies!
+
+- Complete hardware & software scan - Windows, Linux, *NIX
+- Full network scanning: Switches, Routers, Firewalls, Load Balancers
+- IP to MAC address and MAC to switch port relationships
+- Discover VLANs, subnets, and CDP / LLDP neighbors
+- Advanced network scanner supports cloud and hypervisor discovery, and custom schedules!
+
+
+
+[feature[1].title]
+Complete hypervisor, VM, and cloud advanced network scanner discovery
+[feature[1].content]
+Device42's advanced network scanner connects to your hypervisor and cloud platforms, collecting host and guest details. Network scans are scheduled & on-demand, support for all popular platforms!
+
+[feature[2].title]
+Load balancer network scan discovery
+[feature[2].content]
+The Device42 SNMP advanced network scanner connects to your F5's and other load balancers and builds dependencies between physical, virtuals and applications.
+
+[feature[3].title]
+Comprehensive data collection and auto-correlation, external integrations, and REST APIs!
+[feature[3].content]
+Much more than just a network scanner, integrations with Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, ServiceNow and more. Bring in data discovered by other systems, and use REST APIs to customize what data you want to send to Device42!

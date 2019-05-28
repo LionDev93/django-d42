@@ -1,0 +1,82 @@
+{% extends "base/_base-landing.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'ISO27001 Compliance' %}"/>
+{% endblock %}
+{% block title %}{% trans "ISO 27001 Compliance" %}{% endblock %}
+
+{% block styles %}
+<style>
+    body{
+    }
+    h1 {
+        font-family: "Roboto Condensed", sans-serif !important;
+      }
+    .cta-free-trial {
+        padding: 24px 0;
+        text-transform: none !important;
+        background-color: #ffc90e;
+        color: #130dff !important;
+    }
+</style>
+{% endblock %}
+
+{% block landingHeadingText %}{% trans "ISO 27001 Compliance" %}{% endblock %}
+{% block landingfeature %}
+    <section class="row flat-bottom landing-section">
+        <div class="col-sm-9">
+            <p class="lead">{% blocktrans %}﻿ISO 27001 Compliance requires you to designate ‘risk owners’ for each and every one of your IT Assets, and Device42 makes it simple! <br />Easily locate, accommodate, and assign owners to each and every IT asset you own. Device42 does the hard work for you, autodiscovering all of your hardware and software across your entire IT infrastructure!{% endblocktrans %}</p>
+            <ul class="checklist lead-small bullet-blue light-weight">
+              <li>{% trans "Agentless and agent-based Continuous Auto-discovery" %}</li>
+              <li>{% trans "Autodiscovery tools support physical, virtual, hybrid, and cloud-based infrastructures" %}</li>
+              <li>{% trans "Device42’s ISO 27001 compliance tools track ownership everywhere, on premise and in the cloud" %}</li>
+              <li>{% trans "Physical and Virtual based ISO 27001 compliance auditing, simple security and risk assessments, etc." %}</li>
+              <li>{% trans "Track and visualize relationships between your servers and other IT assets" %}</li>
+            </ul>
+        </div>
+        <div class="col-sm-3">
+            <img src="{% static 'img/landing/iso27001-view-device-other.png' %}"
+                 alt="{% trans 'ISO27001 View Device Other' %}" class="img-responsive center-block">
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block maincontent %}
+    <section class="row is-table-row landing-section">
+        <div class="col-sm-12">
+            <h3 style="font-weight:400;" class="flat-bottom">{% trans "Simplify ISO 27001 Compliance With Complete IT Inventory Management" %}</h3>
+            <p>{% trans "Device42’s ISO 27001 compliance software produces an accurate inventory that is ALWAYS audit-ready" %}</p>
+            <p>{% trans "Running down your ISO 27001 compliance checklist has never been easier! Device42 can:" %}</p>
+            <ul class="lead-small bullet-blue light-weight">
+                <li>{% trans "Discover hardware and software on any operating system: Windows, Linux, UNIX, Mac, or BSD" %}</li>
+                <li>{% trans "Run discovery with Device42’s ISO 27001 compliance tools on demand, or schedule discovery to run automatically so your inventory is always up-to-date" %}</li>
+                <li>{% trans "Multiple discovery protocols supported (e.g. WMI & WinRM, SSH, SNMP, Modbus, CDP, and many more)" %}</li>
+                <li>{% trans "Get ISO 27001 compliance details from your blade chassis" %}</li>
+                <li>{% trans "Utilize Device42’s powerful RESTful API to automate your ISO 27001 compliance efforts" %}</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="row is-table-row landing-section">
+        <div class="col-sm-3">
+            <img src="{% static 'img/landing/sql-migration/banner.png' %}"
+                     class="img-restrict center-block" alt="{% trans 'Microsoft Asset Management' %}">
+        </div>
+        <div class="col-sm-9">
+          <h3 style="font-weight:400;" class="flat-bottom">{% trans "Track Relationships and Map Dependencies Between Your Software, Services and IT Assets" %}</h3>
+          <p>
+              {% trans 'Device42’s ISO 27001 compliance software also provides the powerful ability to track and visualize operational dependencies, and can produce detailed software, service, and server impact charts that can:' %}
+          </p>
+          <ul class="lead-small bullet-blue light-weight">
+              <li>{% trans "Display downward dependencies from Virtual Server Host or Blade Chassis to contained VM’s" %}</li>
+              <li>{% trans "Visualize all service connections between them" %}</li>
+              <li>{% trans "Display a clear map of your operations and its interdependencies" %}</li>
+              <li>{% trans "Highlight the trickle-down effect of a service interruption if a blade or service were to become unavailable" %}</li>
+          </ul>
+        </div>
+
+    </section>
+
+{% endblock %}

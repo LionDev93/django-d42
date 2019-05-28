@@ -1,0 +1,192 @@
+{% extends "base/_base-landing.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% blocktrans %}It is a good idea to compare alternative CMDB tools like Riada's Insight for Jira, and possibly other tools. There are a wide variety available, but Device42 is among the best.{% endblocktrans %}"/>
+    <meta name="keywords"
+          content="device42, vs, compare, comparison, riada, insight, jira, device, management, core, asset, ipam, itam, cmdb, functions, features, cloud, discovery, autodiscovery, app, mapping, appmapping, application, map, diagram, discover, depedency, dcim, ticketing, plugin, addon, enterprise, free, trial, tool, tools" />
+{% endblock %}
+{% block title %}{% trans "Device42 vs. Riada Insight Jira" %}{% endblock %}
+{% block scripts %}
+    <script>
+        $(function () {
+            $("[data-toggle='tooltip']").tooltip();
+        });
+    </script>
+{% endblock %}
+{% block landingHeadingText %}{% trans "Device42 vs. Riada Insight Jira" %}{% endblock %}
+{% block landingLeadText %}
+    {% trans "The modern data center can span multiple locations, both physical and cloud, and often features software defined networks, virtualization, containers, cloud and hybrid deployments, and intricate high-availability configurations. All this progress has brought with it complication, and it is no longer practical to manage your IT infrastructure using separate tools for asset management (ITAM), IP Management (IPAM), Cloud Management, Application Dependency Management (ADM), and Software License Management (SLM). The dependencies and interrelationships are too complex, and too important, and can only be sufficiently captured by an integrated tool -- like Device42." %}
+{% endblock %}
+{% block landingfeature %}
+    <section class="row padded">
+        <div class="col-xs-12">
+            <p class="lead">{% blocktrans %}It is always a good idea to compare alternative Jira tools like Riada’s Insight for Jira, and possibly other Jira ticketing tool addons. There are a wide variety available, but we’re confident <strong style="font-weight: 400;">Device42 is among the best, offering market-leading:</strong>{% endblocktrans %}</p>
+
+            <div class="table-responsive">
+                <table class="table" style="margin-bottom: 0;">
+                    <thead>
+                    <tr>
+                        <td class="text-center">
+                            <i class="fa fa-check"></i>   <p class="h3" style="display: inline;">{% trans "Features" %}</p>
+                        </td>
+                        <td class="text-center">
+                            <i class="fa fa-check"></i>   <p class="h3" style="display: inline;">{% trans "Pricing" %}</p>
+                        </td>
+                        <td class="text-center">
+                            <i class="fa fa-check"></i>   <p class="h3" style="display: inline;">{% trans "Support" %}</p>
+                        </td>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <hr>
+        </div>
+    </section>
+
+    <section class="row flat-top">
+        <div class="col-xs-12">
+            <h3 style="margin-top: 0px;">{% trans "The table below highlights similarities and differences between Device42 and Riadia’s Insight for Jira:" %}</h3>
+        </div>
+        <div class="col-xs-4 col-md-3 col-md-offset-1">
+            <img class="img-responsive center-block" alt="{% trans 'Insight Jira vs Divece42' %}"
+                 src="{% static 'img/landing/insight-jira/insight-jira-vs-device42.png' %}">
+            <p>{% trans "Device42 looks at your IT Infrastructure holistically and gives you a single console to manage your Data Center (DCIM), IP addresses (IPAM) and passwords in addition to ITAM (IT asset management) and a CMDB." %}</p>
+            <p><em>{% trans "And that’s just the beginning." %}</em></p>
+        </div>
+        <div class="col-xs-8 col-md-6">
+            <div class="table-responsive">
+                <table class="table table-condensed table-hover d42-sw-compare">
+                    <thead>
+                    <tr>
+                        <th class="table-title">
+                            <p class="dark-blue text-left alt-text" style="margin:0;font-size:24px;">{% trans "Feature" %}</p>
+                        </th>
+                        <th class="product-heading blue">{% trans "Device42" %}</th>
+                        <th class="product-heading blue">{% trans "Riada Insight" %}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="comp-feature">{% blocktrans %}Powerful, <em><u>FREE</u></em> JIRA Integration{% endblocktrans %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Discovery Included in Core product" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "CMDB" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "ITAM" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "IPAM" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "DCIM" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Password Management" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td class="comp-feature">
+                            {% trans "Cost" %} <em class="text-muted">({% trans "Core / Core + Dependency Mapping" %})</em>
+                        </td>
+                        <td class="text-center">
+                            <i class="fa fa-money text-success"></i>
+                            <i class="fa fa-money text-success"></i> / 
+                            <i class="fa fa-money text-success"></i>
+                        </td>
+                        <td class="text-center">
+                            <i class="fa fa-money text-danger"></i> / 
+                            <i class="fa fa-money text-danger"></i>
+                            <i class="fa fa-money text-danger"></i>
+                            <i class="fa fa-money text-danger"></i>
+                        </td>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="row text-center">
+        <div class="col-xs-12">
+            <h3 style="margin-bottom: 0;">{% trans "You get more for your money with Device42." %}</h3>
+            <p style="color: #22a3df;">{% trans "Don’t pay enterprise prices -- without getting enterprise features." %}</p>
+        </div>
+        <div class="col-sm-4 col-sm-offset-2">
+            <img class="img-responsive center-block" alt="{% trans 'Insight Asset Management' %}" 
+                 src="{% static 'img/landing/insight-jira/insight-asset-management.png' %}">
+        </div>
+        <div class="col-sm-4">
+            <img class="img-responsive center-block" alt="{% trans 'Insight Discovery' %}" 
+                 src="{% static 'img/landing/insight-jira/insight-discovery.png' %}">
+        </div>
+        <div class="col-xs-12">
+            <p class="lead">{% trans "Insight’s Asset Management looks like a bargain on the surface..." %}</p>
+        </div>
+    </section>
+    <section class="row text-center">
+        <div class="col-xs-12">
+            <p class="lead"><strong style="font-weight: 400;">{% trans "Both Device42 and Insight’s Jira Integrations share similar functionality:" %}</strong></p>
+            <div class="row">
+                <div class="col-xs-4 col-xs-offset-1">
+                    <ul class="checklist">
+                        <li>{% trans "Link CMDB Items to JIRA Issues" %}</li>
+                        <li>{% trans "Search Jira Tickets for CI’s" %}</li>
+                        <li>{% trans "View CI Details From HelpDesk Tickets" %}</li>
+                    </ul>
+                </div>
+                <div class="col-xs-3">
+                    <ul class="checklist">
+                        <li>{% trans "Conditional Functions" %}</li>
+                        <li>{% trans "Validator Functions" %}</li>
+                        <li>{% trans "POST Functions" %}</li>
+                    </ul>
+                </div>
+                <div class="col-xs-3">
+                    <ul class="checklist">
+                        <li>{% trans "Custom Jira Fields" %}</li>
+                        <li>{% trans "Custom Jira Workflows" %}</li>
+                        <li>{% trans "Powerful Permissioning" %}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <p class="lead">{% blocktrans %}...until you realize it <strong style="font-weight: 400;">doesn’t include *any* auto-discovery.</strong>{% endblocktrans %}</p>
+        </div>
+    </section>
+    <section class="row">
+        <div class="col-xs-12">
+            <p class="lead" style="font-weight: 400; margin-bottom: 0px;">{% trans "Device42’s Core product includes Autodiscovery, and our JIRA enhancement add-on is completely free." %}</p>
+            <p><em>*{% blocktrans %}Riada’s Insight & Discovery Jira plugins are their core product, and <b>you only get discovery if you buy both.{% endblocktrans %}</b></em></p>
+            <hr>
+        </div>
+    </section>
+
+    <section class="row">
+        <div class="col-xs-12">
+            <h3 style="margin-bottom: 0;">{% trans "World Class Support." %}</h3>
+            <p style="color: #22a3df;">{% trans "Get treated like a paying customer from the moment you download." %}</p>
+            <p class="lead">{% blocktrans %}Try Device42 for yourself. If you have a question, or need help with anything, don’t hesitate to reach out to <a href="support@device42.com" target="_blank">support@device42.com</a>, or pick up the phone and give us a call. <em>We’re here to help!</em>{% endblocktrans %}</p>
+        </div>
+    </section>
+{% endblock %}

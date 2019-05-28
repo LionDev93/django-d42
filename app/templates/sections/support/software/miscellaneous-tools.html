@@ -1,0 +1,74 @@
+{% load i18n static %}
+<div class="well">
+    <h2 class="flat-top">Device42 {% trans "QR Code Print Utility" %}</h2>
+    <p>{% trans "The Device42 QR code print utility allows users to have fine grained control over printing QR codes using your defined Device42 print profiles or generate codes on an ad-hoc basis." %}</p>
+    <p>{% trans "This is a Windows-based application <em>(Microsoft Software Installer)</em>, and is compatible with Device42 9.6.0+ and above." %}</p>
+    <div class="row">
+        <div class="col-sm-8">
+            <p>{% trans "Current Version" %} <code><strong>1.0.4</strong></code></p>
+        </div>
+        <div class="col-sm-4 text-center">
+            <form action="." method="post" role="form">{% csrf_token %}
+                <input style="display:none;" type="text" name="main" maxlength="64">
+                <button type="submit" name="download" value="d42 print utility"
+                        class="btn btn-warning">{% trans "Download" %}</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="well">
+    <h2 class="flat-top">Device42 {% trans "Agent Log Upload Utility" %}</h2>
+    <p>{% trans "The Device42 agent log upload utility allows users to upload log files created by the Device42 discovery agent when run in 'offline' mode. The utility supports batch upload of multiple log files per run." %}</p>
+    <p>{% trans "This is a Windows-based application and is compatible with Device42 15.14.04 and above." %}</p>
+    <div class="row">
+        <div class="col-sm-8">
+            <p>{% trans "Current Version" %} <code><strong>1.0.0</strong></code></p>
+        </div>
+        <div class="col-sm-4 text-center">
+            <form action="." method="post" role="form">{% csrf_token %}
+                <input style="display:none;" type="text" name="main" maxlength="64">
+                <button type="submit" name="download" value="d42 agent uploadtool"
+                        class="btn btn-warning">{% trans "Download" %}</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="well">
+    <h2 class="flat-top">Device42 {% trans "ODBC Driver" %}</h2>
+    <p>{% trans "The Device42 ODBC driver supports access to the extensive data stored in Device42's CMDB via ODBC (Open Database Connectivity)." %}</p>
+    <p>{% trans "The ODBC driver is Windows-based and is compatible with Device42 15.14.02 and above." %}</p>
+    <div class="row">
+        <div class="col-sm-8">
+            <p>{% trans "Current Version" %} <code><strong>1.0.1</strong></code></p>
+        </div>
+        <div class="col-sm-4 text-center">
+            <form action="." method="post" role="form">{% csrf_token %}
+                <input style="display:none;" type="text" name="main" maxlength="64">
+                <button type="submit" name="download" value="D42 ODBC driver"
+                        class="btn btn-warning">{% trans "Download" %}</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="well">
+    <h2 class="flat-top">{% trans "Device42 Search - Browser Add-on" %}</h2>
+    <p>{% trans "The Device42 search add-on makes it easy to search for items in your Device42 instance. Just add your Device42 instance URL in options, and you'll be able to highlight any word git<i>(e.g. an IP address, a device name, serial #, or any other word)</i>, right click and search in Device42. You'll then be taken to the Device42 search page where you'll see relevant results. This will help you quickly find exactly what you're looking for in Device42!" %}</p>
+    <div class="row">
+        <div class="col-sm-8">
+            <p>{% trans "Current Chrome add-on Version" %} <code><strong>1.0.1</strong></code><br>{% trans "Current Firefox add-on Version" %} <code><strong>1.0.1</strong></code></p>
+        </div>
+        <div class="col-sm-4 text-center">
+            <form action="https://chrome.google.com/webstore/detail/device42-search/nikgbjdjgbnlfbjoeddjbpddidificdj" method="get" role="form" target="_blank">
+                <button type="submit" class="btn btn-warning">{% trans "Chrome Download" %}</button>
+            </form>
+        </div>
+        <div class="col-sm-4 text-center">
+            <form action="https://addons.mozilla.org/en-US/firefox/addon/device42-search-addon" method="get" role="form" target="_blank">
+                <button type="submit" class="btn btn-warning">{% trans "Firefox Download" %}</button>
+            </form>
+        </div>
+    </div>
+</div>

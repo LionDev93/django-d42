@@ -1,0 +1,183 @@
+{% extends 'base/_base.html' %}
+{% load i18n static %}
+{% block title %}{% trans "Gravity R&D - Case Study" %}{% endblock %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Case studies for Device42 - with Gravity R&D' %}"/>
+{% endblock %}
+{% block styles %}
+  <style>
+    .secondary-menu {
+      text-align: center;
+    }
+
+    @media(max-width: 992px){
+      .secondary-menu {
+        display: none;
+      }
+    }
+
+    .secondary-menu.fixed {
+      position: fixed;
+      background: white;
+      z-index: 999;
+      top: 53px;
+      width: 100%;
+    }
+
+    .secondary-content  {
+      display: inline-block;
+    }
+
+    .secondary-menu-list {
+      display: inline-block;
+      list-style: none;
+      margin: 0;
+      padding: 0px;
+    }
+
+    .secondary-menu-list-item {
+      display: inline-block;
+      text-align: center;
+      zoom: 1;
+      vertical-align: middle;
+      height: 100%;
+      width: auto;
+      min-width: 100px;
+      cursor: pointer;
+      position: relative;
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+
+    .secondary-menu-list-item:before {
+      display: none;
+    }
+
+    .secondary-menu-link {
+      padding: 1.5rem 0;
+      color: #706F6F;
+      display: block;
+    }
+
+    .secondary-menu-link:focus, .secondary-menu-link:hover {
+      color: #706F6F;
+      text-decoration: none;
+    }
+
+    <!--.secondary-menu-list-item:hover, .secondary-menu-list-item.active {-->
+      <!--color: #706F6F;-->
+      <!--border-bottom: 3px solid #ab00dc;-->
+    <!--}-->
+
+    .secondary-menu-list-item:after {
+      content: "";
+      background-color: #22a3df;
+      padding: 1.5px;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      line-height: 3px;
+      font-size: 2em;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      right: 50%;
+      visibility: hidden;
+      transition: all 0.2s linear;
+    }
+
+    .secondary-menu-list-item:hover:after {
+          visibility: visible;
+        left: 6px;
+        right: 6px;
+    }
+
+    .secondary-menu-list-item.active:after {
+      visibility: visible;
+      content: "";
+      background-color: #eb8f34;
+      font-size: 30px;
+      padding: 1.5px;
+      line-height: 3px;
+      position: absolute;
+      bottom: 0;
+      left: 6px;
+      right: 6px;
+    }
+
+    .d-flex {
+      display: flex;
+    }
+  </style>
+{% endblock %}
+{% block body_scripts %}
+<script>D42.setSiteSection("customers");</script>
+{% endblock %}
+{% block body %}
+    <header class="row bg-primary head-home">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{% trans "Case Studies" %} - {% trans "Gravity R&D" %}</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <br />
+                {% include 'sections/customers/_case-studies_left_col.html' %}
+            </div>
+            <div class="col-sm-9">
+                <br />
+                <div class="secondary-menu">
+                <div class="secondary-content">
+                  <ul class="secondary-menu-list">
+                    <li class="secondary-menu-list-item" id="testimonials_link">
+                      <a href="{% url 'customers_testimonials' %}" class="secondary-menu-link">
+                        {% trans "TESTIMONIALS" %}
+                      </a>
+                    </li>
+                    <li class="secondary-menu-list-item" id="customers_link">
+                      <a href="{% url 'customers' %}" class="secondary-menu-link">
+                        {% trans "CUSTOMERS" %}
+                      </a>
+                    </li>
+                    <li class="secondary-menu-list-item" id="case_studies_link">
+                      <a href="{% url 'customers_case_studies' %}" class="secondary-menu-link">
+                        {% trans "CASE STUDIES" %}
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+                <h3 class="text-muted">{% trans "Device42 User Case Study – Gravity R&D" %}</h3>
+                <ul>
+                    <li><strong>{% trans "Company" %}</strong>: {% trans "Gravity R&D" %}</li>
+                    <li><strong>{% trans "Industry" %}</strong>: {% trans "SAS Recommendations" %}</li>
+                    <li><strong>{% trans "Location" %}</strong>: {% trans "Headquartered in" %}</li>
+                </ul>
+
+                <h2>{% trans "Gravity R&D, which specializes in serving real time customer SAS recommendations, brought Device42 on board to unify their information silos into a single source. Device42 allows Gravity to visualize their infrastructure deployments, and quickly locate capacity for load response scaling, ultimately supplying customers with real-time recommendations on products they might be interested in based on those they have looked at." %}</h2>
+                <p>{% blocktrans %}Gravity powers the “You may also like” and “You may also be interested in” suggestions for many big-name websites used by millions of visitors daily. The loads they face are somewhat predictable, but do vary considerably, and scaling their infrastructure to meet demand without being wasteful presents a challenge. Sometimes, they must respond in seconds but scaling would take minutes, so a large bare-metal base deployment is a must to support the load.{% endblocktrans %}</p>
+                <p>{% trans "To more efficiently serve Gravity’s customers, Gravity needed software that could do the following jobs:" %}</p>
+                <ol>
+                    <li>{% trans "Unify their information silos" %}</li>
+                    <li>{% trans "Translate hostnames between their internal naming convention & that of their hosting provider" %}</li>
+                    <li>{% trans "Quickly anticipate the need to scale up for increasing load" %}</li>
+                    <li>{% trans "Track servers and back office non-IP asset inventory (Monitors, Laptops, SSDs, Keyboards, Mice, etc.) in one place" %}</li>
+                </ol>
+                <h3 class="text-muted">{% trans "The Implementation" %}</h3>
+                <p>{% trans "When asked about the Device42 implementation, Gravity reported:" %} <em>“{% trans "Installing and configuring Device42 was really fast. It was up and running in like an hour, as the process of deploying virtual appliances is something we do all the time. Next, the certificates and a DNS entry were configured, and then a user & password was created for a fellow team member who took over from there. The implementation was about a straightforward as it could get." %}“</em></p>
+                <p>{% trans "There was a slight learning curve to understanding how all the many parts of Device42 worked together but, after a bit of use, that was quickly overcome." %}</p>
+                <p><em>“{% trans "We needed to be able to translate back and forth quickly between the naming convention we used internally, and the convention used by our hosting provider. We came up with a strategy. We started with asset inventory, and then leveraged the API and the alias field to get the corresponding hostname data into Device42. After about 4 weeks, we realized we had everything working well and our familiarity grew to the point that we really felt we knew the software." %}”</em></p>
+                <h3 class="text-muted">{% trans "Post Implementation" %}</h3>
+                <p>{% trans "With the implementation completed and the system operational for several months, Gravity provided the following feedback:" %} <em>“{% trans "We began with Excel sheets a few years back, and then attempted to unify the information within Google Docs. We then found out we needed to track more information about the bare metal machines, which led to creation of another database, and then another... and we soon realized that we were yet again using too many disparate products to track the different machine instances and the associated data. We tried to unify our information with some open source solutions – Racktables, Sunbird ... but Device42 was the only product we found that could handle both our server’s information and our non-IP assets under the same umbrella. Since Device42 doesn’t count non-IP assets against the license, this was another bonus!" %}”</em></p>
+                <p>{% trans "When asked to elaborate on the specifics of using Device42 to help manage their deployment, Gravity commented," %} <em>“{% trans "Device42’s to-the-point functionality and responsiveness allows us to quickly assess our currently deployment and adjust as necessary to meet the demands of our application, and ultimately those of our customers. The core of our application can be quite CPU intensive. We use a hybrid solution with a very large bare metal deployment to handle the base load. We can scale in minutes, but sometimes we have only a few seconds to react to load [...] We have custom scripts that populate the Device42 database via the API as part of our process." %}”</em></p>
+                <p>{% trans "Device42 checked all the boxes. On top of that, Gravity commented on their positive interactions with Device42’s support team when they encountered a minor bug:" %} <em>“{% trans "The support was excellent. When we found the bug, we reported it and were told that a fix would be out as soon as possible. Just a couple of weeks passed, and we were told that the fix had been incorporated into the latest release. We upgraded, and it was fixed. Device42’s responsiveness was nothing short of excellent!" %}”</em></p>
+                <p>{% trans "When asked about what insights Gravity could offer others seeking to better manage their data center infrastructure, Gravity shared," %} <em>“{% blocktrans %}Trying to manage IT inventory without a tool that stores accurate device data in a centralized database is very difficult. Manually managed lists are burdensome and quickly become out of sync with the actual environment. One of the keys that sold us on Device42 is that it’s “fast” ... in every way. It’s easy to get information in and out, easy to install, support is fast, the user interface is fast, the purchase process was fast, and the software itself was fast to learn - We don’t like wasting time, and with Device42, no time was wasted.{% endblocktrans %}”</em></p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

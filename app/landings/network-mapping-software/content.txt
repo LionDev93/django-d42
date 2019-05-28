@@ -1,0 +1,38 @@
+[head.title]
+Comprehensive Network Mapping Software with Agentless Autodiscovery
+
+
+[head.description]
+Device42 is a comprehensive Network Mapping Software Toolkit powered by Agentless Autodiscovery. Scan and Map Your Entire IT Infrastructure in Minutes!
+
+
+[landing.title]
+Comprehensive Agentless Network Mapping Software
+
+
+[landing.content]
+The Device42 network mapping software features native hypervisor, SNMP, WMI, and SSH discovery, comprehensively identifying and tracking all of your physical and logical components, relationships, and interdependencies!
+
+- Complete host and guest discovery: hardware & software on Windows, Linux, and *NIX/BSD
+- Full network auto-discovery: switches, routers, firewalls, load balancers
+- Powerful visualizations let you view detailed maps while customizable reports deliver the answers you're looking for
+- Support for all common hypervisors: VMware, Hyper-V, Xen, KVM
+- Discover VLANs, subnets, and CDP / LLDP neighbors
+- Complete cloud and hypervisor discovery with custom network discovery tool scheduling - Scan your entire IT infrastructure in minutes!
+
+
+
+[feature[1].title]
+Network Mapping Software Discovers Complete VM & Cloud Inventory
+[feature[1].content]
+Device42's Network Discovery Tool connects to your hypervisor and cloud platforms, collecting host and guest details. Network scans are scheduled & on-demand, support for all popular platforms!
+
+[feature[2].title]
+Native Load Balancer and Router Virtual Context Discovery
+[feature[2].content]
+The Device42 SNMP Network Discovery Tool connects to your load balancers, switches, firewalls, etc. and maps virtual hosts and dependencies across your entire infrastructure!
+
+[feature[3].title]
+Comprehensive Network Discovery Tool with External Integrations, and REST APIs!
+[feature[3].content]
+Much more than just a Network Discovery Tool, Device42 integrates with Puppet, Chef, SCCM, Infoblox, Splunk, ServiceNow and more. Bring in data discovered from other systems, and use REST APIs to fuel your automation!

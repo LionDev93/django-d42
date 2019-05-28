@@ -1,0 +1,159 @@
+{% extends "base/_base-landing.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'IT Documentation Software' %}"/>
+{% endblock %}
+{% block styles %}
+    <style>
+      .checkmark-style li:before {
+          content: "\2714";
+          margin-left: -24px;
+          margin-right: 12px;
+          position: relative;
+          vertical-align: text-top;
+          display: inline-block;
+          font-weight: 100;
+          font-size: 15px;
+          color: #22a3df;
+      }
+    </style>
+{% endblock %}
+{% block title %}{% trans "IT Documentation Software" %}{% endblock %}
+
+{% block landingHeadingText %}{% trans "IT Documentation Software" %}{% endblock %}
+{% block landingfeature %}
+    <section class="landing-section">
+        <h4>{% trans "Device42 is the only IT documentation software with a ‘self-documenting CMDB’ that automatically creates an accurate map of your infrastructure with all of the important details about your physical, virtual and cloud networks, the servers, applications, and services, and their relationships and dependencies by:" %}</h4>
+        <ul class="bullet-blue">
+            <li>{% trans "Agent-lessly discovering all of your hardware, software, and application dependencies via automated discovery and application dependency mapping (ADM)" %}</li>
+            <li>{% trans "Analyzing thousands of servers without installing any extra software, and without needing to configure expensive span ports" %}</li>
+            <li>{% trans "Automatically generating dependency flow diagrams that show the relationship between devices, servers, applications, and application components" %}</li>
+            <li>{% trans "Showing what services are listening on what ports, and all of the open ports on each server" %}</li>
+            <li>{% trans "Augmenting the discovery process with netflow data, and generating comprehensive application dependency maps even if certain servers can’t be accessed directly" %}</li>
+        </ul>
+        <br>
+        <a href="{% static 'img/landing/it-infrastructure-map.png' %}" data-featherlight="image">
+          <img src="{% static 'img/landing/it-infrastructure-map.png' %}"
+               class="img-responsive box-shadow center-block"
+               alt="{% trans 'IT Documentation Software' %}"/>
+        </a>
+    </section>
+{% endblock %}
+
+{% block maincontent %}
+    <secction class="landing-section">
+      <h3 class="sub-heading">{% trans "Device42 IT documentation software quickly and thoroughly discovers your network using a variety of auto-discovery methods, automatically correlating the information into a detailed IT infrastructure map:" %}</h3>
+      <div class="row">
+        <div class="col-md-8">
+        <ul class="square-style">
+            <li>{% trans "SNMP v1/v2c/v3 Discovery:" %}</li>
+            <ul>
+                <li>{% trans "Network switches, routers and firewalls" %}</li>
+                <li>{% trans "Load balancers: F5 BIG-IP, Cisco NetScaler" %}</li>
+                <li>{% trans "Blade systems: chassis/blade system information" %}</li>
+                <li>{% trans "Discovery and monitoring of power devices like PDUs, UPS, CRAC, etc." %}</li>
+                <li>{% trans "Console switches, fiber switches, SAN switches, etc." %}</li>
+            </ul>
+            <li>{% trans "Netflow data collection for discovery and analysis" %}</li>
+            <li>{% trans "Nmap based discovery (for scans without credentials)" %}</li>
+            <li>{% trans "WMI and WinRM based discovery for Windows based machines (and servers)" %}</li>
+            <li>{% trans "SSH based discovery for Mac, BSD, UNIX, and different Linux flavors" %}</li>
+            <li>{% trans "Hypervisor and VM discovery with support for all major virtualization platforms" %}</li>
+            <li>{% trans "Cloud discovery support for Amazon, Azure, Joyent, Linode, Digital Ocean etc." %}</li>
+            <li>{% trans "Cisco UCS support" %}</li>
+            <li>{% trans "IPMI discovery for BMC boards" %}</li>
+            <li>{% trans "DNS sync and ping sweep for network discovery" %}</li>
+            <li>{% trans "Pull inventory data from tools like Puppet, Chef, Microsoft SCCM, monitoring systems" %}</li>
+            <li>{% trans "Discoveries are continuously run on a schedule, automatically detecting changes to your infrastructure as they are made" %}</li>
+        </ul>
+      </div>
+        <div class="col-md-4">
+          <br>
+          <a href="{% static 'img/sections/solutions/network-discovery-01.png' %}" data-featherlight="image">
+            <img src="{% static 'img/sections/solutions/network-discovery-01.png' %}"
+                 class="img-responsive center-block padded"
+                 alt="{% trans 'IT Documentation Software' %}"/>
+          </a>
+      </div>
+      </div>
+    </secction>
+
+    <section class="landing-section is-table-row">
+      <h3 class="sub-heading">{% trans "IT Documentation Software Continuously Discovers Hypervisors, Virtual Machines, and Cloud Platforms " %}</h3>
+      <p>{% trans "Device42 connects natively to many popular hypervisors, and automatically gathers host and VM details. Device42’s Continuous Discovery then keeps the VM documentation up-to-date as VMs are created, destroyed, and migrate between hosts." %}</p>
+      <div class="row">
+        <div class="col-xs-12 col-sm-3">
+          <p style="color: #22a3df; font-weight: 400;">{% trans "Supported Virtualization platforms include:" %}</p>
+          <ul class="bullet-blue">
+              <li>{% trans "VMware vCenter and/or ESXi" %}</li>
+              <li>{% trans "Citrix Xen" %}</li>
+              <li>{% trans "oVirt / Redhat" %}</li>
+              <li>{% trans "KVM / Xen / libvirt" %}</li>
+              <li>{% trans "OpenVZ" %}</li>
+              <li>{% trans "LXC" %}</li>
+              <li>{% trans "Docker" %}</li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+          <p style="color: #22a3df; font-weight: 400;">{% trans "Supported Cloud Platforms Include:" %}</p>
+          <ul class="bullet-blue">
+              <li>{% trans "Amazon AWS" %}</li>
+              <li>{% trans "Cloudstack" %}</li>
+              <li>{% trans "DigitalOcean" %}</li>
+              <li>{% trans "Joyent" %}</li>
+              <li>{% trans "Linode" %}</li>
+              <li>{% trans "OpenStack" %}</li>
+              <li>{% trans "Windows Azure" %}</li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <a href="{% static 'img/sections/solutions/it-infrastructure-map.png' %}" data-featherlight="image">
+            <img class="img-responsive center-block" alt="{% trans 'IT Documentation Software' %}"
+                 src="{% static 'img/sections/solutions/it-infrastructure-map.png' %}">
+          </a>
+        </div>
+      </div>
+    </section>
+    <br>
+
+    <section class="row landing-section">
+
+        <div class="col-sm-6">
+          <a href="{% static 'img/sections/solutions/network-discovery-11.png' %}" data-featherlight="image">
+            <img class="img-responsive img-rounded box-shadow center-block" alt="{% trans 'REST APIs' %}"
+                 src="{% static 'img/sections/solutions/network-discovery-11.png' %}">
+          </a>
+        </div>
+        <div class="col-sm-6">
+            <h3 class="sub-heading">{% trans "External Integrations and REST APIs" %}</h3>
+            <p>{% trans "Using our out of box integrations with Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, Servicenow and many more, you can bring in your data discovered by other systems. You can use REST APIs to customize what data you want to send to Device42." %}</p>
+        </div>
+    </section>
+
+    {% include 'partials/try-free-callout.html' %}
+
+    <section class="row landing-section">
+        <div class="col-sm-12 col-md-6">
+          <a href="{% static 'img/sections/features/cmdb/Solution-Components.png' %}" data-featherlight="image">
+            <img class="img-responsive center-block" alt="{% trans 'Device42 Solution Components' %}"
+                 src="{% static 'img/sections/features/cmdb/Solution-Components.png' %}">
+          </a>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <h3 class="sub-heading"><em>{% blocktrans %}See <strong style="font-style:normal;">IT</strong> All in One Place!</em>{% endblocktrans %}</h3>
+            <p>{% trans "Device42 offers a full-fledged CMDB product with ‘True’ Auto-Discovery (discovering complete, actionable data), comprehensive IT infrastructure mapping and asset management (ITAM) capabilities, PLUS:" %}</p>
+            <ul class="checkmark-style">
+                <li>{% trans "Powerful agentless auto-discovery " %}</li>
+                <li>{% trans "A complete CMDB with fully configurable asset types" %}</li>
+                <li>{% trans "Comprehensive DCIM functionality" %}</li>
+                <li>{% trans "RESTful APIs and Webhooks" %}</li>
+                <li>{% trans "Seamless integrations with your ITSM suite and more" %}</li>
+                <li>{% trans "An extensive set of visualizations" %}</li>
+                <li>{% trans "A highly customizable set of reports and inquiry screens" %}</li>
+                <li>{% trans "Room, rack, and power modeling with power and capacity heatmaps" %}</li>
+                <li>{% trans "And more, more, more! Try Device42 today." %}</li>
+            </ul>
+        </div>
+    </section>
+{% endblock %}

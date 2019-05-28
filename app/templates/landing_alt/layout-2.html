@@ -1,0 +1,210 @@
+{% extends "base/_base-landing-alt.html" %}
+{% load i18n static %}
+
+{% block customcss %}
+  <style>
+    /*
+    .container {
+      width: 820px;
+    }
+    */
+    .landing-title h1 {
+      font-size: 34px;
+      line-height: 43px;
+      font-weight: bolder;
+      font-family: Arial,serif;
+    }
+    .landing-content h2 {
+      font-size: 21px;
+      line-height: 26px;
+      font-family: arial,helvetica,sans-serif;
+      font-weight: bolder;
+    }
+
+    .landing-content ol {
+      display: block;
+      padding: 0 0 0 26px;
+      list-style: none;
+      overflow: hidden;
+      counter-reset: numList;
+    }
+
+    .landing-content ol li {
+      /* width: 176px; */
+      margin-right: 0px;
+      float: left;
+      position: relative;
+      padding-left: 8px;
+      margin-bottom: 0.7em;
+    }
+
+    .landing-content ol li:before {
+      counter-increment: numList;
+      content: counter(numList);
+      font-size: 15px;
+      line-height: 22px;
+      font-weight: bolder;
+      float: left;
+      position: absolute;
+      left: -26px;
+      /* font: bold 12px sans-serif; */
+      text-align: center;
+      color: #fff;
+      /* line-height: 18px; */
+      width: 24px;
+      height: 24px;
+      background: rgba(62, 156, 227, 1);
+      -moz-border-radius: 999px;
+      border-radius: 999px;
+    }
+
+    .landing-content ol li strong {
+      display: block;
+      font-size: 17px;
+      line-height: 22px;
+      font-weight: bolder;
+      margin-bottom: 0.3em;
+    }
+
+    #id_instance_type {
+      margin: 0;
+      padding: 0;
+    }
+
+    #id_instance_type li {
+      list-style: none;
+    }
+  </style>
+{% endblock %}
+
+{% block header %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <img alt="Device42" class="img-responsive center-block"
+           src="https://cdn4.device42.com/img/branding/transparent-logo.png"
+           style="height: 51px; margin-bottom: 2em; margin-top: 2em;">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 landing-title">
+      <img data-src="{% static page.landing.image_url %}" alt="{{ page.landing.title }}"
+           class="img-responsive center-block" style="border-radius: 15px;border: 5px solid; border-color: silver;margin-bottom: 3em;">
+      <h1 class="text-center">{{ page.landing.title }}</h1>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container m-t-2">
+  <div class="row landing-content">
+    <div class="col-md-8">
+      {{ page.landing.content | safe }}
+    </div>
+    <div class="col-md-4" style="border: 5px solid #3e9ce3;border-radius: 10px;background: rgba(255, 255, 255, 1);background: -webkit-linear-gradient(#f0f9ff, #fff);background: -moz-linear-gradient(#f0f9ff, #fff);background: linear-gradient(#f0f9ff, #fff);background: -ms-linear-gradient(#f0f9ff, #fff);background: -o-linear-gradient(#f0f9ff, #fff);behavior: url(PIE.htc);-pie-background: linear-gradient(#f0f9ff, #fff);">
+      <h2 class="text-center" style="margin-top: 2em;margin-bottom: 2em;">Download your Free Trial</h2>
+      <hr>
+      <form role="form" id="downloadForm" action="." method="POST" class="form-horizontal" style="margin-top: 2em;">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="form-group {% if field.errors %}has-errors{% endif %}">
+          <label class="control-label col-md-4 font-roboto" style="font-weight:400;text-align:left;" for="id_{{ field.name }}">{{ field.label }}</label>
+          <div class="col-md-8">
+          {{ field }}
+          </div>
+          {% if field.errors %}
+          {% for error in field.errors %}
+          <span class="text-danger text-strong">{{ error|escape }}</span>
+          {% endfor %}
+          {% endif %}
+          {% if field.help_text %}
+          <p class="help-block">{{ field.help_text|safe }}</p>
+          {% endif %}
+        </div>
+        {% endfor %}
+        <input style="display:none" id="id_main" type="text" name="main" maxlength="64"/>
+        <div class="text-right" style="margin-top: 3em;">
+          <button type="submit" name="action" value="schedule" class="btn btn-info btn-md text-uppercase"><i
+            class="fa fa-clock-o fa-pull-left"
+            style="padding-top: 3px"></i> {% trans 'Request a Demo' %}
+          </button>
+          <button type="submit" name="action" value="download" class="btn btn-warning btn-orange btn-md text-uppercase"><i
+            class="fa fa-download fa-pull-left"
+            style="padding-top: 6px"></i> {% trans 'Download Now' %}
+          </button>
+        </div>
+        <hr>
+        <div class="text-right text-muted">100% Privacy Guaranteed</div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="line">
+  <hr>
+</div>
+<div class="container">
+  <div class="row">
+    {% for feature in page.feature %}
+    <div class="col-md-4">
+      {% if feature.image_url %}
+      <img data-src="{% static feature.image_url %}"
+           alt="{{ feature.title }}" class="img-responsive center-block m-b-1">
+      {% endif %}
+      <h4>{{ feature.title }}</h4>
+    {{ feature.content | safe }}
+    </div>
+    {% endfor %}
+  </div>
+  <hr class="m-t-2">
+  <div class="row">
+    <h4 class="text-center">Some of Our Customers</h4>
+  </div>
+  <div class="row m-t-1">
+    <div class="col-md-2 col-xs-6">
+      <div style="width:120px; height:40px" class="sprite-atlassian center-block"></div>
+    </div>
+    <div class="col-md-2 col-xs-6">
+      <div style="width:120px; height:40px" class="sprite-mercedesbenz center-block"></div>
+    </div>
+    <div class="col-md-2 hidden-xs">
+      <div style="width:120px; height:40px" class="sprite-westerndigital center-block"></div>
+    </div>
+    <div class="col-md-2 hidden-xs">
+      <div style="width:120px; height:40px" class="sprite-avaya center-block"></div>
+    </div>
+    <div class="col-md-2 hidden-xs">
+      <div style="width:120px; height:40px" class="sprite-verizon center-block"></div>
+    </div>
+    <div class="col-md-2 hidden-xs">
+      <div style="width:120px; height:40px" class="sprite-fijitsu center-block"></div>
+    </div>
+  </div>
+  <hr>
+  <div class="row m-t-5">
+    <div class="col-md-12">
+      <p class="text-center lead">"Device42 eliminates hours of manually taking and updating inventory and I like its
+        ease of use and having everything in one application. I’m also very satisfied with the support I receive from
+        Device42 and would definitely recommend Device42 to others!"</p>
+      <div>
+        <hr class="text-center" style="width: 30px;">
+      </div>
+      <p class="text-center">Nick Fredrich<br>
+        <span class="text-muted">Network Engineer, OneChicago</span>
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<hr class="m-t-2">
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <span>By filling out the form above you are agreeing to <a href="https://www.device42.com/eula/">Device42 End User License Agreement</a></span>
+      <span class="pull-right"><a href="https://www.device42.com/privacy/">Privacy Policy</a></span>
+    </div>
+  </div>
+</div>
+{% endblock %}

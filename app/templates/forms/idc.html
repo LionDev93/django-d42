@@ -1,0 +1,98 @@
+{% extends 'base/_base.html' %}
+{% load i18n static %}
+{% block title %}{% trans "IT Agility and Business Alignment: Why You Need a Single Source of Truth" %}{% endblock %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'IT organizations are under pressure to deliver a higher degree of agility and business alignment while keeping costs under control.' %}"/>
+{% endblock %}
+{% block site_section_product %}active{% endblock %}
+{% block head_scripts %}
+    <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
+{% endblock %}
+{% block body_scripts %}
+{% endblock %}
+
+{% block body %}
+    <section class="landing-form vert-offset-top-4">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <h1 style="font-size: 56px !important;">{% trans "IT Agility and Business Alignment:" %}</h1>
+                    <h2>{% trans "Why You Need a Single Source of Truth" %}</h2>
+                    <p>{% trans "<b><i>IT organizations are under pressure to deliver a higher degree of agility and business alignment while keeping costs under control.</i></b>" %}</p>
+                    <h3 class="vert-offset-top-2">{% trans "Learn how savvy IT leaders are addressing these common challenges, and more:" %}</h3>
+
+                    <div class="row">
+                        <div class="col-xs-5 col-sm-5">
+                            <ul>
+                                <li>{% trans "Better aligning IT with business digital transformation initiatives" %}</li>
+                                <li>{% trans "Simplifying IT management" %}</li>
+                                <li>{% trans "Reducing cost of operations" %}</li>
+                                <li>{% trans "Implementing data center automation" %}</li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-7 col-sm-7">
+                            <ul>
+                                <li>{% trans "Obtaining a deeper understanding of datacenter dependencies" %}</li>
+                                <li>{% trans "Boosting IT staff efficiencies" %}</li>
+                                <li>{% trans "Making software and other audits more efficient" %}</li>
+                                <li>{% trans "Delivering critical services faster with higher SLAs" %}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <form role="form" id="downloadForm" action="." method="POST" style="margin-top: 22px !important; margin-bottom: 0 !important;">
+                    	<div class="form_head">
+		                    <h1 style="font-size: 28px !important; margin-bottom: 0 !important;">{% trans "<span><i>FREE</i></span> IDC White Paper Download" %}</h1>
+		                </div>
+		                <div class="form_body">
+		                    <h3>{% trans "Please fill out the following form and we will email you the download link." %}</h3>
+                            {% csrf_token %}
+                            {% for field in form %}
+                            <div class="form-group {% if field.errors %}has-errors{% endif %}">
+                                <label class="control-label col-md-4 font-roboto" style="font-weight:400;text-align:left;"
+                                       for="id_{{ field.name }}">{{ field.label }}</label>
+                                {{ field }}
+                                {% if field.errors %}
+                                    {% for error in field.errors %}
+                                        <span class="text-danger text-strong">{{ error|escape }}</span>
+                                    {% endfor %}
+                                {% endif %}
+                                {% if field.help_text %}
+                                    <p class="help-block">{{ field.help_text|safe }}</p>
+                                {% endif %}
+                            </div>
+                            {% endfor %}
+                            <input style="display:none" id="id_main" type="text" name="main" maxlength="64"/>
+		                </div>
+		                <div class="form_footer">
+		                    <div class="col-sm-6 col-xs-4">
+                                <img class="img-responsive center-block"
+                                     src="{% static 'img/branding/transparent-logo.png' %}"
+                                     style="margin-top: 15px; max-width: 80% !important;">
+		                    </div>
+		                    <div class="col-sm-6 col-xs-8">
+		                    	<input class="btn btn-primary btn-block-xs" type="submit" value="{% trans 'SEND MY WHITEPAPER' %}">
+		                    </div>
+		                </div>
+                    </form>
+                    <div class="vert-offset-top-1 text-center">
+                        <p class="small text-muted">{% trans 'We will not misuse or sell your information. Read our <a href="#">Privacy Policy' %}</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 vert-offset-top-3 vert-offset-bottom-3">
+                    <img src="{% static 'img/branding/graphics/home-gfx.png' %}"
+                         class="center-block"
+                         style="max-width: 75% !important;">
+                </div>
+            </div>
+        </div>
+
+    </section>
+{% endblock %}

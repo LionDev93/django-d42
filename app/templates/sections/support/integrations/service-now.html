@@ -1,0 +1,75 @@
+{% load i18n static %}
+<h2>{% trans "Power ServiceNow by syncing CI data from Device42" %}</h2>
+<p>Easily populate your ServiceNow database with CIs from Device42. Take advantage of Device42’s enhanced asset discovery and tracking capabilities, and sync CI details to the ServiceNow Configuration Management Database (CMDB)</p>
+<p>Device42’s comprehensive agentless autodiscovery [with optional agents] and remote collectors can be used in any combination to automatically maintain an accurate inventory of your physical, virtual, and cloud servers, containers, network components, software, and services as well as critical inter-relationships and interdependencies. Scheduled syncs automatically keep ServiceNow CIs up-to-date, or quickly refresh on demand</p>
+
+
+<div class="row is-table-row">
+    <div class="col-sm-7">
+        <h3>Intuitive Visual Transform Mappings</h3>
+        <ul>
+            <li>The built-in transform mapping engine makes it easy to map your Device42 CIs and their details to any ServiceNow table with drag and drop!</li>
+            <li>Device42 Object Query language (DOQL) provides the ultimate flexibility for selecting CIs to sync from Device42 to ServiceNow</li>
+        </ul>
+    </div>
+    <div class="col-sm-5">
+        <a href="{% static 'img/sections/support/integrations/servicenow/Device42-servicenow-transform-maps.png' %}" data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/servicenow/Device42-servicenow-transform-maps.png' %}"
+                 class="img-responsive center-block img-border"
+                 alt="{% trans 'ServiceNow Integration' %}">
+        </a>
+    </div>
+</div>
+
+<div class="row image-right-5x7 is-table-row vert-offset-top-1">
+    <div class="col-sm-7">
+        <h3>Sync and Natively View All CI Details in ServiceNow</h3>
+        <ul>
+            <li>See complete details about all of your CIs across your IT infrastructure when Device42 is synced to ServiceNow</li>
+            <li>Easily tie your IT assets to related service requests, and view any problems that may be associated with a CI with a click, just like you’re used to</li>
+        </ul>
+   </div>
+    <div class="col-sm-5">
+        <a href="{% static 'img/sections/support/integrations/servicenow/Device42-CIs-in-ServiceNow.png' %}" data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/servicenow/Device42-CIs-in-ServiceNow.png' %}"
+                 class="img-responsive center-block img-border"
+                 alt="{% trans 'Natively view synced CI details in servicenow' %}">
+        </a>
+    </div>
+</div>
+
+<div class="row is-table-row">
+    <div class="col-sm-7">
+<h3>{% trans "Associate imported CIs with ServiceNow requests" %}</h3>
+<p>{% trans "When a creating a new request in ServiceNow, users can choose to associate configuration items synced from Device42. They can then be managed natively within ServiceNow, utilizing the task management workflow you’re already used to. Assign teams and create task checklists related to CI’s imported from Device42" %}</p>
+    </div>
+
+    <div class="col-xs-10 col-xs-offset-1">
+        <a href="{% static 'img/sections/support/integrations/servicenow/servicenow-change-request-with-Device42-CIs.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/servicenow/servicenow-change-request-with-Device42-CIs.png' %}"
+                 class="img-responsive center-block img-border" alt="{% trans 'Associate synced CI data from Device42 into ServiceNow with service requests' %}">
+        </a>
+    </div>
+</div>
+
+<div class="row image-right-5x7 is-table-row vert-offset-top-1">
+    <div class="col-sm-7">
+<h3>Create Custom, Automated Workflows</h3>
+<ul>
+    <li>Automatically open a ticket in ServiceNow when criteria you describe are met, for example, when cloud recommendation engine finds that running a given workload on an alternate cloud provider would offer significant savings</li>
+    <li>Build workflows that automate actions around any infrastructure change: For example, approve a ticket to commission a new server, get the next free IP address and kick off the build automation</li>
+</ul>
+    </div>
+     <div class="col-sm-5">
+        <a href="{% static 'img/sections/support/integrations/servicenow/Device42-servicenow-workflow.png' %}" data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/servicenow/Device42-servicenow-workflow.png' %}"
+                 class="img-responsive center-block img-border"
+                 alt="{% trans 'ServiceNow Device42 Integration Automated Workflows' %}">
+        </a>
+    </div>
+</div>
+
+<h3>ServiceNow and Device42 Integration available on the ServiceNow Store</h3>
+<p>Get this integration for Free from the: <a href="https://store.servicenow.com/sn_appstore_store.do#!/store/application/42597533db201300a189622dca961964/" target="_blank">ServiceNow Store Device42 Listing Page</a></p>
+<br><br>

@@ -1,0 +1,151 @@
+{% extends "base/_base-landing.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Creating and managing an accurate and up-to-date Salt CMDB is a vital component in effectively managing today’s data center and IT Infrastructure. Device42 software does just that and a lot more.' %}"/>
+{% endblock %}
+{% block title %}{% trans "Device42: The Ideal Salt CMDB" %}{% endblock %}
+{% block script %}
+    <script type="text/javascript">
+        $(function () {
+            $("i.fa").tooltip();
+        });
+    </script>
+{% endblock %}
+
+{% block styles %}
+    <style>
+      p {
+        font-size: 20px;
+        font-family: "Roboto Condensed", sans-serif !important;
+      }
+      .sub-heading {
+        margin-top: 0px;
+      }
+      .checkmark-style {
+        margin: 0px !important;
+        font-weight: 300;
+        color: #717171;
+      }
+      .checkmark-style li{
+        font-size: 17px;
+      }
+      .checkmark-style li:before {
+        content: "\2714";
+        margin-left: -24px;
+        margin-right: 12px;
+        position: relative;
+        vertical-align: text-top;
+        display: inline-block;
+        font-weight: 100;
+        font-size: 15px;
+      }
+    </style>
+{% endblock %}
+
+
+{% block landingHeadingText %}{% trans "Device42: The Ideal Salt CMDB" %}{% endblock %}
+{% block landingfeature %}
+    <p class="lead">{% trans "A powerful, accurate CMDB gives you a competitive edge when teamed with Salt, powering the configuration and automation tasks that are common across the modern datacenter. Device42 is the ultimate CMDB to team with SaltStack:" %}</p>
+    <ul class="checkmark-style">
+      <li>{% trans "Easily populate CI data into Device42 from SaltStack’s minions." %}</li>
+      <li>{% trans "Powerful auto-discovery and dependency mapping features populate the rest of your CMDB fast." %}</li>
+      <li>{% trans "Integrations allow bi-directional interaction [both read and write] with SaltStack." %}</li>
+      <li>{% trans "By leveraging Device42 as a SaltStack External Pillar, you can store, manage, and modify CI’s details in Device42 which SaltStack will then apply to its minions - for example, change a server IP in Device42, and SaltStack can make that change automatically!" %}</li>
+      <li>{% trans "With webhooks and well documented, easy to use RESTful APIs, tasks that involve any other CM, ITSM, and/or ITIL products are easier, too." %}</li>
+    </ul>
+{% endblock %}
+
+{% block maincontent %}
+    <section>
+        <p class="h2 lead">{% trans "If you are looking for a Salt CMDB, there are several reasons to choose Device42:" %}</p>
+        <div class="media">
+            <div class="media-left">
+                <i class="fa fa-check-square-o fa-2x"></i>
+            </div>
+            <div class="media-body">
+                <p class="">{% trans "Device42’s CMDB (Configuration Management DataBase) offers pre-defined CIs and relationships that work “out of the box” for most, while also offering extensive customizability." %}</p>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-left">
+                <i class="fa fa-check-square-o fa-2x"></i>
+            </div>
+            <div class="media-body">
+                <p class="">{% trans "Device42 offers strong auto discovery features that you can use to populate most of the CMDB automatically, and the free Device42-Salt integration allows you to pull CI details directly from SaltStack." %}</p>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-left">
+                <i class="fa fa-check-square-o fa-2x"></i>
+            </div>
+            <div class="media-body">
+                <p class="">{% trans "Leverage Device42 as an External Pillar for Salt. This allows built in and custom CI attributes to be managed conveniently from within Device42, changes to which can then be read by SaltStack and applied to its minions." %}</p>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-left">
+                <i class="fa fa-check-square-o fa-2x"></i>
+            </div>
+            <div class="media-body">
+                <p class="">{% trans "Everything you’d want in a Salt CMDB is included in Device42 Core, and more: A powerful, well documented RESTful API, webhooks to initiate automation from Device42, Native Integrations your favorite tools, and lots of free example scripts to give your automation projects a head start." %}</p>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-left">
+                <i class="fa fa-check-square-o fa-2x"></i>
+            </div>
+            <div class="media-body">
+                <p class="">{% trans "Device42 provides a single source of truth for all of IT because it is not just a CMDB - Besides powerful application dependency mapping, It’s also a DCIM tool, an ITAM tool, it does IPAM, cable management, secure password management, and even offers powerful resource utilization features to help with rightsizing cloud migrations - and too many more features than there’s room to list here." %}</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="row image-left-4x8 padded">
+        <div class="col-sm-4">
+          <a href="{% static 'img/landing/sql-migration/banner.png' %}" data-featherlight="image">
+            <img src="{% static 'img/landing/sql-migration/banner.png' %}" class="img-responsive center-block"
+                 alt="{% trans 'Ansible Automations' %}"/>
+          </a>
+        </div>
+        <div class="col-sm-8">
+            <h3 class="sub-heading">{% trans "Load CIs Fast with Powerful Auto-Discovery Tools" %}</h3>
+            <p>{% trans "Populate your CMDB fast with an extensive range of auto-discovery tools for physical, virtual, cloud, and hybrid infrastructures. Increase productivity with clear visibility into your infrastructure." %}</p>
+            <ul>
+              <li>{% trans "All discovery tools are available both agentless or agent-based" %}</li>
+              <li>{% trans "All discoveries can be scheduled so you're always up-to-date" %}</li>
+              <li>{% trans "Multiple protocols supported (e.g. SNMP, WMI, SSH, Modbus, etc.)" %}</li>
+              <li>{% trans "Native support for virtualization platforms" %}</li>
+              <li>{% trans "Native support for public and private cloud platforms" %}</li>
+              <li>{% trans "Native support for blade chassis" %}</li>
+              <li>{% trans "Granular, well documented APIs with sample scripts for custom discovery" %}</li>
+            </ul>
+        </div>
+    </section>
+    <section class="row padded">
+        <div class="col-sm-6">
+            <h3 class="sub-heading">{% trans "The Pre-configured Salt CMDB" %}</h3>
+            <p>{% trans "No need for a drawn-out CI design process because CI’s and relationships are pre-configured. Device42 doesn’t simply ‘lock’ you in." %}</p>
+            <br>
+            <p>{% trans "Additionally, Device42 is a complete Salt Configuration Management solution. The Device42 CMDB also does advanced dependency mapping, handles your DCIM tasks, IT Asset Management (ITAM), IP Address Management (IPAM), and lots, lots more. What are you waiting for?" %}</p>
+        </div>
+        <div class="col-sm-6">
+          <a href="{% static 'img/sections/features/cmdb/Solution-Components.png' %}" data-featherlight="image">
+            <img src="{% static 'img/sections/features/cmdb/Solution-Components.png' %}" class="img-responsive center-block"
+                 alt="{% trans 'Solution Components' %}"/>
+          </a>
+        </div>
+    </section>
+    <section class="row padded">
+        <div class="col-sm-5" style="padding-top: 30px;">
+            <a href="{% static 'img/sections/features/cmdb/RESTful-APIs.png' %}" data-featherlight="image">
+              <img src="{% static 'img/sections/features/cmdb/RESTful-APIs.png' %}" class="img-responsive center-block"
+                   alt="{% trans 'Restful Apis' %}"/>
+            </a>
+        </div>
+        <div class="col-sm-7">
+            <h3 class="sub-heading">{% trans "Everything a Salt Powered Organization Needs" %}</h3>
+            <p>{% trans "Device42 includes a well documented, secure and powerful RESTful API for easy custom integrations with other applications used to manage your IT infrastructure. Webhooks can be triggered for any event that creates an audit-log entry, and on top of that, Device42 also offers out-of-the box integrations with all of your favorite tools. Interfacing with custom automation workflows couldn’t be easier!" %}</p>
+        </div>
+    </section>
+{% endblock %}

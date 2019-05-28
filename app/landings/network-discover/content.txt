@@ -1,0 +1,32 @@
+[head.title]
+Comprehensive network discover and scan tool with agent-less auto-discovery
+
+[head.description]
+Device42 is a comprehensive network discover and scan tool with agent-less auto-discovery. Discovery your entire network in minutes!
+
+[landing.title]
+Network Discover Tool Maps Your Network in Minutes!
+
+[landing.content]
+
+Map your physical, virtual, and cloud networks automatically with Device42's agent-less network discover and scan tool.  Your entire network is automatically discovered and correlated!
+
+- Network discover tools use native protocols: WMI for Windows, SSH for Linux/Unix, and SNMP for network devices
+- TCP port scan and other network discover tools quickly map your network details
+- Discover Hypervisors via their native APIs: Hyper-V, VMWare, OpenStack, and more
+- Connect and map your cloud deployments on Amazon Web Services, Azure, Google Compute Engine, and many more!
+
+[feature[1].title]
+Network Discover Tools Work on All Networks
+[feature[1].content]
+Device42 network discover and scan tool builds dependencies between all of your physical, virtuals, and applications. No need to use multiple tools to put together information anymore!
+
+[feature[2].title]
+Comprehensive Data Collection with Auto-correlation
+[feature[2].content]
+Collect your complete network inventory: models, serials, OS info, installed software and versions, IPs and connections, and more. Data from various auto-discovery methods is automatically correlated.
+
+[feature[3].title]
+Real-time Map of Your IT Infrastructure, with Integrations
+[feature[3].content]
+Out-of-the-box integrations with JIRA, ServiceNow, Puppet, Chef, SCCM, Infoblox, Splunk, and more! Use real-time data to reduce your MTTR and to make faster decisions across IT operations.

@@ -1,0 +1,175 @@
+body {
+	background: #fff;
+}
+
+.landing-form .logo {
+	width: 50%;
+	display: block;
+	margin: 15px auto;
+}
+
+.landing-form .workflow {
+	width: 90%;
+	display: block;
+	margin: 0 auto 50px auto;
+}
+
+.landing-form form {
+	background: #D9EDF7;
+	margin-top: 150px;
+	-webkit-box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+.landing-form h1 {
+	margin-bottom: 0;
+	color: #7D7E81;
+	font-size: 75px;
+	text-align: left;
+}
+
+.landing-form h2 {
+	margin-top: 0;
+	color: #7D7E81;
+	font-size: 35px;
+	text-align: left;
+	font-weight: 100;
+}
+
+.landing-form h3 {
+	color: #445463;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.landing-form ul {
+	display: block;
+}
+
+.landing-form ul li {
+	min-width: 250px;
+	font-size: 15px;
+	float: left;
+}
+
+.landing-form .btn {
+	font-size: 13px;
+}
+
+.form_head {
+	background: #22A3DF;
+	padding: 5px 0 10px 20px;
+}
+
+.form_head h1 {
+	margin-bottom: -20px;
+	font-size: 30px;
+	color: #fff;
+}
+
+.form_head h1 span {
+	color: #F1C313;
+	font-weight: 100;
+}
+
+.form_head h2 {
+	font-size: 25px;
+	color: #fff;
+	font-weight: 400;
+	margin-top: 25px;
+}
+
+.form_body {
+	padding: 10px 20px 0 20px;
+}
+
+.form_body h2 {
+	color: #1A83B4;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 35px;
+}
+
+.form_body h3 {
+	color: #22A7E3;
+	font-size: 25px;
+	font-weight: 100;
+	padding-bottom: 30px;
+}
+
+.form_body label {
+	display: block;
+	color: #2587B4;
+	font-size: 16px;
+	font-weight: 400;
+	margin-bottom: 0px;
+}
+
+.form_body input {
+	display: block;
+	width: 100%;
+	height: 40px;
+	margin-bottom: 20px;
+	padding-left: 20px;
+	border: 1px solid #D0D0D0;
+	border-radius: 3px;
+}
+
+.form_footer {
+	min-height: 100px;
+}
+
+.form_footer p {
+	color: #BAB8B9;
+	font-size: 16px;
+	font-weight: 100;
+}
+
+.form_footer .btn {
+	margin-top: 15px;
+}
+
+.pad {
+	margin-top: 50px
+}
+
+.no-pad {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+
+@media (max-width: 1200px) {
+  .landing-form h1 {
+    font-size: 45px;
+  }
+   .landing-form h2	 {
+    font-size: 25px;
+  }
+  .form_head h1 {
+  	font-size: 30px;
+  }
+  .form_head h2 {
+  	font-size: 20px;
+  }
+  .form_footer .btn {
+  	margin-bottom: 20px;
+  	width: 100%;
+  }
+  .landing-form form {
+  	margin-bottom: 40px;
+  }
+  .form_footer {
+  	padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+	.landing-form form {
+		margin-top: 0 !important;
+	}
+	.landing-form form {
+	  	margin-bottom: 40px !important;
+	}
+}

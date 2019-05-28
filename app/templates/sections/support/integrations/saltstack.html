@@ -1,0 +1,99 @@
+{% load i18n static %}
+<h2>Device42's {% trans "Integration with" %} Salt (SaltStack)</h2>
+<h4 class="prelist">{% trans "Quickly and easily sync Salt Node information to Device42" %}</h4>
+<p>{% trans "Salt (aka SaltStack) is a Python-based open source configuration management software and remote execution engine. Salt supports the Software-Defined Datacenter,  allowing configuration of your Infrastructure as Code (IaC). With the Device42 Salt Integration, you can now gather information about your devices from the same tool you use to provision them." %}</p>
+<h3>{% trans "Device42’s Salt Integration can gather and import the following from Salt Grains:" %}</h3>
+<section class="row">
+    <div class="col-xs-12 col-sm-3">
+        <ul class="checklist font-stack-roboto">
+            <li>{% trans "Name" %}</li>
+            <li>{% trans "Virtual or Physical" %}</li>
+            <li>{% trans "Operating System Details" %}</li>
+        </ul>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+        <ul class="checklist font-stack-roboto">
+            <li>{% trans "Node Type" %}</li>
+            <li>{% trans "Virtual Sub-type" %}</li>
+            <li>{% trans "Total Memory" %}</li>
+        </ul>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+        <ul class="checklist font-stack-roboto">
+            <li>{% trans "CPU Power" %}</li>
+            <li>{% trans "CPU Core Count" %}</li>
+            <li>{% trans "HDD Count" %}</li>
+        </ul>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+        <ul class="checklist font-stack-roboto">
+            <li>{% trans "Customer" %}</li>
+            <li>{% trans "Manufacturer" %}</li>
+            <li>{% trans "Service Level" %}</li>
+        </ul>
+    </div>
+</section>
+<div class="row image-right-8x4 {% if vcenter %}is-table-row{% endif %} is-table-row">
+    <div class="col-sm-4">
+        <a href="{% static 'img/sections/support/integrations/saltstack/salt-01.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/saltstack/salt-01.png' %}"
+                 class="img-responsive center-block img-border" alt="{% trans 'Saltstack Integration' %}">
+        </a>
+    </div>
+    <div class="col-sm-8">
+        <h3>{% trans "See Your Salt Configuration data in Device42!" %}</h3>
+      <p>{% trans "Salt ships with a lot of tools that make your life easier. The Device42 - Salt Sync Integration makes your life easier too by reading and gathers information from your Salt Master: Salt’s Grains (like facts), gathered from Minions (like nodes). Instead of recording configuration information twice, or even doing it manually once, let the Device42 - Salt Integration handle pulling in the data you care about, right from the source." %}</p>
+    </div>
+</div>
+<div class="row image-left-4x8 {% if vcenter %}is-table-row{% endif %} is-table-row">
+    <div class="col-sm-4">
+        <a href="{% static 'img/sections/support/integrations/saltstack/salt-02.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/saltstack/salt-02.png' %}"
+                 class="img-responsive center-block img-border" alt="{% trans 'Saltstack Integration' %}">
+        </a>
+    </div>
+    <div class="col-sm-8">
+        <h3>{% trans "Use Device42 with Salt Pillars for two-way configuration and sync!" %}</h3>
+        <p><b>{% trans "Salt Pillars allow you to store configuration for Salt nodes within Device42!" %}</b></p>
+        <p>{% trans 'If a Salt node changes, Device42 can update the CI. Conversely, leveraging Device42 as an <a href="https://www.device42.com/blog/2017/10/using-device42-with-salt-external-pillar/">External Pillar source</a> allows you to utilize any CI detail from Device42 in Salt to target and configure its minions.' %}</p>
+        <p>{% trans "Salt can execute commands across thousands of systems in seconds, and with these two Device42 - Salt Integrations, a few simple tweaks means that every time Salt runs to apply configuration, it not only has the power to leverage any CI detail from within Device42, but Device42 and Salt can then re-sync Salt’s CI changes automatically, too." %}</p>
+    </div>
+</div>
+<div class="row image-right-8x4 {% if vcenter %}is-table-row{% endif %} is-table-row">
+    <div class="col-sm-4">
+        <a href="{% static 'img/sections/support/integrations/saltstack/salt-03.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/saltstack/salt-03.png' %}"
+                 class="img-responsive center-block img-border" alt="{% trans 'Saltstack Integration' %}">
+        </a>
+    </div>
+    <div class="col-sm-8">
+        <h3>{% trans "Use Device42 to Visualize The Details of Your Deployment!" %}</h3>
+        <p><b>{% trans "Easily visualize the details of your deployment and its dependencies with Device42." %}</b></p>
+        <p>{% trans "You did all the work to capture your infrastructure in code, and everything looks like it deployed and works as expected … but are you sure, and how can you show this to management? Visualize your deployment right in Device42, and make sure it looks exactly how you expect it to. Make sure the right number of server instances are hosting the right number of services on the right IP’s -- see your physical, cloud, or hybrid layout and all of your infrastructure’s dependency details any time." %}</p>
+    </div>
+</div>
+<div class="row image-left-4x8 {% if vcenter %}is-table-row{% endif %} is-table-row">
+    <div class="col-sm-4">
+        <a href="{% static 'img/sections/support/integrations/saltstack/salt-04.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/saltstack/salt-04.png' %}"
+                 class="img-responsive center-block img-border" alt="{% trans 'Saltstack Integration' %}">
+        </a>
+    </div>
+    <div class="col-sm-8">
+        <h3>{% trans "Eliminate Disconnects between DevOps & Security." %}</h3>
+        <p><b>{% trans "Device42 Generates Compliance Reports On-Demand!" %}</b></p>
+        <p>{% trans "Locate and remediate vulnerabilities across your infrastructure faster with Device42 & Salt. You can quickly query Device42 for a list of servers running vulnerable software, and Salt can take care of removing or updating vulnerable the vulnerable build." %}</p>
+        <p>{% trans "Showing your security team that everything has been remediated is as easy as running an on demand report in Device42 - or, schedule the report. Simply specify the security team’s inbox and let Device42 handle communicating the rest." %}</p>
+        <p class="text-right"><b><i>{% trans "“...Check your inbox!”"%}</i></b></p>
+    </div>
+</div>
+
+<hr>
+
+<p>{% blocktrans %}<a href="https://github.com/device42/salt_to_device42_sync/archive/master.zip" target="_blank">Download</a> the Salt - Device42 Integration script!{% endblocktrans %}</p>
+<p>{% blocktrans %}<a href="https://github.com/device42/d42_saltstack_external_pillar/archive/master.zip" target="_blank">Download</a> the Salt - Device42 External Pillar Integration!{% endblocktrans %}</p>
+

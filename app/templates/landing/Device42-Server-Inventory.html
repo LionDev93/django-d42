@@ -1,0 +1,100 @@
+{% extends "base/_base-landing.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Device42’s automated and agent-less application mapping makes server migrations easier, ensuring you know all of your dependencies and have all your configurations squared away ahead of time, uncovering the hidden issues before they cause unnecessary downtime.' %}"/>
+{% endblock %}
+{% block title %}{% trans "Server Inventory" %}{% endblock %}
+
+{% block styles %}
+<style>
+    body{
+    }
+    .cta-free-trial {
+        padding: 24px 0;
+        text-transform: none !important;
+        background-color: #ffc90e;
+        color: #130dff !important;
+    }
+</style>
+{% endblock %}
+
+{% block landingHeadingText %}{% trans "Server Inventory" %}{% endblock %}
+{% block landingfeature %}
+    <section class="row flat-bottom landing-section">
+        <div class="col-sm-7">
+            <p class="lead">{% blocktrans %}﻿Device42 provides comprehensive Server IT inventory management capabilities including powerful, server inventory auto-discovery with fully configurable asset types. Easily accommodate any IT asset type within in your infrastructure.{% endblocktrans %}</p>
+            <ul class="checklist lead-small bullet-blue light-weight">
+              <li>{% trans "Agentless and/or agent-based Continuous Auto-discovery" %}</li>
+              <li>{% trans "Physical and Virtual server inventory including hardware and software inventory" %}</li>
+              <li>{% trans "Device42’s server inventory tools manage servers both on premise and in the cloud" %}</li>
+              <li>{% trans "Track and visualize relationships between your server inventory and other IT assets" %}</li>
+              <li>{% trans "Scalability, from small to huge – No inventory too large" %}</li>
+              <li>{% trans "Powerful, customizable reports" %}</li>
+            </ul>
+        </div>
+        <div class="col-sm-5">
+            <img src="{% static 'img/landing/server-inventory/banner1.png' %}"
+                 alt="{% trans 'Server Inventory' %}" class="img-responsive img-restrict center-block">
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block maincontent %}
+    <section class="row is-table-row landing-section">
+        <div class="col-sm-12">
+            <h3 style="font-weight:400;" class="flat-bottom">{% trans "Auto Discover Your Server Inventory" %}</h3>
+            <p class="text-strong">{% trans "Device42’s Server Inventory Software produces an accurate server inventory that is ALWAYS audit-ready" %}</p>
+            <p>{% trans "Populate your server inventory quickly and effortlessly with an extensive range of auto-discovery tools that support physical, virtual, hybrid, and cloud infrastructures." %}</p>
+            <ul class="lead-small bullet-blue light-weight">
+                <li>{% trans "Discover using the Device42 Server inventory tool with or without agents [optional agent-based discovery]" %}</li>
+                <li>{% trans "Run discovery with Device42’s server inventory tool on demand, or schedule discovery to run automatically so your inventory is always up-to-date" %}</li>
+                <li>{% trans "Discover anything with Device42’s server inventory tools: Multiple discovery protocols supported (e.g. WMI & WinRM, SSH, SNMP, Modbus, CDP, and many more)" %}</li>
+                <li>{% trans "Auto-discover your virtualization platforms no matter where they are - Device42’s server inventory software natively discovers local hypervisors and both public and private cloud" %}</li>
+                <li>{% trans "Inventory your blade chassis - Device42’s server inventory software includes native support" %}</li>
+                <li>{% trans "Utilize Device42’s powerful RESTful API for server inventory management" %}</li>
+                <li>{% trans "Use Device42’s server inventory tool as is, or build on any of the included sample scripts for custom discoveries" %}</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section class="row is-table-row landing-section">
+        <div class="col-sm-8">
+          <h3 style="font-weight:400;" class="flat-bottom">{% trans "Server inventory management - Hardware and Software" %}</h3>
+          <p>
+              <strong>{% trans '﻿Device42 locates and updates your devices automatically, making it easy to document physical, virtual, blade, clusters, switches or any other device types.' %}</strong>
+          </p>
+          <p>{% trans "Server inventory management has never been easier. Featuring easy to use, multi-edit data entry pages which allow you to add and modify hardware components from a single page. While editing a device, simply open a new tab to see all locations that part number exists, and inventory counts for that specific model or part number as well." %}</p>
+          <img src="{% static 'img/landing/server-inventory/banner2.png' %}"
+                     class="img-restrict center-block" style="max-width: 100% !important;" alt="{% trans 'Server Inventory' %}">
+        </div>
+        <div class="col-sm-4">
+            <img src="{% static 'img/landing/server-inventory/selectsoftware.png' %}"
+                     class="img-restrict center-block" alt="{% trans 'Server Inventory' %}">
+        </div>
+    </section>
+
+    <section class="row is-table-row landing-section">
+        <div class="col-sm-4">
+            <img src="{% static 'img/landing/server-inventory/relations.png' %}"
+                     class="img-restrict center-block" alt="{% trans 'Server Inventory' %}">
+        </div>
+        <div class="col-sm-8">
+          <h3 style="font-weight:400;" class="flat-bottom">{% trans "Track Relationships and Map Dependencies Between Server Inventory and Other IT Assets" %}</h3>
+          <p>
+              {% trans 'Device42’s Server Inventory Management Software provides the powerful ability to track and visualize operational dependencies. ' %}
+          </p>
+          <p>{% trans "﻿Device42’s server inventory tool produces detailed software and server Impact Charts:" %}</p>
+          <ul class="lead-small bullet-blue light-weight">
+              <li>{% trans "Display downward dependencies from Virtual Server Host or Blade Chassis to contained VM’s" %}</li>
+              <li>{% trans "Visualize all service connections between them" %}</li>
+              <li>{% trans "See a clear map of your operations and its interdependencies" %}</li>
+              <li>{% trans "Quickly understand the trickle-down effect of a service interruption if a blade or service were to become unavailable" %}</li>
+          </ul>
+        </div>
+
+    </section>
+
+{% endblock %}

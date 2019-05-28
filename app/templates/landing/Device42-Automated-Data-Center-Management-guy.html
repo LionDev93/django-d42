@@ -1,0 +1,180 @@
+{% extends "base/_base-landing-v3.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Data center management made easy with intuitive, integrated software by device42. Loved by organizations around the world for its open APIs.' %}"/>
+{% endblock %}
+{% block title %}{% trans "Automated Data Center Management" %}{% endblock %}
+{% block styles %}
+<style>
+    .cta-free-trial {
+        padding: 24px 0;
+        text-transform: none !important;
+        background-color: #ffc90e;
+        color: #130dff !important;
+    }
+    #top-container h1 {
+        margin-bottom: 0px;
+    }
+</style>
+{% endblock %}
+
+{% block landingHeadingText %}
+    {% trans "Automated Data Center Management" %}
+{% endblock %}
+{% block landingSubHeadText %}
+    <em class="h3 flat-top flat-bottom">{% trans "Device42 software redefines automated data center management. Centrally manage your data center, increase visibility and gain better control - all at a price that will surprise you!" %}</em>
+{% endblock %}
+
+{% block key_benefits %}
+    <section class="row landing-section">
+        <div class="col-sm-7">
+
+            <h3 class="text-strong">{% trans "Key Benefits:" %}</h3>
+            <div class="row">
+                <ul class="bullet-blue">
+                    <li>{% trans "Goodbye spreadsheets...hello automated IT management!" %}</li>
+                    <li>{% trans "Access accurate, actionable data about the current state and future needs of the data center" %}</li>
+                    <li>{% trans "Single source of truth for asset management" %}</li>
+                    <li>{% trans "Better predictability for space, power and cooling capacity means increased time to plan" %}</li>
+                    <li>{% trans "Enhanced understanding of the present state of the power and cooling infrastructure and environment increases the overall availability of the data center" %}</li>
+                    <li>{% trans "Increase your team’s productivity" %}
+                        <ul class="bullet-gray flat-top">
+                            <li>{% trans "Focus on high value activities, and not manual processes" %}</li>
+                            <li>{% trans "Shift from reactive to proactive management" %}</li>
+                            <li>{% trans "Simplify management and justification of budget" %}</li>
+                        </ul>
+                    </li>
+                    <li>{% trans "Reduced operating cost from energy usage effectiveness and efficiency" %}</li>
+                    <li>{% trans "Help prevent downtime and associated costs by leveraging Device42’s holistic view of your IT environment and reconciling existing infrastructure." %}</li>
+                </ul>
+            </div>
+
+            <div class="row" style="width: 100%;">
+
+                <div class="text-center" style="width: 30%; float: left; margin-left: 5%;">
+                    <div style="max-width:50%; margin-left:auto; margin-right:auto; margin-top:24px; height:auto !important;"   
+                         class="clearfix">
+                        <div class="embed-responsive embed-responsive-16by9" style="margin-bottom: 5px;">
+                            <div class="wistia_responsive_wrapper"
+                                 style="height:100%; left:0; position:absolute; top:0; width:100%;">
+                                <script src="//fast.wistia.com/embed/medias/igc5qfvoyr.jsonp" async></script>
+                                <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                                <div class="wistia_responsive_padding"
+                                     style="padding:60% 0 0 0; position:relative;">
+                                    <div class="wistia_responsive_wrapper"
+                                         style="height:100%; left:0; position:absolute; top:0; width:100%;">
+                                        <span class="wistia_embed wistia_async_igc5qfvoyr popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block; height:100%; width:100%">&nbsp;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="text-primary font-stack-roboto text-center h4" style="margin-top: 0px !important; margin-bottom: 0px !important;">{% trans "90 Second Overview" %}</span>
+                </div>
+
+                <div class="vert-offset-top-1" style="width: 60%; float: left; margin-left: 5%;">
+                    <p>{% blocktrans %}<strong class="h3">You're in good company!</strong><br> <em>Many global companies use Device42,<br> and they LOVE us!</em>{% endblocktrans %}</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <a href="{% url 'download' %}">
+                <img src="{% static 'img/sections/features/app-map/set-it-all-in-one-place.jpg' %}"
+                     alt="{% trans 'Automated Data Center Management' %}" 
+                     class="img-responsive center-block vert-offset-bottom-3 vert-offset-top-1">
+            </a>
+            <a class="btn center-block cta-free-trial h3"
+                href="{% url 'download' %}">{% trans "Get your FREE, fully-functional trial NOW!" %}</a>
+        </div>
+    </section>
+{% endblock %}
+
+{% block good_company %}
+{% endblock %}
+
+{% block key_features %}
+    <section class="row image-right-5x7 is-table-row landing-section">
+        <div class="col-sm-7">
+            <h3 class="text-strong">{% trans "Key Features:" %}</h3>
+            <ul class="bullet-blue">
+                <li>{% trans "Comprehensive DCIM functionality" %}</li>
+                <li>{% trans "Powerful agent-less autodiscovery tools with the ability to deploy remote collectors as needed for distributed discovery" %}</li>
+                <li>{% trans "Drag and drop building, server room, and rack diagrams" %}</li>
+                <li>{% trans "Simple patch panel & cable management" %}</li>
+                <li>{% trans "Detailed device, network, and connectivity documentation" %}</li>
+                <li>{% trans "Password management vault with secure generation and storage" %}</li>
+                <li>{% trans "Advanced spare parts management" %}</li>
+                <li>{% trans "Power and environmental management" %}</li>
+                <li>{% trans "Powerful, free integrations & a RESTful API" %}</li>
+            </ul>
+        </div>
+        <div class="col-sm-5">
+            <a href="{% url 'download' %}">
+                <img src="{% static 'img/sections/features/web-based-rack-layout-with-drag-and-drop.gif' %}"
+                     alt="{% trans 'Automated Data Center Management' %}"
+                     class="img-responsive center-block">
+            </a>
+        </div>
+    </section>
+{% endblock %}
+
+{% block maincontent %}
+    <section class="row landing-section">
+        <div class="col-sm-6">
+            <h3 class="text-strong flat-bottom">{% trans "Device42 Documents Automatically." %}</h3>
+            <p class="text-muted flat-top">{% trans "An accurate, always up-to-date record of your infrastructure" %}</p>
+            <ul class="bullet-blue">
+                <li>{% trans "Increased visibility into and control of all IT assets" %}</li>
+                <li>{% trans "Improved response to planned & unplanned service outages" %}</li>
+                <li>{% trans "Increased user satisfaction levels" %}</li>
+                <li>{% trans "Improved budgeting, cost visibility, and control" %}</li>
+                <li>{% trans "Centralized monitoring and control of power / temperatures" %}</li>
+            </ul>
+        </div>
+        <div class="col-sm-6">
+            <a href="{% url 'download' %}">
+                <img src="{% static 'img/sections/features/server-room-layout.gif' %}"
+                     alt="{% trans 'Automated Data Center Management' %}"
+                     class="img-responsive center-block"
+                     style="max-width: 70% !important;">
+            </a>
+        </div>
+    </section>
+
+    <section class="row image-right-5x7 is-table-row landing-section">
+        <div class="col-sm-7">
+            <h3 class="text-strong">{% trans "Plus, Device42 Includes:" %}</h3>
+            <ul>
+                <li>{% trans "Power & Thermal Management" %}
+                    <ul class="bullet-gray flat-top">
+                        <li>{% trans "Real-time monitoring & historical statistics" %}</li>
+                        <li>{% trans "Power and cooling planning and estimation" %}</li>
+                        <li>{% trans "Power Control" %}</li>
+                    </ul>
+                </li>
+                <li>{% trans "IT Patch Panel Management" %}
+                    <ul class="bullet-gray flat-top">
+                        <li>{% trans "Drag and drop cable management" %}</li>
+                        <li>{% trans "Color coded with hover-over for full connection details" %}</li>
+                    </ul>
+                </li>
+                <li>{% trans "Detailed Device Information" %}
+                    <ul class="bullet-gray flat-top">
+                        <li>{% trans "Complete details for physical, virtual, blade, and cloud" %}</li>
+                        <li>{% trans "Network and power connectivity information" %}</li>
+                        <li>{% trans "At-a-glance interdependency and impact information" %}</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-5">
+            <a href="{% url 'download' %}">
+                <img src="{% static 'img/sections/features/dcim/device_energy.jpg' %}"
+                     alt="{% trans 'Automated Data Center Management' %}"
+                     class="img-responsive center-block">
+            </a>
+        </div>
+    </section>
+{% endblock %}

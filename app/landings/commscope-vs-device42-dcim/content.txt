@@ -1,0 +1,39 @@
+[head.title]
+Better data center infrastructure management than Commscope DCIM
+
+[head.description]
+Device42 is a better Commscope DCIM alternative. It is a comprehensive data center management tool with agent-less auto-discovery. Map out your physical and virtual infrastructure with power and environmental monitoring.
+
+[landing.title]
+
+Better Commscope DCIM Alternative for Automated Data Center Management
+
+[landing.image_format]
+gif
+
+[landing.content]
+
+Looking for a better DCIM than Commscope? Device42 is a comprehensive DCIM tool that helps you manage your data centers visually with room and rack layouts, power consumption and real-time capacity planning.
+
+
+- Auto-generated rack layouts with drag and drop
+- Color coded room layouts with heatmaps for easy capacity planning
+- Web based with no flash and with SVG exports that lets you import in Visio
+- Real time power and environmental monitoring with charts and alerts
+- Map your physical, virtual and cloud networks automatically with agentless discovery.
+
+
+[feature[1].title]
+Rack and Room layouts with What-if Scenarios
+[feature[1].content]
+Device42 auto-discovery spans from legacy to newer systems and builds dependencies between physical, virtuals and applications. No need to use multiple tools to put together information anymore.
+
+[feature[2].title]
+Real time capacity planning with monitoring and control
+[feature[2].content]
+Collect your complete inventory like serial #, hardware model, OS and build info, installed software, IPs and connections, services and mapping between services across machines. Data from various auto-discovery methods is automatically correlated.
+
+[feature[3].title]
+Automated data center management with integrations
+[feature[3].content]
+Using our out of box integrations with JIRA, Confluence, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, ServiceNow and many more you can use this real-time map to reduce your mean time to recovery and make faster decisions in your daily IT operations.

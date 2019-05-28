@@ -1,0 +1,25 @@
+{% load i18n %}
+{% load staticfiles %}
+<div {% if id %}id="{{ id }}" {% endif %}class="row featurette image-right-4x8 {% if vcenter %}is-table-row{% endif %}">
+
+    <div class="col-sm-8">
+        <h2 class="featurette-heading">{% trans "Track relationships between assets" %}</h2>
+        <p><b>{% trans "Device42 asset tracking software provides the powerful ability to track and visualize operational dependencies." %}</b></p>
+        <p>{% trans "Device42’s detailed Impact Charts:" %}</p>
+        <ul class="checklist">
+            <li>{% trans "Display downward dependencies from Virtual Host or Blade Chassis to contained VM’s" %}</li>
+            <li>{% trans "Visualize service connections between them" %}</li>
+            <li>{% trans "See a clear map of your operations " %}</li>
+            <li>{% trans "Quickly understand the trickle-down effect of a service interruption if a blade or service were to become unavailable" %}</li>
+        </ul>
+    </div>
+
+    <div class="col-sm-4">
+        <a href="{% static 'img/sections/features/cmdb/impact-1.png' %}" data-featherlight="image">
+            <img class="img-responsive center-block img-border"
+                 alt="{% trans 'Track relationships between assets' %}"
+                 src="{% static 'img/sections/features/cmdb/impact-1.png' %}">
+        </a>
+    </div>
+
+</div>

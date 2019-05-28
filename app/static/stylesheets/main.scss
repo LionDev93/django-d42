@@ -1,0 +1,46 @@
+/**
+ * device42.com - root style file
+ * (c) Device42 <dave.amato@device42.com>
+ */
+
+
+/* bootstrap */
+@import 'base/mixins';
+@import 'base/variables';
+@import 'base/bootstrap';
+@import 'base/custom-overrides';
+@import 'base/custom-buttons';
+@import 'base/landing-webinar';
+@import 'base/fonts';
+/* global components and vendor styles */
+@import 'base/home-pages';
+@import 'components/navigation';
+@import 'components/logoScroller';
+@import 'components/lists';
+@import 'components/tooltips';
+@import 'components/misc';
+/* sprites */
+@import 'sprites/sprite-logos';
+@import 'sprites/sprite-integrations';
+@import 'sprites/sprite-home';
+@import 'sprites/sprite-customers';
+/* base customizations */
+@import 'base/layout';
+@import 'base/footer';
+@import 'base/typography';
+@import 'base/flag-icons';
+@import 'base/landing-form';
+@import 'base/landing-page';
+@import 'base/landing-page-v2';
+/* misc customizations */
+@import 'modules/img-effects';
+@import 'modules/feature-pages';
+@import 'modules/customer-logo';
+/* vendor libraries */
+@import 'libs/prettify';
+@import 'libs/featherlight';
+@import 'libs/owl-carousel';
+@import 'libs/font-awesome';
+@import 'libs/animate';
+/* exit intent modal */
+@import 'base/ouibounce';

@@ -1,0 +1,40 @@
+[head.title]
+Comprehensive technology asset management software with agent-less auto-discovery
+
+[head.description]
+Device42 is a comprehensive technology asset management software with agent-less auto-discovery.
+
+[landing.title]
+Comprehensive Technology Asset Management Software
+
+[landing.image_format]
+png
+
+[landing.content]
+
+Device42 provides comprehensive technology asset management capabilities including powerful auto-discovery with fully configurable asset types. Easily accommodate any IT and technology asset type within in your infrastructure!
+
+- Agent-less auto-discoveries make technology asset management nearly effortless
+- Support for physical, virtual and cloud infrastructure to track complete  hardware and software inventory
+- Discover hardware and software inventory on any operating system: Windows, Linux, UNIX, Mac, or BSD
+- Out of box integrations with ITSM tools like JIRA, ServiceNow, Cherwell and many more help you enhance the value of your existing investments.
+- Know your support expiry and more with automatic contract management for various vendors.
+- Easier audits with comprehensive reports and visualization tools
+
+
+[feature[1].title]
+Complete Technology Asset Management and Auto-discovery
+[feature[1].content]
+Device42 auto-discovery spans from legacy to newer systems and builds inventory and dependencies between physical, virtuals, cloud infrastructure and applications. No need to use multiple tools to put together information anymore.
+
+[feature[2].title]
+Support Entitlement and Technology Asset Management
+[feature[2].content]
+Device42 helps you auto-discover your warranty information from various vendors to know when does your support expire. Know in advance when your server support is up for renewal and information for a support call when a server is down.
+
+
+[feature[3].title]
+Leverage technology asset management Data in Real-time
+
+[feature[3].content]
+Go beyond traditional technology asset management tools using our out of box integrations with JIRA, Confluence, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, ServiceNow and more!

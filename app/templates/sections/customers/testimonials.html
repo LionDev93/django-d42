@@ -1,0 +1,323 @@
+{% extends 'base/_base.html' %}
+{% load i18n static %}
+{% block title %}{% trans "Our Happy Customers" %}{% endblock %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Device42 review and Customer testimonials for Device42,  a comprehensive Data Center Documentation Software that integrates IP address management and application mapping.' %}"/>
+{% endblock %}
+{% block styles %}
+  <style>
+    .secondary-menu {
+      text-align: center;
+    }
+
+    @media(max-width: 992px){
+      .secondary-menu {
+        display: none;
+      }
+    }
+
+    .secondary-menu.fixed {
+      position: fixed;
+      background: white;
+      z-index: 999;
+      top: 53px;
+      width: 100%;
+    }
+
+    .secondary-content  {
+      display: inline-block;
+    }
+
+    .secondary-menu-list {
+      display: inline-block;
+      list-style: none;
+      margin: 0;
+      padding: 0px;
+    }
+
+    .secondary-menu-list-item {
+      display: inline-block;
+      text-align: center;
+      zoom: 1;
+      vertical-align: middle;
+      height: 100%;
+      width: auto;
+      min-width: 100px;
+      cursor: pointer;
+      position: relative;
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+
+    .secondary-menu-list-item:before {
+      display: none;
+    }
+
+    .secondary-menu-link {
+      padding: 1.5rem 0;
+      color: #706F6F;
+      display: block;
+    }
+
+    .secondary-menu-link:focus, .secondary-menu-link:hover {
+      color: #706F6F;
+      text-decoration: none;
+    }
+
+    <!--.secondary-menu-list-item:hover, .secondary-menu-list-item.active {-->
+      <!--color: #706F6F;-->
+      <!--border-bottom: 3px solid #ab00dc;-->
+    <!--}-->
+
+    .secondary-menu-list-item:after {
+      content: "";
+      background-color: #22a3df;
+      padding: 1.5px;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      line-height: 3px;
+      font-size: 2em;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      right: 50%;
+      visibility: hidden;
+      transition: all 0.2s linear;
+    }
+
+    .secondary-menu-list-item:hover:after {
+          visibility: visible;
+        left: 6px;
+        right: 6px;
+    }
+
+    .secondary-menu-list-item.active:after {
+      visibility: visible;
+      content: "";
+      background-color: #eb8f34;
+      font-size: 30px;
+      padding: 1.5px;
+      line-height: 3px;
+      position: absolute;
+      bottom: 0;
+      left: 6px;
+      right: 6px;
+    }
+
+    .d-flex {
+      display: flex;
+    }
+
+    .customers .carousel-inner{
+        height: 500px;
+    }
+
+    .customers .carousel-inner .item {
+      padding-left: 100px;
+      padding-right: 100px;
+      background: #eb8e35;
+      height: 500px;
+    }
+
+    @media(max-width: 767px) {
+      .customers .carousel-inner .item {
+        padding: 0px;
+      }
+    }
+
+    .customers .carousel-inner .item-container {
+      height: 100%;
+      width: 100%;
+      display: table;
+    }
+
+    .customers .carousel-control.right, .customers .carousel-control.left {
+      background-image: none;
+    }
+
+    .glyphicon-chevron-right:before {
+        content: "\e080";
+    }
+    .glyphicon-chevron-left:before {
+        content: "\e079";
+    }
+
+    .carousel-control .fa-chevron-left, .carousel-control .fa-chevron-right {
+        position: absolute;
+        top: 50%;
+        margin-top: -10px;
+        z-index: 5;
+        display: inline-block;
+        color: white;
+    }
+
+    .carousel-indicators li {
+      border: 1px solid #ffffff;
+    }
+
+    .carousel-indicators li.active {
+        border: 2px solid #ffffff;
+        background-color: #ffffff;
+    }
+
+    #customers {
+      padding: 50px;
+    }
+
+    #customers h2 {
+      color: #2270b2;
+      margin-bottom: 40px;
+    }
+
+    #case-studies > .container > h2 {
+      color: #2270b2;
+    }
+
+    .photo-card>.heading .title {
+       border-bottom: 1px solid #445362;
+    }
+
+    .photo-card>.heading {
+      padding: 24px;
+    }
+
+    .photo-card>.image img {
+      max-height: 220px;
+    }
+
+    .photo-card .font-stack-serif {
+      font-size: 15px;
+    }
+  </style>
+{% endblock %}
+{% block body_scripts %}
+<script>D42.setSiteSection("customers");</script>
+{% endblock %}
+{% block body %}
+   <div class="secondary-menu">
+      <div class="secondary-content">
+        <ul class="secondary-menu-list">
+          <li class="secondary-menu-list-item" id="testimonials_link">
+            <a href="{% url 'customers_testimonials' %}" class="secondary-menu-link">
+              {% trans "TESTIMONIALS" %}
+            </a>
+          </li>
+          <li class="secondary-menu-list-item" id="customers_link">
+            <a href="{% url 'customers' %}" class="secondary-menu-link">
+              {% trans "CUSTOMERS" %}
+            </a>
+          </li>
+          <li class="secondary-menu-list-item" id="case_studies_link">
+            <a href="{% url 'customers_case_studies' %}" class="secondary-menu-link">
+              {% trans "CASE STUDIES" %}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="text-center vert-offset-bottom-1"><em>{% trans "What people are saying about Device42" %}...</em></h2>
+                <div class="row flat-top">
+                    <div class="col-md-12">
+                        <blockquote>
+                            {% trans 'As a Cloud Service provider, we have to have accurate IPAM. We have been using spreadsheets for a long time and our growth just made it no longer feasible to manage technology in this manner. We have been a Solar Winds customer for quite some time, but that product pales in comparison. What attracted us to Device42 was the UCS, Cisco ACI, and VMware integration. For us this was critical. We also utilized your dev team during the past month with at least 4-5 bugs that we uncovered during our POC. They immediately turned around code for us – and have made that standard in the next release. This was quite impressive. We were not even a customer and you were partnering with us to solve problems. We also are a Service NOW shop so this product will help with IP management during our new client build and deployment processes. We also love the data center integration piece where we can literally detail with a drawn VISIO to the actual port ID where a circuit is plugged in. This entire “data center single piece of glass” is what we were looking for.<br><br>As an Enterprise Cloud Provider, we are happy we have made this decision!' %}
+                            <hr>
+                            <cite>Eric Tuley<br><span>{% trans "Director, Cloud Platform" %}<br>Concerto Cloud Services</span></cite>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="row flat-top">
+                    <div class="col-sm-6">
+                        <blockquote>
+                            {% trans "Device42 eliminates hours of manually taking and updating inventory and I like its ease of use and having everything in one application.  I’m also very satisfied with the support I receive from Device42 and would definitely recommend Device42 to others!" %}
+                            <hr>
+                            <cite>Nick Fredrich<br><span>{% trans "Network Engineer" %}<br>OneChicago</span></cite>
+                        </blockquote>
+                    </div>
+                    <div class="col-sm-6">
+                        <blockquote>
+                            {% trans "Everyone has been so professional, courteous and willing to accommodate above and beyond my expectations. I’ve had numerous questions and problems but each inquiry was returned with such enthusiasm and eagerness to help. Thank you again for the wonderful customer service." %}
+                            <hr>
+                            <cite>Christina Sharp<br><span>Cox Communications</span></cite>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="row flat-top">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <blockquote>
+                            {% trans "Device42 support has been unparalleled to any other vendor in my experience. They are agile and eager to help solve any problems I run into." %}
+                            <hr>
+                            <cite>Aaron Burton<br><span>{% trans "System Administrator" %}<br>ProQuest</span></cite>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="row flat-top">
+                    <div class="col-md-12">
+                        <blockquote>
+                            {% trans "As an early adopter of Device42, we have found the product and it's development team to be extremely nimble in meeting our needs. Managing a limited staff, pressure from the business to meet a rapid speed to market, as well as increased complexities to meet our compliance needs, the traditional spreadsheets and big box solutions have not been able to provide an easy no hassle solution. Device42 has become our single system to manage all physical, virtual, software, vendor, and IP assets with strong search capabilities as well as graphical representations. Device42 has also become a significant aid in validating our documentation process for customer audits and I would highly recommend this software." %}
+                            <hr>
+                            <cite>Michael Loffredo<br><span>{% trans "Director of IT Infrastructure" %}<br>LifeCare Inc.</span></cite>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="row flat-top">
+                    <div class="col-md-12">
+                        <blockquote>
+                            {% trans "Device42 is simple, light, responsive, easy to use and powerful to manage and record my data center information. I can manage list of my server whether it is a rack server, blade, virtual, even a cluster, complete with its specifications like CPU, memory, harddrive and OS plus manage its manufactures like the vendor, contact information, and warranty date. I can now find an available IP Address or server information and even the rack mapping now with just few simple clicks. Export support is also a big plus. The deployment of this software is very easy too. I'm looking forward to the future updates and gladly recommend this software to my friends." %}
+                            <hr>
+                            <cite>Mardelis Lubis<br><span>{% trans "IT Data Centre Officer" %}<br>PT Federal International Finance</span></cite>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="row flat-top">
+                    <div class="col-sm-6">
+                        <blockquote>
+                            {% trans "Feature rich. This is exactly what I needed." %}
+                            <hr>
+                            <cite>Rod Batalla<br><span>{% trans "Senior System Administrator" %}<br>Western Digital Technologies</span></cite>
+                        </blockquote>
+                    </div>
+                    <div class="col-sm-6">
+                        <blockquote>
+                            {% trans "Layout of the software web console is very clean and easy to follow." %}
+                            <hr>
+                            <cite>Brent Meints<br><span>{% trans "IT Senior Analyst" %}<br>Thyssenkrupp Bilstein of America</span></cite>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="row flat-top">
+                    <div class="col-sm-6">
+                        <blockquote>
+                            {% trans "Folks here like it because it fits most of our needs and understands blades and virtualization." %}
+                            <hr>
+                            <cite>ShaColby Jackson<br><span>Blue Jeans Network</span></cite>
+                        </blockquote>
+                    </div>
+                    <div class="col-sm-6">
+                        <blockquote>
+                            {% trans "Device42 is taking us from anarchy to organization." %}
+                            <hr>
+                            <cite>Matt Iles<br><span>{% trans "Network Systems Manager" %}<br>International School of Beijing</span></cite>
+                        </blockquote>
+                    </div>
+                </div>
+{#                <div class="row flat-top">#}
+{#                    <div class="col-sm-6 col-sm-offset-3">#}
+{#                        <blockquote>#}
+{#                            {% trans "Device42 gave us the badly needed ability to manage our Assets and our Lab." %}<br>#}
+{#                            <br>{% trans "I like the constant improvements, and the way we can track almost everything we need to in one place." %}#}
+{#                            <hr>#}
+{#                            <cite>Robert Higbie<br>#}
+{#                            <span>Cisco</span></cite>#}
+{#                        </blockquote>#}
+{#                    </div>#}
+{#                </div>#}
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+

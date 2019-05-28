@@ -1,0 +1,17 @@
+{% load i18n static %}
+<div {% if id %}id="{{ id }}" {% endif %}class="row featurette image-right-5x7 {% if vcenter %}is-table-row{% endif %}">
+    <div class="col-md-6">
+        <a href="{% static 'img/sections/features/app-map/visual-impacts.png' %}"
+           data-featherlight="image">
+            <img class="img-responsive center-block animated"
+                 style="width: 70% !important;"
+                 src="{% static 'img/sections/features/app-map/visual-impacts.png' %}"
+                 alt="{% trans 'Visual Application Impacts' %}">
+        </a>
+    </div>
+    <div class="col-md-6">
+        <h2 class="featurette-heading">{% trans "Visual Application Impacts" %}</h2>
+        <p>{% trans "Easily Understand Network Device Relationships!" %}</p>
+        <p>{% blocktrans %}Fast, easy, and accurate, auto-generated diagrams provide IT staff members with "anytime access" to impact charts that clearly communicate the relationships between applications, hardware components and facilities (rooms, buildings).{% endblocktrans %}</p>
+    </div>
+</div>

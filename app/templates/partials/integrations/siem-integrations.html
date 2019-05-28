@@ -1,0 +1,30 @@
+{% load i18n static %}
+<div {% if id %}id="{{ id }}" {% endif %}>
+  <h2 class="featurette-heading xs-center">{% blocktrans %}SIEM Integrations{% endblocktrans %}</h2>
+  <h4 class="prelist xs-center text-left">...{% trans "Compatible with Splunk and Logstash" %}</h4>
+  <div class="row featurette image-{{ image|default:'right' }} {% if vcenter %}is-table-row{% endif %}">
+      <div class="col-sm-6">
+          <ul class="bullet-blue checklist">
+              <li>{% trans 'See your Device42 audit data in external logging systems' %}</li>
+              <li>{% trans 'View all of your logs system-wide in one place for better correlation' %}</li>
+              <li>{% trans 'Audit data is pushed via Device42 webhooks in real-time' %}</li>
+          </ul>
+      </div>
+      <div class="col-sm-6 padded">
+          <div class="row integration-logos">
+              <div class="col-xs-6">
+                  <div class="sprite-logstash"></div>
+              </div>
+              <div class="col-xs-6">
+                  <div></div>
+              </div>
+              <div class="col-xs-6">
+                  <div></div>
+              </div>
+              <div class="col-xs-6">
+                  <div class="sprite-splunk"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

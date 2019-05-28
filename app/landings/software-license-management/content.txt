@@ -1,0 +1,38 @@
+[head.title]
+Comprehensive software license management (SLM) solution with agent-less auto-discovery
+
+[head.description]
+Device42 ITAM features comprehensive SLM (software license management) with agent-less auto-discovery.
+
+[landing.title]
+Complete Software License Management and ITAM
+
+[landing.image_format]
+png
+[landing.content]
+
+Device42 provides comprehensive SLM (software license management) capabilities including powerful auto-discovery with fully configurable asset types. Easily accommodate any IT asset type within in your infrastructure.
+
+- Agent-less auto-discoveries to keep all your inventory up-to-date with an optional agent for remote assets.
+- Support for physical, virtual and cloud infrastructure to track complete  hardware and software inventory.
+- Discover software inventory on any operating system: Windows, Linux, UNIX, Mac, or BSD.
+- Out-of-the-box integrations with ITSM tools like JIRA, ServiceNow, Cherwell and more help you maximize the value of existing investments.
+- Powerful visualizations and a brand new reporting engine provide unmatched buisness intelligence from your IT infrastructure data!
+
+
+
+[feature[1].title]
+Complete Auto Discovery for all networks
+[feature[1].content]
+Device42 auto-discovery spans from legacy to newer systems and builds inventory and dependencies between physical, virtuals, cloud infrastructure and applications. No need to use multiple tools to put together information anymore.
+
+[feature[2].title]
+Complete Software Inventory & License Management
+[feature[2].content]
+View and manage all software, software license counts, and expiration dates. Manage license keys along with software relationships to devices and users, including complex licensing models like cpu-bound, user-bound and machine-bound licenses.
+
+
+[feature[3].title]
+A Real-time Map of Your IT Infrastructure with Integrations
+[feature[3].content]
+Go beyond traditional ITAM tools. Enjoy out-of-the-box integrations with JIRA, ServiceNow, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk and more! Use this real-time insight to reduce MTTR and to support decision making across your IT operations.

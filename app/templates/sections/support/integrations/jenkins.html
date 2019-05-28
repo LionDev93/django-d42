@@ -1,0 +1,55 @@
+{% load i18n static %}
+<h2>{% trans "Device42 - Jenkins Credentials Integration" %}</h2>
+<h4>{% trans "<em>Leverage passwords and other secrets from Device42’s Secrets module in your Jenkins-powered automation!</em>" %}</h4>
+<section class="row featurette image-{{ image|default:'right' }}-7x5 {% if vcenter %}is-table-row{% endif %} is-table-row">
+    <div class="col-sm-5">
+      <a href="{% static 'img/sections/support/integrations/jenkins/jenkins-device42_1.png' %}"
+           data-featherlight="image">
+        <img class="img-responsive center-block" src="{% static 'img/sections/support/integrations/jenkins/jenkins-device42_1.png' %}" alt="{% trans 'Jenkins-Device42 credentials integration' %}">
+      </a>
+    </div>
+    <div class="col-sm-7">
+        <h3>{% trans "Integrate Jenkins with Device42 and Leverage Existing Stored Secrets in your Processes!" %}</h3>
+        <p class="lead-small">{% trans "With the Device42/Jenkins integration, you can extend Device42's secure password/secret storage to Jenkins. The integration securely retrieves your credentials while Jenkins handles timing and manages processes execution." %}</p>
+        <p class="lead-small">{% trans 'Forget about updating saved passwords in multiple places. Simply update Device42, the integration pulls the updated credentials automatically.' %}</p>
+        <p class="lead-small">{% trans "Enjoy centralized, secure password management with the Device42 credentials plugin for Jenkins!" %}</p>
+    </div>
+</section>
+<section class="row landing-section is-table-row">
+    <div class="col-sm-5">
+      <a href="{% static 'img/sections/support/integrations/jenkins/jenkins-device42_0.png' %}"
+           data-featherlight="image">
+        <img class="img-responsive center-block box-shadow" src="{% static 'img/sections/support/integrations/jenkins/jenkins-device42_0.png' %}" alt="{% trans 'Pull passwords into Jenkins from the secure Device42 secrets store.' %}">
+      </a>
+    </div>
+    <div class="col-sm-7">
+        <h3 class="alt-font sub-heading">{% trans "Easily add New Credentials or Pass Existing Credentials from Device42 to Jenkins" %}</h3>
+        <p class="lead-small">{% trans "Authenticate all around your infrastructure:" %}</p>
+      <p class="lead-small">{% trans "<b>Servlet containers</b> like Apache Tomcat, Jetty, JBoss, or your favorite java-servlet. <b>Version control systems</b>: AccuRev, CVS, Subversion, Git, Mercurial. <b>Execute</b>: Apache Ant, Maven, or sbt -based projects." %}</p>
+        <p class="lead-small">{% trans "<i>...plus, Shell scripts, Windows Batch commands, and more!</i>" %}</p>
+    </div>
+</section>
+<section class="row featurette image-{{ image|default:'right' }}-7x5 {% if vcenter %}is-table-row{% endif %} is-table-row">
+    <div class="col-sm-5">
+      <a href="{% static 'img/sections/support/integrations/jenkins/jenkins-device42_3.png' %}"
+           data-featherlight="image">
+        <img class="img-responsive center-block box-shadow" src="{% static 'img/sections/support/integrations/jenkins/jenkins-device42_3.png' %}" alt="{% trans 'Jenkins workflows automated with credentials from Device42.' %}">
+      </a>
+    </div>
+    <div class="col-sm-7">
+        <h3>{% trans "Secure Jenkins-based Workflows!" %}</h3>
+      <p class="lead-small">{% trans "By leveraging the Device42-Jenkins integration to pull credentials <i><small>[passwords/secrets/etc.]</i></small> from Device42, you eliminate the need to embed credentials in plaintext within your automation." %}</p>
+        <p class="lead-small">{% trans 'Protect passwords to your repositories, your build servers, etc. - even SSH certificates with Device42! ' %}</p>
+    </div>
+</section>
+<hr>
+<div class="row">
+    <div class="col-md-12 vert-offset-bottom-2">
+        <center>
+          <h3>{% trans "Start leveraging your securely-stored Device42 credentials in Jenkins today!" %}</h3>
+          <p class="lead-small" style="margin-top: 0px;">{% trans 'If you aren’t already a Device42 user, <a href="http://www.device42.com/download/" target="_blank">download a free 30-day trial NOW!</a>' %}</p>
+          <p class="lead-small" style="margin-top: 0px;">{% trans 'See the Device42-Jenkins integration documentation, <a href="https://docs.device42.com/external-integrations/jenkins-integration/" target="_blank">see our documentation here.</a>' %}</p>
+          <p style="font-size: 80%;"><i>{% trans 'If you run into any unexpected behavior, bugs, or otherwise have questions, comments, or feature requests, feel free to reach out to <a href="mailto:support@device42.com">support@device42.com</a>' %}</i></p>
+        </center>
+    </div>
+</div>

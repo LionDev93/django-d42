@@ -1,0 +1,46 @@
+[head.title]
+Device42 is powerful, automated DCIM (data center infrastructure management) software, redefined
+
+
+[head.description]
+Device42 is a powerful, automated DCIM (data center infrastructure management) tool featuring agentless autodiscovery.
+
+
+[landing.title]
+Device42 is an Automated DCIM Tool, Redefined!
+
+
+[landing.image_format]
+gif
+
+
+[landing.content]
+Device42 is a comprehensive DCIM (data center infrastructure management) tool that helps you manage and understand your data centers. Features include room and rack layouts, power consumption, real-time capacity planning, and more:
+
+- Map your physical, virtual and cloud networks automatically and agentlessly
+- Auto-generated, photo-realistic rack layouts feature drag'n'drop
+- Color-coded room layouts display heat-maps for easy capacity planning
+- Fast and light-weight web-based interface, powerful visualizations, and SVG exports that import to Visio
+- Resource utilization and real-time power and environmental monitoring with charts and alerts
+
+
+[feature[1].title]
+Powerful DCIM Tools Include Drag'n'drop Room and Rack Layouts with What-if Scenarios
+[feature[1].image_format]
+gif
+[feature[1].content]
+Device42 DCIM auto-discovers across all of your systems, highlighting dependencies between physical, virtuals and applications. The only tool you need to understand your infrastructure.
+
+
+[feature[2].title]
+Capacity Planning with Resource Utilization, Monitoring, and Control
+[feature[2].content]
+Collect all the DCIM-related details about your inventory including IPs and connections, services and interdependencies. Data is not only autodiscovered - it's also automatically correlated.
+
+
+[feature[3].title]
+Automated DCIM with FREE Out-of-the-box Integrations!
+[feature[3].image_format]
+png
+[feature[3].content]
+Leverage Device42's powerful integrations with software you already use: Chef, Puppet, JIRA, MS SCCM, Infoblox, Splunk, ServiceNow and more. Use this real-time map for reduced MTTR and for faster decision making.

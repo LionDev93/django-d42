@@ -1,0 +1,37 @@
+[head.title]
+Looking for a better BMC TrackIT alternative? 
+
+[head.description]
+Device42 with agent-less auto-discovery is a better ITAM alternative to BMC TrackIT
+
+[landing.title]
+Looking for a Better BMC TrackIT Alternative?
+[landing.image_format]
+png
+[landing.content]
+
+Device42 provides powerful auto-discovery and more comprehensive IT asset management capabilities than BMC TrackIT, PLUS integrations with popular ticketing systems like JIRA!
+
+- Agent-less auto-discoveries automatically keep your inventory up-to-date, with an optional agent for remote assets
+- Support for physical, virtual and cloud infrastructure to track your complete hardware and software inventory
+- Discover hardware and software inventory on any operating system: Windows, Linux, UNIX, Mac, or BSD
+- Out of box integrations with ITSM tools like JIRA, ServiceNow, Cherwell and more help you enhance the value of your existing investments
+- Know your support expiry and more with automatic contract management for various vendors
+- Easier audits with comprehensive reports and visualization tools
+
+
+[feature[1].title]
+Complete Auto Discovery for All IT Assets
+[feature[1].content]
+Device42 auto-discovery spans across legacy and new systems alike, building ITAM inventory and dependencies between physical, virtuals, cloud infrastructure and applications. BMC TrackIT just can't compete!
+
+[feature[2].title]
+Link your ITSM Tickets to Your ITAM Assets
+[feature[2].content]
+Integrate Device42 with JIRA or even ServiceNow, and link your IT Assets directly to the trouble tickets they concern for issue tracking that's better than BMC TrackIT!
+
+
+[feature[3].title]
+Real-time ITAM with Help Desk Integrations
+[feature[3].content]
+Go beyond Track IT and traditional ITAM using our out of box integrations with JIRA, Confluence, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, ServiceNow and many more! Reduce your MTTR, and make faster decisions in your daily IT operations!

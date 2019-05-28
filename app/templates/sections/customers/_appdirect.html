@@ -1,0 +1,213 @@
+{% extends 'base/_base.html' %}
+{% load i18n static %}
+{% block title %}{% trans "AppDirect - Case Study" %}{% endblock %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Case studies for Device42 - with AppDirect' %}"/>
+{% endblock %}
+{% block styles %}
+  <style>
+    .secondary-menu {
+      text-align: center;
+    }
+
+    @media(max-width: 992px){
+      .secondary-menu {
+        display: none;
+      }
+    }
+
+    .secondary-menu.fixed {
+      position: fixed;
+      background: white;
+      z-index: 999;
+      top: 53px;
+      width: 100%;
+    }
+
+    .secondary-content  {
+      display: inline-block;
+    }
+
+    .secondary-menu-list {
+      display: inline-block;
+      list-style: none;
+      margin: 0;
+      padding: 0px;
+    }
+
+    .secondary-menu-list-item {
+      display: inline-block;
+      text-align: center;
+      zoom: 1;
+      vertical-align: middle;
+      height: 100%;
+      width: auto;
+      min-width: 100px;
+      cursor: pointer;
+      position: relative;
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+
+    .secondary-menu-list-item:before {
+      display: none;
+    }
+
+    .secondary-menu-link {
+      padding: 1.5rem 0;
+      color: #706F6F;
+      display: block;
+    }
+
+    .secondary-menu-link:focus, .secondary-menu-link:hover {
+      color: #706F6F;
+      text-decoration: none;
+    }
+
+    <!--.secondary-menu-list-item:hover, .secondary-menu-list-item.active {-->
+      <!--color: #706F6F;-->
+      <!--border-bottom: 3px solid #ab00dc;-->
+    <!--}-->
+
+    .secondary-menu-list-item:after {
+      content: "";
+      background-color: #22a3df;
+      padding: 1.5px;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      line-height: 3px;
+      font-size: 2em;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      right: 50%;
+      visibility: hidden;
+      transition: all 0.2s linear;
+    }
+
+    .secondary-menu-list-item:hover:after {
+          visibility: visible;
+        left: 6px;
+        right: 6px;
+    }
+
+    .secondary-menu-list-item.active:after {
+      visibility: visible;
+      content: "";
+      background-color: #eb8f34;
+      font-size: 30px;
+      padding: 1.5px;
+      line-height: 3px;
+      position: absolute;
+      bottom: 0;
+      left: 6px;
+      right: 6px;
+    }
+
+    .d-flex {
+      display: flex;
+    }
+  </style>
+{% endblock %}
+{% block body_scripts %}
+<script>D42.setSiteSection("customers");</script>
+{% endblock %}
+{% block body %}
+    <header class="row bg-primary head-home">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{% trans "Case Studies" %} - {% trans "AppDirect" %}</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <br />
+                {% include 'sections/customers/_case-studies_left_col.html' %}
+            </div>
+            <div class="col-sm-9">
+                <br />
+                <div class="secondary-menu">
+                <div class="secondary-content">
+                  <ul class="secondary-menu-list">
+                    <li class="secondary-menu-list-item" id="testimonials_link">
+                      <a href="{% url 'customers_testimonials' %}" class="secondary-menu-link">
+                        {% trans "TESTIMONIALS" %}
+                      </a>
+                    </li>
+                    <li class="secondary-menu-list-item" id="customers_link">
+                      <a href="{% url 'customers' %}" class="secondary-menu-link">
+                        {% trans "CUSTOMERS" %}
+                      </a>
+                    </li>
+                    <li class="secondary-menu-list-item" id="case_studies_link">
+                      <a href="{% url 'customers_case_studies' %}" class="secondary-menu-link">
+                        {% trans "CASE STUDIES" %}
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+                <h3 class="text-muted">{% trans "Device42 User Case Study – AppDirect" %}</h3>
+                <ul>
+                    <li><strong>{% trans "Company" %}</strong>: {% trans "AppDirect" %}</li>
+                    <li><strong>{% trans "Industry" %}</strong>: {% trans "Cloud Application Delivery" %}</li>
+                    <li><strong>{% trans "Location" %}</strong>: {% trans "International; HQ in San Francisco, CA" %}</li>
+                    <li><strong>{% trans "Solution" %}</strong>: {% trans "Device42 Core" %}</li>
+                </ul>
+                <h2>{% trans "Device42 helps AppDirect, a cloud service commerce company powering the future of software delivery, efficiently manage their large hybrid inventory and ensure compliance with the requirements of the Center for Internet Security (CIS) Security Controls" %}</h2>
+                    <h3 class="text-muted">{% trans "AppDirect" %}</h3>
+                    <p>{% trans "AppDirect, headquartered in San Francisco, California, is a cloud service commerce company that is powering the future of software delivery. AppDirect offers a cloud service marketplace and management platform that enables companies to distribute web-based services. The global network of AppDirect-powered marketplaces allows businesses to find, buy, and manage the best applications the cloud has to offer." %}</p>
+                    <h3 class="text-muted">{% trans "AppDirect’s Asset Management Challenges" %}</h3>
+                    <p>{% trans "As AppDirect’s business grew and continues to grow, the number of assets (servers, software, applications, network components, storage, and so on) powering the IT infrastructure grew and continues to grow dramatically. This made it difficult for the data center operations team to maintain a single source of truth concerning IT assets that was available to all authorized personnel. These challenges fell into three categories:" %}</p>
+                    <ul>
+                        <li><strong>{% trans "Managing the Asset inventory" %}</strong>
+                            - {% trans "The data center operations team was using Excel spreadsheets to document and track data center assets. This involved a very manual process and regular human intervention to gather, update and manipulate the data into a useful format. Worse, the spreadsheets were outdated shortly after they were completed or updated. As the infrastructure grew, this manual effort became more and more difficult, time-consuming, and prone to error." %}
+                        </li>
+                        <li><strong>{% trans "Maintaining compliance with security standards" %}</strong>
+                            - {% trans "As a cloud infrastructure provider, AppDirect must provide a high level of security and adheres to the CIS Security Controls standard. They need an anytime, accurate inventory of all devices, unauthorized and authorized, and software, authorized and unauthorized to meet the requirements of CIS Security Controls. They were concerned that the significant manual effort and the resulting risk of manual error might put their security compliance at risk." %}
+                        </li>
+                        <li><strong>{% trans "Powering IT decision making" %}</strong>
+                            - {% trans "Though spreadsheets tracked physical devices, they did not provide detailed room, rack, or device visualization necessary for capacity planning. There was no application dependency map or network map that could be used for remediation and/or migration planning. There was a software inventory but it was very difficult to get an up-to-date view of what software was running on what machines and what was authorized and unauthorized. Worse, making decision based on an integrated view of physical and cloud assets was even more difficult." %}
+                        </li>
+                    </ul>
+                    <h3 class="text-muted">{% trans "Solution Requirements" %}</h3>
+                    <p>{% trans "Recognizing that this issue would only get worse as the company grew, AppDirect began a search for a tool to automate the inventory process and reduce or eliminate the manual effort and set out to evaluate the market’s offerings, taking a security-based approach to the evaluation. At minimum, an acceptable solution needed to:" %}</p>
+                    <ul>
+                        <li><strong>{% trans "Agentless and agent-based discovery scans" %}</strong>
+                            - {% trans "AppDirect recognized that it was just impractical to put discovery agents on every machine especially cloud-based virtual machines. That said, there were also machines in sensitive locations that could only report out and therefore required discovery agents. So AppDirect required a solution that supported both agent-based and agentless discovery scans." %}
+                        </li>
+                        <li><strong>{% trans "Meet CIS Security Control requirements" %}</strong>
+                            - {% trans "AppDirect approached this project with a “security first” mindset, and the ability to meet the standards set forth in CIS’ Security controls was a must for a winning solution." %}
+                        </li>
+                        <li><strong>{% trans "Operate in a modern, hybrid environment" %}</strong>
+                            - {% trans "As a cloud-based company, it was extremely important to AppDirect that the solution they chose was designed to fully support discovery and tracking of physical, virtual, and cloud assets. They did not want a solution that only supported cloud functionality as an afterthought." %}
+                        </li>
+                        <li><strong>{% trans "Grow with them" %}</strong>
+                            - {% trans "It was very important to AppDirect to be able to form a lasting relationship with the vendor they would choose to work with. They envisioned a vendor that would partner with them, who would both listen to their feedback and take it seriously." %}
+                        </li>
+                    </ul>
+                    <h3 class="text-muted">{% trans "The Device42 Solution" %}</h3>
+                    <p>{% trans "After evaluating a group of market leaders in the CMDB space, AppDirect began to narrow down their options. They liked the fact that Device42 was developed from the ground up to support integrated discovery and visualization of physical, virtual, and cloud assets." %}</p>
+                    <p>
+                        <blockquote>{% blocktrans %}“We got the feeling that the other alternatives on the market were built for legacy data centers … and not for today’s hybrid and cloud based data centers”{% endblocktrans %}</blockquote>
+                    </p>
+                    <p>{% trans "Due to their focus on security, Device42’s availability of both agentless and agent-based autodiscovery was critical. For the same reason, they also liked that Device42 was available as a 100% on-premise solution, and that their confidential inventory data didn’t have to leave their premises. They also liked the fact that Device42 is provided as an easy-to-install virtual machine with no other software to install." %}</p>
+                    <p>{% trans "Also important was Device42’s ability to assist AppDirect in meeting the requirements of CIS’s security controls." %}</p>
+                    <p>
+                      <blockquote>{% blocktrans %}“Take security requirements into account from the beginning - Don’t take security lightly, and don’t treat it as an afterthought. Security is not only important when someone is asking for the results or auditing you, but should instead be taken into account every day, with everything you do. Implement a tool that satisfies security requirements from the beginning so you don’t find yourself in a bad place, failing an audit, or worse...”{% endblocktrans %}</blockquote>
+                      {% trans "- AppDirect on security" %}
+                    </p>
+                    <p>{% trans "To get up and running with Device42 took AppDirect less than one hour. Because Device42 is delivered as a virtual appliance, the setup was easy. The VM was imported and booted, and required minimal configuration aside from standard DNS entry creation and SSL certificate setup for secure HTTPS communication to the appliance. Device42 support offered to assist if at all necessary, but AppDirect didn’t need any help to get it running and had an autodiscovery going quickly. AppDirect estimates that within approximately 3 days of installation, they had a full inventory." %}</p>
+                    <p>
+                      <blockquote>{% blocktrans %}“Device42 was obviously built with the hybrid and cloud-only environments in mind, and if you run a hybrid or cloud-only datacenter, Device42 is a great choice. They also offer stellar support, and really value customer feedback & requests - We knew they were the right choice when they offered to let us pilot their Agent Based Discovery, and we couldn’t be happier with the results.”{% endblocktrans %}</blockquote>
+                      {% trans "- AppDirect on their experience working with Device42" %}
+                    </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,190 @@
+{% extends "base/_base-landing.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Cloud Discovery Tool for automated IT infrastructure management.' %}"/>
+{% endblock %}
+
+{% block title %}{% trans "Cloud Discovery Tool" %}{% endblock %}
+
+{% block landingHeadingText %}{% trans "Cloud Discovery Tool" %}{% endblock %}
+{% block landingSubHeadingText %}<br/>
+    {% trans "Map your cloud instances, networks, and dependencies automatically with agentless cloud discovery tools" %}{% endblock %}
+{% block landingfeature %}
+    <h4 style="color: #22a3df; margin-bottom: 0px;">{% trans "Device42’s cloud discovery tools can quickly and thoroughly discover your entire cloud deployment using a variety of auto-discovery methods, automatically correlating the information in the built-in CMBD:" %}</h4>
+    <section class="row landing-section" style="padding-top: 0px;">
+        <div class="col-sm-8">
+            <ul class="square-style">
+                <li>{% trans "Native cloud discovery tools include support for Amazon, Azure, Joyent, Linode, Digital Ocean" %}</li>
+                <li>{% trans "WMI based discovery for Windows based server instances" %}</li>
+                <li>{% trans "SSH based discovery for Linux, Mac, BSD, and UNIX" %}</li>
+                <li>{% trans "Netflow data collection for discovery and analysis" %}</li>
+                <li>{% trans "Nmap based discovery (for scans without credentials)" %}</li>
+            </ul>
+            <br>
+            <h4 style="color: #22a3df;">{% trans "...and can also run discoveries from cloud-based remote collectors (RCs):" %}</h4>
+            <ul class="square-style">
+                <li>{% trans "SNMP Discovery (v1/v2c/v3):" %}</li>
+                <ul>
+                    <li>{% trans "Network switches, routers and firewalls" %}</li>
+                    <li>{% trans "Load balancers (such as " %} BIG-IP F5 & Cisco NetScaler</li>
+                    <li>{% trans "Blade systems to get chassis/blade system information" %}</li>
+                    <li>{% trans "Discovery and monitoring of power devices like PDUs, UPS, CRAC, etc." %}</li>
+                    <li>{% trans "Console switches, fiber switches, SAN switches, etc." %}</li>
+                </ul>
+                <li>{% trans "Hypervisor and VM discovery with support for all major virtualization platforms" %}</li>
+                <li>{% trans "Cisco UCS support" %}</li>
+                <li>{% trans "IPMI discovery for BMC boards" %}</li>
+                <li>{% trans "DNS sync and ping sweep for network discovery" %}</li>
+                <li>{% trans "Pull inventory data from tools like Puppet, Chef, Microsoft SCCM, monitoring systems" %}</li>
+                <li>{% trans "Discoveries are continuously run on a schedule, automatically detecting changes to your infrastructure as they are made" %}</li>
+            </ul>
+        </div>
+        <div class="col-sm-4 hidden-xs">
+          <a href="{% static 'img/sections/solutions/network-discovery-01.png' %}" data-featherlight="image">
+            <img src="{% static 'img/sections/solutions/network-discovery-01.png' %}"
+                 alt="{% trans 'Switch Port Map Visualization' %}" class="img-responsive">
+          </a>
+        </div>
+    </section>
+{% endblock %}
+
+{% block maincontent %}
+    <section class="row landing-section">
+        <div class="col-md-7">
+            <h3 class="sub-heading">{% trans "Cloud Discovery Tools with Application Dependency Mapping" %}</h3>
+            <p>{% trans "Discover your cloud instances, services, and dependencies with <b>native cloud discovery support</b> for mainstream cloud providers: " %}</p>
+            <div class="row" style="width: 100%;">
+              <div class="col-sm-4">
+                <ul>
+                    <li>Amazon AWS</li>
+                    <li>DigitalOcean</li>
+                    <li>Linode</li>
+                    <li>CloudStack</li>
+                </ul>
+              </div>
+              <div class="col-sm-4">
+                <ul>
+                    <li>Windows Azure</li>
+                    <li>Joyent</li>
+                </ul>
+              </div>
+              <div class="col-sm-4">
+                <ul>
+                    <li>Linode</li>
+                    <li>OpenStack</li>
+                </ul>
+              </div>
+            </div>
+
+        </div>
+        <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-offset-0 col-md-5">
+          <a href="{% static 'img/sections/solutions/network-discovery-05.png' %}" data-featherlight="image">
+            <img class="img-responsive box-shadow" alt="{% trans 'Cloud Discovery' %}"
+                 src="{% static 'img/sections/solutions/network-discovery-05.png' %}">
+          </a>
+        </div>
+    </section>
+
+    <section class="row vert-offset-top-1">
+        <div class="col-sm-4">
+          <a href="{% static 'img/sections/solutions/autodiscovery-screen.png' %}" data-featherlight="image">
+            <img class="img-responsive img-border" alt="{% trans 'Auto-Discovery Utility' %}"
+                 src="{% static 'img/sections/solutions/autodiscovery-screen.png' %}">
+          </a>
+        </div>
+        <div class="col-sm-8">
+            <h3 class="sub-heading">{% trans "Agentless Cloud Discovery Tools with Workload Right-Sizing" %}</h3>
+
+            <p class="h4 ul-heading" style="color: #22a3df;">{% trans "Agentless Auto-Discovery for Windows based instances" %}</p>
+            <p>{% trans "No need to install agents on your Windows machines to keep your inventory info up-to-date. Our agentless tool can natively collect inventory data via WMI!" %}</p>
+
+            <p class="h4 ul-heading" style="color: #22a3df;">{% trans "Agentless Auto-Discovery for Linux, *nix based instances" %}</p>
+            <p>{% trans "Also discover your unix and Linux platforms like Solaris, AIX, Redhat, CentOS, Ubuntu, Suse Linux, BSD, and more!" %}</p>
+
+            <p class="h4 ul-heading" style="color: #22a3df;">{% trans "Remote Collectors (RCs) run on Windows and/or Linux" %}</p>
+            <p>{% trans "<b>Discover from anywhere with Device42’s Remote Collectors (RCs).</b> Deploy as many as you need, wherever you like!" %}</p>
+        </div>
+
+    </section>
+
+    <br>
+    <p class="h4 ul-heading" style="color: #22a3df;">{% trans "Data collected includes:" %}</p>
+    <ul>
+      <li>{% trans "Basic inventory information (hostname [or vhost], serial number, hardware model, CPU/RAM/HDD details)" %}</li>
+      <li>{% trans "CPU, Memory, Disk, and Network IO stats to RightSize your cloud instance" %}</li>
+      <li>{% trans "Operating System (OS) with version number and build information" %}</li>
+      <li>{% trans "IP and MAC addresses with relations between them (Automatically correlates to corresponding switch ports)" %}</li>
+      <li>{% trans "Installed software (including version number and installation date)" %}</li>
+      <li>{% trans "All services (running or stopped) with listening ports for all the services and remote connections" %}</li>
+      <li>{% trans "Service-to-service IP, port maps, and application dependency maps" %}</li>
+    </ul>
+
+    <section class="row landing-section">
+        <div class="col-md-5">
+          <a href="{% static 'img/landing/discovery/snmp_network_discovery.png' %}" data-featherlight="image">
+            <img src="{% static 'img/landing/discovery/snmp_network_discovery.png' %}"
+                 class="img-responsive box-shadow center-block"
+                 alt="{% trans 'SNMP Network Discovery' %}"/>
+          </a>
+        </div>
+        <div class="col-md-7">
+            <h3 class="sub-heading">{% trans "Cloud-Based Network Discovery via SNMP" %}</h3>
+            <p>{% trans "Device42 enables SNMP discovery for network devices and more. SNMP provides comprehensive capabilities to identify and track many physical and virtual components, their relationships, and their interdependencies." %}</p>
+            <div class="row" style="width: 100%;">
+                <div class="col-sm-6">
+                    <ul>
+                        <li>{% trans "Switch/Router/Firewall inventory" %}</li>
+                        <li>{% trans "IP to MAC address relationships" %}</li>
+                        <li>{% trans "MAC address to switch port relationships" %}</li>
+                        <li>{% trans "VLANs/Subnets" %}</li>
+                    </ul>
+                </div>
+                <div class="col-sm-6">
+                    <ul>
+                        <li>{% trans "SNMP v1/v2c/v3 supported" %}</li>
+                        <li>{% trans "Discover CDP/LLDP neighbors" %}</li>
+                        <li>{% trans "Custom discovery scheduling" %}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    {% include 'partials/try-free-callout.html' %}
+
+    <section class="row landing-section is-table-row">
+
+        <div class="col-sm-6 col-sm-push-6">
+          <a href="{% static 'img/sections/solutions/network-discovery-11.png' %}" data-featherlight="image">
+            <img class="img-responsive img-rounded box-shadow center-block" alt="{% trans 'REST APIs' %}"
+                 src="{% static 'img/sections/solutions/network-discovery-11.png' %}">
+          </a>
+        </div>
+        <div class="col-sm-6 col-sm-pull-6">
+            <h3 class="sub-heading">{% trans "Integrations, REST APIs, and Webhooks" %}</h3>
+            <p>{% trans "Take advantage of out of the box integrations with Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, Servicenow and more. Bring in any data you have stored in other systems. Use REST APIs to customize exactly what data you want to send to Device42, and create your own integrations and automations with RESTful API’s and Webhooks." %}</p>
+        </div>
+    </section>
+
+    <section class="row landing-section">
+        <div class="col-sm-12 col-md-6">
+          <a href="{% static 'img/sections/features/cmdb/Solution-Components.png' %}" data-featherlight="image">
+            <img class="img-responsive center-block" alt="{% trans 'Device42 Solution Components' %}"
+                 src="{% static 'img/sections/features/cmdb/Solution-Components.png' %}">
+          </a>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <h3 class="sub-heading"><em>{% blocktrans %}See <strong style="font-style:normal;">IT</strong> All in One Place!</em>{% endblocktrans %}</h3>
+            <p>{% trans "Device42 offers an extensive and highly-customizable set of reports and inquiry screens to access your CI data. Even better, Device42 provides an extensive set of visualizations including:" %}</p>
+            <ul>
+                <li>{% trans "Your full IP connectivity and power chain with DCIM" %}</li>
+                <li>{% trans "Your hardware, software, and application dependencies with ADM" %}</li>
+                <li>{% trans "Your computer rooms and racks with power and capacity heatmaps" %}</li>
+                <li>{% trans "Your assets and IPs with IT asset management [ITAM] & IP address management [IPAM]" %}</li>
+            </ul>
+        </div>
+    </section>
+    <p>{% trans "Device42's CMDB provides a <em>single source of truth</em> within your organization.  This gives you a clear view into your IT ecosystem to identify, manage, and verify all configuration items (CI) across your deployment." %}</p>
+{% endblock %}

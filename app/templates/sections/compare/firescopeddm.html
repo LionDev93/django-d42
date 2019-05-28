@@ -1,0 +1,226 @@
+{% extends "base/_base.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Device42 is a comprehensive IT management software (virtual appliance). Plug & Play with open APIs. Rely on Device42 for automated IP Address Management!' %}"/>
+{% endblock %}
+{% block title %}{% trans "Device42 vs. FireScope DDM" %}{% endblock %}
+{% block styles %}
+    <style>
+        .media-left i.fa {
+            color: #00b6ff;
+        }
+
+        .media-body {
+            vertical-align: middle !important;
+        }
+
+        ul.square-style {
+            font-weight: 300;
+        }
+
+        .blue-back.box {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .media {
+            margin-left: 24px;
+        }
+        #top-container ul{
+          font-family: "Roboto Condensed", sans-serif;
+        }
+        .table-title p {
+          font-weight: 300;
+        }
+
+        #top-container p {
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+        }
+
+        .table-desc {
+          font-size: 14px;
+          font-weight: 300 !important;
+          color: #0fb9ff;
+          text-align: center;
+        }
+
+        .table {
+          margin-bottom: 0px !important;
+        }
+
+        .d-flex {
+          display: flex;
+        }
+
+        .m-auto {
+          margin: auto;
+        }
+
+        @media (max-width: 768px) {
+          .d-flex {
+            display: block;
+          }
+        }
+    </style>
+{% endblock %}
+{% block script %}
+    <script type="text/javascript">
+        $(function () {
+            $("i.fa").tooltip();
+        });
+    </script>
+{% endblock %}
+{% block body %}
+<header class="row head-home bg-primary">
+    <div class="container">
+        <div class="row">
+            <h1>{% trans "Device42 vs. FireScope DDM" %}</h1>
+        </div>
+    </div>
+</header>
+<article class="container vert-offset-top-1 landing-page">
+  <section class="row landing-section">
+    <p>{% trans "Automatic Discovery & Dependency mapping tools (i.e. ADM, ADDM, DDM, IDDM) provide company-wide benefits that extend beyond the walls of IT. From migration planning insights to easier audits, driving automation via webhooks and interfacing via RESTful APIs, and assisting with daily ITSM tasks, choosing the right Application Dependency Mapping product can really pay dividends." %}</p>
+    <br>
+    <p>{% trans "Device42 provides agentless services and application discovery based on native Windows (WMI) and Linux (SSH) protocols.  Agent-based versions are available for sensitive and/or often-disconnected devices.  Device42 augments this native-protocol deep application discovery with Netflow, and Nmap is also used for supplemental services discovery." %}</p>
+  </section>
+
+  {% include 'partials/try-free-callout.html' %}
+
+  <h4 class="lead-small text-muted" style="font-weight: bold;font-style:italic;">Key differences between Device42 and FireScope are highlighted below:</h4>
+  <section class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+
+        <div class="table-responsive">
+          <table class="table table-hover d42-sw-compare">
+            <thead>
+              <tr>
+                <th class="table-title"><p class="dark-blue text-left alt-text" style="margin:0;font-size:24px;">{% trans "Feature Comparisons" %}</p></th>
+                <th>{% trans "Device42 Core" %}</th>
+                <th>{% trans "FireScope" %}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="comp-feature">{% trans "Option to keep data on premises" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Enterprise CMDB" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Native WMI & SSH Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Primary discovery done w/o agents" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-exclamation-triangle" data-toggle="tooltip" data-placement="top" title="FireScope requires deployment of agents for anything more than 'guess-based' discovery via netflow, and to obtain packet capture data."></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Resource Utilization" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-exclamation-triangle" data-toggle="tooltip" data-placement="top" title="When deployed, FireScope Agents can collect resource utilization data."></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "AWS and Azure cloud instance recommendations with pricing" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Cisco UCS Support" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "SNMP Support" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Netflow Support" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "No need for expensive Span Ports" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Webhooks to drive automation" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "RESTful API" %}</td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+  </section>
+  <p class="table-desc">{% trans "*All feature data deduced from the Firescope Software website and/or available marketing materials. Please let us know if something isn’t right and we’ll gladly update it." %}</p>
+  <br />
+  <p>{% trans "In contrast, Firescope does not offer native-protocol application discovery and instead relies on Netflow which provides a weak level of services (but not application) discovery and/or packet capture which requires use of expensive and time-consuming span ports." %}</p>
+  <br>
+  <p>{% trans "Another critical distinction between Firescope and Device42 is that Device42 provides everything you need right out of the box: a Continuous Discovery CMDB solution that finds and catalogs comprehensive details about what you have running in your environment today, while detecting and recording additions and changes across your infrastructure as they happen." %}</p>
+  <br>
+  <p>{% trans "Though FireScope has recently added Asset Inventory Management, they, in contrast, do not include a fully-integrated CMDB solution in which to store discovered dependencies and asset configuration details. Instead, customers are encouraged to purchase and integrate with their “Cherwell Service Management CMDB” product." %}</p>
+  <br>
+  <hr>
+
+  <section class="landing-section">
+    <h3 class="text-strong">{% trans "The Device42 Solution" %}</h3>
+    <p>{% trans "Device42 combines data obtained via multiple complimentary discovery technologies (WMI, SSH, VMware & other native protocols, SNMP, Netflow, Nmap, etc.) to comprehensively identify running and installed software, services, hardware, and their interdependencies. Conversely, FireScope DDM output is ‘guess-based’, derived solely from netflow and/or packet capture data." %}</p>
+    <br>
+    <p>{% trans "Device42 ships as an on premise virtual appliance (though SaaS is available to those who require it), while FireScope only offers a SaaS solution. That said, getting up and running with FireScope’s approach to Dependency Mapping is an order of magnitude more complicated when compared to Device42, requiring the configuration of expensive and intrusive span ports on every VLAN of your network." %}</p>
+    <br>
+    <p>{% trans 'Beyond Continuous Discovery and Dependency Mapping, Device42 is your one-stop single source of truth because it includes a fully integrated suite of enterprise CMDB features: A DCIM, IPAM, Password Management, Certificate Management, Inventory and Lifecycle Management, Automatic Rack Diagrams, Cable Management, Drag-and-drop Room Layouts, Advanced Visualizations, Powerful, Customizable Reporting, webhooks, and a well documented RESTful API. Device42 provides far more value than any single solution "point product" ever could.' %}</p>
+  </section>
+
+  <br>
+  <section class="landing-section">
+    <p style="font-size: 20px;"><strong>{% trans "Device42 can quickly and thoroughly discover your entire network using a variety of auto-discovery methods, automatically correlating the information:" %}</strong></p>
+    <div class="row d-flex">
+      <div class="col-md-7">
+        <ul class="square-style">
+        <li>
+          {% trans "SNMP Discovery (v1/v2c/v3):" %}
+          <ul class="bullet-gray">
+            <li>{% trans "Network switches, routers and firewalls" %}</li>
+            <li>{% trans "Load balancers (such as BIG-IP F5 & Cisco NetScaler" %}</li>
+            <li>{% trans "Blade systems to get chassis/blade system information" %}</li>
+            <li>{% trans "Discovery and monitoring of power devices like PDUs, UPS, CRAC, etc." %}</li>
+            <li>{% trans "Console switches, fiber switches, SAN switches, etc." %}</li>
+          </ul>
+        </li>
+        <li>{% trans "WMI based discovery for Windows based machines (and servers)" %}</li>
+        <li>{% trans "SSH based discovery for different UNIX and Linux flavors." %}</li>
+        <li>{% trans "Hypervisor and VMs discovery with support for all major virtualization platforms" %}</li>
+        <li>{% trans "Cloud discovery support for Amazon, Azure, Joyent, Linode, Digital Ocean etc." %}</li>
+        <li>{% trans "Cisco UCS" %}</li>
+        <li>{% trans "DNS sync and ping sweep for network discovery" %}</li>
+        <li>{% trans "Pull inventory data from tools like Puppet, Chef, Microsoft SCCM, monitoring systems" %}</li>
+        <li>{% trans "IPMI discovery for BMC boards" %}</li>
+    </ul>
+      </div>
+      <div class="col-md-5 padded m-auto">
+        <img class="img-responsive" alt="{% trans 'Solutions Components' %}" src="{% static 'img/sections/features/cmdb/Solution-Components.png' %}">
+      </div>
+    </div>
+
+  </section>
+
+  {% include 'partials/try-free-callout.html' %}
+</article>
+{% endblock %}

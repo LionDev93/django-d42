@@ -1,0 +1,138 @@
+{% extends "base/_base-landing-alt.html" %}
+{% load i18n static %}
+
+{% block content %}
+<div class="container m-t-2">
+  <div class="row">
+    <div class="col-md-6">
+      <img data-src="{% static page.landing.image_url %}" alt="{{ page.landing.title }}"
+           class="img-responsive center-block">
+    </div>
+    <div class="col-md-6">
+      <h1>{{ page.landing.title }}</h1>
+      {{ page.landing.content | safe }}
+      <div class="row text-center" style="margin-top: 1em;">
+        <a href="/download/" class="btn btn-warning btn-orange btn-lg text-uppercase m-b-05"><i
+          class="fa fa-download fa-pull-left"
+          style="padding-top: 6px"></i> Free
+          Trial Now
+        </a>
+        <a href="/schedule_demo/" class="btn btn-info btn-lg text-uppercase m-b-05"><i
+          class="fa fa-clock-o fa-pull-left"
+          style="padding-top: 3px"></i> Request Online Demo
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="line">
+  <hr>
+</div>
+<div class="container">
+  <div class="row">
+    <h4 class="text-center">Some of Our Customers</h4>
+  </div>
+  <div class="row m-t-1">
+    <div class="col-md-2 col-xs-6">
+      <div style="width:120px; height:40px" class="sprite-atlassian center-block"></div>
+    </div>
+    <div class="col-md-2 col-xs-6">
+      <div style="width:120px; height:40px" class="sprite-mercedesbenz center-block"></div>
+    </div>
+    <div class="col-md-2 hidden-xs">
+      <div style="width:120px; height:40px" class="sprite-westerndigital center-block"></div>
+    </div>
+    <div class="col-md-2 hidden-xs">
+      <div style="width:120px; height:40px" class="sprite-avaya center-block"></div>
+    </div>
+    <div class="col-md-2 hidden-xs">
+      <div style="width:120px; height:40px" class="sprite-verizon center-block"></div>
+    </div>
+    <div class="col-md-2 hidden-xs">
+      <div style="width:120px; height:40px" class="sprite-fijitsu center-block"></div>
+    </div>
+  </div>
+  <hr class="m-t-2">
+  <div class="row">
+    {% for feature in page.feature %}
+    <div class="col-md-4">
+      {% if feature.image_url %}
+      <img data-src="{% static feature.image_url %}"
+           alt="{{ feature.title }}" class="img-responsive center-block m-b-1">
+      {% endif %}
+      <h4>{{ feature.title }}</h4>
+      {{ feature.content | safe }}
+    </div>
+    {% endfor %}
+  </div>
+  <hr>
+  <div class="row m-t-5">
+    <div class="col-md-12">
+      <p class="text-center lead">"After trialing many different asset solutions, Device42 was by far superior. It came
+        with a lot of unique functionality we were looking for such as SAML, Jira Integration, workflows etc. What really
+        made my life easier though was their thorough documentation on everything and their very timely and
+        knowledgeable
+        support. Their support was fantastic throughout the implementation process and always addressed issues
+        expediently.
+        I deal with many organizations support for various solutions we have and D42 definitely stands out for quality.
+        I would definitely recommend their solution based on the above."</p>
+      <div>
+        <hr class="text-center" style="width: 30px;">
+      </div>
+      <img data-src="{% static 'img/landings/keith.png' %}" alt="Keith Cross - System Administrator, Abas USA" width="80" height="80" class="img-circle center-block m-b-05">
+      <p class="text-center">Keith Cross<br>
+        <span class="text-muted">System Administrator, Abas USA</span>
+      </p>
+    </div>
+  </div>
+  <hr>
+  <div class="row m-t-1">
+    <div class="col-md-4">
+      <p class="text-center">"Everyone has been so professional, courteous and willing to accommodate above and beyond
+        my expectations. I've had numerous questions and problems but each inquiry was returned with such enthusiasm and
+        eagerness to help. Thank you again for the wonderful customer service."</p>
+      <div>
+        <hr class="text-center" style="width: 30px;">
+      </div>
+      <p class="text-center">Christina Sharp<br>
+        <span class="text-muted">Cox Communications</span>
+      </p>
+    </div>
+    <div class="col-md-4">
+      <p class="text-center" style="padding-top: 1em;">"Device42 gave us the badly needed ability to manage our Assets
+        and our Lab.<br>
+        I like the constant improvements, and the way we can track almost everything we need to in one place."</p>
+      <div>
+        <hr class="text-center" style="width: 30px; margin-top: 3em;">
+      </div>
+      <p class="text-center">Robert Higbie<br>
+        <span class="text-muted">Cisco</span>
+      </p>
+    </div>
+    <div class="col-md-4">
+      <p class="text-center">"Device42 eliminates hours of manually taking and updating inventory and I like its ease
+        of use and having everything in one application. I'm also very satisfied with the support I receive from
+        Device42
+        and would definitely recommend Device42 to others!"</p>
+      <div>
+        <hr class="text-center" style="width: 30px; margin-top: 2em;">
+      </div>
+      <p class="text-center">Nick Fredrich<br>
+        <span class="text-muted">Network Engineer, OneChicago</span>
+      </p>
+    </div>
+  </div>
+</div>
+<div class="container-fluid m-t-1" style="background-color: #f1f1f1;">
+  <div class="row text-center">
+    <div style="padding: 3em 0em 1.5em;">
+      <a href="/download/" class="btn btn-warning btn-orange btn-lg text-uppercase m-b-05">
+        <i class="fa fa-download fa-pull-left" style="padding-top: 6px"></i> Free Trial Now
+      </a>
+      <a href="/schedule_demo/" class="btn btn-info btn-lg text-uppercase m-b-05">
+        <i class="fa fa-clock-o fa-pull-left" style="padding-top: 3px"></i> Request Online Demo
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

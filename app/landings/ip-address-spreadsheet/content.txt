@@ -1,0 +1,33 @@
+[head.title]
+Replace spreadsheets with a comprehensive IP address tool with agentless autodiscovery
+
+[head.description]
+Ditch your IP address spreadsheet! Device42 features comprehensive IP address management with powerful agentless auto-discovery!
+
+[landing.title]
+Comprehensive IP address tool
+
+[landing.content]
+The Device42 IP address tool helps you ditch IPAM spreadsheets for good, providing an easy to use console for centralized IP visibility and control!
+	
+- Comprehensive IPv4/IPv6 IP address management tool
+- Automatic network and server discovery using ping sweep, SNMP, SSH, WMI, netflow, and other native protocols
+- Support for overlapping IP ranges and nested subnet management
+- Auto-assignment of next free IPs to any device using APIs and/or integrations
+- Automatic correlation of and updates to autodiscovered data!
+- ...and much, much more!
+
+[feature[1].title]
+Complete autodiscovery across networks and IP address tool
+[feature[1].content]
+Forget Spreadsheets! Device42 autodiscovers all your systems, highlighting dependencies between physical, virtuals and applications. Autodiscovery populates your IP address tool with subnets, VLANs, network inventory, and switch port mappings.
+
+[feature[2].title]
+Overlapping IP ranges with visualizations
+[feature[2].content]
+Re-use IPs across different network segments? Device42 handles overlapping IP ranges! Subnet tree and usage charts provide powerful visualization and better operational insight.
+
+[feature[3].title]
+Automate IP address tool functions with Device42's RESTful APIs and integrations
+[feature[3].content]
+Take advantage of out-of-the-box integrations: Ansible, Foreman, Puppet, Chef, SCCM, Infoblox, JIRA, ServiceNow, vRealize, and many more! Automatically assign IP's in your provisioning and orchestration workflows.

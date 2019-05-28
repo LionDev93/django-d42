@@ -1,0 +1,194 @@
+{% extends "base/_base.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% blocktrans %}Device42’s plug & play virtual appliance, comprehensive CMDB and powerful ADM make cloud management and cloud migrations easier, reliable and successful!{% endblocktrans %}"/>
+{% endblock %}
+{% block title %}{% trans "Device42 vs. Cloudamize" %}{% endblock %}
+{% block styles %}
+<style>
+     #top-container {
+          font-family: "Open Sans", sans-serif !important;
+     }
+
+    .cta-free-trial {
+        padding: 24px 0;
+        text-transform: none !important;
+        background-color: #ffc90e;
+        color: #130dff !important;
+    }
+    #top-container h1 {
+        margin-bottom: 0px;
+    }
+
+    .landing-section {
+      padding: 10px;
+    }
+
+    @media screen and (min-width: 1200px){
+
+      .lead {
+          padding: 10px;
+      }
+
+    }
+
+    @media screen and (min-width: 768px) {
+      .table-title p {
+        margin: 0px;
+        font-size: 24px;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .table-title p {
+        margin: 0px;
+        font-size: 15px;
+      }
+    }
+
+</style>
+{% endblock %}
+{% block script %}
+    <script type="text/javascript">
+        $(function () {
+            $("i.fa").tooltip();
+        });
+    </script>
+{% endblock %}
+{% block body %}
+  <header class="row head-home bg-primary">
+      <div class="container">
+          <div class="row">
+              <h1>{% trans "Device42 vs. Cloudamize" %}</h1>
+          </div>
+      </div>
+  </header>
+
+  <article class="container vert-offset-top-1">
+    <em class="h3 flat-top flat-bottom">{% trans "Looking for a better alternative to Cloudamize?" %}</em><br />
+    <em class="h3 flat-top flat-bottom">{% trans "You’re in the right place!" %}</em>
+    <p class="lead" style="margin:initial!important;"></p>
+    <section class="row landing-section">
+            <div class="col-sm-7">
+
+                <div class="row">
+                    <ul class="bullet-blue square-style">
+                        <li>{% trans "Our easy to use virtual appliance is feature-packed with agentless auto-discovery, remote collectors, resource utilization, and universal import tools help make cloud migrations easier" %}</li>
+                        <li>{% trans "Device42’s comprehensive CMDB and powerful ADM make migrations easier, helping you create and prioritize ‘move groups’ and simplifying the retirement and/or consolidation of assets during your migration" %}</li>
+                        <li>{% trans "More than simply a “best cloud platform and cost” calculator, Device42 continues to provide valuable insight long after your migration is complete" %}</li>
+                        <li>{% blocktrans %}Device42’s unique understanding and clear presentation of application interdependencies ensures all of your migrations efforts are efficient and successful!{% endblocktrans %}</li>
+                        <li>{% trans "Impact and dependency charts ensure faster recovery and shorter MTTRs" %}</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-sm-5">
+                <table class="table table-hover d42-sw-compare">
+                    <thead>
+                    <tr>
+                        <th class="table-title">
+                            <p class="dark-blue text-left alt-text"
+                               style="margin:0;font-size:24px;">{% trans "Features" %}</p>
+                        </th>
+                        <th class="product-heading blue">{% trans "Device42" %}</th>
+                        <th class="product-heading blue">{% trans "Cloudamize" %}<sup>&reg;</sup></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="comp-feature">{% trans "CMDB" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Can keep discovered data on premise" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Agentless Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Resource Utilization" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "ITAM" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "IPAM" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "DCIM" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature">{% trans "Cloud Cost Estimation" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    <section class="row image-right-5x7 is-table-row landing-section">
+            <div class="col-sm-7">
+                <h3 class="text-strong">{% trans "Key Features:" %}</h3>
+                <ul class="bullet-blue square-style">
+                    <li>{% trans "Lean on Device42 before, during, and after your migration:" %}</li>
+                    <li><u>{% trans "Assess" %}</u>: {% trans "Determine the best migration path for your systems - Legacy or modern, to the cloud, colo, or hybrid" %}</li>
+                    <li><u>{% trans "Plan" %}</u>: {% trans 'Segment apps and servers into “move groups” by dependency, and ensure all inter-dependencies are accounted for. Quickly determine who needs to be involved, and their contact information is at your fingertips' %}</li>
+                    <li><u>{% trans "Migrate" %}</u>: {% trans "Look up server credentials, and generate a secure new set for the migrated server" %}</li>
+                    <li><u>{% trans "Validate" %}</u>: {% trans "Ensure your applications are functioning and your changes appear as they should" %}</li>
+                    <li><u>{% trans "Optimize" %}</u>: {% trans "Continuously optimize. Watch power usage and temps, and ensure loads remain ideally distributed. Use data provided by Device42 to help fine tune whenever necessary. Use webhooks and the API to automate repetitive processes" %}</li>
+                </ul>
+                <p>{% blocktrans %}Device42 focuses on complete and accurate discovery, identifying all the details about what you have running in your environment <em>(no matter where it is or where it’s going)</em>, clearly highlighting the interdependencies. In contrast, Cloudamize provides tools centered around workload migration, and Cloudamize’s tools focus on helping to compare the costs of migrating identified workloads (e.g. VMs and/or applications) to competing cloud providers.{% endblocktrans %}</p>
+                <p>{% blocktrans %}In Device42, once you have identified what you have running and where and how it all interacts, identifying candidates for migration and creating a migration plan is a much more straightforward process. <em>The hardest and most important part of any migration project is gaining a thorough understanding of the current state of your network.</em>{% endblocktrans %}</p>
+            </div>
+            <div class="col-sm-5">
+                <a href="{% url 'download' %}">
+                    <img src="{% static 'img/landing/cloudamize/device42.png' %}"
+                         alt="{% trans 'Cloudamize vs Device42' %}"
+                         class="img-responsive center-block">
+                </a>
+            </div>
+        </section>
+    <section class="row landing-section">
+            <div class="col-sm-7">
+                <ul class="bullet-blue square-style">
+                    <li>{% trans "Powerful, Agentless Device Discovery" %}
+                        <ul class="bullet-gray">
+                            <li>{% trans "Native WMI for Windows & SSH for *nix, BSD, and Mac" %}</li>
+                            <li>{% trans "SNMP for network devices like routers, switches, and load balancers" %}</li>
+                            <li>{% trans "Native Discovery for popular hypervisors and their guest VMs, cloud platforms, blades" %}</li>
+                        </ul>
+                    </li>
+                    <li>{% trans "Application Dependency Mapping discovers (with or without agents) all your application dependencies" %}</li>
+                    <li>{% trans "Optional remote collector - no complicated span ports necessary, ever!" %}</li>
+                    <li>{% trans "Device42 automatically generates dependency flow diagrams, charts, and list views that identify the relationships and interdependencies between devices, servers, applications, and application components" %}</li>
+                    <li>{% trans "See the services that are listening, on what ports, and all open ports on each server" %}</li>
+                    <li>{% trans "Discover data on servers that can’t be accessed directly with netflow and NMAP" %}</li>
+                    <li>{% trans 'Powerful Planning with “What-if Scenarios” - Optimally spread loads for efficient space and power utilization' %}</li>
+                </ul>
+            </div>
+            <div class="col-sm-5">
+                <a href="{% url 'download' %}">
+                    <img src="{% static 'img/sections/features/cmdb/key-features.png' %}"
+                         alt="{% trans 'Cloudamize vs Device42' %}"
+                         style="max-width: 90% !important;"
+                         class="img-responsive center-block">
+                </a>
+            </div>
+        </section>
+    {% include 'partials/try-free-callout.html' %}
+  </article>
+{% endblock %}

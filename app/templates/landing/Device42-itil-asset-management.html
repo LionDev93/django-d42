@@ -1,0 +1,144 @@
+{% extends "base/_base-landing.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'ITIL Asset Management with an easy and intuitive web based tool that integrates IP address management as well.' %}"/>
+{% endblock %}
+{% block styles %}
+    <style>
+        .sub-heading {
+            margin-bottom: 4px;
+        }
+        ul.small li {
+            font-size:100%;
+        }
+    </style>
+{% endblock %}
+{% block title %}{% trans "ITIL Asset Management" %}{% endblock %}
+
+{% block landingHeadingText %}{% trans "ITIL Asset Management" %}{% endblock %}
+
+{% block landingfeature %}
+    <section class="row is-table-row">
+        <div class="col-sm-7">
+            <p class="lead">{% trans "Device42 provides comprehensive ITIL Asset Management" %} <span style="font-style:italic;font-weight:300;">({% trans "ITAM" %})</span> {% trans "capabilities. Establishing and maintaining a centralized system of record, you can now easily manage the entire lifecycle of any IT asset type within your data center. Device42’s powerful continuous auto-discovery ensures IT asset inventories, whether physical, hybrid, or cloud are always accurate and up-to-date." %}
+            </p>
+        </div>
+        <div class="col-sm-5">
+            <img class="hidden-xs img-responsive center-block img-border"
+                 src="{% static 'img/sections/features/itam/it-asset-management.png' %}">
+        </div>
+    </section>
+    <h4 class="prelist text-primary flat-bottom">{% trans "With Device42’s comprehensive ITIL asset management capabilities, companies can" %}:</h4>
+    <div class="row">
+        <div class="col-xs-6">
+            <ul class="bullet-blue tight" style="font-family:inherit;">
+                <li>{% trans "Auto-discover: both agentless, and/or with our agent" %}</li>
+                <li>{% trans "Track hardware and software, on both physical and virtual machines" %}</li>
+                <li>{% trans "Manage container inventory (Docker, Kubernetes)" %}</li>
+                <li>{% trans "Inventory any assets, whether on premise or in the cloud" %}</li>
+                <li>{% trans "Track and visualize relationships between assets" %}</li>
+                <li>{% trans "Print QR codes and barcodes with smart phone support for inventory management" %}</li>
+            </ul>
+        </div>
+        <div class="col-xs-6">
+            <ul class="bullet-blue tight" style="font-family:inherit;">
+                <li>{% trans "Integrate with many popular ITSM tools (track and manage change history)" %}</li>
+                <li>{% trans "Scale from small to huge – No inventory too large" %}</li>
+                <li>{% trans "Check Warranty Status, with tracking and reporting" %}</li>
+                <li>{% trans "Ensure security and compliance" %}</li>
+                <li>{% trans "Handle Audits with ease via customizable reports, at your fingertips" %}</li>
+                <li>{% trans "...And go beyond just assets with Device42’s fully integrated CMDB" %}</li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}
+
+{% block maincontent %}
+    <h3 class="sub-heading"><i class="fa fa-magic text-primary fa-pull-left"
+                               aria-hidden="true"></i>{% trans "Agentless auto-discovery" %} {% trans "<small>An accurate inventory that is <strong>always</strong> audit-ready</small>" %}
+    </h3>
+    <section class="row landing-section">
+        <div class="col-sm-7">
+            <p class="">{% trans "Populate your Infrastructure and inventory quickly and effortlessly with an extensive range of auto-discovery tools for physical, virtual, and cloud infrastructures. Designed with ITIL asset management in mind, increase efficiency and maximize productivity by getting clear visibility into what you have while promoting transparency companywide." %}</p>
+            <ul class="font-stack-condensed dash">
+                <li>{% trans "All discovery tools are available both with an agent or agentless, choose the best combination for your environment!" %}</li>
+                <li>{% trans "All discoveries can be scheduled so your inventory is always up-to-date" %}</li>
+                <li>{% trans "Multiple discovery protocols supported (e.g. SNMP, WMI, SSH, Modbus, ...)" %}</li>
+                <li>{% trans "Native support for most popular virtualization platforms," %}</li>
+                <li>{% trans "Native support for many popular public and private cloud platforms" %}</li>
+                <li>{% trans "Native support for blade chassis" %}</li>
+                <li>{% trans "Granular APIs with great documentation and sample scripts for custom discovery" %}</li>
+                <li>{% trans "Featuring webhooks for custom integrations and/or driving automation" %}</li>
+                <li>{% trans "Fast, flexible and easy to deploy" %}</li>
+            </ul>
+        </div>
+        <div class="col-sm-5">
+            <img class="img-responsive center-block" alt="{% trans 'Agentless Autodiscovery' %}"
+                 src="{% static 'img/landing/itil-asset-management/agentless-auto-discovery.png' %}"">
+        </div>
+    </section>
+    <h3 class="sub-heading"><i class="fa fa-hdd-o  text-primary fa-pull-left"
+                               aria-hidden="true"></i>{% trans "Hardware, virtual machines, containers and cloud inventory" %}</h3>
+    <section class="row landing-section">
+        <div class="col-xs-12">
+            <p class="alt-font">{% trans "Device42 locates and updates your devices automatically, making it easy to document physical, virtual, blade, clusters, switches or any other device types." %}</p>
+            <p class="alt-font">{% trans "Effortlessly enumerate data from your Hosts and Virtual Machines across all widely used Hypervisors and Cloud Providers with Device42’s Cloud and vServer Auto-Discovery. Built upon native vendor API’s, you can run on-demand or scheduled jobs to reach and grab data from your Hosts and VM’s alike, keeping your inventory up to date with new deployments and changes to your virtual and cloud environments." %}</p>
+        </div>
+    </section>
+    <section class="row">
+        <div class="col-sm-7 text-center">
+              <img src="{% static 'img/sections/solutions/hardware-inventory.png' %}"
+                     class="img-responsive img-border padded">
+        </div>
+        <div class="col-sm-5">
+            <p class="alt-font">{% trans "Device42 also offers automated warranty checking. Simply query Device42 for your assets, and warranty information is automatically retrieved from Dell, HP, IBM & Lenovo., and then automatically added into the Device42 database." %}</p>
+        </div>
+    </section>
+
+    <section class="row landing-section">
+        <div class="col-sm-8">
+            <h3 class="sub-heading"><i class="fa fa-laptop text-primary"
+                                       aria-hidden="true"></i> {% trans "Software inventory" %}</h3>
+            <br>
+            <p class="alt-font">{% trans "Using Device42’s powerful software discovery process, organizations can create and maintain a comprehensive, accurate profile of the software deployed on Windows and Linux machines across the entire IT infrastructure — from the server to the desktop." %}</p>
+            <ul class="bullet-blue tight">
+                <li>{% trans "Compare current usage to license counts" %}</li>
+                <li>{% trans "Detect prohibited software" %}</li>
+                <li>{% trans "Track license agreements and expiration dates" %}</li>
+                <li>{% trans "Identify purchased vs. installed software" %}</li>
+                <li>{% trans "Provide customizable notification alerts" %}</li>
+            </ul>
+            <p class="alt-font">{% trans "We have designed Device42 to allow you to accurately reflect all licensing models, whether user, device or CPU based. Extensive functionality provides key organizational benefits, ensuring license compliance, standards assurance, and cost management." %}</p>
+        </div>
+        <div class="col-sm-4 padded">
+            <img src="{% static 'img/sections/solutions/software-inventory.png' %}"
+                 class="img-responsive img-border center-block flat-bottom">
+        </div>
+    </section>
+    <h3 class="sub-heading"><i class="fa fa-thumb-tack text-primary"
+                               aria-hidden="true"></i> {% trans "Track relationships between assets" %}</h3>
+    <section class="row">
+        <div class="col-xs-12 col-md-8">
+            <p class="alt-font">{% trans "With flexible and far reaching methods of gathering network and device data, Device42 is a powerful platform to visualize concrete information on all operational dependencies." %}</p>
+            <p class="alt-font">{% trans "Using multiple methods of Auto-Discovery, API, and integration data, Device42 will put the pieces together for detailed Impact Charts displaying the downward dependency of a Virtual Host or Blade Chassis to all contained VM’s or Servers and the service connections between. See a map of your operations and quickly understand what occurs if a blade or service becomes unavailable and the trickle-down effect of outages or service interruptions." %}</p>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <img class="img-responsive img-border center-block" alt="{% trans 'Asset Relationships' %}"
+                 src="{% static 'img/sections/solutions/asset-relationships.png' %}">
+        </div>
+    </section>
+    {% include 'partials/try-free-callout.html' %}
+    <h3 class="sub-heading text-center">{% trans "Go beyond just assets with a fully integrated CMDB" %}</h3>
+    <section class="row landing-section">
+      <div class="col-sm-7">
+          <img class="img-responsive center-block" alt="{% trans 'Solutions Components' %}"
+                 src="{% static 'img/landing/solution_components.png' %}">
+      </div>
+      <div class="col-sm-5">
+        <p class="alt-font">{% trans "Device42’s CMDB takes ITIL asset management to the next level, becoming the source of truth within your organization. Device42 is always ready to provide a clear view into your IT ecosystem." %}</p>
+        <p class="alt-font">{% trans "A powerful RESTful API allows for easy custom integrations with other applications across your IT infrastructure, while webhooks can be triggered by any event that creates an audit-log entry. On top of that, Device42 also offers out-of-the box integrations with all of your favorite tools. Interfacing with custom automation workflows couldn’t be easier!" %}</p>
+        <p class="alt-font">{% trans "Unify data and process across teams and across departments, and foster alignment across your organization!" %}</p>
+      </div>
+    </section>
+{% endblock %}

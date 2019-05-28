@@ -1,0 +1,199 @@
+{% extends "base/_base.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Compare Device42 with ManageEngine IT asset explorer.' %}"/>
+{% endblock %}
+{% block title %}{% trans "ManageEngine Asset Explorer vs Device42" %}{% endblock %}
+{% block styles %}
+    <style>
+        .media-left i.fa {
+            color: #00b6ff;
+        }
+
+        .media-body {
+            vertical-align: middle !important;
+        }
+
+        ul.square-style {
+            font-weight: 300;
+        }
+
+        .blue-back.box {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .media {
+            margin-left: 24px;
+        }
+        #top-container ul{
+          font-family: "Roboto Condensed", sans-serif;
+        }
+        .table-title p {
+          font-weight: 300;
+        }
+
+        #top-container p {
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+        }
+
+        @media (min-width: 768px) {
+          .middle-pos {
+            margin-top: 150px;
+          }
+          .table-title p {
+            margin:0;
+            font-size:24px;
+          }
+        }
+
+        @media (max-width: 767px) {
+          .table-title p {
+            margin:0;
+            font-size:16px;
+          }
+        }
+    </style>
+{% endblock %}
+{% block script %}
+    <script type="text/javascript">
+        $(function () {
+            $("i.fa").tooltip();
+        });
+    </script>
+{% endblock %}
+{% block body %}
+<header class="row head-home bg-primary">
+    <div class="container">
+        <div class="row">
+            <h1>{% trans "ManageEngine Asset Explorer vs Device42" %}</h1>
+        </div>
+    </div>
+</header>
+<article class="container vert-offset-top-1 landing-page">
+  <em class="h3 flat-top flat-bottom">{% trans "Looking for a better Manageengine Asset Explorer alternative? Find out how Device42 hands down beats the competition." %}</em>
+  <section class="row">
+        <div class="col-md-4">
+            <p class="middle-pos"><strong><em>{% trans "Device42 provides comprehensive IT asset management (ITAM) capabilities:" %}</em></strong></p>
+            <ul>
+                <li>{% trans "Powerful agentless auto-discovery" %}</li>
+                <li>{% trans "Configurable asset types" %}</li>
+                <li>{% trans "RESTful APIs and Webhooks" %}</li>
+                <li>{% trans "A holistic approach to IT infrastructure" %}</li>
+                <li>{% trans "Matching Device42’s single product functionality would require multiple separate ManageEngine products" %}</li>
+            </ul>
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+
+            <table class="table table-hover d42-sw-compare">
+            <thead>
+                <tr>
+                    <th class="table-title">
+                        <p class="dark-blue text-left alt-text">{% trans "Solution Comparison" %}</p>
+                    </th>
+                    <th class="product-heading blue" style="vertical-align: middle;">Device42</th>
+                    <th class="product-heading blue">ManageEngine<br> AssetExplorer<sup>&reg;</sup></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="comp-feature">{% trans "Data Center Management (DCIM)" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="Add-on with very limited functionality"><i class="fa fa-2x fa-exclamation-triangle"></i></a></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "IT Asset Management (ITAM)" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "IP Address Management (IPAM)" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="Requires a separate product - with limited functionality"><i class="fa fa-2x fa-exclamation-triangle"></i></a></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Agentless Auto-Discovery" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Native Hypervisor Inventory" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="Native support for VMware Only"><i class="fa fa-2x fa-exclamation-triangle"></i></a></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Hardware and Software Dependency Maps (ADM)" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Certificate Discovery & Management" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Barcode & QR code generation" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="Only available in separate product ServiceDeskPlus"><i class="fa fa-2x fa-times"></i></a></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Multi-tenancy" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Workflow Management" %}</td>
+                    <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="Powerful, free integrations with JIRA, ServiceNow, and more!"><i class="fa fa-2x fa-exclamation-triangle"></i></a></td>
+                    <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="Requires a separate product"><i class="fa fa-2x fa-exclamation-triangle"></i></a></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Power Control" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Single/Unified Product" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+            </tbody>
+            </table>
+
+        </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="row landing-section">
+        <div class="col-sm-7">
+            <h3 class="text-strong">{% trans "Key Features:" %}</h3>
+            <ul class="bullet-blue">
+                <li>{% trans "Powerful agent-less autodiscovery tools with the ability to deploy remote collectors as needed for distributed discovery" %}</li>
+                <li>{% trans "Track hardware and software on physical and virtual machines, containers, and blades whether on premise or in the cloud" %}</li>
+                <li>{% trans "Complete network infrastructure discovery with end-to-end connectivity tracking" %}</li>
+                <li>{% trans "Visualize relationships between assets with detailed impact charts, dependency lists and diagrams, and powerful visualizations" %}</li>
+                <li>{% trans "Track unlimited non-IP assets" %}</li>
+                <li>{% trans "Print QR codes and barcodes with smart phone support" %}</li>
+                <li>{% trans "Integrate with many popular ITSM, CM, and SIEM tools" %}</li>
+                <li>{% trans "Automatic warranty lookup with centralized status tracking and reporting" %}</li>
+                <li>{% trans "Customizable reports, expiration reminders, and notifications" %}</li>
+                <li>{% trans "Support for all popular licensing models (user, device, or CPU-based)" %}</li>
+                <li>{% trans "Granular APIs, sample scripts, and webhooks to drive automation" %}</li>
+                <li><em>{% trans "Go beyond just assets with Device42’s fully integrated CMDB!" %}</em></li>
+            </ul>
+        </div>
+        <div class="col-sm-5">
+            <a href="{% url 'download' %}">
+                <img src="{% static 'img/sections/features/itam/it-asset-management.png' %}"
+                     alt="{% trans 'IT asset management' %}"
+                     class="img-responsive center-block vert-offset-top-2">
+            </a>
+        </div>
+    </section>
+  {% include 'partials/try-free-callout.html' %}
+</article>
+{% endblock %}

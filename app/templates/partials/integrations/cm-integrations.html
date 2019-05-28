@@ -1,0 +1,41 @@
+{% load i18n static %}
+<div {% if id %}id="{{ id }}" {% endif %}>
+  <h2 class="featurette-heading xs-center text-right">{% trans "Configuration Management [CM] Integrations" %}</h2>
+  <h4 class="prelist xs-center text-right">...{% trans "with Puppet, CHEF, ANSIBLE, and System Center" %}</h4>
+  <div class="row featurette image-{{ image|default:'right' }} {% if vcenter %}is-table-row{% endif %}">
+      <div class="col-sm-6">
+          <ul class="bullet-blue">
+              <li>{% trans 'Utilize system information data stored in puppet manifests to populate asset inventory' %}</li>
+              <li>{% trans 'Sync Puppet Facts from Puppet Master and Ohai Node data from Chef Server with Device42' %}</li>
+              <li>{% trans 'Assign Puppet Node Classes directly from Device42' %}</li>
+              <li>{% trans 'Eliminate the need to run redundant discovery processes across the IT infrastructure' %}</li>
+              <li>{% trans 'Streamline the task of provisioning, configuring, and maintaining servers' %}</li>
+              <li>{% trans 'Utilize Chef-discovered system information data to populate asset inventory' %}</li>
+              <li>{% trans 'Integration connector works with all Chef-supported versions of Chef software' %}</li>
+              <li>{% trans 'Import existing Microsoft System Center information into Device42' %}</li>
+          </ul>
+      </div>
+      <div class="col-sm-6 padded">
+          <div class="row integration-logos">
+              <div class="col-xs-6">
+                  <div class="sprite-sccm"></div>
+              </div>
+              <div class="col-xs-6">
+                  <div class="sprite-puppetlabs"></div>
+              </div>
+              <div class="col-xs-6">
+                  <div class="sprite-chef"></div>
+              </div>
+              <div class="col-xs-6">
+                  <div class="sprite-ansible"></div>
+              </div>
+              <div class="col-xs-6">
+                  <div class="sprite-rundeck"></div>
+              </div>
+              <div class="col-xs-6">
+                  <div class="sprite-saltstack"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

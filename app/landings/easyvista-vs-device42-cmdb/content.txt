@@ -1,0 +1,33 @@
+[head.title]
+Device42 is the better EasyVista CMDB alternative with agent-less auto-discovery, ADM, DCIM, and more!
+
+[head.description]
+Go beyond EasyVista with Device42's comprehensive CMDB (Configuration Management Database) with agent-less auto-discovery and so much more!
+
+[landing.title]
+Device42 is the Full-featured EasyVista CMDB Alternative!
+
+[landing.content]
+Looking for the best EasyVista CMDB (Configuration Management Database) alternative? Device42 CMDB is a single source of truth within your organization that ensures that configuration records are accurate with powerful auto-discoveries and provides a clear view into your IT ecosystem.
+
+- Agent-less auto-discoveries to keep all your configuration items (CIs) up-to-date.
+- Helps you unify data and processes across teams, as well as departments, creating alignment companywide.
+- Powerful reporting and easy visualizations for better business decisions and easy understanding of the impacts of different CIs on other CIs.
+- Out of box integrations with ITSM tools like JIRA, ServiceNow, Cherwell and many more help you enhance the value of your existing investments.
+- REST APIs to build quick integrations with homegrown and external tools whether it is another CMDB, automation or other tools.
+
+
+[feature[1].title]
+Complete Autodiscovery for All Networks
+[feature[1].content]
+Device42 auto-discovery spans from legacy to newer systems and builds dependencies between physical, virtuals, cloud infrastructure and applications. No need to use multiple tools to put together information anymore.
+
+[feature[2].title]
+Get the CMDB that Unifies your Infrastructure
+[feature[2].content]
+Device42 comes with pre-configured CIs so there is no need to spend time or money on expensive implementation services. Coupled with advanced customizations, discover any physical, virtual or service dependencies you want to capture.
+
+[feature[3].title]
+Real time map of your IT infrastructure with integrations
+[feature[3].content]
+Go beyond traditional CMDBs using our out of box integrations with JIRA, Confluence, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, ServiceNow and many more you can use this real-time map to reduce your mean time to recovery and make faster decisions in your daily IT operations.

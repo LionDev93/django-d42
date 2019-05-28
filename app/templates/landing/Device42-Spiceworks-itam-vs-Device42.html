@@ -1,0 +1,191 @@
+{% extends "base/_base-landing.html" %}
+{% load i18n static %}
+{% block meta %}
+	<meta name="description" content="{% trans 'Spiceworks Inventory vs Device42' %}"/>
+{% endblock %}
+
+{% block styles %}
+    <style>
+      .center-read-label {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500 !important;
+        margin: 30px 0px;
+        font-family: 'Roboto Condensed', sans-serif !important;
+      }
+      .landing-section p {
+        font-size: 24px;
+        font-family: 'Roboto Condensed', sans-serif !important;
+      }
+      .landing-section ul {
+        margin: 0px;
+      }
+      @media (min-width: 768px){
+        .banner-img img {
+          width: 50%;
+          margin-top: 5%;
+          float: left;
+        }
+         .table-th-label {
+            margin:0;
+            font-size:24px !important;
+            text-align: center;
+            font-weight: 500;
+         }
+      }
+
+      @media (max-width: 768px) {
+        .table-th-label {
+            margin:0;
+            font-size:14px !important;
+            text-align: center;
+            font-weight: 500;
+         }
+      }
+
+    </style>
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript">
+    $(function() {
+       $("[data-toggle='tooltip']").tooltip();
+    });
+    </script>
+{% endblock %}
+{% block title %}{% trans "Spiceworks Inventory vs Device42" %}{% endblock %}
+
+{% block landingHeadingText %}{% trans "Spiceworks Inventory vs Device42" %}{% endblock %}
+
+{% block landingLeadText %}{% trans "Looking for a better [and Ad-Free!] Spiceworks alternative? Find out how Device42 hands down beats the competition." %}{% endblock %}
+
+{% block landingfeature %}
+
+<section class="row flat-top flat-bottom">
+    <div class="col-xs-12">
+        <h4 class="lead-small text-muted" style="font-weight: bold;font-style:italic;">{% trans "Device42 provides comprehensive Network and IT asset management (ITAM) capabilities PLUS:" %}</h4>
+        <ul>
+          <li>{% trans "Powerful agentless auto-discovery"%}</li>
+          <li>{% trans "A full CMDB with configurable asset types"%}</li>
+          <li>{% trans "DCIM functionality"%}</li>
+          <li>{% trans "RESTful APIs and Webhooks"%}</li>
+          <li>{% trans "A holistic approach to IT infrastructure: matching Device42’s single-product functionality requires multiple separate Spiceworks products"%}</li>
+        </ul>
+    </div>
+</section>
+
+<section class="row flat-top landing-section">
+    <div class="col-sm-10 col-sm-offset-1">
+
+            <table class="table table-condensed table-hover d42-sw-compare">
+            <thead>
+              <tr>
+                <th class="table-title"><p class="dark-blue text-left alt-text" style="margin:0;font-size:24px;">{% trans "Solution Comparison" %}</p></th>
+                <th>
+                    <img src="{% static 'img/branding/transparent-logo.png' %}" class="img-responsive img-restrict center-block" style="width: 150px;">
+                    <p class="dark-blue text-left alt-text table-th-label">&nbsp;</p>
+                </th>
+                <th>
+                    <img src="{% static 'img/branding/spiceworks.png' %}" class="img-responsive img-restrict center-block" style="width: 150px;">
+                    <p class="dark-blue text-left alt-text table-th-label">Inventory</p>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="comp-feature">{% trans "Data Center Management (DCIM)" %}</td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "IT Asset Management (ITAM)" %}</td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "IP Address Management (IPAM)" %}</td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Agentless Auto-Discovery" %}</td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Native Hypervisor Inventory" %}</td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Hardware and Software Dependency Maps (ADM)" %}</td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Certificate Discovery & Management" %}</td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Barcode & QR code generation" %}</td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Multi-tenancy" %}</td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Workflow Management" %}</td>
+                <td class="text-center"><i class="fa fa-exclamation-triangle" data-toggle="tooltip" data-placement="top" title="{% trans 'Device42 is not an ITSM tool, but does offer free integrations the majority of popular ones!' %}."></i></td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Power Control" %}</td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="comp-feature">{% trans "Single/Unified Product" %}</td>
+                <td class="text-center"><i class="fa fa-check"></i></td>
+                <td class="text-center"><i class="fa fa-times"></i></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</section>
+
+<section class="landing-section">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3 class="sub-heading">{% trans "Key Features:" %}</h3>
+      <ul class="lead-small bullet-blue light-weight">
+        <li>{% trans "Powerful agent-less autodiscovery tools with the ability to deploy remote collectors as needed for distributed discovery" %}</li>
+        <li>{% trans "Track hardware and software on physical and virtual machines, containers, and blades whether on premise or in the cloud" %}</li>
+        <li>{% trans "Complete network infrastructure discovery with end-to-end connectivity tracking" %}</li>
+        <li>{% trans "Visualize relationships between assets with detailed impact charts, dependency lists and diagrams, and powerful visualizations" %}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-7">
+      <ul class="lead-small bullet-blue light-weight">
+        <li>{% trans "Track unlimited non-IP assets" %}</li>
+        <li>{% trans "Print QR codes and barcodes with smart phone support" %}</li>
+        <li>{% trans "Integrate with many popular ITSM, CM, and SIEM tools" %}</li>
+        <li>{% trans "Automatic warranty lookup with centralized status tracking and reporting" %}</li>
+        <li>{% trans "Customizable reports, expiration reminders, and notifications" %}</li>
+        <li>{% trans "Support for all popular licensing models (user, device, or CPU-based)" %}</li>
+        <li>{% trans "Granular APIs, sample scripts, and webhooks to drive automation" %}</li>
+        <li>{% trans "Go beyond just assets with Device42’s fully integrated CMDB!" %}</li>
+      </ul>
+    </div>
+    <div class="col-sm-5 banner-img">
+      <img src="{% static 'img/landing/server-inventory/banner1.png' %}" class="img-responsive img-restrict center-block" alt="{% trans 'Spiceworks Inventory Vs Device42' %}">
+    </div>
+  </div>
+</section>
+{% endblock %}
+

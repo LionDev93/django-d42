@@ -1,0 +1,101 @@
+{% load i18n static %}
+<h2>Device42's {% trans "Integration with" %} Chef</h2>
+<h4 class="prelist">{% trans "Easily Import Chef Ohai Node Data Into Device42" %}</h4>
+<h4>{% trans "Chef helps you automate your business infrastructure to achieve speed, scale, and consistency. Whether your infrastructure is in the cloud, on-premises or in a hybrid environment, you can easily and quickly adapt to your business’s changing needs with Chef." %}</h4>
+<h3>{% trans "The Device42 / Chef Integration can gather the following node information:" %}</h3>
+<section class="row">
+    <div class="col-xs-12 col-sm-3">
+        <ul class="checklist font-stack-roboto">
+            <li>{% trans "Node Name" %}</li>
+            <li>{% trans "Node Type" %}</li>
+            <li>{% trans "Virtual or Physical" %}</li>
+            <li>{% trans "Virtual Subtype" %}</li>
+        </ul>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+        <ul class="checklist font-stack-roboto">
+            <li>{% trans "Operating System and Version" %}</li>
+            <li>{% trans "CPU Count (Physical)" %}</li>
+            <li>{% trans "CPU Core Count" %}</li>
+            <li>{% trans "CPU Power" %}</li>
+        </ul>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+        <ul class="checklist font-stack-roboto">
+            <li>{% trans "Memory Details (RAM)" %}</li>
+            <li>{% trans "HDD Count" %}</li>
+            <li>{% trans "HDD Size" %}</li>
+            <li>{% trans "Chef Node ID" %} <small>{% trans "(for Chef servers)" %}</small></li>
+        </ul>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+        <ul class="checklist font-stack-roboto">
+            <li>{% trans "MAC Address" %}</li>
+            <li>{% trans "Customer" %}</li>
+            <li>{% trans "Service Level" %}</li>
+            <li>{% trans "Notes" %}</li>
+        </ul>
+    </div>
+</section>
+<section class="row featurette image-{{ image|default:'right' }}-7x5 {% if vcenter %}is-table-row{% endif %} is-table-row">
+    <div class="col-sm-5">
+      <a href="{% static 'img/sections/support/integrations/chef/chef-device42_1.png' %}"
+           data-featherlight="image">
+        <img class="img-responsive center-block box-shadow" src="{% static 'img/sections/support/integrations/chef/chef-device42_1.png' %}" alt="{% trans 'See Your Chef Generated Configuration data in Device42!' %}">
+      </a>
+    </div>
+    <div class="col-sm-7">
+        <h3>{% trans "See Your Chef Generated Configuration data in Device42!" %}</h3>
+        <p><b><i>{% trans "The Device42 - Chef Sync Integration gathers detailed information about your Chef nodes." %}</i></b></p>
+        <p>{% trans "Whether you have five or five thousand servers, Chef lets you manage them all by turning infrastructure into code. Instead of recording configuration information twice, let the Device42 - Chef Integration automatically pull in the data you care about, right from the source." %}</p>
+      <p>{% trans 'But wait, there’s more! Do you have specific or custom CI details you want to keep track of? No problem! Create one or more custom fields in Device42, and map the content of any string and/or count array field over to them using your integration’s setting.yaml file. For more details on custom fields in Chef, check out our <a href="https://www.device42.com/blog/2017/09/device42-puppetchef-integration-now-supports-extended-custom-ci-attributes/">Chef Integration: Extended Custom CI Attributes</a> blog post.' %}</p>
+    </div>
+</section>
+<section class="row landing-section is-table-row">
+    <div class="col-sm-5">
+      <a href="{% static 'img/sections/support/integrations/chef/chef-device42_2.png' %}"
+           data-featherlight="image">
+        <img class="img-responsive center-block box-shadow" src="{% static 'img/sections/support/integrations/chef/chef-device42_2.png' %}" alt="{% trans 'Any time your Chef configuration changes, Device42 can sync, too.' %}">
+      </a>
+    </div>
+    <div class="col-sm-7">
+        <h3 class="alt-font sub-heading">{% trans "Any time your Chef configuration changes, Device42 can sync, too." %}</h3>
+        <p><i><b>{% trans "Any time Chef deploys a recipe, automatically sync configuration details to Device42!" %}</b></i></p>
+        <p class="lead-small">{% trans "Chef lets you run commands on remote systems, and Chef Automate leverages this core functionality to support a continuous delivery pipeline. While Chef executes commands across hundreds or thousands of systems, the Device42 - Chef Integration can, with a few simple tweaks, automatically sync change details to Device42." %}</p>
+    </div>
+</section>
+<section class="row featurette image-{{ image|default:'right' }}-7x5 {% if vcenter %}is-table-row{% endif %} is-table-row">
+    <div class="col-sm-5">
+      <a href="{% static 'img/sections/support/integrations/chef/chef-device42_3.png' %}"
+           data-featherlight="image">
+        <img class="img-responsive center-block box-shadow" src="{% static 'img/sections/support/integrations/chef/chef-device42_3.png' %}" alt="{% trans 'Visualize Your Deployment’s Relationships and Dependencies.' %}">
+      </a>
+    </div>
+    <div class="col-sm-7">
+        <h3>{% trans "Visualize Your Deployment’s Relationships and Dependencies." %}</h3>
+        <p><b><i>{% trans "Easily visualize the details of your deployment and its dependencies with Device42." %}</i></b></p>
+        <p>{% trans "Infrastructure described as code is flexible, versionable, human-readable, and testable. You already did all the hard work to write the cookbooks that describe your infrastructure as code, and everything looks like it’s deployed as expected … but it’s better to be sure. Visualize your deployment right in Device42, and ensure it looks exactly how you expect it to. Make sure the right number of server instances are hosting the right number of services on the right IP’s -- anytime." %}</p>
+    </div>
+</section>
+<section class="row landing-section is-table-row">
+    <div class="col-sm-5">
+      <a href="{% static 'img/sections/support/integrations/chef/chef-device42_4.png' %}"
+           data-featherlight="image">
+        <img class="img-responsive center-block box-shadow" src="{% static 'img/sections/support/integrations/chef/chef-device42_4.png' %}" alt="{% trans 'Any time your Chef configuration changes, Device42 can sync, too.' %}">
+      </a>
+    </div>
+    <div class="col-sm-7">
+        <h3>{% trans "Eliminate the Disconnect between DevOps & Security. " %}</h3>
+        <p><b>{% trans "Remediate faster, and let Device42 generate on-demand compliance reports!" %}</b></p>
+        <p>{% trans "Locate and remediate vulnerabilities across your infrastructure faster with Device42 & Chef. You can quickly query Device42 for a list of servers running vulnerable software, and Chef can take care of removing or updating the vulnerable build." %}</p>
+        <p>{% trans "Showing your security team that everything has been remediated is as easy as running an on demand report in Device42 - or, schedule the report. Simply specify the security team’s inbox and let Device42 handle communicating the rest." %}</p>
+        <p class="text-right"><b><i>{% trans "“...Check your inbox!”"%}</i></b></p>
+    </div>
+</section>
+<hr>
+<div class="row">
+    <div class="col-md-12 vert-offset-bottom-2">
+        <p>{% blocktrans %}<a href="https://github.com/device42/chef_to_device42_sync_py/archive/master.zip" target="_blank" class="ext-link">Download</a> the Device42-Chef CMDB integration script for Device42 today!{% endblocktrans %}</p>
+    </div>
+</div>
+

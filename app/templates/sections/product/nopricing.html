@@ -1,0 +1,171 @@
+{% extends 'base/_base.html' %}
+{% load i18n static custom_tags %}
+{% lang_code as context_language %}
+{% block meta %}
+<meta name="description"
+content="{% trans 'Device42 software provides Server room asset management integrated with IP address management and application mapping.' %}"/>
+{% endblock %}
+{% block title %}{% trans "Pricing for Data Center Infrastructure Management software" %}{% endblock %}
+{% block nav_product %}class="current-menu-item"{% endblock %}
+{% block body_scripts %}
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+      jQuery("input#id_referred_by_reseller").on("click", function () {
+          jQuery(".reseller").fadeToggle('fast');
+      });
+
+      {% if form.referred_by_reseller.value == True %}
+        jQuery(".reseller").fadeToggle('fast');
+      {% endif %}
+      {% if form.device_count.value %}
+        jQuery("#id_device_count").val("{{ form.device_count.value }}");
+      {% endif %}
+
+      {% if form.referred_by_reseller.value == True %}
+        jQuery("#id_referred_by_reseller").attr("checked", true);
+      {% endif %}
+      {% if form.application_mapping_addon.value == True %}
+        jQuery("#id_application_mapping_addon").attr("checked", true);
+      {% endif %}
+      {% if form.slm_addon.value == True %}
+        jQuery("#id_slm_addon").attr("checked", true);
+      {% endif %}
+      {% if form.power_monitoring_addon.value == True %}
+        jQuery("#id_power_monitoring_addon").attr("checked", true);
+      {% endif %}
+      {% if form.power_control_addon.value == True %}
+        jQuery("#id_power_control_addon").attr("checked", true);
+      {% endif %}
+
+      jQuery(".pricing_form").validate({
+            ignore: ".ignore",
+            rules: {
+                hiddenRecaptcha: {
+                    required: {
+                        depends: function () {
+                            if (window.grecaptcha.getResponse() == '') {
+                                return true;
+                            } else {
+                                return false;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>
+{% endblock %}
+{% block body %}
+<header class="row head-home bg-primary">
+    <div class="container">
+        <div class="row featurette">
+            <div class="col-md-12">
+                <h1>{% trans "Pricing" %}</h1>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="row">
+<div class="container padded">
+    <div class="row">
+        <div class="col-sm-3">
+            <h2 class="prelist xs-center flat-top">{% trans "Sections" %}</h2>
+            {% url 'faq_sales' as sales_faq %}
+            {% url 'compare' as compare %}
+            {% url 'product_pricing' as pricing %}
+            <div class="list-group">
+                <a href="{{ sales_faq }}" class="list-group-item">{% trans "Sales FAQ" %}</a>
+                <a href="{{ compare }}" class="list-group-item">{% trans "Compare" %}</a>
+                <a href="{{ pricing }}" class="list-group-item active">{% trans "Pricing" %}</a>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <div id="content" class="sidebar-left twelve columns">
+                <div class="entry">
+                    {% if form.errors %}
+                    <div class="alert alert-error">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        {% for field in form %}
+                        {% if field.errors %}
+                        <li><strong>{{ field.label }}</strong>: {{ field.errors|striptags }}</li>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    <p class="lead">{% trans "Please fill out the following form and we will reach out to you with pricing info" %}.<p/>
+                    <form action="{{request.get_full_path}}" method="post" class="pricing_form">
+                        {% csrf_token %}
+                        <fieldset>
+                            <h3>{% trans "Basic Information" %}</h3>
+                            <div class="form-field clearfix">
+                                <label for="id_name">{% trans "Name" %}</label>
+                                <input class="form-control" id="id_name" type="text" name="name" maxlength="128" required="required" value="{{ form.name.value|default_if_none:'' }}" />
+                            </div>
+                            <div class="form-field clearfix">
+                                <label for="id_email">{% trans "Email" %}</label>
+                                <input class="form-control" id="id_email" type="email" name="email" maxlength="75" required="required" value="{{ form.email.value|default_if_none:'' }}"  />
+                            </div>
+                            <div class="form-field clearfix">
+                                <label for="id_company">{% trans "Company" %}</label>
+                                <input class="form-control" id="id_company" type="text" name="company" maxlength="128" value="{{ form.company.value|default_if_none:'' }}" />
+                            </div>
+                            <div class="form-field clearfix">
+                                <label for="id_phone">{% trans "Phone" %}</label>
+                                <input class="form-control" id="id_phone" type="tel" name="phone" maxlength="32" value="{{ form.phone.value|default_if_none:'' }}" />
+                            </div>
+                            <div class="form-field clearfix">
+                                <label for="id_device_count">{% trans "Number of Devices/IPs" %}</label>
+                                <div class="field-wrap">
+                                  <select id="id_device_count" name="device_count">
+                                      {% for option in form.DEVICE_COUNTS %}
+                                      <option value="{{ option.0 }}">{{ option.1 }} {% if option.2 != '--' %}({{ option.2 }} {% trans "IP Addresses" %}) {% endif %}</option>
+                                      {% endfor %}
+                                  </select>
+                                </div>
+                            </div>
+                            <div class="form-field clearfix">
+                                <label for="id_referred_by_reseller">{% trans "Referred by Reseller" %}?</label>
+                                <input type="checkbox" name="referred_by_reseller" id="id_referred_by_reseller" />
+                            </div>
+                            <div class="form-field clearfix reseller" style="display:none;">
+                                <label for="id_reseller_name">{% trans "Reseller Name" %}</label>
+                                <div class="field-wrap">
+                                  <input type="text" name="reseller_name" id="id_reseller_name" value="{{ form.reseller_name.value|default_if_none:'' }}" />
+                                </div>
+                            </div>
+                            <h3>{% trans "Add-ons" %}</h3>
+                            <div class="form-field clearfix">
+                                <label for="id_application_mapping_addon">{% trans "Application Mapping" %}</label>
+                                <input type="checkbox" name="application_mapping_addon" id="id_application_mapping_addon" />
+                            </div>
+                            <div class="form-field clearfix">
+                                <label for="id_slm_addon">{% trans "Software License Management" %}</label>
+                                <input type="checkbox" name="slm_addon" id="id_slm_addon" />
+                            </div>
+                            <div class="form-field clearfix">
+                                <label for="id_power_monitoring_addon">{% trans "Power" %} &amp; {% trans "Environmental Monitoring" %}</label>
+                                <input type="checkbox" name="power_monitoring_addon" id="id_power_monitoring_addon" />
+                            </div>
+                            <div class="form-field clearfix">
+                                <label for="id_power_control_addon">{% trans "Power Control" %}</label>
+                                <input type="checkbox" name="power_control_addon" id="id_power_control_addon" />
+                            </div>
+                            <input style="display:none" id="id_address" type="text" name="address" maxlength="32" />
+                            <br>
+                            <div class="g-recaptcha center-block"
+                                data-sitekey="6LdxPCYTAAAAADYUR5AACcfH7RlHPLy5O2ocC6W1"></div>
+                            <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha"
+                                id="hiddenRecaptcha">
+                            <br>
+                            <button class="btn btn-primary" VALUE="{% trans 'submit' %}" type="submit">{% trans "Send" %}</button>
+                            <div class="wpcf7-response-output wpcf7-display-none"></div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,135 @@
+{% extends "base/_base-landing.html" %}
+{% load i18n static %}
+{% block title %}{% trans "Automatic Dependency and Change Mapping" %}{% endblock %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Automated service impact discovery, dependency flow diagrams, application impact lists, and easy impact visualizations make planning and validating changes a breeze!' %}"/>
+{% endblock %}
+
+{% block landingHeadingText %}{% trans "Change Management |" %}{% endblock %}
+{% block landingSubHeadingText %}{% trans "Automatic Dependency and Change Mapping!" %}!{% endblock %}
+{% block landingLeadText %}{% trans "Automated service impact discovery, dependency flow diagrams, application impact lists, and easy impact visualizations make planning and validating changes a breeze!" %}{% endblock %}
+{% block landingfeature %}
+    <section class="row landing-section">
+        <div class="col-sm-12">
+            <p>{% trans "Device42 enables effective IT change management processes and planning. With a centralized repository of application, service and device relationships and dependencies, you can confidently retire, consolidate, or replace assets. Device42 provides the necessary understanding of the inter-dependencies and business impact for managing change. Facilitate effective change management with a clear understanding of application interdependencies." %}</p>
+        </div>
+    </section>
+{% endblock %}
+
+{% block maincontent %}
+        <div class="col-sm-12 text-center padded">
+          <h2 class="featurette-heading">{% trans "ITIL or not, we’ve got your back." %}</h2>
+        </div>
+        <div class="col-sm-6 padded">
+            <p>{% trans "Bolster your IT change management process with:" %}</p>
+            <ul class="checklist tight bullet-blue text-small">
+                <li>{% trans 'Agentless services and application discovery combines data obtained via Windows (WMI) and Linux (SSH) protocols, and augments this native-protocol deep application discovery with netflow and nmap' %}</li>
+                <li>{% trans 'Agent based solutions available for sensitive or often disconnected devices' %}</li>
+                <li>{% trans 'Autodiscovery of services running on network devices, protocols & ports' %}</li>
+                <li>{% trans 'Lists of all deployed applications, manufacturers, owners, version numbers and functions' %}</li>
+                <li>{% trans 'Lists of all services, running or not, users, protocols & ports' %}</li>
+                <li>{% trans 'Application dependency diagrams that quickly communicate application to device relationships' %}</li>
+                <li>{% trans 'Application to server mappings and application to application mapping' %}</li>
+                <li>{% trans 'Services organized by device or user, and devices by service' %}</li>
+                <li>{% trans 'Comprehensive application dependency maps even for machines that can’t be directly accessed, built out with Netflow data!' %}</li>
+            </ul>
+        </div>
+        <div class="col-sm-6 padded">
+            <img class="featurette-image img-responsive center-block"
+                 alt="{% trans 'Application Dependency Mapping' %}"
+                 src="{% static 'img/generic/ApplicationDependencyFlowCharts.png' %}">
+        </div>
+        <div class="col-sm-12 text-center padded">
+          <h2 class="featurette-heading">{% blocktrans %}Continuous Discovery | <small class="prelist light-weight">verifies and enforces changes as they are made</small>{% endblocktrans %}</h2>
+        </div>
+        <div class="col-md-6 padded">
+            <img class="img-responsive center-block animated box-shadow"
+                 src="{% static 'img/sections/features/app-map/continous-discovery.png' %}"
+                 alt="{% trans 'Application Outlined Impact' %}">
+        </div>
+        <div class="col-sm-6 padded">
+            <p>{% trans "Discovery is continuously run on a schedule - Your 24/7 Partner in the ITIL Change Management Process" %}</p>
+            <ul class="checklist tight bullet-blue text-small">
+                <li>{% trans 'Focus on executing changes, not documenting them' %}</li>
+                <li>{% trans 'Device42 can fire a webhook to trigger automation based on just about any infrastructure change' %}</li>
+                <li>{% trans 'Automatically <a href="https://www.device42.com/blog/2016/11/automating-a-workflow-with-device42s-continuous-discovery-and-stackstorm/" target="_blank">create a ticket in your ITSM system</a> based on detection of a new piece of hardware or software' %}</li>
+                <li>{% trans 'Quickly detect installation of prohibited software - <i>nothing sneaks by the change management process</i>' %}</li>
+                <li>{% trans 'Your infrastructure data is always up to date - an invaluable change management tool' %}</li>
+                <li>{% trans 'You define the change management process, Device42 watches for and helps you manage change in the workplace!' %}</li>
+            </ul>
+        </div>
+        <div class="col-sm-12 text-center">
+          <h2 class="featurette-heading padded">{% blocktrans %}No matter what changes you’re planning, Device42 Has You Covered.{% endblocktrans %}</h2>
+        </div>
+        <div class="col-sm-12">
+            <p>{% trans "Native discovery technologies help you plan and validate execution of your ITIL change management process." %}</p>
+        </div>
+        <div {% if id %}id="{{ id }}" {% endif %}class="row image-right-8x4">
+            <div class="col-sm-3 text-center">
+                <img src="{% static 'img/sections/features/app-map/win.png' %}"
+                     class="img-responsive inline-block img-xs-restrict-100 img-restrict-150 vert-offset-bottom-1">
+                <div style="display:block;" class="hidden-xs"></div>
+                <img src="{% static 'img/sections/features/app-map/tux.png' %}"
+                     class="img-responsive inline-block img-xs-restrict-100 img-restrict-150">
+            </div>
+            <div class="col-xs-12">
+                <ul class="text-small bullet-blue">
+                    <li>{% trans 'WMI for native Windows discovery' %}</li>
+                    <li>{% trans 'SSH for native Linux/UNIX discovery' %}</li>
+                    <li>{% trans 'SNMP Discovery (v1/v2c/v3):' %}
+                        <ul class="bullet-gray">
+                            <li>{% trans 'Network switches, routers, and firewalls' %}</li>
+                            <li>{% trans 'Load Balancers (F5 BIG-IP, Cisco NetScaler, etc.)' %}</li>
+                            <li>{% trans 'Blade systems for chassis and blade information' %}</li>
+                            <li>{% trans 'Discovery & monitoring of power and environmental devices like PDUs, UPS, CRAC, etc.' %}</li>
+                        </ul>
+                    </li>
+                    <li>{% trans 'Netflow & NMAP discovery' %}</li>
+                    <li>{% trans 'Native hypervisor and VM discovery with support for all major virtualization platforms' %}</li>
+                    <li>{% trans 'Cloud discovery support for Amazon, Azure, Joyent, Linode, Digital Ocean, etc.' %}</li>
+                    <li>{% trans 'Cisco UCS, Cisco discovery protocol (CDP), and LLDP neighbors' %}</li>
+                    <li>{% trans 'IPMI discovery for BMC boards' %}</li>
+                    <li>{% trans 'DNS and ping sweep for network discovery' %}</li>
+                    <li>{% trans 'Pull inventory data from tools like Puppet, Chef, Microsoft SCCM, monitoring systems, and more!' %}</li>
+                </ul>
+            </div>
+        </div>
+        <div {% if id %}id="{{ id }}" {% endif %}class="row image-right-8x4">
+            <div class="col-md-6">
+                <img class="img-responsive center-block animated padded"
+                     src="{% static 'img/sections/features/app-map/impact-list.png' %}"
+                     alt="{% trans 'Application Impact Lists' %}">
+            </div>
+            <div class="col-md-6 padded">
+                <h2 class="featurette-heading">{% trans "Visual Application Impact Diagrams and Lists" %}</h2>
+                <p>{% trans '<span class="prelist text-yellow">Visually plan and verify</span> your change management process.' %}</p>
+                <p>{% trans "Device42 makes understanding network device relationships fast, easy, and accurate. Using auto-generated diagrams, IT staff members have “anytime access” to impact charts that visually communicate the relationships between applications, hardware components, and facilities." %}</p>
+           </div>
+        </div>
+        <div {% if id %}id="{{ id }}" {% endif %}class="row image-left-5x7">
+            <div class="col-md-6">
+                <img class="img-responsive center-block animated"
+                     src="{% static 'img/sections/features/app-map/app-visualized-impact.png' %}"
+                     alt="{% trans 'Visual Application Impacts' %}">
+            </div>
+            <div class="col-md-6">
+                <p>{% trans "Device Impact Lists provide the necessary details about the organizational groups using the applications." %}</p>
+                <p>{% trans '<span class="prelist text-yellow">Reduce risk</span> and potential downtime during cutovers, upgrades, and migrations by understanding interdependencies and connections!' %}</p>
+            </div>
+        </div>
+        <div {% if id %}id="{{ id }}" {% endif %}class="row image-right-8x4">
+            <div class="col-md-6">
+                <img class="img-responsive center-block animated img-xs-restrict-300 vert-offset-bottom-1 padded"
+                     src="{% static 'img/generic/anarchy-to-organization.png' %}"
+                     alt="{% trans 'Application Mapping Flow' %}">
+            </div>
+            <div class="col-md-6 padded">
+                <h2 class="featurette-heading">{% trans "Application Dependency Flow" %}</h2>
+              <p>{% blocktrans %}<span class="prelist text-yellow">Reduce service outages</span> with predictable change and configuration management intelligence.{% endblocktrans %}</p>
+                <p>{% trans "Device42's application dependency mapping component is powerful and easy to use. Application dependencies are defined from the bottom up and automatically generated dependency flow diagrams clearly show relationships between application components."%}</p>
+            </div>
+        </div>
+    <br><br>
+{% endblock %}
+

@@ -1,0 +1,36 @@
+[head.title]
+Comprehensive Windows Inventory Tool with agent-less auto-discovery!
+
+[head.description]
+Device42 is a comprehensive Windows Inventory Tool with powerful agent-less hardware inventory auto-discovery!
+
+[landing.title]
+Windows Inventory Tool with Autodiscovery
+[landing.image_format]
+png
+[landing.content]
+
+Device42 provides comprehensive Microsoft Windows inventory management capabilities, including powerful IT software and hardware auto-discovery with fully configurable asset types. Easily accommodate any IT asset type within in your infrastructure!
+
+- Windows Inventory Tools use agent-less auto-discovery to keep all your inventory up-to-date
+- Optional agent-based Windows Inventory Tool included for remote, high-security, and/or disconnected assets
+- Device42's Windows inventory tools support physical, virtual, and cloud infrastructure
+- Discover inventory on ANY operating system: Windows, Linux, UNIX, Mac, or BSD
+- Device42's Windows Inventory Tools integrate with IT tools like JIRA, ServiceNow, Cherwell and more!
+
+
+[feature[1].title]
+Complete Windows Inventory Autodiscovery
+[feature[1].content]
+Device42's Windows inventory auto-discovery covers across legacy and newer systems alike, discovering hardware inventory and dependencies between physical, virtuals, cloud infrastructure and applications. No need to use multiple tools to put together information anymore.
+
+[feature[2].title]
+Support Entitlement Tracking and Management for Windows Inventory
+[feature[2].content]
+Device42 helps you auto-discover your warranty information for your entire Windows inventory. Know BEFORE it's time to renew, and quickly find support information related to any piece of your hardware inventory!
+
+
+[feature[3].title]
+Real-time map of your IT infrastructure with Integrations
+[feature[3].content]
+Go beyond traditional Windows Inventory Tools using out-of-the-box integrations with JIRA, Confluence, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, ServiceNow and many more! Use this real-time map to reduce your MTTR, and make faster business decisions!

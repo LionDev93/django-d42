@@ -1,0 +1,46 @@
+[head.title]
+Device42 is powerful, automated data center management software (DCIM), redefined
+
+
+[head.description]
+Device42 is a powerful, automated data center management software (DCIM) tool featuring agent-less autodiscovery.
+
+
+[landing.title]
+Device42 is Automated Data Center Management Software, Redefined!
+
+
+[landing.image_format]
+gif
+
+
+[landing.content]
+Device42 is a comprehensive data center management software (DCIM) tool that helps you manage and understand your data centers. data center management software features include:
+
+- Drag and Drop building, room, and rack layouts with power consumption and real-time capacity planning
+- Map your physical, virtual and cloud networks automatically and agentlessly
+- Color-coded room layouts display heatmaps for easy capacity planning
+- Fast and light-weight web-based interface, powerful visualizations, and SVG exports that import to Visio
+- Resource utilization and real-time power and environmental monitoring with charts and alerts
+
+
+[feature[1].title]
+Powerful data center management software with What-if Scenarios
+[feature[1].image_format]
+gif
+[feature[1].content]
+Device42 data center management software auto-discovers across all of your systems, highlighting dependencies between physical, virtuals and applications, and auto-generates photo-realistic rack layouts, too!
+
+
+[feature[2].title]
+Powerful capacity planning with resource utilization, monitoring, and control
+[feature[2].content]
+Collect all the data center management software related details about your inventory including IPs and connections, services, interdependencies, and more! Data is not only auto-discovered, it's also automatically correlated too!
+
+
+[feature[3].title]
+Automated DCIM includes Free Out-of-the-box Integrations
+[feature[3].image_format]
+png
+[feature[3].content]
+Device42's data center management software includes powerful integrations with the software you already use: Chef, Puppet, JIRA, MS SCCM, Infoblox, Splunk, ServiceNow and more!

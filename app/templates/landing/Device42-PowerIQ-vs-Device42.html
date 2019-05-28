@@ -1,0 +1,179 @@
+{% extends "base/_base-landing.html" %}
+{% load i18n static %}
+{% block meta %}
+	<meta name="description" content="{% trans 'Device42 is a powerful IP Address management solution that integrates IT Infrastructure management.' %}"/>
+{% endblock %}
+{% block title %}{% trans "Device42 vs. Raritan’s Power IQ" %}{% endblock %}
+
+{% block styles %}
+<style>
+
+    hr{
+      margin: 0px;
+    }
+
+    table {
+      margin-bottom: 0px !important;
+    }
+
+    p.small-font {
+      font-size: 10px;
+      color: #31a2df;
+      text-align: center;
+    }
+</style>
+{% endblock %}
+
+{% block landingHeadingText %}{% trans "Device42 vs. Raritan’s Power IQ" %}{% endblock %}
+{% block landingLeadText %}{% trans "Looking for a better Power IQ alternative? Look no further than Device42. Device42 can show you if you’ve been wasting money and resources on an under-optimized data center, and where. Device42's takes the complexity out of power and thermal management in your data center, giving you full visibility and control." %}.{% endblock %}
+
+{% block landingfeature %}
+<section class="row padded is-table-row">
+  <div class="col-sm-12 col-md-7">
+    <p>{% trans "Device42 helps you understand and manage your data center’s power usage and thermal footprint:" %}</p>
+    <ul class="light-weight bullet-blue">
+        <li>{% trans 'Monitor your smart PDUs, UPSs, ATS, CRACs, branch circuits and other devices in real time <span style="font-style: italic;">[in either Amps or Watts]</span>' %}</li>
+        <li>{% trans "Control Smart PDUs outlets and CRAC units via SNMP" %}</li>
+        <li>{% trans "Generate comprehensive power reports and power charts with historical data" %}</li>
+        <li>{% trans "View color heat maps at the room- and rack-level with infeed-level detail" %}</li>
+        <li>{% trans "Receive alerts you when you an anomalous condition is detected" %}</li>
+        <li>{% trans "Monitor sensors (e.g. temperature and humidity) and provides historical data graphs and alerts" %}</li>
+        <li>{% trans "Map your complete power chain" %}</li>
+    </ul>
+  </div>
+  <div class="col-sm-12 col-md-5">
+    <a href="{% static 'img/sections/features/dcim/device_energy.jpg' %}" data-featherlight="image">
+      <img class="img-responsive center-block img-border" src="{% static 'img/sections/features/dcim/device_energy.jpg' %}" alt="{% trans 'Power & Thermal Management' %}">
+    </a>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block maincontent %}
+   <section class="row padded is-table-row">
+    <div class="col-sm-12 col-md-7">
+        <div class="table-responsive padded">
+            <table class="table table-condensed table-hover d42-sw-compare">
+            <thead>
+                <tr>
+                    <th class="table-title"><p class="text-left alt-text" style="margin:0;font-size:24px;">{% trans "Solution Comparison" %}</p></th>
+                    <th class="product-heading text-primary">{% trans "Device42 Core" %}</th>
+                    <th class="product-heading text-primary">{% trans "Power IQ" %}<sup>&reg;</sup></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="comp-feature">{% trans "CMDB" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "DCIM" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "ITAM" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "IPAM" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Resource Utilization" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-exclamation-triangle" data-toggle="tooltip" data-placement="top" title="{% trans 'Power IQ 6.0 introduces server monitoring for the CPU, memory, and other performance indicators and makes this data available to third-party monitoring systems.' %}"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Effective IPMI Power Monitoring" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Smart PDU Monitoring" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "IPMI Temperature Monitoring" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                </tr>
+            </tbody>
+          </table>
+          <p class="small-font">{% trans "*All feature data deduced from product website and available marketing materials. Please let us know if something isn’t right and we’ll gladly update it." %}</p>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-5">
+      <a href="{% static 'img/landing/datacenterpower/pdu-ports-power-data.png' %}" data-featherlight="image">
+        <img class="img-responsive center-block img-border" src="{% static 'img/landing/datacenterpower/pdu-ports-power-data.png' %}" alt="{% trans 'PDU Port Power Data Charts and Graphs' %}">
+      </a>
+    </div>
+</section>
+    <section class="row padded image-left-7x5 is-table-row">
+        <div class="col-sm-7">
+            <h3>{% trans "Resource Utilization" %}</h3>
+            <p>{% trans "Device42 features resource utilization to support your current digital transformation project. Be it a migration to the public or private cloud, or a move from a classic IT delivery model to IT as a Service (ITaaS), Device42 has the data you need to execute without a hiccup." %}</p>
+            <ul class="light-weight bullet-blue">
+                <li>{% trans "Find out exactly what you have" %}</li>
+                <li>{% trans "Identify opportunities for consolidation or retirement" %}</li>
+                <li>{% trans "See exactly what your application's resource requirements are" %}</li>
+                <li>{% trans "Base capacity planning calculations on real data" %}</li>
+                <li>{% trans "Identify and eliminate ‘hidden’ zombie servers" %}</li>
+            </ul>
+        </div>
+        <div class="col-sm-5">
+          <a href="{% static 'img/sections/solutions/power-iq-vs-device.png' %}" data-featherlight="image">
+            <img class="img-responsive img-border center-block" src="{% static 'img/sections/solutions/power-iq-vs-device.png' %}" alt="Power IQ vs Device">
+          </a>
+        </div>
+    </section>
+    <section class="row image-left-5x7 padded is-table-row">
+        <div class="col-md-6">
+          <a href="{% static 'img/landing/datacenterpower/vendor-agnostic.png' %}" data-featherlight="image">
+            <img class="img-responsive center-block img-border" src="{% static 'img/landing/datacenterpower/vendor-agnostic.png' %}" alt="{% trans 'Vendor Agnostic' %}">
+          </a>
+        </div>
+        <div class="col-md-6">
+            <h3>{% trans "Vendor Agnostic Management" %}</h3>
+            <p class="light-weight">{% trans "There are multiple proprietary power measurement and control protocols supported by different OEMs. This has classically made it challenging to manage power across all devices in the data center via a single solution." %}.</p>
+            <br>
+            <p class="light-weight">{% trans "Device42's Energy Management Module tackles this issue, working across different vendors. It provides accurate, real time power and thermal monitoring and management for individual servers, groups of servers, racks, and other IT equipment such as PDUs and CRAC units in the data center." %}</p>
+        </div>
+    </section>
+    <section class="row padded image-left-7x5 is-table-row">
+        <div class="col-sm-6">
+            <h3>{% trans "Power Control for Servers, PDU Ports, & CRAC units" %}</h3>
+            <ul class="light-weight bullet-blue">
+                <li>{% trans "PDU Ports power on/off supported via SNMP for supported PDU models" %}</li>
+                <li>{% trans "Control CRAC units via SNMP" %} <small>({% trans "For supported PDU models" %})</small></li>
+            </ul>
+        </div>
+        <div class="col-sm-6">
+          <a href="{% static 'img/landing/datacenterpower/pdu-port-power-control.png' %}" data-featherlight="image">
+            <img class="img-responsive img-border center-block" src="{% static 'img/landing/datacenterpower/pdu-port-power-control.png' %}" alt="Power control for PDU Ports">
+          </a>
+        </div>
+    </section>
+    <section class="row image-left-5x7 padded is-table-row">
+      <div class="col-sm-7">
+          <a href="{% static 'img/sections/solutions/datacenterpower/power-data-terminal.png' %}" data-featherlight="image">
+            <img class="img-responsive center-block img-border" src="{% static 'img/sections/solutions/datacenterpower/power-data-terminal.png' %}" alt="{% trans 'Power Data Terminal' %}">
+          </a>
+      </div>
+      <div class="col-sm-5">
+          <h3>{% trans "Live Thermal and Power Heat Maps + Historical Energy Data" %}</h3>
+          <ul class="light-weight bullet-blue">
+              <li>{% trans "Rack-level heat maps based on power and thermal data from individual servers" %}</li>
+              <li>{% trans "Heat-maps on the room layout view based on capacity, power usage and thermal data" %}</li>
+              <li>{% trans "Look at historical data trends for predictive modeling" %}</li>
+              <li>{% trans "Powerful, clear charts with easy zoom option" %}</li>
+          </ul>
+      </div>
+    </section>
+
+{% endblock %}

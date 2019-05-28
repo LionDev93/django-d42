@@ -1,0 +1,36 @@
+[head.title]
+Comprehensive hardware inventory scanner with agent-less auto-discovery
+
+[head.description]
+Device42 is a comprehensive hardware inventory scanner system with agent-less auto-discovery!
+
+[landing.title]
+Comprehensive Hardware Inventory Scanner
+[landing.image_format]
+png
+[landing.content]
+Device42 provides comprehensive IT hardware inventory scanner capabilities including powerful, auto-discovery with fully configurable asset types!
+
+- Agent-less auto-discoveries automatically keep your inventory up-to-date, with an optional agent for remote assets
+- Support for physical, virtual and cloud infrastructure to track and manage your entire hardware and software inventory
+- Hardware inventory scanner works with any operating system: Windows, Linux/*NIX, Mac, or BSD
+- Out of box integrations with popular CM tools, ITSM tools, SIEM tools, (and many more!)
+- Know support expiration dates, with automatic contract management for various vendors
+- Comprehensive reporting and advanced visualization tools make audits easier
+
+
+[feature[1].title]
+Complete Auto-discovery for All Network Hardware
+[feature[1].content]
+Device42's hardware inventory scanner discovers all of your hardware and software, highlighting dependencies between physical, virtuals, cloud infrastructure, and applications - all with one tool!
+
+[feature[2].title]
+Support Entitlement Tracking and Management
+[feature[2].content]
+Device42 downloads your warranty information from Dell, HP, Lenovo, and more. Know in advance when your server support is up for renewal!
+
+
+[feature[3].title]
+Real-time Map of Your IT Infrastructure with Integrations
+[feature[3].content]
+Go beyond traditional hardware inventory scanner tools with Device42's out-of-the-box integrations with JIRA, Confluence, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, ServiceNow, and many more!

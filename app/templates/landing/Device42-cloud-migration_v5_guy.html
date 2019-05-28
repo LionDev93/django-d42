@@ -1,0 +1,150 @@
+{% extends "base/_base-landing-v3.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Device42’s automated and agent-less application mapping makes cloud migrations easier, ensuring you know all of your dependencies and have all your configurations squared away ahead of time, uncovering the hidden issues before they cause unnecessary downtime.' %}"/>
+{% endblock %}
+{% block title %}{% trans "Cloud Migrations" %}{% endblock %}
+
+
+{% block styles %}
+<style>
+    .cta-free-trial {
+        padding: 24px 0;
+        text-transform: none !important;
+        background-color: #ffc90e;
+        color: #130dff !important;
+    }
+    #top-container h1 {
+        margin-bottom: 0px;
+    }
+</style>
+{% endblock %}
+
+{% block landingHeadingText %}
+    {% trans "Cloud Migrations" %}
+{% endblock %}
+{% block landingSubHeadText %}
+    <em class="h3 flat-top flat-bottom">{% trans "Device42’s comprehensive CMDB and powerful ADM software help make migration planning and execution easier, assembling a vivid picture of everything running across the IT landscape" %}</em>
+{% endblock %}
+
+{% block key_benefits %}
+    <section class="row landing-section">
+        <div class="col-sm-7" style="vertical-align: top;">
+
+            <h3 class="text-strong">{% trans "Key Benefits:" %}</h3>
+            <div class="row">
+                <ul>
+                    <li><strong>{% trans "Device42 is here to help with cloud migrations, and those providing cloud migration services whether:" %}</strong>
+                        <ul class="bullet-gray flat-top">
+                            <li>{% trans "Moving operations to the cloud, or adding hybrid cloud capacity" %}</li>
+                            <li>{% trans "Moving or migrating servers or applications from one cloud vendor to another" %}</li>
+                            <li>{% trans "Building a disaster recovery or high availability (DR/HA) site in the cloud" %}</li>
+                            <li>{% trans "Moving one or more applications or pieces of infrastructure from a physical data center to the cloud" %}</li>
+                            <li>{% trans "Consolidating existing infrastructure to the cloud" %}</li>
+                        </ul>
+                    </li>
+                    <li class="vert-offset-top-1"><strong>Device42 can make your cloud migration services more efficient by:</strong>
+                        <ul class="bullet-gray flat-top">
+                            <li>{% trans "Offering a complete dependency map" %}</li>
+                            <li>{% trans "Discovering existing devices quickly and accurately via agentless autodiscovery, saving time" %}</li>
+                            <li>{% trans "Mapping the network and all your IP addresses with the IPAM module, minimizing manual efforts" %}</li>
+                            <li>{% trans "Sorting out application dependencies with the application dependency mapping (ADM) module, reducing risk" %}</li>
+                            <li>{% trans "Identifying and selecting the best candidate servers for each ‘migration group’ or ‘move group’, simplifying planning" %}</li>
+                            <li>{% trans "Ensuring all software is properly licensed with the software license management (SLM) module, ensuring efficient utilization" %}</li>
+                            <li>{% trans "Getting you access to existing servers and securely storing passwords & SSH keys with the enterprise password management features" %}</li>
+                            <li>{% trans "Ensuring your migration project both starts and finishes on time and within budget" %}</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div style="width: 100%;">
+
+                <div class="text-center" style="width: 30%; float: left; margin-left: 10%;">
+                    <div style="max-width:50%; margin-left:auto; margin-right:auto; margin-top:24px; height:auto !important;" 
+                         class="clearfix">
+                        <div class="embed-responsive embed-responsive-16by9" style="margin-bottom: 5px;">
+                            <div class="wistia_responsive_wrapper"
+                                 style="height:100%; left:0; position:absolute; top:0; width:100%;">
+                                <script src="//fast.wistia.com/embed/medias/igc5qfvoyr.jsonp" async></script>
+                                <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                                <div class="wistia_responsive_padding"
+                                     style="padding:60% 0 0 0; position:relative;">
+                                    <div class="wistia_responsive_wrapper"
+                                         style="height:100%; left:0; position:absolute; top:0; width:100%;">
+                                        <span class="wistia_embed wistia_async_igc5qfvoyr popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block; height:100%; width:100%">&nbsp;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="text-primary font-stack-roboto text-center h4" style="margin-top: 0px !important; margin-bottom: 0px !important;">{% trans "90 Second Overview" %}</span>
+                </div>
+
+                <div class="vert-offset-top-1" style="width: 55%; float: left; margin-left: 5%;">
+                    <p>{% blocktrans %}<strong>You're in good company!</strong><br> Many global companies are using<br> Device42 SW to support their cloud<br> migration offerings, <em>and they LOVE us!</em>{% endblocktrans %}</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <a href="{% url 'download' %}">
+                <img src="{% static 'img/landing/cloudamize/device42.png' %}"
+                     alt="{% trans 'Cloud Migration' %}" 
+                     class="img-responsive center-block vert-offset-bottom-1">
+            </a>
+            <p class="text-center vert-offset-bottom-2">{% trans "Our virtual appliance, agentless auto-discovery, remote collectors, and universal import tools will make your migrations easy, simple, and secure!" %}</p>
+            <a class="btn center-block cta-free-trial h3"
+                href="{% url 'download' %}">{% trans "Get your FREE, fully-functional trial NOW!" %}</a>
+        </div>
+    </section>
+{% endblock %}
+
+{% block good_company %}
+{% endblock %}
+
+{% block key_features %}
+    <section class="row image-right-5x7 is-table-row vert-offset-top-0 landing-section">
+        <div class="col-sm-7">
+            <h3 class="text-strong">{% trans "Key Features:" %}</h3>
+            <ul class="checklist">
+                <li><strong>{% trans "Lean on Device42 before, during, and after your migration to or from the cloud:" %}</strong></li>
+                <li>{% trans "Determine the best migration path for your legacy systems" %}</li>
+                <li>{% trans "Quickly determine what needs to be migrated and who needs to be notified, and their contact information" %}</li>
+                <li>{% trans "Look up cloud instance credentials, and generate new, secure credentials for the migrated server instance" %}</li>
+            </ul>
+            <p class="vert-offset-bottom-2" style="display: block;">{% blocktrans %}When your cloud migration is nearing completion, launch <em>(and/or re-schedule!)</em> an auto-discovery. Device42’s self-documenting CMDB will automatically map out everything that’s changed, and you can then quickly verify that all changes appear as they should!{% endblocktrans %}</p>
+            <ul>
+                <li><strong>{% trans "Powerful, Native Agentless Device Discovery and Cloud Discovery" %}</strong>
+                    <ul class="bullet-gray flat-top">
+                        <li>{% trans "Native WMI for Windows & SSH for *nix, BSD, and Mac" %}</li>
+                        <li>{% trans "SNMP for network devices like routers, switches, and load balancers" %}</li>
+                        <li>{% trans "Native Discovery for popular cloud platforms, hypervisors and their guest VMs, blades" %}
+                            <ul class="flat-top dark-blue">
+                                <li>{% trans "Amazon AWS, Microsoft Azure" %}</li>
+                                <li>{% trans "Openstack, Joyent" %}</li>
+                                <li>{% trans "Linode, OutScale" %}</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>{% blocktrans %}Agentless services and application discovery <em>[optional agent]</em> combines data obtained via Windows (WMI) and Linux (SSH) protocols, and SNMP, no complicated span ports necessary, ever!{% endblocktrans %}</li>
+                <li>{% trans "Device42 automatically generates dependency flow diagrams, charts, and list views that identify the relationships and interdependencies between devices, servers, applications, and application components" %}</li>
+                <li>{% trans "See the services that are listening, on what ports, and all open ports on each server" %}</li>
+                <li>{% trans "Discover data on servers that can’t be accessed directly with netflow and NMAP" %}</li>
+            </ul>
+        </div>
+        <div class="col-sm-5" style="vertical-align: top; padding-top: 40px;">
+            <a href="{% url 'download' %}">
+                <img class="featurette-image img-responsive center-block"
+                     alt="{% trans 'Cloud Migration' %}"
+                     src="{% static 'img/sections/features/app-map/set-it-all-in-one-place.jpg' %}">
+            </a>
+        </div>
+    </section>
+{% endblock %}
+
+{% block landingSubCTAtext %}
+    {% trans "Making the switch is easy with migration utilities and imports" %}
+{% endblock %}

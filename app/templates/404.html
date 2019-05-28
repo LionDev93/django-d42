@@ -1,0 +1,68 @@
+{% extends 'base/_base.html' %} {% load i18n static cache %} {% block title %}{% trans "Continuous Discovery & Management Software" %}{% endblock %} {% block meta %}<meta name="description" content="{% trans 'Device42 is a comprehensive data center and network management software. Loved by organizations around the world for its open APIs and ease of use.' %}">{% endblock %}
+{% block body_scripts %}
+    <script>
+
+        var search = document.getElementById('js-search');
+        search.innerHTML = '<div id="search-box"></div><div id="search-response"></div>';
+
+        var getUrlParam = function(e){var t = new RegExp("[?&]" + e.replace(/[\[\]]/g, "\\$&") + "(=([^&#]*)|&|#|$)"),a = t.exec(window.location.href);return a && a[2] ? decodeURIComponent(a[2].replace(/\+/g, " ")) : ""};
+        window._sjui = { overlay: {}, config: {
+          project: "d42sites",       // Set this to your project.
+          collection: "device42", // Set this to your collection.
+          pipeline: "website",     // Run the website pipeline.
+          attachSearchBox: document.getElementById("search-box"), // DOM element to render search box.
+          attachSearchResponse: document.getElementById("search-response"), // DOM element to render search results.
+          searchBoxPlaceHolder: "", // Placeholder text for the search box.
+          results: {"showImages": true}, // Configure the results
+          values: {"resultsPerPage": "15"}, // Set default values
+          initialValues: {"q": window.location.pathname.substring(1)}, // Set values to be added only on start
+          tabFilters: {defaultTab:"All",tabs:[{title:"All",filter:""},{title:"Blog",filter:"url~'device42.com/blog'"},{title:"Documentation",filter:"url~'docs.device42.com'"},{title:"Support",filter:"url~'support.device42.com'"},{title:"GitHub",filter:"url~'github.com/device42'"}]},
+          overlay: false // Whether to render an overlay or in-page
+        } };
+
+        function loadjscssfile(filename, filetype) {
+          if (filetype == "js") {
+            var fileref = document.createElement('script')
+            fileref.setAttribute("type", "text/javascript")
+            fileref.setAttribute("src", filename)
+          } else if (filetype == "css") {
+            var fileref = document.createElement("link")
+            fileref.setAttribute("rel", "stylesheet")
+            fileref.setAttribute("type", "text/css")
+            fileref.setAttribute("href", filename)
+          }
+          if (typeof fileref != "undefined")
+            document.getElementsByTagName("head")[0].appendChild(fileref)
+        }
+        loadjscssfile('https://cdn4.device42.com/external/sajari/sajari.css', 'css')
+        loadjscssfile('https://cdn4.device42.com/external/sajari/sajari-search-1.1.0.js', 'js')
+
+    </script>
+{% endblock %}
+{% block body %} 
+    <style>
+        .sj-search-bar-input-common, .sj-search-input-holder-inner {
+            width: 50%;
+        }
+        #search-response {
+            margin-top: 50px;
+        }
+    </style>
+    <header class="row head-home bg-primary">
+        <div class="container">
+            <div class="row featurette">
+                <div class="col-md-12">
+                    <h1 class="flat-top">{% trans "404" %}</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 padded">
+                <h1>{% trans "Page not found. Do the following search results match?" %}</h1>
+                <div id="js-search"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

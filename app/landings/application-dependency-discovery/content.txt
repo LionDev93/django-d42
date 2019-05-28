@@ -1,0 +1,38 @@
+[head.title]
+Device42's agent-less application dependency discovery automatically maps and discovers your entire IT infrastructure!
+
+[head.description]
+Device42 features comprehensive, automatic application dependency discovery!
+
+[landing.title]
+Device42 Application Dependency Discovery
+
+[landing.image_format]
+png
+
+[landing.content]
+Device42's Automatic Application Dependency Discovery Documents All of Your Hardware, Software, Services, and their Interdependencies
+
+- Agentless application dependency discovery discovery leverages native Windows (WMI) and Linux (SSH) protocols, and SNMP for network hardware
+- Device42 discovers all of your hardware, software, and applications, including manufacturers and versions
+- application dependency discovery finds in-use protocols & ports
+- Easily view application to server and application to application dependencies
+- View comprehensive dependency maps even for machines that can't be directly accessed, built out with Netflow data!
+
+
+[feature[1].title]
+Automated Application Dependency Discovery
+[feature[1].image_format]
+png
+[feature[1].content]
+Device42 application dependency discovery creates charts that identify and track all of your physical and logical components, their relationships, and their interdependencies.
+
+[feature[2].title]
+Application Dependency Discovery Creates Charts, Lists, and Flow Diagrams
+[feature[2].content]
+Automatic application and services discovery creates dependency maps and charts that highlight the impact of any discovered application. Easy to consume list pages and charts are Visio compatible, too!
+
+[feature[3].title]
+Powerful Visualizations, Reporting, and APIs
+[feature[3].content]
+Easily build move groups, or report on any application dependencies in your desired format - Excel, CSV, or a direct connection to an external database. Flexible APIs let you manipulate your, data your way!

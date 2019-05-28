@@ -1,0 +1,152 @@
+{% extends 'base/_base.html' %}
+{% load i18n static %}
+{% block title %}{% trans "Data Center Infrastructure Management (DCIM) Software Download" %}{% endblock %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Download a free trial of comprehensive data center infrastructure management software (DCIM) with integrated IPAM and centralized password management by Device42.' %}"/>
+{% endblock %}
+{% block site_section_product %}active{% endblock %}
+{% block head_scripts %}
+    <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
+    <script src="//cdn4.device42.com/jquery-1.12.4.min.js"></script>
+{% endblock %}
+{% block body_scripts %}
+{% endblock %}
+{% block body %}
+    <style>
+        label[for="id_cloud_password"], #id_cloud_password { display: none; }
+        label[for="id_phone"], #id_phone { display: none; }
+        label[for="id_instance_type"], #id_instance_type { display: none; }
+        .btn-primary { margin: 0 15px; }
+    </style>
+    <script>
+        function check(v) {
+            if(v === 'Cloud') {
+                $('#id_cloud_password').prop('required', true);
+                $('label[for="id_cloud_password"]').parent().show();
+                $('label[for="id_cloud_password"]').show();
+                $('#id_cloud_password').show();
+            } else {
+                $('#id_cloud_password').prop('required',false);
+                $('label[for="id_cloud_password"]').parent().hide();
+                $('label[for="id_cloud_password"]').hide();
+                $('#id_cloud_password').hide();
+            }
+            if(v === 'Talk-to') {
+                $('#id_phone').prop('required', true);
+                $('label[for="id_phone"]').parent().show();
+                $('label[for="id_phone"]').show();
+                $('#id_phone').show();
+            } else {
+                $('#id_phone').prop('required',false);
+                $('label[for="id_phone"]').parent().hide();
+                $('label[for="id_phone"]').hide();
+                $('#id_phone').hide();
+            }
+        }
+        $(document).ready(function() {
+            check($('#id_instance_type :selected').val());
+            $('#id_instance_type').on('change', function() {
+                check(this.value);
+            });
+            $('.switch .cloud').click(function() {
+                $('#id_instance_type').val('Cloud');
+                check($('#id_instance_type :selected').val());
+                $(this).parent().parent().find('.active').removeClass('active');
+                $(this).addClass('active');
+            });
+            $('.switch .on-prem').click(function() {
+                $('#id_instance_type').val('On-prem');
+                check($('#id_instance_type :selected').val());
+                $(this).parent().parent().find('.active').removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+    </script>
+
+    <header class="row head-home bg-primary">
+        <div class="container">
+            <div class="row featurette">
+                <div class="col-md-12">
+                    <h1>{% trans "Free Trial" %}</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="row">
+        <div class="container">
+            <div class="row padded">
+                <div class="col-sm-8">
+                    <h3 class="flat-top">{% trans "Please fill out the following form and we'll get you started right away!" %}</h3>
+                    <hr>
+                    <div class="col-sm-12 switch">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-4"><a class="on-prem {% if request.POST.instance_type == 'On-prem' or not request.POST.instance_type and request.GET.activation_expired != '' %} active {% endif %}" >Self-Hosted Version</a></div>
+                        <div class="col-sm-4"><a class="cloud {% if request.POST.instance_type == 'Cloud' or request.GET.activation_expired == '' %} active {% endif %}" >Cloud Version</a></div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                    <form role="form" id="downloadForm" action="." method="POST">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            <div class="form-group col-xs-12 {% if field.errors %}has-errors{% endif %}">
+                                <label class="control-label col-md-12 font-roboto" style="font-weight:400;text-align:left;"
+                                       for="id_{{ field.name }}">{{ field.label }}</label>
+                                <div class="field-wrap">
+                                    {{ field }}
+                                </div>
+                                {% if field.errors %}
+                                    {% for error in field.errors %}
+                                        <span class="text-danger text-strong">{{ error|escape }}</span>
+                                    {% endfor %}
+                                {% endif %}
+                                {% if field.help_text %}
+                                    <p class="help-block">{{ field.help_text|safe }}</p>
+                                {% endif %}
+                            </div>
+                        {% endfor %}
+                        <input style="display:none" id="id_main" type="text" name="main" maxlength="64"/>
+                        <div class="text-right xs-center">
+                            <input class="btn btn-primary" type="submit" value="{% trans 'Start Your Free Trial' %}" />
+                        </div>
+                    </form>
+                    <br>
+                    <p class="text-muted">
+                        <small>{% trans "By filling out the form above you are agreeing to " %}<a href="{% url 'legal_eula' %}"
+                               target="_blank">{% trans "Device42 End User License Agreement" %}</a>.</small>
+                    </p>
+                    <p class="text-muted">
+                        <small>{% trans "We respect your privacy and will not misuse or sell your personal information.  Read our " %}<a
+                                href="{% url 'legal_privacy' %}">{% trans "Privacy Policy" %}</a></small>
+                    </p>
+                </div>
+                <div class="col-sm-4 good-company text-center">
+                    <label class="prelist text-jumbo text-warning text-italic text-strong vert-offset-bottom-1">{% trans "You are in good company" %}!</label>
+                    <div style="width:100px;height:100px;" class="inline-block sprite-concurcom"></div>
+                    <div style="width:100px;height:100px;" class="inline-block sprite-singtelcom"></div>
+                    <div style="width:100px;height:100px;" class="inline-block sprite-ucsbedu"></div>
+                    <div style="width:100px;height:100px;" class="inline-block sprite-sprintcom"></div>
+                    <div style="width:100px;height:100px;" class="inline-block sprite-wdccom"></div>
+                    <div style="width:100px;height:100px;" class="inline-block sprite-optuscomau"></div>
+                    <div style="width:100px;height:100px;" class="inline-block sprite-homeawaycom"></div>
+                    <div style="width:100px;height:100px;" class="inline-block sprite-livingsocialcom"></div>
+                    <div style="width:100px;height:100px;" class="inline-block sprite-atlassiancom"></div>
+                    <div class="clearfix"></div>
+{#                    <div class="good-company--imgs padded clearfix">#}
+{#                        <img src="{% static 'img/customers/128x128/concurcom.png' %}" alt="concur">#}
+{#                        <img src="{% static 'img/customers/128x128/singtelcom.png' %}" alt="singtel" class="hidden-xs">#}
+{#                        <img src="{% static 'img/customers/128x128/ucsbedu.png' %}" alt="ucsb" class="hidden-xs">#}
+{#                        <img src="{% static 'img/customers/128x128/sprintcom.png' %}" alt="sprint">#}
+{#                        <img src="{% static 'img/customers/128x128/wdccom.png' %}" alt="western digital">#}
+{#                        <img src="{% static 'img/customers/128x128/optuscomau.png' %}" alt="optus">#}
+{#                        <img src="{% static 'img/customers/128x128/homeawaycom.png' %}" alt="homeaway"#}
+{#                             class="hidden-xs">#}
+{#                        <img src="{% static 'img/customers/128x128/livingsocialcom.png' %}" alt="living social">#}
+{#                        <img src="{% static 'img/customers/128x128/atlassiancom.png' %}" alt="atlassian">#}
+{#                    </div>#}
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

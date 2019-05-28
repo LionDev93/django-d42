@@ -1,0 +1,35 @@
+﻿{% extends "base/_base-landing.html" %}
+{% load i18n static %}
+{% block title %}{% trans "Device42 Application Dependency Mapping" %}{% endblock %}
+{% block og_meta %}
+    <meta property="og:title" content="Device42 Application Dependency and Service Impact Mapping">
+    <meta property="og:description" content="Device 42: Map your IT application dependencies, service / daemon dependencies with continuous and agentless autodiscovery of your data center and IT environment.">
+{% endblock %}
+{% block meta %}
+    <meta name="description" content="Device42 includes a premier agentless application dependency mapping tool that continuously updates IT application dependencies, service / daemon dependencies, and the inventory of your data center and IT infrastructure.">
+    <meta name="keywords" content="application dependency mapping, service mapping, application dependency mapping tool, IT asset management, ITAM, service mapping tool, data center infrastructure management, DCIM, service discovery and impact, windows service, unix service, bsd service, application interdependencies">
+{% endblock %}
+
+{% block landingHeadingText %}<i class="fa fa-database fa-fw"></i> {% trans "Application Dependency Mapping" %}{% endblock %}
+{% block landingfeature %}
+    <h4 class="prelist">{% trans 'Automated Service Impact Discovery, Dependency flow diagrams, Application Impact lists, Easy Impact Visualizations, and more!' %}</h4>
+    <p class="lead">{% trans 'Device42 provides data center managers with an automatically generated, centralized repository of application, service and device relationships and dependencies whether running on premises on physical machines, on virtual machines, or in the cloud.' %}</p>
+    <p class="lead">{% trans 'You can confidently retire or consolidate assets only if you understand their inter-dependencies and business impact. Facilitate effective migrations with the clear understanding of application interdependencies only Device42 can provide.' %}</p>
+{% endblock %}
+
+{% block maincontent %}
+    {% include 'partials/app-map/app-overview.html' %}
+    <br><br>
+    {% include 'partials/app-map/app-continuous-discovery.html' with image='left' %}
+    <br><br>
+    {% include 'partials/app-map/app-discovery-methods.html' %}
+    <br><br>
+    {% include 'partials/app-map/app-automated-service-impact-discovery.html' with image='left'%}
+    <br><br>
+    {% include 'partials/app-map/app-dependency-flow.html' %}
+    <br><br>
+    {% include 'partials/app-map/app-impact-lists.html' with image='left' %}
+    <br><br>
+    {% include 'partials/app-map/app-visual-impacts.html' %}
+{% endblock %}
+

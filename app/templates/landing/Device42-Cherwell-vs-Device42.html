@@ -1,0 +1,330 @@
+{% extends "base/_base-landing.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Looking for Cherwell CMDB alternatives, or for a CMDB that integrates with your favorite ITSM suite? Read below to find out why Device42 is the right choice!' %}"/>
+{% endblock %}
+{% block title %}{% trans "Device42 vs. Cherwell CMDB" %}{% endblock %}
+{% block styles %}
+    <style>
+
+        .media-left i.fa {
+            color: #00b6ff;
+        }
+
+        .media-body {
+            vertical-align: middle !important;
+        }
+        p {
+          font-size: 20px;
+        }
+        p,
+        ul.square-style {
+            font-weight: 300;
+        }
+        p.lead {
+          font-family: "Roboto", sans-serif !important;
+          font-size: 30px;
+          padding-top: 10px;
+          padding-bottom: 30px;
+          border-bottom: 2px solid rgba(68, 84, 99, 0.39);
+        }
+        h3.sub-heading {
+          font-family: "Open Sans", sans-serif !important;
+        }
+        p.sub-title {
+          font-weight: 500;
+          font-size: 24px;
+          margin-top: 50px;
+          text-align: center;
+          margin-bottom: 40px;
+          letter-spacing: 0.5px;
+        }
+        .text-center {
+          text-align: center;
+        }
+        .d42-cherwell-compare {
+            max-width: 750px;
+            margin: auto;
+            margin-top: 50px;
+        }
+        .table-section {
+          border-top: 2px solid rgba(68, 84, 99, 0.39);
+          padding-top: 20px;
+        }
+        .fa-warning {
+          color: #ff9201;
+        }
+        .green-color {
+          color: #39bf87;
+        }
+        .yellow-color {
+          color: #ff9201;
+        }
+        .table_desc {
+          font-size: 14px;
+          text-align: center;
+          color: #28bbff;
+        }
+        .m-t-80 {
+          margin-top: 80px;
+        }
+        .m-t-40 {
+          margin-top: 40px;
+        }
+        .sub-desc{
+          font-family: "Roboto Condensed", sans-serif;
+          line-height: 2.0em;
+          letter-spacing: 0.5px;
+        }
+        ul.bullet-blue {
+          margin-top: 0px;
+          margin-bottom: 0px;
+        }
+        .main-content p a {
+          border-bottom: 2px solid rgba(2, 2, 2, 0.65);
+        }
+        .bottom_download {
+          font-size: 28px;
+          font-weight: 500 !important;
+          font-style: italic;
+        }
+        .bottom_download a{
+          color: #0666ff !important;
+          border-bottom: 2px solid #0666ff !important;
+        }
+        td.comp-feature {
+          color: #777373;
+          font-weight: 300;
+        }
+    </style>
+
+{% endblock %}
+
+
+{% block landingHeadingText %}{% trans "Device42 vs. Cherwell CMDB" %}{% endblock %}
+{% block landingLeadText %}
+    {% trans "﻿Looking for Cherwell CMDB alternatives, or for a CMDB that integrates with your favorite ITSM suite? Read below to find out why Device42 is the right choice!" %}
+{% endblock %}
+{% block landingfeature %}
+    <section class="landing-section">
+      <h3 class="sub-heading">
+        {% trans "Device42 offers a full-fledged CMDB product with Auto-Discovery that integrates with ITSM tools seamlessly." %}
+      </h3>
+      <p>{% trans "You can also integrate Device42 with many other products with our selection of FREE integrations: Atlassian’s JIRA, Confluence, and JIRA Service Desk for ITSM, automation tools like Ansible and Puppet, SIEM tools like Splunk and Logstash, as well as many more -- and, unlike the Cherwell Software CMDB offering," %} <strong style="font-style: italic;">Device42’s Core product includes autodiscovery.</strong></p>
+    </section>
+{% endblock %}
+
+{% block maincontent %}
+    <section class="landing-section table-section">
+      <h3 class="sub-heading text-center">{% trans "The table below highlights similarities and differences between Device42 and Cherwell CMDB:" %}</h3>
+      <table class="table table-condensed table-hover d42-cherwell-compare">
+                <thead>
+                <tr>
+                    <th class="table-title"><p class="dark-blue text-left alt-text"
+                                               style="margin:0;font-size:24px;">{% trans "Features" %}</p>
+                    </th>
+                    <th class="product-heading blue">{% trans "Device42" %}</th>
+                    <th class="product-heading blue">{% trans "Cherwell® CMDB" %}<sup>&reg;</sup></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="comp-feature">{% trans "Discovery Included in Core product" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "CMDB" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "IPAM" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "DCIM" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "ITSM" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Resource Utilization" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Power Monitoring" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Environmental Monitoring" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Password Management" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Drag and Drop, Photo realistic Rack Layouts" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Cable Management" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Cloud and On-Premise Option" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Agentless Discovery" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><a href="https://www.cherwell.com/products/it-asset-management" data-toggle="tooltip" data-placement="top" title='Customers must purchase and integrate the separate "Cherwell Asset Management" product to collect hardware and software inventory.'><i class="fa fa-2x fa-warning"></i></a></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Optional Agent-Based Discovery" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Automatic Service/Application Discovery" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Dependency Autodiscovery" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                  <td class="text-center"><a href="https://www.cherwell.com/products/it-service-management/cmdb-software" data-toggle="tooltip" data-placement="top" title='Cherwell recommends customers purchase "FireScope Discovery and Dependency Mapping" to fill this role'><i class="fa fa-2x fa-warning"></i></a></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Simple, unified licensing model" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Native Windows WMI & *nix (ssh) Discovery" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Native WinRM Discovery" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "SNMP Discovery" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Native Cisco UCS Discovery" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Native Load Balancer Discovery" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Native VMware Discovery" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Native other Virtualization (Hyper-V, Xen, KVM, LXC)" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Native Public Cloud Discovery" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Native Private Cloud Discovery" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Nmap / Netflow Discovery" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "RESTful APIs" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><a href="https://cherwellsupport.com/CherwellAPI/Documentation/en-US/csm_rest_api.html"><i class="fa fa-2x fa-check"></i></a></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Webhooks to drive automation" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature">{% trans "Price [complete, comparable solution]" %}</td>
+                    <td class="text-center"><p class="green-color">$$$</p></td>
+                    <td class="text-center"><a href="https://www.cherwell.com/products/it-service-management/cmdb-software" data-toggle="tooltip" data-placement="top" title='Cherwell® CMDB + Cherwell® Asset Management + Firescope® Discovery and Dependency Mapping'><p class="yellow-color">﻿$$ + $$ + $$</p></td>
+                </tr>
+            </table>
+            <p class="table_desc">{% trans "*All feature data deduced from Cherwell Software’s website and available marketing materials. Please let us know if something isn’t right and we’ll gladly update it." %}</p>
+            <p>{% trans "Device42 goes beyond the traditional CMDB with a complete feature set that supports Data Center Infrastructure Management (DCIM), IP Address Management (IPAM), ITAM (IT asset management) and more." %} </p>
+    </section>
+    <section class="landing-section m-t-40">
+      <p>{% trans "﻿In contrast to Cherwell Software, Device42 is fully integrated with no standalone modules required. Device42 is truly a one-stop single source of truth because it includes a fully integrated suite of enterprise CMDB features:" %}</p>
+      <div class="row">
+        <div class="col-md-4">
+          <ul class="light-weight bullet-blue">
+            <li>{% trans "Comprehensive Auto Discovery" %}</li>
+            <li>{% trans "DCIM & IPAM" %}</li>
+            <li>{% trans "Password Management" %}</li>
+            <li>{% trans "Capacity Planning" %}</li>
+            <li>{% trans "Multi-Tenancy" %}</li>
+            <li>{% trans "Certificate (SSL, RSA/DSA, etc.) Management" %}</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="light-weight bullet-blue">
+            <li>{% trans "Application Dependency Mapping" %}</li>
+            <li>{% trans "Resource Utilization" %}</li>
+            <li>{% trans "Power Monitoring & Control" %}</li>
+            <li>{% trans "Cable Management" %}</li>
+            <li>{% trans "Drag-and-drop rack & room Layouts" %}</li>
+            <li>{% trans "Full Audit Trails" %}</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="light-weight bullet-blue">
+            <li>{% trans "Inventory Lifecycle Management" %}</li>
+            <li>{% trans "Asset Lifecycle Tracking" %}</li>
+            <li>{% trans "Purchase Tracking" %}</li>
+            <li>{% trans "“What-if” scenarios" %}</li>
+            <li>{% trans "QR / Barcode Generation" %}</li>
+            <li>{% trans "Spreadsheet / CSV Import of CI’s and Attributes" %}</li>
+          </ul>
+        </div>
+      </div>
+      <p class="m-t-40" style="font-style: italic;">{% trans "Device42’s advanced visualizations, powerful, customizable reporting facilities, and advanced, well documented RESTful APIs work together to provide a second-to-none data management experience. Device42 helps make your data easier to see and understand, faster to manipulate, and more convenient to quantify - at a price that will surprise you." %}</p>
+
+      <div class="row m-t-80">
+        <div class="col-md-12 text-center">
+          <h4 class="sub-desc">{% trans "See why customers in over 50 countries are using Device42:" %}</h4>
+          <p class="bottom_download"><a href="/download/">Download Device42</a> today</p>
+          <h4 class="sub-desc">{% trans "It’s fully functional and completely free to try." %}</h4>
+        </div>
+      </div>
+    </section>
+{% endblock %}

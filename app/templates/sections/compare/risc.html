@@ -1,0 +1,240 @@
+{% extends 'base/_base.html' %}
+{% load i18n static %}
+{% block title %}{% trans "An Easier Alternative to RISC Networks CloudScape" %}{% endblock %}
+{% block styles %}
+    <style>
+        p.small-font {
+            font-size: 14px;
+            color: #00b6ff;
+            text-align: center;
+        }
+        hr {
+          margin-bottom: 0px;
+        }
+    </style>
+{% endblock %}
+{% block site_section_compare %}active{% endblock %}
+{% block body_scripts %}
+    <script>$("[data-toggle='tooltip']").tooltip();</script>
+{% endblock %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Device42 is the better RISC CloudScape alternative - its simply bettter, for less!' %}"/>
+{% endblock %}
+{% block body %}
+    <header class="row head-home bg-primary">
+        <div class="container">
+            <div class="row">
+                <h1>{% trans 'Device42 vs RISC Networks Discovery' %}</h1>
+            </div>
+        </div>
+    </header>
+    <article class="row">
+        <div class="container font-stack-roboto">
+            <p class="vert-offset-top-1">{% trans "RISC Networks provides tools centered around workload migration, and RISC’s tools focus on helping to compare the costs of migrating identified workloads (e.g. discovered VMs and/or applications) to competing cloud providers." %}</p>
+            {% include 'partials/try-free-callout.html' %}
+            <p class="vert-offset-top-1 vert-offset-bottom-1">{% trans "Not only does Device42’s comprehensive discovery also provide all of the details you need to plan your next cloud migration (e.g. automatic move groups based on your application/service dependencies) on both AWS and competing providers (e.g. Microsoft Azure) -- but it also continues to provide value well beyond the completion of your cloud migration project with its unrivaled enterprise feature-set:" %}</p>
+
+            <table class="table table-hover table-condensed table-striped">
+                <thead>
+                <tr>
+                    <th class="h4 text-dark-blue text-strong">{% trans "Solution Comparison" %}</th>
+                    <th class="h4 text-default text-center text-strong">Device42 Core</th>
+                    <th class="h4 text-default text-center text-strong">RISC Networks CloudScape</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "Option To Keep All Data On-Premise" %}</td>
+                    <td class="text-center "><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "Agentless Discovery" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "Optional Agent-based Discovery" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "Native Windows Discovery" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "Native Linux Discovery" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><a data-toggle="tooltip" data-placement="left"
+                                               title="{% blocktrans %}RN only discovers Linux via SNMP, which isn't &ldquo;native&rdquo; and isn't enabled by default (almost ever) on most Linux distributions.{% endblocktrans %}">
+                      <i class="fa fa-2x fa-exclamation-triangle"></i></a></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "Other OS Discovery (Mac, BSD)" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "VMWare Discovery" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "Native Discovery for Other Hypervisors" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><a data-toggle="tooltip" data-placement="left"
+                                               title="{% blocktrans %}RN only offers a &ldquo;weak&rdquo; VMware discovery, while Device42 thoroughly discovers guests and details on VMware, hyperV, Citrix Xen, oVirt, Redhat, KVM, LXC, etc.{% endblocktrans %}">
+                      <i class="fa fa-2x fa-exclamation-triangle"></i></a></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "Native Discovery for Cloud Platforms" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "Application Dependency Discovery" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "App/Service install path, config files, permissions, & registry keys" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "NetFlow Support" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "NMap support" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "Blade Chassis Discovery" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "IPMI Devices" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "PDUs, UPS, BMC's, ATS" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "Certificate Discovery" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "Active Directory" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "RESTful API" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "Webhooks" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "Database Access via SQL" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "Audit / Change History Trail" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "Multi-Tenancy" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "Multi-Language Support" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "Power Monitoring" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "Full CMDB" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "Automatic Move Groups" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "Cloud Cost Estimates" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td class="comp-feature alt-font">{% trans "Resource Utilization" %}</td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                </tr>
+                </tbody>
+            </table>
+            <hr>
+            <p class="small-font">{% trans "*All feature data deduced from RISC Network’s website and available marketing materials. Please let us know if something isn’t right and we’ll gladly update it." %}</p>
+            <br />
+            <h3>{% trans 'Our Solution' %}</h3>
+          <p>{% trans 'Device42’s usefulness far outlives migration planning and execution. After completion of your migration project, Device42 remains your one-stop single source of truth with a fully integrated suite of enterprise features: Complete DCIM, IPAM, a full CMDB, resource utilization, password management, certificate management, software and hardware inventory, lifecycle, and license management, advanced visualizations, powerful reporting, webhooks to drive automation, an advanced, well documented RESTful API, <em>and more!</em>' %}</p>
+            <h4 class="text-muted vert-offset-top-1">{% trans "Device42 can quickly and thoroughly discover your entire network using a variety of auto-discovery methods, automatically correlating the information:" %}</h4>
+            <div class="row is-table-row">
+                <div class="col-sm-7">
+                    <ul class="bullet-blue font-stack-condensed">
+                        <li>{% trans "SNMP Discovery (v1/v2c/v3)" %}:</li>
+                        <ul>
+                            <li>{% trans "Network switches, routers and firewalls" %}</li>
+                            <li>{% trans "Load balancers (such as BIG-IP F5 & Cisco NetScaler)" %}</li>
+                            <li>{% trans "Blade systems to get chassis/blade system information" %}</li>
+                            <li>{% trans "Discovery and monitoring of power devices like PDUs, UPS, CRAC, etc." %}</li>
+                            <li>{% trans "Console switches, fiber switches, SAN switches, etc." %}</li>
+                        </ul>
+                        <li>{% trans "WMI/WinRM based discovery for Windows based machines (and servers)" %}</li>
+                        <li>{% trans "SSH based discovery for different UNIX and Linux distributions" %}</li>
+                        <li>{% trans "Hypervisor and VMs discovery with support for all major virtualization platforms" %}</li>
+                        <li>{% trans "Cloud discovery support for Amazon, Azure, Joyent, Linode, Digital Ocean, etc." %}</li>
+                        <li>{% trans "Automatic Affinity groups for maintenance or migration planning" %}</li>
+                        <li>{% trans "DNS sync and ping sweep for network discovery" %}</li>
+                        <li>{% trans "Pull inventory data from tools like Puppet, Chef, Microsoft SCCM, monitoring systems" %}</li>
+                        <li>{% trans "AS/400, Cisco UCS, and IPMI discovery for BMC boards" %}</li>
+                        <li>{% trans "Netflow discovery" %}</li>
+                        <li>{% trans "NMap discovery" %}</li>
+                    </ul>
+                </div>
+                <div class="col-sm-5 hidden-xs">
+                    <img src="{% static 'img/sections/features/cmdb/Impact_chart_load_CIs_fast.png' %}"
+                         alt="{% trans 'Switch Port Map Visualization' %}" class="img-responsive">
+                </div>
+            </div>
+
+            {% include 'partials/cmdb/fast-and-easy-integration.html' %}
+            {% include 'partials/see-it-all-in-one-place.html' %}
+            {% include 'partials/try-free-callout.html' %}
+
+        </div>
+    </article>
+
+{% endblock %}

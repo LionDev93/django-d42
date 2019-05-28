@@ -1,0 +1,179 @@
+{% extends "base/_base.html" %}
+{% load i18n static %}
+{% block title %}{% trans "Accelerating your IT Transformation (and your business) with Device42" %}{% endblock %}
+{% block og_meta %}
+    <meta property="og:title" content="IT & Agility">
+    <meta property="og:description" content="Accelerating your clients' IT transformation (and your business) with Device42">
+{% endblock %}
+{% block meta %}
+    <meta name="description" content="Accelerating your clients' IT transformation (and your business) with Device42">
+{% endblock %}
+
+{% block styles %}
+<style>
+    body{
+    }
+    .left-content {
+      text-align: center;
+      padding: 20px;
+    }
+    .time-available {
+      margin-bottom: 40px;
+    }
+    .time-available img {
+      width: 100px;
+      display: inline-block;
+    }
+    .time-available .time{
+      display: inline-block;
+      padding-top: 10px;
+      vertical-align: middle;
+    }
+    .time-available .time p{
+      font-size: 24px;
+      font-weight: 700;
+      color: #246e90;
+      margin: 0;
+    }
+    .description {
+      text-align: left;
+    }
+    .description p{
+      font-size: 20px;
+      color: #000;
+    }
+    .description span {
+      font-weight: 700;
+    }
+    .regist_form {
+      font-family: Helvetica, Trebuchet MS, sans-serif !important;
+      background-color: #22a3df !important;
+      color: #ffffff !important;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .regist_form h2 {
+      color: #ffffff !important;
+      font-weight: normal !important;
+      font-family: Helvetica, Trebuchet MS, sans-serif !important;
+      font-size: 30px;
+      text-align: center;
+      margin: 0;
+    }
+    .regist_form input[type=text], .regist_form input[type=email] {
+        width: 100% !important;
+        padding: 10px !important;
+        font-size: 17px !important;
+        font-style: italic !important;
+        color: #246e90;
+        margin-top: 20px;
+    }
+    .regist_form input[type=submit] {
+        background: #ffd377 !important;
+      ﻿ color: #383838;
+        width: 50% !important;
+        border-radius: 2px !important;
+        font-size: 20px !important;
+        font-weight: bold !important;
+        padding-bottom: 7px !important;
+        padding-top: 7px !important;
+        border: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        margin-top: 40px;
+    }
+    .regist_form p label {
+      display: none;
+    }
+    .regist_form p {
+      padding: 0px !important;
+    }
+  ﻿
+    @media screen and (min-width: 768px){
+      .left-content {
+        padding-left: 70px;
+      }
+      .right-content{
+        padding-right: 70px;
+      }
+    }
+    @media screen and (max-width: 768px){
+      .main-content {
+        margin: 0;
+      }
+      .left-content h1{
+        font-size: 24px;
+      }
+      .time-available .time p{
+        font-size: 18px;
+      }
+      .hbspt-form{
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      .main-content > .row {
+        margin-top: 40px;
+      }
+    }
+
+</style>
+{% endblock %}
+
+{% block body %}
+  <article class="container vert-offset-top-1">
+      <div class="row">
+        <div class="col-md-7 left-content">
+          <h1>{% trans "Accelerating your clients' IT transformation" %} <br />{% trans "(and your business) with Device42" %}</h1>
+          <div class="time-available">
+            <img src="{% static 'img/landing/calendar.png' %}" />
+            <div class="time">
+              <p>{% trans "Thursday, September 21st" %}</p>
+              <p>{% trans "12:00 pm IST (14:30 HKT)" %}</p>
+            </div>
+          </div>
+          <div class="description">
+            <p><img src="{% static 'img/landing/check.png' %}" />  <span>{% trans "Engage" %}</span> {% trans "buyers early to influence the sales cycle" %}</p>
+            <p><img src="{% static 'img/landing/check.png' %}" />  <span>{% trans "Compress" %}</span> {% trans "the typical cycle by producing actionable data quickly" %}</p>
+            <p><img src="{% static 'img/landing/check.png' %}" />  <span>{% trans "" %}Overcome</span> {% trans "a client's fear of what they don't know" %}</p>
+            <p><img src="{% static 'img/landing/check.png' %}" />  <span>{% trans "" %}Lay the foundation</span> {% trans "for continuous deployment, automation and enhanced service management" %}</p>
+            <p><img src="{% static 'img/landing/check.png' %}" />  <span>{% trans "" %}Increase margins</span> {% trans "by automating discovery over a 4-8 week period" %}</p>
+          </div>
+        </div>
+        <div class="col-md-5 right-content">
+          <!--﻿﻿&lt;!&ndash;[if lte IE 8]>-->
+            <!--<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>-->
+            <!--<![endif]&ndash;&gt;-->
+            <!--<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>-->
+            <!--<script>-->
+              <!--hbspt.forms.create({-->
+                <!--portalId: '433338',-->
+                <!--formId: 'c53d3e88-a234-4705-9abc-e9648b8167f1',-->
+                <!--css: ''-->
+              <!--});-->
+            <!--</script>-->
+          <form class="regist_form" role="form" action="" method="post">
+            <h2>{% trans "Please complete the registration form below:" %}</h2>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="SUBMIT"/>
+          </form>
+        </div>
+      </div>
+  </article>
+{% endblock %}
+
+{% block body_scripts %}
+<script type="text/javascript">
+    videoSrc = 'https://www.youtube.com/embed/X9zirQ-HZEw?rel=0';
+
+    $("#videoModal").on('show.bs.modal', function() {
+        $("#videoModal iframe").attr('src', videoSrc + '&amp;autoplay=1');
+    });
+
+    $("#videoModal").on('hidden.bs.modal', function() {
+        $("#videoModal iframe").removeAttr('src');
+    });
+</script>
+{% endblock %}

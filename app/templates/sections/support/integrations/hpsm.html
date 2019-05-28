@@ -1,0 +1,100 @@
+{% load i18n static %}
+<section class="row is-table-row">
+  <div class="col-xs-12 col-sm-8">
+    <h2>{% trans "Enhance HP Service Manager with CI sync from Device42" %}</h2>
+    <h4 class="prelist">{% trans "HP Service Manager (HPSM) users can enhance their service requests, change management process, and other workflows by syncing their CMDB and asset data from Device42 to HPSM." %}</h4>
+    <h4 class="prelist">{% trans "Users can easily use this free module with their HPSM installations and schedule a data sync from Device42 into HPSM. With that sync, Device42 ITAM data is available when creating a service request, ticket or issue." %}</h4>
+  </div>
+  <div class="col-xs-12 col-sm-4">
+      <div class="center-block xs-center" style="height:60px;width:200px;max-width:100%;">
+          <img src="{% static 'img/branding/transparent-logo.png' %}" alt="{% trans 'Device42 logo' %}"
+               class="img-responsive">
+      </div>
+      <img src="{% static 'img/customers/integrations/hpsm.png' %}" alt="{% trans 'HPSM logo' %}"
+               class="img-responsive">
+  </div>
+</section>
+<section class="row is-table-row">
+  <div class="col-xs-12 col-sm-12">
+    <h2>{% trans "Highlights" %}</h2>
+    <h3>{% trans "Continuously Sync CI attributes from Device42 to HPSM" %}</h3>
+    <p>{% trans "Enhance HP Service manager with Device42’s power and comprehensive Continuous Discovery. Quickly and easily schedule regular syncing all of the following attributes:" %}</p>
+  </div>
+</section>
+<section class="row">
+    <div class="col-xs-6 col-sm-3">
+        <ul class="checklist font-stack-roboto">
+            <li>{% trans "Logical Name" %}</li>
+            <li>{% trans "Machine Name" %}</li>
+            <li>{% trans "Type & Sub-type" %}</li>
+            <li>{% trans "Assignment" %}</li>
+        </ul>
+    </div>
+    <div class="col-xs-6 col-sm-3">
+        <ul class="checklist font-stack-roboto">
+            <li>{% trans "Operating System" %}</li>
+            <li>{% trans "Environment" %}</li>
+            <li>{% trans "Asset Tag" %}</li>
+            <li>{% trans "Manufacturer" %}</li>
+        </ul>
+    </div>
+    <div class="col-xs-6 col-sm-3">
+        <ul class="checklist font-stack-roboto">
+            <li>{% trans "Model and Serial" %}</li>
+            <li>{% trans "Description" %}</li>
+            <li>{% trans "Memory (RAM) " %}</li>
+            <li>{% trans "IP Address" %}</li>
+        </ul>
+    </div>
+    <div class="col-xs-6 col-sm-3">
+        <ul class="checklist font-stack-roboto">
+            <li>{% trans "MAC address" %}</li>
+            <li>{% trans "Network Name" %}</li>
+            <li>{% trans "Add’l MAC & IP" %}</li>
+            <li>{% trans "Device42 ID" %}</li>
+        </ul>
+    </div>
+</section>
+
+<div class="row padded image-right-8x4 is-table-row">
+    <div class="col-sm-4">
+      <a href="{% static 'img/sections/support/integrations/hpsm/hpsm-1.png' %}"
+         data-featherlight="image">
+          <img src="{% static 'img/sections/support/integrations/hpsm/hpsm-1.png' %}"
+               class="img-responsive center-block img-border" alt="{% trans 'HPSM Integration' %}">
+      </a>
+    </div>
+    <div class="col-sm-8">
+      <h3>{% trans "Link Service requests to CIs" %}</h3>
+      <p>{% trans "Once Device42’s Configuration Management Database is synced to HPSM, users can use link service requests to those synced CIs. Associate CIs with the ticket they concern for enhanced issue tracking, resulting in an improved IT Service Management experience." %}</p>
+    </div>
+</div>
+<div class="row padded image-left-4x8 is-table-row">
+    <div class="col-sm-4">
+      <a href="{% static 'img/sections/support/integrations/hpsm/hpsm-2.png' %}"
+         data-featherlight="image">
+          <img src="{% static 'img/sections/support/integrations/hpsm/hpsm-2.png' %}"
+               class="img-responsive center-block img-border" alt="{% trans 'HPSM Integration' %}">
+      </a>
+    </div>
+    <div class="col-sm-8">
+      <h3>{% trans "Search issues using CI attributes" %}</h3>
+      <p>{% trans "Once the CIs from Device42 are synced to HP Service Manager, a simple search is all it takes to find all issues concerning that CI. All synced CIs are completely searchable from within HPSM using all native HPSM search tools!" %}</p>
+    </div>
+</div>
+<div class="row padded image-right-8x4 is-table-row">
+    <div class="col-sm-4">
+      <a href="{% static 'img/sections/support/integrations/hpsm/hpsm-3.png' %}"
+         data-featherlight="image">
+          <img src="{% static 'img/sections/support/integrations/hpsm/hpsm-3.png' %}"
+               class="img-responsive center-block img-border" alt="{% trans 'HPSM Integration' %}">
+      </a>
+    </div>
+    <div class="col-sm-8">
+      <h3>{% trans "See CI details in HPSM" %}</h3>
+      <p>{% trans "Once Device42 CI data has been synced to HP Service Manager, users can see Device42 CI details (Asset tag, Assignment, Description, IP & MAC, and more) for those CIs in HPSM. At the same time, CI Data can also be seen for all HPSM CI types. Quickly view any service requests that are associated with a CI." %}</p>
+    </div>
+</div>
+<hr>
+<h3 class="vert-offset-bottom-1 text-strong text-default"><a href="https://github.com/device42/Device42_HPSM_Sync/archive/master.zip" class="btn btn-warning">Download</a> {% trans "the HPSM sync integration script for Device42 today!" %}</h3>
+

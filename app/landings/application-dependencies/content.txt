@@ -1,0 +1,39 @@
+[head.title]
+Device42's Agentless discovery automatically maps and discovers service and application dependencies across your infrastructure!
+
+[head.description]
+Device42 is a comprehensive autodiscovery tool that maps your service and application dependencies, automatically.
+
+[landing.title]
+
+Autodiscover Service and Application Dependencies
+
+[landing.image_format]
+png
+
+[landing.content]
+Device42 automatically autodiscovers and generates a centralized map of your hardware, software, service and application dependencies and relationships
+
+- Agentless service and application dependencies discovery via native Windows (WMI) and Linux (SSH) protocols, and via SNMP for network hardware
+- Device42 discovers all of your hardware, software, and applications, including manufacturers and versions
+- Automatically discover all application dependencies, protocols & ports
+- Easily view application to server and to application dependencies charts
+- View comprehensive application dependencies maps even for machines that can't be directly accessed, built out with Netflow data!
+
+
+[feature[1].title]
+Automated Application Dependencies and Impact Discovery
+[feature[1].image_format]
+png
+[feature[1].content]
+Device42 discovers hardware, software, and application dependencies. View charts that identify and track all of your physical and logical components, relationships, and their interdependencies.
+
+[feature[2].title]
+Service and application dependencies Charts, Lists, and Flow Diagrams
+[feature[2].content]
+Automatic application and service discovery creates dependency maps and charts that highlight the impact of any discovered application, whether contemplating a migration or a change control. Easy to consume list pages and charts are Visio compatible, too!
+
+[feature[3].title]
+Powerful Visualizations, Reporting and APIs
+[feature[3].content]
+Easily build move groups, or report on any application dependencies in your desired format - Excel, CSV, or a direct connection to an external database. Flexible APIs let you manipulate data your way and integrate Device42 with other products, too!

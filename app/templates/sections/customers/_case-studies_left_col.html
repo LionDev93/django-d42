@@ -1,0 +1,19 @@
+{% load i18n static %}
+<div class="list-group">
+    <a class="list-group-item {% if request.resolver_match.url_name == 'case_studies_intl_financial_service_provider' %}active{% endif %}"
+       href="{% url 'case_studies_intl_financial_service_provider' %}">{% trans "International Financial Services Provider" %}</a>
+    <a class="list-group-item {% if request.resolver_match.url_name == 'case_studies_coventry_university' %}active{% endif %}"
+       href="{% url 'case_studies_coventry_university' %}">{% trans "Coventry University" %}</a>
+    <a class="list-group-item {% if request.resolver_match.url_name == 'case_studies_maxihost' %}active{% endif %}"
+       href="{% url 'case_studies_maxihost' %}">{% trans "Maxihost Data Center Ltd." %}</a>
+    <a class="list-group-item {% if request.resolver_match.url_name == 'case_studies_appdirect' %}active{% endif %}"
+       href="{% url 'case_studies_appdirect' %}">{% trans "AppDirect" %}</a>
+    <a class="list-group-item {% if request.resolver_match.url_name == 'case_studies_gravity' %}active{% endif %}"
+       href="{% url 'case_studies_gravity' %}">{% trans "Gravity R&D" %}</a>
+    <a class="list-group-item {% if request.resolver_match.url_name == 'case_studies_netcetera' %}active{% endif %}"
+       href="{% url 'case_studies_netcetera' %}">{% trans "Netcetera Group Ag." %}</a>
+    <a class="list-group-item {% if request.resolver_match.url_name == 'case_studies_dell_emc' %}active{% endif %}"
+       href="{% url 'case_studies_dell_emc' %}">{% trans "Dell EMC" %}</a>
+    <a class="list-group-item {% if request.resolver_match.url_name == 'largest_virt_company' %}active{% endif %}"
+       href="{% url 'largest_virt_company' %}">{% trans "World’s Largest Virtualization Company" %}</a>
+</div>

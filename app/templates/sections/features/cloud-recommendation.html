@@ -1,0 +1,48 @@
+{% extends 'base/_base.html' %}
+{% load i18n static include_partial %}
+{% block title %}{% trans "Configuration Management Database (CMDB) Features" %}{% endblock %}
+{% block site_section_features %}active{% endblock %}
+{% block meta %}
+    <meta name="description" content="{% trans 'Device42 is a powerful Configuration management (CMDB) solution that integrates with JIRA, Servicenow, and Zendesk through REST APIs.' %}"/>
+{% endblock %}
+{% block body %}
+    <header class="row head-home bg-info">
+        <div class="container">
+            <div class="row featurette is-table-row">
+                <div class="col-sm-8">
+                    <span class="section-label">{% trans "Features Tour" %}</span>
+                    <h1 class="featurette-heading">{% trans "Cloud Recommendation Engine" %}</h1>
+                    <p>{% trans "Device42's Cloud Recommendation Engine (CRE) provides cloud instance sizing recommendations with pricing details for both the Amazon AWS and the Microsoft Azure cloud platforms - tailored to your actual workloads!" %}</p>
+                </div>
+                <div class="col-sm-4">
+                    <img class="featurette-image img-responsive center-block animated"
+                         alt="{% trans 'CMDB For The Cloud Era' %}"
+                         src="{% static 'img/generic/icons_cog_randoms.png' %}" style="max-width:60%;height:auto!important;">
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="row bg-warning feature-menu-wrap flat-top flat-bottom">
+        <div class="feature-menu">
+            <a href="#" data-jump="#workload" data-offset="top-nav">{% trans "Workload Data" %}</a>
+            <a href="#" data-jump="#option" data-offset="top-nav">{% trans "Cloud Options" %}</a>
+            <a href="#" data-jump="#secure" data-offset="top-nav">{% trans "Secure" %}</a>
+        </div>
+    </div>
+    <div class="container featurette-wrap">
+        {% include_partial "partials/cloud-recommendation/workload-data.html" image="disabled" id="workload" %}
+        {% include_partial "partials/cloud-recommendation/cloud-option.html" id="option" %}
+        {% include_partial "partials/cloud-recommendation/secure.html" image="left" id="secure" %}
+     <div class="row foot-nav">
+            <div class="col-xs-6 text-left">
+                <small class="text-uppercase text-muted">{% trans 'Previous' %}</small><br>
+                <a href="{% url 'features' %}"><i class="fa fa-chevron-left"></i> {% trans 'Highlights / Screenshots' %}</a>
+            </div>
+            <div class="col-xs-6 text-right">
+                <small class="text-uppercase text-muted">{% trans "Next" %}</small><br>
+                <a href="{% url 'features_dcim' %}">{% trans 'Data Center Management' %} <i class="fa fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

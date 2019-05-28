@@ -1,0 +1,36 @@
+[head.title]
+Comprehensive IT management toolkit with agent-less auto-discovery
+
+[head.description]
+Device42 is a comprehensive IT Management toolkit with agent-less auto-discovery!
+
+[landing.title]
+Comprehensive IT Management
+[landing.image_format]
+png
+[landing.content]
+
+Device42 provides comprehensive IT management capabilities including powerful auto-discovery and fully configurable asset types. Easily manage any IT asset type across your infrastructure!
+
+- Agent-less auto-discoveries to keep all your inventory up-to-date with an optional agent for remote assets.
+- Support for physical, virtual and cloud infrastructure to track complete hardware and software inventory.
+- Discover hardware and software inventory on any operating system: Windows, Linux, UNIX, Mac, or BSD.
+- Out of the box integrations with ITSM tools like JIRA, ServiceNow, Cherwell, and many more!
+- Know your support expiry and more with automatic contract management.
+- Easier audits with comprehensive reports and visualization tools!
+
+
+[feature[1].title]
+Complete Auto Discovery for All Networks
+[feature[1].content]
+Device42 auto-discovery spans from legacy to newer systems and builds inventory and dependencies between physical, virtuals, cloud infrastructure and applications. No need to use multiple tools anymore!
+
+[feature[2].title]
+Support Entitlement Tracking and Management
+[feature[2].content]
+Device42 helps you auto-discover your warranty information from various vendors to know when does your support expire. Know in advance when your server support is up for renewal!
+
+[feature[3].title]
+Real-time Map of Your IT Infrastructure with Integrations
+[feature[3].content]
+Go beyond traditional inventory tools using our out of box integrations with JIRA, Confluence, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, ServiceNow. Use this real-time map to reduce MTTR and make faster decisions!

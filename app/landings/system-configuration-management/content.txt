@@ -1,0 +1,32 @@
+[head.title]
+Get the System Configuration Management Database with agent-less auto-discovery
+
+[head.description]
+Device42 is the Comprehensive System Configuration Management Database with Agent-less Auto-discovery.
+
+[landing.title]
+Device42 is the Powerful System Configuration Management Database (CMDB)
+
+[landing.content]
+Device42 is a Powerful System Configuration Management Tool that Provides a Clear View Into Your IT Ecosystem for More Efficient System Configuration Management!
+
+- Agent-less auto-discoveries keep your configuration items (CIs) up-to-date with changes made by your configuration management system
+- Powerful visualizations help you make quick business decisions and easily see the impacts of CIs on other systems
+- Out of box integrations with system configuration management tools like Ansible, Puppet, Chef and more help you get the most out of existing investments
+- REST APIs make quick, custom integrations with homegrown and external CMDBs, automation, or other tools a breeze!
+
+
+[feature[1].title]
+Complete Autodiscovery Across Your Entire system Infrastructure
+[feature[1].content]
+Device42 auto-discovery spans from legacy to newer systems and builds dependencies between physical, virtuals, cloud infrastructure and applications - all in one tool.
+
+[feature[2].title]
+System Configuration Management with Powerful Reporting and Visualizations
+[feature[2].content]
+Device42 comes with pre-configured CIs so there is no need to spend time or money on expensive implementation services. Coupled with advanced customizations, discover any physical, virtual or service dependencies you want to capture.
+
+[feature[3].title]
+Real-time Map of your Infrastructure, PLUS Integrations with:
+[feature[3].content]
+Go beyond traditional CMDBs using our out of box integrations with JIRA, Confluence, system, Chef, SCCM, Infoblox, Splunk, ServiceNow and more! Leverage the real-time view to reduce your MTTR and make faster decisions in your daily IT operations.

@@ -1,0 +1,71 @@
+{% load i18n static %}
+<h2>{% trans "Enhance your IPAM with the InfoBlox / Device42 integration" %}</h2>
+<p>{% trans "Easily utilize this free script to gather information from Infoblox, syncing data to your Device42 appliance via the REST APIs." %}</p>
+<h2>{% trans "Sync InfoBlox IP & Subnet Data To Device42!" %}</h2>
+<div class="row is-table-row">
+    <div class="col-sm-8">
+        <h3 class="">{% trans "The Device42 / InfoBlox Integration Imports:" %}</h3>
+        <ul class="checklist bullet-blue">
+            <li>{% trans 'Subnets' %}</li>
+            <li>{% trans 'Static IP addresses' %}</li>
+            <li>{% trans 'MAC addresses' %}</li>
+            <li>{% trans 'Device names (if detected by Infoblox)' %}</li>
+            <li>{% trans 'Device OS (if detected by Infoblox)' %}</li>
+        </ul>
+    </div>
+    <div class="col-sm-4">
+        <div class="center-block xs-center" style="height:60px;width:200px;max-width:100%;">
+            <img src="{% static 'img/branding/transparent-logo.png' %}" alt="{% trans 'Device42 logo' %}"
+                 class="img-responsive">
+        </div>
+        <div class="sprite-infoblox center-block xs-center" style="height:60px;width:200px;"></div>
+    </div>
+</div>
+<div class="row padded">
+    <div class="col-sm-6">
+        <img class="img-responsive center-block box-shadow" src="{% static 'img/sections/support/integrations/infoblox/infoblox-subnet-management.png' %}" alt="{% trans 'Infoblox Subnet Management' %}">
+    </div>
+    <div class="col-sm-6">
+        <img class="img-responsive center-block box-shadow" src="{% static 'img/sections/support/integrations/infoblox/d42-subnet-management.png' %}" alt="{% trans 'Device42 Subnet Management' %}">
+    </div>
+</div>
+
+<hr>
+<section class="row landing-section is-table-row">
+    <div class="col-sm-5">
+        <img class="img-responsive center-block box-shadow" src="{% static 'img/sections/support/integrations/infoblox/centralized-management.png' %}" alt="{% trans 'IP Address Management APIs' %}">
+    </div>
+    <div class="col-sm-7">
+        <h3 class="alt-font sub-heading">{% trans "Let InfoBlox handle your DDI. <br>Device42 can do the rest!" %}</h3>
+        <p class="lead-small"><i>{% trans "Device42 enables <b>centralized management</b> of IPv4 and IPv6 addresses. Manually and automatically add IP addresses and define relationships to devices and MAC addresses. <b>Robust filtering and search</b> makes IP management easy and fast, while <b>DNS Integration</b> means zones are transferred automatically for easy correlation with IP addresses." %}</i></p>
+    </div>
+</section>
+<section class="row featurette image-{{ image|default:'right' }}-7x5 {% if vcenter %}is-table-row{% endif %} is-table-row">
+    <div class="col-sm-5">
+        <img class="img-responsive center-block box-shadow" src="{% static 'img/landing/ip-tracking/switch_impact_chart.png' %}" alt="{% trans 'Switch Impact Chart' %}">
+    </div>
+    <div class="col-sm-7">
+        <h3 class="alt-font sub-heading">{% trans "Track and Visualize Switch Port Connectivity" %}</h3>
+        <p class="lead-small"><i>{% trans "Device42's IP Address Manager builds graphic network visualizations of switch to switch port connections. The automatically generated diagrams are based on both auto-discovered and manually entered network data. In addition, diagrams also depict virtual devices detected on switch ports." %}</i></p>
+    </div>
+</section>
+<section class="row landing-section is-table-row">
+  <div class="col-sm-12">
+    <div class="col-sm-5">
+        <img class="img-responsive center-block box-shadow" src="{% static 'img/sections/compare/ip-address-management-apis.png' %}" alt="{% trans 'Manage IP Addresses from the Command Line' %}">
+    </div>
+    <div class="col-sm-7">
+        <h3 class="alt-font sub-heading">{% trans "Manage IP Addresses<br> from the Command Line" %}</h3>
+        <p class="lead-small"><i>{% trans "Device42's IPAM tool provides simple, well documented API calls that can find the next available IP, search for an IP, and can even easily assign one or more new IPs using the scripting language of your choice." %}</i></p>
+    </div>
+    <p>{% trans "Device42 has a robust IPAM implementation, but a full DDI tool is needed, Infoblox & Bluecat are both good choices. For those needing or planning to utilize a DDI solution, Device42 integrates with InfoBlox." %}</p>
+  </div>
+</section>
+
+<hr>
+<div class="row">
+    <div class="col-md-12 vert-offset-bottom-2">
+        <h4>{% trans "Download the InfoBlox - Device42 integration script for <em>better IPAM</em> today!" %}</h4>
+        <p>{% blocktrans %}The latest version is available on our <a href="https://github.com/device42/Sync-From-Infoblox" target="_blank" class="ext-link">Github repo.</a>{% endblocktrans %}</p>
+    </div>
+</div>

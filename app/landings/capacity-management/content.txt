@@ -1,0 +1,43 @@
+[head.title]
+Better capacity management with comprehensive IT management tool
+
+[head.description]
+Device42 is a comprehensive capacity management tool with agent-less auto-discovery. Map out your physical and virtual infrastructure with power and environmental monitoring.
+
+[landing.title]
+
+Better capacity management
+
+[landing.image_format]
+gif
+
+[landing.content]
+
+Device42 is a comprehensive capacity management tool that helps you manage your IT infrastructure visually with room and rack layouts, power consumption and real-time capacity management.
+
+
+- Auto-generated rack layouts with drag and drop
+- Color coded room layouts with heatmaps for easy capacity management
+- Web based with no flash and with SVG exports that lets you import in Visio
+- Real time power and environmental monitoring with charts and alerts
+- Map your physical, virtual and cloud networks automatically with agentless discovery.
+
+
+[feature[1].title]
+Rack and Room layouts with What-if Scenarios
+[feature[1].image_format]
+gif
+[feature[1].content]
+Device42 auto-discovery spans from legacy to newer systems and builds dependencies between physical, virtuals and applications. No need to use multiple tools to put together information anymore.
+
+[feature[2].title]
+Real time capacity management with monitoring and control
+[feature[2].content]
+Collect your complete inventory like serial #, hardware model, OS and build info, installed software, IPs and connections, services and mapping between services across machines. Data from various auto-discovery methods is automatically correlated.
+
+[feature[3].title]
+Automated data center management with integrations
+[feature[3].image_format]
+png
+[feature[3].content]
+Using our out of box integrations with JIRA, Confluence, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, ServiceNow and many more you can use this real-time map to reduce your mean time to recovery and make faster decisions in your daily IT operations.

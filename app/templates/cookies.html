@@ -1,0 +1,108 @@
+{% extends 'base/_base.html' %}
+{% load i18n static cache %}
+{% block title %}{% trans "2018 Device42.com Cookie Policy" %}{% endblock %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans '2018 Device42.com Cookie Policy' %}">
+{% endblock %}
+{% block body_scripts %}
+<script type="text/javascript">
+
+</script>
+{% endblock %}
+{% block styles %}
+  <style>
+  table {
+    display: table;
+    border-collapse: collapse;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0px;
+    border-style: solid;
+    border-color: #666666;
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-spacing: 0px;
+  }
+  table tr {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    letter-spacing: 0px;
+  }
+  table tr td {
+    margin: 0px;
+    padding: 10px;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #666666;
+    border-top-color: #666666;
+    border-top-style: solid;
+    text-align: left;
+    letter-spacing: 0px;
+  }
+  thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+  }
+  .column1 {
+    width: 150px;
+  }
+  .column2 {
+    width: 500px;
+  }
+  .column3 {
+    width: 100px;
+  }
+  @media (min-width: 768px){
+    .top-right-banner {
+      position: absolute;
+      right: 0;
+      top: 25px;
+    }
+  }
+  </style>
+{% endblock %}
+{% block body %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-xs-6">
+          <h3>{% trans "Cookie Policy" %}</h3>
+        </div>
+        <div class="col-xs-6">
+          <p style="float: right;">{% trans "20180110" %}</p>
+        </div>
+      </div>
+      <p><em>{% trans 'Device42.com is committed to protecting your privacy. This Policy concerns use of the cookies, web beacons, and similar technologies (“Cookies”). By using the Device42.com website, you consent to the practices described in this statement.' %}</em></p>
+      <br />
+      <p>{% trans "Device42 may update its Cookie Policy from time to time to reflect any changes in technology, legislation, or our data use policies, which may impact the way in which Cookies are used by us and how you as a user can manage them. Device42 may use Cookies to collect certain information when you visit our website, interact with our emails, within the Device42 products, or in online advertisements. A Cookie, also known as an HTTP cookie, web cookie, or browser cookie, web beacon, or similar technology is usually a small piece of data sent from the website and stored in a user's web browser while a user is browsing the website." %}</p>
+      <p>{% trans "Cookies were designed to be a mechanism for websites to remember the state of the website or activity the user had taken in the past. This can include automatically collecting information such as your IP address, browser type, operating system, software version, your location, internet service provider, referrer ID and the domain from which you accessed the website, or collection of information about your use of the website, such as the time you spend using the website, date/time stamp, the number of times you return, whether you click-through, open, or forward links, emails, and ads, and other website or product usage data. When a user visits the website in the future, the data stored in the cookie can be retrieved by the website to notify the website of the user's previous activity. Information collected by Cookies may be tagged to your information, including your contact information, device information, or other information that you may have provided to Device42." %}</p>
+      <p>{% trans "Device42 uses Cookies that are hosted internally and that are provided by service providers to analyze users’ usage of its website. Some of these Cookies will be deleted from your device after you leave the Website (known as “Session” Cookies), and others will persist on your device after you leave the Website (“Persistent” Cookies). These Cookies facilitate ongoing improvements to the Website and improves the customer experience with Device42 and its products." %}</p>
+      <table>
+        <thead>
+            <tr>
+                <td rowspan="1" colspan="1" class="column1">Service</td>
+                <td rowspan="1" colspan="1" class="column2">Function</td>
+                <td rowspan="1" colspan="1" class="column3">Cookie Type</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="1" colspan="1">{% trans "Analytical Cookies" %}</td>
+                <td rowspan="1" colspan="1">{% trans "These cookies allow us to generate anonymous customer usage statistics, and they differentiate requests from different browsers and to store helpful information." %}</td>
+                <td rowspan="1" colspan="1">{% trans "First Party" %}
+                    <br>
+                    <br>
+                    <br> {% trans "Third Party" %}</td>
+            </tr>
+        </tbody>
+      </table>
+      <p>{% trans 'Tracking Options and California Do No Track Disclosures. You may adjust your browser settings to notify you when you are sent a Cookie or to limit tracking or to decline Cookies, but by doing so, you may not be able to use certain features on the website or take full advantage of Device42’ offerings. Our system may not respond to Do Not Track requests or headers from some or all browsers. To learn more about the use of Cookies or other technologies to deliver more relevant advertising and your choices about not having this information used by certain service providers, please click (<a href="http://www.aboutads.info/choices/">http://www.aboutads.info/choices/</a>) (for users in the United States) or (<a href="http://youronlinechoices.eu/">http://youronlinechoices.eu/</a>) (for users in the European Union).' %}</p>
+      <br /><br />
+    </div>
+  </div>
+</div>
+{% endblock %}

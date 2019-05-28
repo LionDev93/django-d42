@@ -1,0 +1,38 @@
+[head.title]
+Comprehensive software discovery tool with agent-less auto-discovery
+
+[head.description]
+Device42 is a comprehensive software discovery tool tool with agent-less auto-discovery.
+
+[landing.title]
+Comprehensive Software Discovery Tool and More!
+
+[landing.image_format]
+png
+[landing.content]
+
+Device42 is comprehensive IT infrastructure management suite including powerful software auto-discovery, and features fully configurable asset types. Software or hardware, easily accommodate any IT asset type across your infrastructure!
+
+- Software discovery tool via agent-less auto-discovery, keeping your inventory up-to-date automatically
+- Discover software across physical, virtual, and cloud servers, on-premise or off
+- Discover software across all popular operating systems: Windows, Linux, UNIX, Mac, and BSD!
+- Integrate with your other important IT tools like JIRA, ServiceNow, Cherwell, and many more. Maximize your existing investments!
+- Powerful, customizable visualization and reports
+
+
+
+[feature[1].title]
+Complete Software Auto-Discovery for All Networks
+[feature[1].content]
+Device42's software discovery tools build a complete inventory, including dependencies between your physical, virtuals, and cloud infrastructure and applications without the need for multiple tools!
+
+[feature[2].title]
+Complete Software License Management
+[feature[2].content]
+Manage all of your software licenses, keys, and expiration dates, tracking of install locations and assigned users. Easily manage complex licensing models including CPU-based, user-based, or machine bound licenses!
+
+
+[feature[3].title]
+Real-time Map of Your IT Infrastructure with Integrations
+[feature[3].content]
+Go beyond traditional software inventory tools. Enjoy out of box integration with JIRA, ServiceNow, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, and many more!

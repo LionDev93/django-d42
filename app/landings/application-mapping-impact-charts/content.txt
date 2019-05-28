@@ -1,0 +1,41 @@
+[head.title]
+Automate your documentation with agent-less autodiscovery of application maps and impact charts!
+
+[head.description]
+Device42 provides a unified view of your IT infrastructure by automatically mapping out the dependencies between your applications and services, no packet captures necessary.
+
+[landing.title]
+Application Mapping Impact Charts
+
+[landing.image_format]
+png
+
+
+[landing.content]
+Device42 automatically generates a centralized repository of your applications, services, and devices and their dependencies, whether physical or virtual, on-premise or in the cloud - without agents or packet captures!
+
+- Agentless services and application discovery combines data obtained via Windows (WMI) and Linux (SSH) protocols
+- Get a list of all deployed applications, manufacturer, version number
+- Get a list of all services, running or not, users, protocols & ports
+- Easily view application to server and application to application mapping
+- View comprehensive application dependency maps even for machines that can’t be directly accessed, built out with Netflow data!
+
+
+[feature[1].title]
+Automated Service Impact Discovery
+[feature[1].image_format]
+png
+[feature[1].content]
+Impacts across your physical and virtual server instances and the applications they host are discovered and mapped automatically. View application impact charts from any device in a single click!
+
+
+[feature[2].title]
+Application Dependency Flow with Impact Charts
+[feature[2].content]
+Know the impact of any application, whether you are contemplating a migration or a change control. List pages and charts are easy to consume, and can be imported into Visio as well.
+
+
+[feature[3].title]
+Powerful visualizations, Rreporting and APIs
+[feature[3].content]
+Easily build move groups, report on dependency data, and import and export to and from Excel, CSV, or direct external database connections! Flexible RESTful APIs let you consume data easily, and simplify integrating Device42 with other products.

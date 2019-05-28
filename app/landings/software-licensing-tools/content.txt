@@ -1,0 +1,37 @@
+[head.title]
+Device42's Comprehensive Software Licensing Tools feature agent-less auto-discovery for a complete SLM solution!
+
+[head.description]
+Device42's Comprehensive Software Licensing Tools include powerful, agent-less auto-discovery!
+
+[landing.title]
+Comprehensive Software Licensing Tools
+[landing.image_format]
+png
+[landing.content]
+
+Device42 includes a suite of software licensing tools that feature powerful auto-discovery and fully configurable asset types. Accommodate any software license and IT asset across your infrastructure!
+
+- Software licensing tools use agent-less auto-discovery to keep your inventory up-to-date
+- Support for physical, virtual and cloud infrastructure to track complete  hardware and software inventory
+- Software licensing tools work with any operating system: Windows, Linux, UNIX, Mac, or BSD
+- Out of box integrations with ITSM tools like JIRA, servicenow, Cherwell and many more! Enhance the value of your existing investments!
+- Device42 software license tools take SLM to the next level with powerful, customizable visualization and detailed reports
+
+
+
+[feature[1].title]
+Software Licensing Tools Autodiscover All Networks
+[feature[1].content]
+Device42 software licensing tools auto-discovery reaches across legacy AND newer systems alike, building inventory and dependencies between your physical, virtual, and cloud layers. No need to use multiple tools to put together the information anymore!
+
+[feature[2].title]
+Software Licensing Tools Include License Management
+[feature[2].content]
+Software licensing tools allow you to view and manage all software license counts and expiration dates. Manage license keys and software relationships to devices or users. Manage complex licensing models, too: CPU-bound, user-bound, and machine-bound!
+
+
+[feature[3].title]
+Real time map of your IT infrastructure with integrations
+[feature[3].content]
+Go beyond traditional software licensing tools using our out of box integrations with JIRA, Confluence, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, ServiceNow and many more you can use this real-time map to reduce your mean time to recovery and make faster decisions in your daily IT operations.

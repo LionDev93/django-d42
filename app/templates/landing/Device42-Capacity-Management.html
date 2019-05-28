@@ -1,0 +1,149 @@
+{% extends "base/_base-landing.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description" content="{% trans 'The Capacity Management Challenge' %}"/>
+{% endblock %}
+
+{% block styles %}
+    <style>
+      p {
+        font-size: 20px;
+        font-family: "Roboto Condensed", sans-serif !important;
+      }
+      .number-ul {
+        font-style: italic;
+        font-weight: 300;
+        color: #717171;
+        list-style-type: decimal;
+        padding-left: 15px;
+        font-size: 17px;
+      }
+      .number-ul li:before {
+        content: '';
+        width: 10px;
+      }
+      .checkmark-style {
+        margin: 0px !important;
+        font-weight: 300;
+        color: #717171;
+      }
+      .checkmark-style li{
+        font-size: 17px;
+      }
+      .checkmark-style li:before {
+        content: "\2714";
+        margin-left: -24px;
+        margin-right: 12px;
+        position: relative;
+        vertical-align: text-top;
+        display: inline-block;
+        font-weight: 100;
+        font-size: 15px;
+      }
+      p.strong {
+        font-weight: 400;
+      }
+      .w-100 {
+        width: 100%;
+      }
+      .m-b-20 {
+        margin-bottom: 20px;
+      }
+      .m-t-20 {
+        margin-top: 20px;
+      }
+      .m-t-40 {
+        margin-top: 40px;
+      }
+
+      .landing-section {
+        margin-bottom: 20px;
+      }
+
+      h2, h3 {
+        color: #22a3df;
+      }
+
+      .itac-font {
+        font-style: italic;
+        font-size: 24px;
+        color: #22a3df;
+      }
+
+      .itac-black-font {
+        font-style: italic;
+        font-weight: 500;
+      }
+
+      @media screen and (max-width: 767px) {
+          .m-t-40.mobile-no {
+            margin-top: 0px !important;
+          }
+        }
+    </style>
+{% endblock %}
+
+{% block title %}{% trans "Capacity Management" %}{% endblock %}
+{% block landingHeadingText %}{% trans "Capacity Management" %}{% endblock %}
+{% block landingLeadText %}{% trans "When it’s time to boost server capacity and figure out where to place one new server or a hundred, Device42 is right there with the ITIL capacity management tools you need. Device42 means capacity management made easy with advanced “What-if” scenarios that can find you the space, power, and info you need to right-size your deployment. Locating un- and under-utilized servers is a breeze, and forget the stress of managing outdated IPAM spreadsheets, for good!" %}{% endblock %}
+
+{% block landingfeature %}
+<article class="landing-page">
+    <section class="landing-section">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="text-center text-strong">{% trans "Device42 Helps You Answer the Important Capacity Management Questions" %}</h2>
+          <p class="text-center itac-black-font">{% trans "Make the most of existing capacity, or to create a capacity management forecast by answering questions such as:" %}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <ul class="checkmark-style">
+            <li>{% trans "Where do I have rack space and power to put new equipment?" %}</li>
+            <li>{% trans "Are there power spikes in my colo cage that put us over the power limit?" %}</li>
+            <li>{% trans "Do I have space and power for 200 more machines?" %}
+            <li>{% trans "Is a /24 subnet the ideal size to assign to an internal department to minimize fragmentation, and if so, which /24?" %}</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="checkmark-style">
+            <li>{% trans "Do I have any zombie servers?" %}</li>
+            <li>{% trans "Do I have in service IP addresses that aren’t being used?" %}</li>
+            <li>{% trans "Where are all the spare parts located and when should I reorder?" %}</li>
+            <li>{% trans "How much cpu, memory, disk, and network are my workloads currently using so I can right-size my cloud instance?" %}</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="row landing-section">
+      <div class="col-sm-6" style="vertical-align: top;">
+        <h2 class="text-strong">{% trans "Right-size Your Cloud Instances for Your Workloads" %}</h2>
+        <p class="mobile-no">{% trans "Capacity management is a careful balancing act. You need to accommodate both future needs and peak transient loads. However, if you provision too much capacity, spend can quickly get out of control supporting idle machines, blowing your budget. Too little, and your company’s site or services can experience embarrassing downtime, leaving you to answer to angry customers and executives alike." %}</p>
+      </div>
+      <div class="col-sm-6">
+          <img class="img-responsive" alt="{% trans 'Data Center Documentation' %}" src="{% static 'img/landing/capacity-planning/banner.png' %}">
+        </div>
+    </section>
+  </article>
+{% endblock %}
+
+{% block maincontent %}
+    <section class="row is-table-row" id="sect2">
+        <div class="col-sm-5">
+            <img class="img-responsive" alt="{% trans 'Rack elevation documentation' %}"
+                 src="{% static 'img/landing/capacity-planning/cpu.png' %}">
+        </div>
+        <div class="col-sm-7">
+            <p class="strong itac-font">{% trans "Many capacity management tools on the market today focus solely on CPU utilization and trending data to find underutilized servers. We believe that utilization doesn’t tell the whole story because:" %}</p>
+            <p class="lead text-strong">{% trans "...BUT utilization, by itself, doesn’t tell the whole story because:" %}</p>
+            <ul class="clean number-ul">
+                <li>{% trans "You generally size capacity for peak times while normal utilization is low" %}</li>
+                <li>{% trans "You might have an application with constant high utilization that has no users" %}</li>
+                <li>{% trans "You might have a valid app that is business critical, but is low utilization" %}</li>
+            </ul>
+        </div>
+    </section>
+    <p class="lead m-t-40">{% trans "Only when you combine Device42’s automated service to server or service to service mapping with Device42’s utilization and trends metrics can you find out exactly which servers have applications that are truly being utilized on your network, while at the same time easily identifying those that are just eating resources." %}</p>
+
+{% endblock %}

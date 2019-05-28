@@ -1,0 +1,32 @@
+[head.title]
+Puppet Configuration Management Database with agent-less auto-discovery
+
+[head.description]
+Device42 is a comprehensive Puppet Configuration Management Database with agent-less auto-discovery.
+
+[landing.title]
+A Powerful Puppet Configuration Management Database (CMDB)
+
+[landing.content]
+Device42 is a Powerful Puppet Configuration Management (CMDB) that Provides a Clear View Into Your IT Ecosystem, Making Puppet Configuration Management More Efficient.
+
+- Agent-less auto-discoveries to keep configuration items (CIs) up-to-date with changes made by puppet configuration management
+- Powerful visualizations to make quick business decisions and quickly find impacts of different puppet managed CIs to other CIs
+- Out of box integrations with ITSM tools like JIRA, ServiceNow, Cherwell, and more help you get more value out of existing investments
+- REST APIs make quick, custom integrations with homegrown and external CMDBs, automation, or other tools a breeze
+
+
+[feature[1].title]
+Complete Autodiscovery Across Your Entire Puppet Infrastructure
+[feature[1].content]
+Device42 auto-discovery spans from legacy to newer systems and builds dependencies between physical, virtuals, cloud infrastructure and applications - all in one tool.
+
+[feature[2].title]
+Puppet Configuration Management CMDB with Powerful Reporting and Visualizations
+[feature[2].content]
+Device42 comes with pre-configured CIs so there is no need to spend time or money on expensive implementation services. Coupled with advanced customizations, discover any physical, virtual or service dependencies you want to capture. Native integration with Puppet.
+
+[feature[3].title]
+Real-time Map of your Puppet Configured Infrastructure, PLUS Integrations with:
+[feature[3].content]
+Go beyond traditional CMDBs using our out of box integrations with JIRA, Confluence, Puppet, Chef, SCCM, Infoblox, Splunk, ServiceNow and more! Leverage the real-time view to reduce your MTTR and make faster decisions in your daily IT operations.

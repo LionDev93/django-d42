@@ -1,0 +1,52 @@
+{% load i18n static %}
+<h2>{% trans "Connect PowerBI to Device42 via ODBC" %}</h2>
+<div class="row is-table-row">
+    <div class="col-sm-8">
+        <p>{% trans "Combine the business analytics prowess of PowerBI with Device42’s comprehensive CMDB for unmatched business intelligence!" %}</p>
+    </div>
+        <form action="." method="POST" role="form">{% csrf_token %}
+        	<button class="btn btn-sm btn-primary center-block" type="submit">{% trans "Download" %}<br>Device42 {% trans "ODBC" %}<br>{% trans "Driver" %}</button>
+        </form>
+</div>
+<hr>
+<div class="row">
+    <div class="col-sm-12">
+        <p>{% trans "Power BI is a business analytics solution that lets you visualize your data and share insights across your organization. Use this Device42 ODBC connector to link PowerBI directly to your Device42 CMDB -- and bring your data to life!"%}</p>
+    </div>
+</div>
+
+<div class="row image-right-8x4 is-table-row">
+    <div class="col-sm-4">
+        <a href="{% static 'img/sections/support/integrations/powerbi/D42-PowerBI.png' %}"
+            data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/powerbi/D42-PowerBI.png' %}"
+                    class="img-responsive center-block img-border" alt="{% trans 'PowerBI ODBC Integration' %}">
+        </a>
+    </div>
+    <div class="col-sm-8">
+        <h3>{% trans "Connect PowerBI directly to Device42 with ODBC" %}</h3>
+        <p>{% trans "If you're already a PowerBI user, you're in luck. Forget about manually exporting and re-importing Device42 data - Access it directly with Device42's ODBC driver!" %}</p>
+    </div>
+</div>
+
+<div class="row image-left-4x8 is-table-row">
+    <div class="col-sm-4">
+        <a href="{% static 'img/sections/support/integrations/powerbi/PowerBI_Repair-Dash.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/powerbi/PowerBI_Repair-Dash.png' %}"
+                 class="img-responsive center-block img-border" alt="{% trans 'PowerBI ODBC Integration' %}">
+        </a>
+    </div>
+    <div class="col-sm-8">
+        <h3>{% trans "Bring your Device42 data to life with PowerBI" %}</h3>
+        <p>{% trans "PowerBI is well known for it's powerful business intelligence, and its live dashboards and reports. Create, publish, and share reports that your end-users can then access from anywhere!" %}</p>
+        <p>{% trans "You can now quickly and easily integrate Device42 data into PowerBI dashboards and/or reports, you'll be viewing your Device42 data in a whole new light in no-time!" %}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h3>{% trans "Extract valuable business intelligence from your Device42 CMDB, and more!" %}</h3>
+        <p>{% trans "You’ve already got accurate details about your entire IT infrastructure in Device42. Leverage this data in PowerBI to extract every ounce of business insight it holds." %}</p>
+        <p>{% trans "Plus, get more from your collaborative efforts. Share custom dashboards and interactive reports, now with Device42 data in PowerBI." %}</p>
+    </div>
+</div>

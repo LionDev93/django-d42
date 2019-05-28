@@ -1,0 +1,44 @@
+[head.title]
+Device42 is automated data center infrastructure management software, redefined
+
+
+[head.description]
+Device42 is a comprehensive data center management tool with agent-less auto-discovery. Map out your physical and virtual infrastructure with power and environmental monitoring.
+
+
+[landing.title]
+Device42 software is automated DCIM, redefined!
+
+
+[landing.image_format]
+gif
+[landing.content]
+
+Device42 is a comprehensive DCIM (data center infrastructure management) tool that helps you manage and understand your data centers. Features include room and rack layouts, power consumption, real-time capacity planning, and more:
+
+
+- Map your physical, virtual and cloud networks automatically with agentless discovery
+- Auto-generated, photo-realistic rack layouts feature drag and drop
+- Color-coded room layouts display heatmaps for easy capacity planning
+- Web-based, fast, and light-weight with SVG exports that import to Visio
+- Resource Utilization and real-time power and environmental monitoring, reports, charts, alerts, and so much more!
+
+
+[feature[1].title]
+Drag'n'drop room and rack layouts with what-if Scenarios
+[feature[1].image_format]
+gif
+[feature[1].content]
+Device42 software features comprehensive auto-discovery across legacy and newer systems, highlighting dependencies between physical, virtuals and applications. No need to use multiple tools to understand your infrastructure anymore.
+
+[feature[2].title]
+Powerful, real-time capacity planning with monitoring and control
+[feature[2].content]
+Collect your complete inventory like serial #, hardware model, OS and build info, installed software, IPs and connections, services and mapping between services across machines. Data from various auto-discovery methods is automatically correlated.
+
+[feature[3].title]
+Automated data center management with lots of out-of-the-box integrations
+[feature[3].image_format]
+png
+[feature[3].content]
+Leverage Device42's powerful integrations with the software you already have: Chef, Puppet, JIRA, MS SCCM, Infoblox, Splunk, ServiceNow and many more. You can use this real-time map to reduce your mean time to recovery and make faster decisions in your daily IT operations.

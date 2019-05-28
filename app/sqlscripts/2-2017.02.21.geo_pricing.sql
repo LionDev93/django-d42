@@ -1,0 +1,1 @@
+ALTER TABLE device42_pricingcontactmodel ADD COLUMN application_mapping_addon bool;

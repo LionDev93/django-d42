@@ -1,0 +1,29 @@
+[head.title]
+Samanage Integration
+
+[head.description]
+Leverage Device42’s enhanced asset management and tracking capabilities and effortlessly sync data from Device42 to Samanage!
+
+[landing.title]
+Samanage Integration
+
+[landing.content]
+Stop wondering what you have deployed. Take advantage of comprehensive agentless autodiscovery with optional agents and remote collectors to help you automatically maintain an up-to-date inventory of your physical, virtual, and cloud servers, containers, network components, software and services, and all of your infrastructure’s critical relationships and interdependencies.
+
+[feature[1].title]
+Sync your CIs between Device42 and Samanage
+[feature[1].content]
+Skip tedious and error-prone manual CI data entry. Once you sync your Device42 CMDB with Samanage, any CIs that were configured to sync are then available in both systems!
+If you’ll be concurrently using both systems, keep CI data up-to-date by scheduling automatic syncs *(refresh manually at any time, too)*!
+
+[feature[2].title]
+Associate imported CIs with Samanage service requests!
+[feature[2].content]
+When a creating a new ITSM ticket or service request in Samanage, users can associate configuration items synced from Device42, while samanage users can easily view the complete service history on any CI.
+Once imported, all CI’s are natively managed from within Samanage, utilizing the workflows you’re already accustomed to. Quickly and easily assign teams and create task checklists related to your imported CI’s!
+
+[feature[3].title]
+Sync hardware, software and services, vendor information, and more from Device42.
+[feature[3].content]
+You’ve already got accurate CI details in Device42, so don’t re-enter them. Sync anything and everything you care about from software and services to service levels and customers (and much more) into your Samanage instance. Let Device42 handle discovery, and spend your valuable time on automation and custom workflows that are tailored to your company’s unique needs!
+Beyond CI’s, sync notes, contacts, escalation procedures, and more - simply create the desired target fields in Samanage!

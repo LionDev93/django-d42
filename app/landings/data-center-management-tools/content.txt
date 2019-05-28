@@ -1,0 +1,46 @@
+[head.title]
+Device42 features powerful data center management tools and comprehensive auto-discovery
+
+
+[head.description]
+Device42 comprehensive data center management tools include agent-less auto-discovery!
+
+
+[landing.title]
+Device42 Redefines Data Center Management Tools!
+
+
+[landing.image_format]
+gif
+
+
+[landing.content]
+Device42's comprehensive data center management tools auto-discover your entire data center: hardware, software, interdependencies, and more!
+
+- Map your physical, virtual and cloud networks automatically and agentlessly
+- Auto-generated, photo-realistic rack layouts feature drag'n'drop
+- Color-coded room layouts display heatmaps for easy capacity planning
+- Fast and light-weight web-based interface, powerful visualizations, and SVG exports that import to Visio
+- Resource utilization and real-time power and environmental monitoring with charts and alerts
+
+
+[feature[1].title]
+Comprehensive Data Center Management Tools
+[feature[1].image_format]
+gif
+[feature[1].content]
+Device42's data center management tools include powerful DCIM like drag'n'drop building,  room, and rack layouts with what-if scenarios. The only tool you need to understand your infrastructure!
+
+
+[feature[2].title]
+Powerful capacity planning with resource utilization, monitoring, and control
+[feature[2].content]
+Data center management tools collect all the DCIM-related details about your inventory including: Hardware, software, IPs, connections, services and interdependencies, resource utilization, and more!
+
+
+[feature[3].title]
+Automated DCIM with awesome out-of-the-box integrations
+[feature[3].image_format]
+png
+[feature[3].content]
+Device42's data center management tools include powerful integrations with software you already use: Chef, Puppet, JIRA, MS SCCM, Infoblox, Splunk, ServiceNow and more. Make decisions faster, and reduce MTTR!

@@ -1,0 +1,182 @@
+{% extends "base/_base.html" %}
+{% load i18n static %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Creating and managing an accurate and up-to-date configuration management database (CMDB) is a vital component in effectively managing today’s data center and IT Infrastructure. Device42 software does just that and a lot more.' %}"/>
+{% endblock %}
+{% block title %}{% trans "Netterrain Alternative" %}{% endblock %}
+{% block styles %}
+    <style>
+        .media-left i.fa {
+            color: #00b6ff;
+        }
+
+        .media-body {
+            vertical-align: middle !important;
+        }
+
+        ul.square-style {
+            font-weight: 300;
+        }
+
+        .blue-back.box {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .media {
+            margin-left: 24px;
+        }
+        #top-container ul{
+          font-family: "Roboto Condensed", sans-serif;
+        }
+        .table-title p {
+          font-weight: 300;
+        }
+
+        #top-container p {
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+        }
+    </style>
+{% endblock %}
+{% block script %}
+    <script type="text/javascript">
+        $(function () {
+            $("i.fa").tooltip();
+        });
+    </script>
+{% endblock %}
+{% block body %}
+<header class="row head-home bg-primary">
+    <div class="container">
+        <div class="row">
+            <h1>{% trans "NetTerrain vs. Device42 DCIM" %}</h1>
+        </div>
+    </div>
+</header>
+<article class="container vert-offset-top-1">
+  <p class="lead" style="margin:initial!important;">{% trans "Looking for a better netTerrain DCIM alternative? Device42’s software redefines automated data center management. Real time DCIM helps organizations centrally manage their data center while increasing visibility and control of their IT environment – without breaking the bank!" %}</p>
+  <section class="row landing-section">
+    <div class="col-md-12">
+        <h3>{% trans "Device42 vs netTerrain DCIM Software" %}</h3>
+        <p>{% trans "netTerrain focuses mainly on DCIM, with a very strong focus on physical infrastructure: outside plant, site maps, and cable management. While many customers use just the DCIM solutions within Device42, the product is in fact a fully-integrated suite including a CMDB, data center asset management (ITAM), IT Asset Management, IP Address Management (IPAM), Software License Management (SLM), Application Dependency Mapping (ADM), Password Management, and more." %}</p>
+    </div>
+  </section>
+  <section class="row vert-offset-top-2">
+    <div class="col-md-12">
+        <div class="text-center">
+            <p><strong>{% trans 'If you require a GIS-compatible tool that has some DCIM capabilities, netTerrain might be a good choice...' %}</strong></p>
+        </div>
+    </div>
+  </section>
+  <section class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <img class="img-responsive center-block"
+             src="{% static 'img/sections/features/netterrain/gis-compatible.png' %}"/>
+    </div>
+  </section>
+  <section class="row vert-offset-top-2">
+    <div class="col-sm-10 col-sm-offset-1 col-xs-12 text-center">
+        <p><strong>{% trans '...if, however, your core business requires managing mission critical applications in a deployment that consists of cloud, hybrid, or one or more data centers -- Device42 is what you are looking for for the best in data center infrastructure management.' %}</strong></p>
+    </div>
+  </section>
+  <section class="row">
+    <div class="col-sm-4 col-sm-offset-2 col-xs-12 vert-offset-bottom-1">
+        <img class="img-responsive center-block"
+             src="{% static 'img/sections/features/netterrain/image7.png' %}"/>
+    </div>
+    <div class="col-sm-4 col-xs-12">
+        <img class="img-responsive center-block vert-offset-bottom-1"
+             src="{% static 'img/sections/features/netterrain/image5.png' %}"/>
+    </div>
+  </section>
+  <section class="row padded">
+      <div class=" text-center">
+          <h3>{% trans 'The table below highlights similarities and differences between Device42 and netTerrain:' %}</h3>
+      </div>
+      <div class="col-md-8 col-md-offset-2 col-sm-12">
+          <table class="table table-hover d42-sw-compare">
+              <thead>
+              <tr>
+                  <th class="table-title">
+                      <p class="dark-blue text-left alt-text"
+                         style="margin:0;font-size:24px;">{% trans "Features" %}</p>
+                  </th>
+                  <th class="product-heading blue">{% trans "Device42" %}</th>
+                  <th class="product-heading blue">{% trans "netTerrain DCIM" %}</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                  <td class="comp-feature">{% trans "Discovery Included in Core product" %}</td>
+                  <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                  <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="{% blocktrans %}Only in 'on-premise' tariff{% endblocktrans %}"><i class="fa fa-2x fa-exclamation-triangle"></i></a></td>
+              </tr>
+              <tr>
+                  <td class="comp-feature">{% trans "CMDB" %}</td>
+                  <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                  <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              </tr>
+              <tr>
+                  <td class="comp-feature">{% trans "ITAM" %}</td>
+                  <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                  <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              </tr>
+              <tr>
+                  <td class="comp-feature">{% trans "IPAM" %}</td>
+                  <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                  <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                  <td class="comp-feature">{% trans "DCIM" %}</td>
+                  <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                  <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+              </tr>
+              <tr>
+                  <td class="comp-feature">{% trans "Password Management" %}</td>
+                  <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                  <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                  <td class="comp-feature">{% trans "Agentless Discovery" %}</td>
+                  <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                  <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="{% blocktrans %}Only in 'enterprise' and 'on-premise' tariffs{% endblocktrans %}"><i class="fa fa-2x fa-exclamation-triangle"></i></a></td>
+              </tr>
+              <tr>
+                  <td class="comp-feature">{% blocktrans %}<em>Optional</em> Agent-Based Discovery{% endblocktrans %}</td>
+                  <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                  <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                  <td class="comp-feature">{% trans "Automatic Service/Application Discovery" %}</td>
+                  <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                  <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                  <td class="comp-feature">{% trans "Resource Utilization" %}</td>
+                  <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                  <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                  <td class="comp-feature">{% trans "Native Cloud Discovery" %}</td>
+                  <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                  <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+              </tr>
+              <tr>
+                  <td class="comp-feature">{% trans "RESTful APIs" %}</td>
+                  <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                  <td class="text-center"><a href="#" data-toggle="tooltip" data-placement="top" title="{% blocktrans %}Only in 'enterprise' and 'on-premise' tariffs{% endblocktrans %}"><i class="fa fa-2x fa-exclamation-triangle"></i></a></td>
+              </tr>
+              </tbody>
+          </table>
+      </div>
+  </section>
+  <section class="row">
+    <div class="col-md-12">
+        <p>{% trans 'The architects of Device42 believe that you need a single, unified source of truth to effectively manage your modern IT infrastructure. IT infrastructure data is so interrelated that it requires a tightly unified and holistic approach. Device42’s approach to IT infrastructure management leads to IT operations efficiencies, better migration planning, better informed decision making, optimal risk mitigation, and faster MTTRs, compliance and auditing responses.' %}</p>
+    </div>
+  </section>
+  {% include 'partials/try-free-callout.html' %}
+</article>
+{% endblock %}

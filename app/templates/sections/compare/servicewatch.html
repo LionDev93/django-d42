@@ -1,0 +1,177 @@
+{% extends 'base/_base.html' %}
+{% load i18n %}
+{% load static from staticfiles %}
+{% load include_partial %}
+{% block title %}{% trans "ServiceNow ServiceWatch vs. Device42" %}{% endblock %}
+{% block site_section_compare %}active{% endblock %}
+{% block meta %}
+    <meta name="description"
+          content="Information comparing Device42's Discovery capabilities to those offered by ServiceNow, including both the 'ServiceNow Discovery' and the 'ServiceNow ServiceWatch' offerings,... " />
+    <meta name="keywords"
+          content="discovery, servicenow, vs, device42, device, cmdb, native, application, services, autodiscovery, servicewatch, comparison, software, itsm" />
+{% endblock %}
+{% block body %}
+    <header class="row head-home bg-primary">
+        <div class="container">
+            <div class="row">
+                <h1>{% trans "ServiceNow ServiceWatch vs. Device42" %}</small></h1>
+            </div>
+        </div>
+    </header>
+
+    <article class="container vert-offset-top-1">
+        <p><em>{% trans "If you are planning a migration to the cloud or another type of migration, you need an up-to-date map of where your applications are running and which servers, network components, software, services, and applications are needed for proper functioning, and the application’s resource utilization to plan capacity and ‘rightsize’ the target instance.  You also need to know which other software, services, and applications depend on components that might be moved or shut down during the migration.  Device42 and ServiceNow each offer software that will discover servers, network components, software, services, and applications automatically." %}</em></p>
+        <p>{% trans "Below, you will find information that compares Device42’s Discovery capabilities to those offered by ServiceNow, including both the ‘ServiceNow Discovery’ and the ‘ServiceNow ServiceWatch’ offerings, highlighting both the similarities and main differences between the solutions.  Device42 discovers both servers and the underlying infrastructure that supports them, while also automatically discovering installed applications and services, running or stopped." %}</p>
+
+        <h4 class="vert-offset-top-2">{% trans "The table below outlines similarities and differences between the two discovery solutions:" %}</h4>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <table class="table table-hover table-striped">
+                    <thead>
+                    <tr>
+                        <th class="h4 text-dark-blue text-strong" style="vertical-align: middle;">{% trans "Solution Comparison" %}</th>
+                        <th class="h4 text-default text-center text-strong" style="vertical-align: middle;">Device42 Core</th>
+                        <th class="h4 text-default text-center text-strong">ServiceNow Discovery +<br>ServiceNow ServiceWatch®</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Integrated Solution" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Cloud Option" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "On-Premise Option" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Agentless Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Optional Agent-Based Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><a href="https://community.servicenow.com/thread/265231" data-toggle="tooltip" data-placement="left" title='{% blocktrans %}Suggestions to use the "helpdesk tool" to discover local computers{% endblocktrans%}'><i class="fa fa-2x fa-times"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Automatic Service/Application Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><a data-toggle="tooltip" data-placement="left" title='{% blocktrans %}ServiceNow requires that each Service Endpoint be manually specified for "top-down" discovery; a tedious process with more than a few services.{% endblocktrans%}'><i class="fa fa-2x fa-exclamation-triangle"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Resource Utilization" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Native Windows & *nix Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "SNMP Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Cisco UCS Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Native Load Balancer Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                      <td class="text-center"><a data-toggle="tooltip" data-placement="left" title='{% blocktrans %}Uses SNMP & SSH for BigIP{% endblocktrans%}'><i class="fa fa-2x fa-times"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Native VMware Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Native Other Virtualization (Hyper-V, Xen, KVM, LXC)" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                      <td class="text-center"><a data-toggle="tooltip" data-placement="left" title='{% blocktrans %}Xen via vbscript >=4.5 or PowerShell & xenApp SDK{% endblocktrans%}'><i class="fa fa-2x fa-times"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Native Public Cloud Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><a data-toggle="tooltip" data-placement="top" title="{% blocktrans %}Servicenow only supports discovery on AWS and Azure, and only with the 'Fuji' release or newer.{% endblocktrans %}"><i class="fa fa-2x fa-exclamation-triangle"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Native Private Cloud Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><a data-toggle="tooltip" data-placement="top" title='{% blocktrans%}Literally says "Only VMware & vSphere" -- so it appears they miss the mark here.{% endblocktrans %}'><i class="fa fa-2x fa-times"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Nmap Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Netflow Discovery" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "RESTful APIs" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Orchestrate Automation" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><a data-toggle="tooltip" data-placement="left" title="{% trans 'Servicenow does not offer webhooks, limiting the ability to orchestrate automation.' %}"><i class="fa fa-2x fa-exclamation-triangle"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Webhooks" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-check"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-times"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="comp-feature alt-font">{% trans "Pricing" %}</td>
+                        <td class="text-center"><i class="fa fa-2x fa-money" aria-hidden="true"></i></td>
+                        <td class="text-center"><i class="fa fa-2x fa-money" aria-hidden="true"></i> <i class="fa fa-2x fa-money" aria-hidden="true"></i> <i class="fa fa-2x fa-money" aria-hidden="true"></i> <i class="fa fa-2x fa-money" aria-hidden="true"></i></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3>{% trans "Device42 advantages:" %}</h3>
+                <p>{% trans "To accomplish a similar level of Discovery with ServiceNow, discoveries must be run using two different, and separately purchased discovery products:  ServiceNow Discovery can discover servers and details about the underlying infrastructure that supports them, while the ServiceNow ServiceWatch product can then discover Application and Service details." %}</p>
+                <br />
+                <p>{% trans "As can be seen in the table above, Device42 (D42) offers a number of significant advantages vs. ServiceNow (SN):" %}</p>
+                <ul class="bullet-blue tight font-stack-condensed">
+                    <li>{% trans "Integrated Product:  D42 was designed from the ground-up to be a single integrated discovery and CMDB tool.  SN started out as a CMDB, then purchased two separate companies to procure two different sets of discovery capabilities." %}</li>
+                    <li>{% trans "On-Premise Option:  D42 can run entirely behind a company’s firewall. SN offers only cloud-based data storage." %}</li>
+                    <li>{% trans "Optional Agent-Based Discovery:  This is a critical capability if discovery must occur in sensitive network segments." %}</li>
+                    <li>{% trans "Automated Service Discovery:  Device42 automatically discovers all services and dependencies and can optionally discovery starting from a device. ServiceNow can only discover starting from a device." %}</li>
+                    <li>{% trans "Range of Discovery Platforms:  D42 discovers load balancers, and components located in a multitude of virtualization platforms, and public and private cloud platforms" %}</li>
+                    <li>{% trans "Webhooks:  Any event that generates an audit log can also trigger a webhook, orchestrating automation across your infrastructure" %}</li>
+                    <li>{% trans "SIEM Integrations: Discovered data can automatically populate logging platforms and other tools" %}</li>
+                    <li>{% trans "Pricing:  SN doesn’t list pricing on their website like D42; however, customers that have moved away from SN have told us that they were able to purchase D42 and still significantly reduce their budgets" %}</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <h3>{% trans "Device42 also Integrates with ServiceNow" %}</h3>
+        <p>{% trans "We also understand that there are happy users of the ServiceNow’s ITSM (IT Service Management) solution, and Device42 is not in the ITSM business.  For those customers, we offer an integration that connects the ServiceNow’s ITSM solution to Device42’s powerful, and easy-to-use Discovery solution with its integrated CMDB." %}</p>
+        <p>{% blocktrans %}Taking advantage of Device42’s Comprehensive Discovery solution while <a href="https://www.device42.com/integrations/service-now/">enhancing the ServiceNow ticketing system</a> you’re already using couldn’t be easier.{% endblocktrans %}</p>
+        <hr>
+        <p>{% trans "Try Device42’s Discovery for yourself. Experience the power of Device42’s holistic view of your IT Infrastructure, which includes a single, comprehensive package that can manage your Data Center (DCIM), IP addresses (IPAM) and passwords in addition to ITAM (IT asset management) and a CMDB, all at a price that will surprise you." %}</p>
+
+        {% include 'partials/try-free-callout.html' %}
+
+        <p>{% blocktrans %}For a comparison of Device42’s CMDB and associated features vs. ServiceNow’s CMDB, see our <a href="https://www.device42.com/vs/servicenow/">Device42 vs. ServiceNow</a> CMDB comparison page.{% endblocktrans %}</p>
+    </article>
+
+{% endblock %}

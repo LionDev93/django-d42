@@ -1,0 +1,38 @@
+[head.title]
+Comprehensive ITAM software tool with agent-less auto-discovery
+
+[head.description]
+Device42 is a comprehensive ITAM (IT Asset Management) software suite powered by agent-less auto-discovery.
+
+[landing.title]
+Comprehensive IT Asset Management Tool
+
+[landing.image_format]
+png
+[landing.content]
+
+Device42 provides comprehensive IT Asset Management (ITAM) capabilities, including powerful auto-discovery and fully configurable asset types. Easily accommodate all IT asset types across your organization!
+
+- Agent-less auto-discoveries to keep all your inventory up-to-date, with optional agents available for remote assets
+- Support for physical, virtual and cloud infrastructure asset management for a complete hardware and software inventory
+- Discover hardware and software inventory on all popular operating systems: Linux, Windows, UNIX, Mac, BSD
+- Out-of-the-box integrations with ITSM tools like JIRA, ServiceNow, Cherwell and more for enhanced the value of your existing investments
+- Know your support expiry and more with automatic contract management for various vendors
+- Easier audits with comprehensive reports and visualization tools
+
+
+[feature[1].title]
+Complete Auto-discovery for Total Network Coverage
+[feature[1].content]
+Device42 auto-discovery builds inventory and dependencies between physicals, virtuals, and cloud infrastructure and application deployments. Forget needing to use multiple disparate tools to get an answer!
+
+[feature[2].title]
+Support Entitlement Tracking and Management Tools
+[feature[2].content]
+Device42's ITAM tool-kit goes above and beyond to eliminate the need for manual data entry, auto-discovering your warranty information from various vendors- and can also can warn you when it's time for renewal!
+
+
+[feature[3].title]
+Real-time Map of your IT infrastructure with Integrations
+[feature[3].content]
+Go beyond traditional inventory tools using our out of box integrations with JIRA, ServiceNow, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk and more! Use this real-time intelligence to reduce MTTRs and in support of faster decisions across IT operations.

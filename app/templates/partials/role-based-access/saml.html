@@ -1,0 +1,13 @@
+{% load i18n %}
+{% load staticfiles %}
+<div {% if id %}id="{{ id }}" {% endif %}class="row featurette image-right-4x8 {% if vcenter %}is-table-row{% endif %}">
+    <div class="col-md-6">
+        <h2 class="featurette-heading">{% trans "SAML 2.0 Single Sign On (SSO) Support" %}</h2>
+        <p>{% trans "Device42 supports single sign on via SAML 2.0. It has been tested to work with Okta, OneLogin, Microsoft ADFS and should work with any other SAML 2.0 standards-based deployment, too. Implement SSO today, and eliminate one more password from your memory!" %}</p>
+    </div>
+    <div class="col-md-6">
+        <img class="img-responsive center-block animated"
+             src="{% static 'img/generic/icons_cog_collection.png' %}"
+             alt="{% trans 'SAML' %}" style="max-width:60%;height:auto!important;">
+    </div>
+</div>

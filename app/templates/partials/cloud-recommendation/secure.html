@@ -1,0 +1,20 @@
+{% load i18n static  %}
+<div {% if id %}id="{{ id }}" {% endif %}class="row featurette {% if vcenter %}is-table-row{% endif %}">
+    <div class="col-md-offset-1 col-md-4">
+        <img class="img-responsive center-block box-shadow"
+             src="{% static 'img/sections/features/cloud-recommendation/secure.png' %}"
+             alt="{% trans 'Cloud Recommendation Engine is SECURE' %}">
+    </div>
+    <div class="col-md-offset-1 col-md-6">
+        <h3>{% trans "Cloud Recommendation Engine is SECURE" %}</h3>
+        <p>{% trans "It’s your data, anonymized. Yes, it uses encrypted SSL, and yes, it’s secure … but the only 100% security guarantee is not transmitting sensitive data in the first place … so CRE never does!" %}</p>
+        <p>{% trans "Our proprietary processes analyze your workloads, stripping out all proprietary information. Anonymous, but critical workload details are then matched (in the cloud!) to hundreds of various cloud instance combinations, zeroing in on those that fit them best. Your workload names are then re-matched with those recommendations - locally!" %}</p>
+        <p>{% trans "Proprietary information never leaves your site! And best of all, Device42 makes it easy, pricing multiple scenarios for you using all available data!" %}</p>
+        <ul class="checklist">
+            <li>{% trans "AWS based on Inventory data only" %}</li>
+            <li>{% trans "AWS based on Inventory data + resource utilization!" %}</li>
+            <li>{% trans "Azure based on Inventory data only" %}</li>
+            <li>{% trans "Azure based on Inventory data + resource utilization!" %}</li>
+        </ul>
+    </div>
+</div>

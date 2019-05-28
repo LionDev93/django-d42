@@ -1,0 +1,37 @@
+[head.title]
+Comprehensive Server Inventory Tool with agent-less auto-discovery!
+
+[head.description]
+Device42 is a comprehensive Server Inventory Tool with powerful agent-less hardware inventory auto-discovery!
+
+[landing.title]
+Server Inventory Tool with Autodiscovery
+[landing.image_format]
+png
+[landing.content]
+
+Device42 provides comprehensive IT server inventory management capabilities, including powerful hardware and software inventory auto-discovery with fully configurable asset types. Easily accommodate any IT asset type within in your infrastructure!
+
+- Server inventory tools use agent-less auto-discovery to keep your inventory up-to-date 
+- Optional agent-based server inventory tool included for remote, high-security, and/or disconnected assets
+- Server inventory tools support physical, virtual, and cloud infrastructure
+- Discover software and server inventory with any operating system: Windows, Linux, UNIX, Mac, or BSD
+- Device42's server inventory tools integrate with IT tools like JIRA, ServiceNow, Cherwell and more!
+- Know your support expiry and more with automatic contract management!
+
+
+[feature[1].title]
+Complete Server Inventory Autodiscovery
+[feature[1].content]
+Device42's server inventory auto-discovery covers across legacy and newer systems alike, discovering hardware inventory and dependencies between physical, virtuals, cloud infrastructure and applications. No need to use multiple tools to put together information anymore.
+
+[feature[2].title]
+Support Entitlement Tracking and Management for Server Inventory
+[feature[2].content]
+Device42 helps you auto-discover your warranty information across your server inventory so you know when your support expires. Know when it's time to renew, or quickly find support information for any member of your server inventory!
+
+
+[feature[3].title]
+Real-time map of your IT infrastructure with Integrations
+[feature[3].content]
+Go beyond traditional Server Inventory Tools using our out of box integrations with JIRA, Confluence, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, ServiceNow and many more! Use this real-time map to reduce your MTTR, and make faster business decisions!

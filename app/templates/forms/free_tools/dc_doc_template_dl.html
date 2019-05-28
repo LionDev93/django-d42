@@ -1,0 +1,73 @@
+{% extends 'base/_base-landing.html' %}
+{% load i18n static %}
+{% block title %}{% trans "Ultimate Data Center Documentation Template" %}{% endblock %}
+{% block meta %}
+    <meta name="description"
+          content="{% trans 'Ultimate Data Center Documentation Template' %}"/>
+{% endblock %}
+{% block site_section_product %}active{% endblock %}
+{% block head_scripts %}
+    <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
+{% endblock %}
+{% block body_scripts %}
+  <style>
+    .form_head {
+      padding: 20px 10px;
+    }
+  </style>
+{% endblock %}
+{% block landingHeadingText %}{% endblock %}
+{% block calloutTryFree %}{% endblock %}
+{% block maincontent %}
+    <section class="landing-form">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <h1>{% trans "Start Documenting Your Data Center Today!" %}</h1>
+                    <h2>{% trans "Download Device42’s Ultimate Template" %}</h2>
+                    <p>{% trans "<b><i>IT organizations the world over are under pressure to ensure everything gets documented, while at the same time, budgetary support for documentation could be non-existent.</i></b>" %}</p>
+                    <h3>{% trans "Download the Ultimate Data Center Documentation Template by Device42 for FREE and document your data center today:" %}</h3>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <ul>
+                                <li>{% trans "Better Understand Your Datacenter" %}</li>
+                                <li>{% trans "Track Branch Office Configurations" %}</li>
+                                <li>{% trans "Track Hardware and Software Licenses" %}</li>
+                                <li>{% trans "Track License Renewals & Simplify Audits" %}</li>
+                                <li>{% trans "100% Free & Completely Customizable!" %}</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3">
+                            <ul>
+                                <li>{% trans "Rack Tracking" %}</li>
+                                <li>{% trans "Cable Tracking" %}</li>
+                                <li>{% trans "VLANs and Networks" %}</li>
+                                <li>{% trans "HTTP Domains" %}</li>
+                                <li>{% trans "SSL Certificates" %}</li>
+                            </ul>
+                        </div>
+                      <div class="col-sm-3">
+                            <ul>
+                                <li>{% trans "Equipment Tracking" %}</li>
+                                <li>{% trans "Server Roles" %}</li>
+                                <li>{% trans "IP Addresses" %}</li>
+                                <li>{% trans "Licenses" %}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <section class="vert-offset-top-2 vert-offset-bottom-2">
+                        {% block tryFreeCallout %}{% include 'partials/try-free-callout-for-xlsx-template.html' %}{% endblock %}
+                    </section>
+                </div>
+                <div class="col-md-5">
+                  <img src="{% static 'img/landing/free_tools_landing.png' %}"
+                           class="padded img-responsive">
+                  <img src="{% static 'img/branding/graphics/home-gfx.png' %}"
+                           class="center-block"
+                           style="max-width: 100% !important;">
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

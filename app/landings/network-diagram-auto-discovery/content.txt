@@ -1,0 +1,40 @@
+[head.title]
+View auto-discovered application and service dependencies on Device42's network diagrams!
+
+[head.description]
+Device42 auto-discovery creates network diagrams automatically by mapping your hardware, software, application, and service dependencies.
+
+
+[landing.title]
+Powerful Network Diagram Auto Discovery!
+
+[landing.image_format]
+png
+
+
+[landing.content]
+Device42 auto-discovers your entire infrastructure, generating network diagrams that highlight your hardware, software, and application dependencies and relationships
+
+- Agentless service and application dependency discovery via native Windows (WMI) and Linux (SSH) protocols, and via SNMP for network hardware
+- Device42 discovers all of your deployed applications, application dependencies, manufacturers, and versions
+- Automatically discover all service dependencies, protocols & ports
+- Easily view application to application and to server network diagrams
+- View comprehensive application dependency maps even for machines that can't be directly accessed, built out with Netflow data!
+
+
+[feature[1].title]
+Automated Service Impact Discovery
+[feature[1].image_format]
+png
+[feature[1].content]
+Device42 auto discovers hardware, software, and application dependencies. Comprehensive, auto-generated network diagrams track all of your physical and logical components, relationships, and their interdependencies.
+
+[feature[2].title]
+Detailed Network Diagrams, Lists, and Dependency Flow Diagrams
+[feature[2].content]
+Automatic network diagram auto discovery also creates dependency maps and flowcharts that highlight the impact of any discovered application. Easy to consume list pages and flowcharts are Visio compatible, too!
+
+[feature[3].title]
+Powerful Visualizations, Reporting and APIs
+[feature[3].content]
+Easily build move groups, or report on any application dependencies in your desired format - Excel, CSV, or a direct connection to an external database. Flexible APIs let you manipulate data your way and integrate Device42 with other products, too!

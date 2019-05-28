@@ -1,0 +1,56 @@
+{% load i18n static %}
+<h2>{% trans "Bring the power of Device42’s Comprehensive Autodiscovery to BMC Atrium" %}</h2>
+<div class="row is-table-row">
+    <div class="col-sm-6 text-center">
+        <form action="." method="POST" role="form">{% csrf_token %}
+        	<button class="btn btn-sm btn-primary center-block" type="submit">{% trans "Download BMC ATRIUM" %}<br>{% trans "Integration Package" %}</button>
+          <a href="/download/" class="btn btn-warning btn-block-xs"><i class="fa fa-download fa-pull-left"></i>{% trans "Download a Free Device42 Trial" %}</a>
+        </form>
+    </div>
+    <div class="col-sm-6">
+      <p>{% trans "Populating BMC Atrium manually just isn’t realistic. Let Device42 handle discovery for you." %}</p>
+      <p>{% trans "The modern datacenter moves at the speed of the cloud. Connect its many data sources with <b>Device42: Your cloud-era configuration broker!</b>" %}</p>
+    </div>
+</div>
+<div class="row image-right-8x4 is-table-row">
+    <div class="col-sm-4">
+        <a href="{% static 'img/landing/device42_home_puzzle.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/landing/device42_home_puzzle.png' %}"
+                 class="img-responsive center-block" alt="{% trans 'BMC Remedy Integration' %}">
+        </a>
+    </div>
+    <div class="col-sm-8">
+        <h3>{% trans "Enjoy the many benefits of Device42" %}</h3>
+        <p>{% trans "From DCIM to IPAM to its comprehensive CMDB, experience value you can see by populating BMC Atrium with Device42’s continuous autodiscovery." %}</p>
+        <ul>
+          <li>{% trans "Passwords at your fingertips with the secure, built in password manager" %}</li>
+          <li>{% trans "Locate running software, get counts, and track licenses for any software with software license management." %}</li>
+          <li>{% trans "Track spare parts and inventory with built-in spare parts management." %}</li>
+          <li>{% trans '“What-If Scenarios” make deployment planning easier - Simply ask Device42 which racks have free space!' %}</li>
+          <li>{% trans "Resource utilization and the cloud recommendation engine make planning your cloud move a breeze!" %}</li>
+        </ul>
+    </div>
+</div>
+<div class="row image-left-4x8 is-table-row">
+    <div class="col-sm-4">
+        <a href="{% static 'img/sections/support/integrations/bmc-remedy/bmc-atrium-1.png' %}"
+           data-featherlight="image">
+            <img src="{% static 'img/sections/support/integrations/bmc-remedy/bmc-atrium-1.png' %}"
+                 class="img-responsive center-block" alt="{% trans 'BMC Remedy Integration' %}">
+        </a>
+    </div>
+    <div class="col-sm-8">
+        <h3>{% trans "Sync your CIs between Device42 and BMC Atrium" %}</h3>
+        <p>{% trans "Customize what you sync to BMC Atrium with the power of Device42’s flexible DOQL, built into this integration!" %}</p>
+        <p>{% trans "Keep sync’d CI data up-to-date with scheduled automatic or on-demand syncs - at any time!" %}</p>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-sm-12">
+        <h3>{% trans "Device42 features integrations, a powerful API, Webhooks, DOQL ...and so much MORE!" %}</h3>
+        <p>{% trans "Leverage the CI details you already have in Device42 to sync anything from software and services (and much more) into BMC Atrium." %}</p>
+        <p>{% trans "Use the synced information to get your data working for you and your unique needs!" %}</p>
+    </div>
+</div>

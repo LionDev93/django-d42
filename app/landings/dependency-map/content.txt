@@ -1,0 +1,40 @@
+[head.title]
+Discover and view your application and service dependencies with Device42's auto-generated dependency maps!
+
+[head.description]
+Device42 automatically discovers your application and service dependencies, generating powerful dependency maps.
+
+
+[landing.title]
+Complete Application Discovery with Dependency Map Creation!
+
+[landing.image_format]
+png
+
+
+[landing.content]
+Device42 automatically discovers your entire infrastructure, generating dependency maps that highlight relationships and interdependencies across your hardware, software, and application deployments!
+
+- Agentless service and application dependency discovery via native protocols: WMI for Windows, SSH for Linux, and SNMP for network hardware
+- Device42 discovers details about all of your deployed hardware, software, manufacturers, and versions
+- Automatically discover all server and service dependencies, protocols & ports
+- Easily view application to application and to app to server dependency maps
+- View comprehensive application dependency maps even for machines that can't be directly accessed, built out with Netflow data!
+
+
+[feature[1].title]
+Automated Dependency Map Creation!
+[feature[1].image_format]
+png
+[feature[1].content]
+Device42 discovers hardware, software, and application dependencies. View dependency maps that identify and track all of your physical and logical components, relationships, and more!
+
+[feature[2].title]
+Application Dependency Maps, Lists, and Flow Diagrams
+[feature[2].content]
+Automatic application discovery creates dependency maps and maps that highlight the impact of any discovered application, whether contemplating a migration or a change control. Easy to consume list pages and maps are Visio compatible, too!
+
+[feature[3].title]
+Powerful Visualizations, Reporting and APIs
+[feature[3].content]
+Easily build move groups, or report on any application dependencies in your desired format - Excel, CSV, or a direct connection to an external database. Flexible APIs let you manipulate data your way and integrate Device42 with other products, too!

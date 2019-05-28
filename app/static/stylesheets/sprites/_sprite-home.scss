@@ -1,0 +1,283 @@
+    $total_width: 858;
+    $total_height: 836;
+
+        .sprite-budgeting-and-finance {
+        background-size: (($total_width / 120) * 100%) (($total_height / 120) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-738 / ($total_width - 120)) * -100%) ((-122 / ($total_height - 120)) * -100%);
+        width: 120px;
+        height: 120px;
+        }
+        .sprite-capacity-planning {
+        background-size: (($total_width / 120) * 100%) (($total_height / 120) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-738 / ($total_width - 120)) * -100%) ((0 / ($total_height - 120)) * -100%);
+        width: 120px;
+        height: 120px;
+        }
+        .sprite-data-center-cloud {
+        background-size: (($total_width / 120) * 100%) (($total_height / 120) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-610 / ($total_width - 120)) * -100%) ((-512 / ($total_height - 120)) * -100%);
+        width: 120px;
+        height: 120px;
+        }
+        .sprite-hardware-audit {
+        background-size: (($total_width / 120) * 100%) (($total_height / 120) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-488 / ($total_width - 120)) * -100%) ((-512 / ($total_height - 120)) * -100%);
+        width: 120px;
+        height: 120px;
+        }
+        .sprite-it-agility {
+        background-size: (($total_width / 120) * 100%) (($total_height / 120) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-366 / ($total_width - 120)) * -100%) ((-512 / ($total_height - 120)) * -100%);
+        width: 120px;
+        height: 120px;
+        }
+        .sprite-it-automation {
+        background-size: (($total_width / 120) * 100%) (($total_height / 120) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-244 / ($total_width - 120)) * -100%) ((-512 / ($total_height - 120)) * -100%);
+        width: 120px;
+        height: 120px;
+        }
+        .sprite-mergers-and-acquisitions {
+        background-size: (($total_width / 120) * 100%) (($total_height / 120) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-404 / ($total_width - 120)) * -100%) ((-310 / ($total_height - 120)) * -100%);
+        width: 120px;
+        height: 120px;
+        }
+        .sprite-os-stack-migration {
+        background-size: (($total_width / 120) * 100%) (($total_height / 120) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-122 / ($total_width - 120)) * -100%) ((-512 / ($total_height - 120)) * -100%);
+        width: 120px;
+        height: 120px;
+        }
+        .sprite-security-compliance {
+        background-size: (($total_width / 120) * 100%) (($total_height / 120) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((0 / ($total_width - 120)) * -100%) ((-512 / ($total_height - 120)) * -100%);
+        width: 120px;
+        height: 120px;
+        }
+        .sprite-cloud-tools {
+        background-size: (($total_width / 100) * 100%) (($total_height / 100) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-408 / ($total_width - 100)) * -100%) ((-634 / ($total_height - 100)) * -100%);
+        width: 100px;
+        height: 100px;
+        }
+        .sprite-cogwheel {
+        background-size: (($total_width / 100) * 100%) (($total_height / 100) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-412 / ($total_width - 100)) * -100%) ((-201 / ($total_height - 100)) * -100%);
+        width: 100px;
+        height: 100px;
+        }
+        .sprite-db1 {
+        background-size: (($total_width / 100) * 100%) (($total_height / 100) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-102 / ($total_width - 100)) * -100%) ((-634 / ($total_height - 100)) * -100%);
+        width: 100px;
+        height: 100px;
+        }
+        .sprite-db2 {
+        background-size: (($total_width / 100) * 100%) (($total_height / 100) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-204 / ($total_width - 100)) * -100%) ((-634 / ($total_height - 100)) * -100%);
+        width: 100px;
+        height: 100px;
+        }
+        .sprite-download {
+        background-size: (($total_width / 308) * 100%) (($total_height / 308) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((0 / ($total_width - 308)) * -100%) ((0 / ($total_height - 308)) * -100%);
+        width: 308px;
+        height: 308px;
+        }
+        .sprite-graph-magnifier {
+        background-size: (($total_width / 100) * 100%) (($total_height / 100) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-102 / ($total_width - 100)) * -100%) ((-736 / ($total_height - 100)) * -100%);
+        width: 100px;
+        height: 100px;
+        }
+        .sprite-home-media-cloud {
+        background-size: (($total_width / 100) * 100%) (($total_height / 100) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-738 / ($total_width - 100)) * -100%) ((-350 / ($total_height - 100)) * -100%);
+        width: 100px;
+        height: 100px;
+        }
+        .sprite-home-media-db {
+        background-size: (($total_width / 100) * 100%) (($total_height / 100) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-738 / ($total_width - 100)) * -100%) ((-452 / ($total_height - 100)) * -100%);
+        width: 100px;
+        height: 100px;
+        }
+        .sprite-home-media-qr {
+        background-size: (($total_width / 100) * 100%) (($total_height / 100) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-536 / ($total_width - 100)) * -100%) ((-404 / ($total_height - 100)) * -100%);
+        width: 100px;
+        height: 100px;
+        }
+        .sprite-home-media-resize {
+        background-size: (($total_width / 100) * 100%) (($total_height / 100) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-310 / ($total_width - 100)) * -100%) ((-201 / ($total_height - 100)) * -100%);
+        width: 100px;
+        height: 100px;
+        }
+        .sprite-home-media-tape {
+        background-size: (($total_width / 100) * 100%) (($total_height / 100) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((0 / ($total_width - 100)) * -100%) ((-634 / ($total_height - 100)) * -100%);
+        width: 100px;
+        height: 100px;
+        }
+        .sprite-home-media-tree {
+        background-size: (($total_width / 100) * 100%) (($total_height / 104) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-738 / ($total_width - 100)) * -100%) ((-244 / ($total_height - 104)) * -100%);
+        width: 100px;
+        height: 104px;
+        }
+        .sprite-icon-flags {
+        background-size: (($total_width / 224) * 100%) (($total_height / 199) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-310 / ($total_width - 224)) * -100%) ((0 / ($total_height - 199)) * -100%);
+        width: 224px;
+        height: 199px;
+        }
+        .sprite-internet-port {
+        background-size: (($total_width / 100) * 100%) (($total_height / 100) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-306 / ($total_width - 100)) * -100%) ((-634 / ($total_height - 100)) * -100%);
+        width: 100px;
+        height: 100px;
+        }
+        .sprite-laptop {
+        background-size: (($total_width / 60) * 100%) (($total_height / 60) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-404 / ($total_width - 60)) * -100%) ((-432 / ($total_height - 60)) * -100%);
+        width: 60px;
+        height: 60px;
+        }
+        .sprite-media-database {
+        background-size: (($total_width / 200) * 100%) (($total_height / 200) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-202 / ($total_width - 200)) * -100%) ((-310 / ($total_height - 200)) * -100%);
+        width: 200px;
+        height: 200px;
+        }
+        .sprite-media-graph {
+        background-size: (($total_width / 200) * 100%) (($total_height / 200) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-536 / ($total_width - 200)) * -100%) ((0 / ($total_height - 200)) * -100%);
+        width: 200px;
+        height: 200px;
+        }
+        .sprite-media-monitor {
+        background-size: (($total_width / 200) * 100%) (($total_height / 200) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-536 / ($total_width - 200)) * -100%) ((-202 / ($total_height - 200)) * -100%);
+        width: 200px;
+        height: 200px;
+        }
+        .sprite-network {
+        background-size: (($total_width / 82) * 100%) (($total_height / 82) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-638 / ($total_width - 82)) * -100%) ((-404 / ($total_height - 82)) * -100%);
+        width: 82px;
+        height: 82px;
+        }
+        .sprite-nhp-media-cloud {
+        background-size: (($total_width / 50) * 100%) (($total_height / 50) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-360 / ($total_width - 50)) * -100%) ((-736 / ($total_height - 50)) * -100%);
+        width: 50px;
+        height: 50px;
+        }
+        .sprite-nhp-media-db {
+        background-size: (($total_width / 50) * 100%) (($total_height / 50) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-412 / ($total_width - 50)) * -100%) ((-736 / ($total_height - 50)) * -100%);
+        width: 50px;
+        height: 50px;
+        }
+        .sprite-nhp-media-qr {
+        background-size: (($total_width / 50) * 100%) (($total_height / 50) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-308 / ($total_width - 50)) * -100%) ((-736 / ($total_height - 50)) * -100%);
+        width: 50px;
+        height: 50px;
+        }
+        .sprite-nhp-media-resize {
+        background-size: (($total_width / 50) * 100%) (($total_height / 50) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-256 / ($total_width - 50)) * -100%) ((-736 / ($total_height - 50)) * -100%);
+        width: 50px;
+        height: 50px;
+        }
+        .sprite-nhp-media-tape {
+        background-size: (($total_width / 50) * 100%) (($total_height / 50) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-204 / ($total_width - 50)) * -100%) ((-736 / ($total_height - 50)) * -100%);
+        width: 50px;
+        height: 50px;
+        }
+        .sprite-nhp-media-tree {
+        background-size: (($total_width / 50) * 100%) (($total_height / 50) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-466 / ($total_width - 50)) * -100%) ((-432 / ($total_height - 50)) * -100%);
+        width: 50px;
+        height: 50px;
+        }
+        .sprite-qrcode {
+        background-size: (($total_width / 200) * 100%) (($total_height / 200) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((0 / ($total_width - 200)) * -100%) ((-310 / ($total_height - 200)) * -100%);
+        width: 200px;
+        height: 200px;
+        }
+        .sprite-setings1 {
+        background-size: (($total_width / 100) * 100%) (($total_height / 100) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-510 / ($total_width - 100)) * -100%) ((-634 / ($total_height - 100)) * -100%);
+        width: 100px;
+        height: 100px;
+        }
+        .sprite-settings2 {
+        background-size: (($total_width / 100) * 100%) (($total_height / 100) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-612 / ($total_width - 100)) * -100%) ((-634 / ($total_height - 100)) * -100%);
+        width: 100px;
+        height: 100px;
+        }
+        .sprite-settings3 {
+        background-size: (($total_width / 100) * 100%) (($total_height / 100) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-714 / ($total_width - 100)) * -100%) ((-634 / ($total_height - 100)) * -100%);
+        width: 100px;
+        height: 100px;
+        }
+        .sprite-structure {
+        background-size: (($total_width / 100) * 100%) (($total_height / 100) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((0 / ($total_width - 100)) * -100%) ((-736 / ($total_height - 100)) * -100%);
+        width: 100px;
+        height: 100px;
+        }
+        .sprite-support {
+        background-size: (($total_width / 72) * 100%) (($total_height / 72) * 100%);
+        @include image('sprites/sprite-home.png');
+        background-position: ((-738 / ($total_width - 72)) * -100%) ((-554 / ($total_height - 72)) * -100%);
+        width: 72px;
+        height: 72px;
+        }

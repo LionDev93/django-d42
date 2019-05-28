@@ -1,0 +1,37 @@
+[head.title]
+Looking for Microsoft Inventory Software? Comprehensive Microsoft Inventory Software Tool with agent-less auto-discovery!
+
+[head.description]
+Device42 is the comprehensive Microsoft Inventory Software with agent-less auto-discovery!
+
+[landing.title]
+Comprehensive Microsoft Inventory Software
+[landing.image_format]
+png
+[landing.content]
+
+Device42 is the only Microsoft inventory software you need, with powerful auto-discovery with fully configurable asset types. Easily track Microsoft license usage across your infrastructure!
+
+- Agent-less auto-discoveries to keep your Microsoft inventory up-to-date, with an optional agent
+- Support for physical, virtual and cloud infrastructure to track Microsoft software across your entire deployment
+- Device42's Microsoft inventory software works with any operating system: Windows, Linux/*NIX, Mac, and BSD
+- Out-of-the-box integrations with ITSM tools like JIRA, ServiceNow, Cherwell, and many more help you enhance the value of your existing software
+- Powerful, customizable visualization and Microsoft license usage reports
+
+
+
+[feature[1].title]
+Complete Microsoft Auto-discovery Across All of Your Assets
+[feature[1].content]
+Device42 auto-discovery builds accurate Microsoft inventory and dependencies between physical, virtuals, cloud infrastructure and applications. Microsoft Inventory Software makes capacity planning simple!
+
+[feature[2].title]
+Microsoft Inventory Software Tool Features Complete MS License Management
+[feature[2].content]
+View and manage all of your Microsoft software license counts, expiration dates, and license keys, plus software relations to devices and users. Manage complex licensing models: Per CPU, per user, or per machine licenses.
+
+
+[feature[3].title]
+Real-time Map of Your IT Infrastructure with Integrations
+[feature[3].content]
+Go beyond traditional inventory tools using our out of box integrations: with JIRA, ServiceNow, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, and many more!

@@ -1,0 +1,33 @@
+[head.title]
+Better SolarWinds IPAM alternative for comprehensive IP address management with agent-less auto-discovery
+
+[head.description]
+Device42 is a better SolarWinds IPAM alternative for comprehensive IP address management with agent-less auto-discovery.
+
+[landing.title]
+Better SolarWinds IPAM alternative for comprehensive IP address management
+
+[landing.content]
+
+Looking for a better SolarWinds IPAM alternative? Device42’s IP Address Management capabilities provide an easy to use, intuitive console for centralized IP visibility and control. Device42 can quickly and thoroughly discover your entire network using a variety of auto-discovery methods, automatically correlating the information and keeping it up-to-date.
+
+- IPv4/IPv6 IP address management
+- SNMP Discovery (v1/v2c/v3) for network and server devices
+- SSH/WMI discovery for Linux/Unix and Windows
+- Support for overlapping IP ranges and nested subnet management
+- Auto assignment of IPs to devices using APIs and integrations
+
+[feature[1].title]
+Complete Auto Discovery for all networks
+[feature[1].content]
+Device42 auto-discovery spans from legacy to newer systems and builds dependencies between physical, virtuals and applications. IPv4/IPv6, subnets, VLANs, network device inventory, device to switch port mapping is all auto-discovered and constantly updated.
+
+[feature[2].title]
+Overlapping IP ranges with visualizations
+[feature[2].content]
+Have same IPs across different network segments? Device42 lets you manage overlapping IP ranges. Subnet tree and usage charts give you powerful visualizations for quicker operational insights.
+
+[feature[3].title]
+Automate your IP management with REST APIs and integrations
+[feature[3].content]
+Using our out of box integrations with JIRA, Confluence, Puppet, Chef, Microsoft SCCM, ServiceNow, vRealize, Foreman and many more you can automatically assign IP addresses in your provisioning and orchestration workflow.

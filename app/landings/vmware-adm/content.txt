@@ -1,0 +1,40 @@
+[head.title]
+Better VMware Application Dependency ADM alternative to automate your application dependency mappings with agent-less autodiscover
+
+[head.description]
+Device42 is a comprehensive mapping tool that helps you map out dependencies between your applications and services automatically and without the need of an expensive packet capture.
+
+[landing.title]
+
+Better VMware Application Dependency ADM Alternative for application dependency mappings
+
+[landing.image_format]
+png
+
+[landing.content]
+
+Looking for a better VMware Application Dependency ADM alternative? Device42 helps you with an automatically generated, centralized repository of application, service and device relationships and dependencies whether running on premises on physical machines, on virtual machines, or in the cloud. And you can do all of that agent-lessly and without any expensive packet captures.
+
+- Agentless services and application discovery combines data obtained via Windows (WMI) and Linux (SSH) protocols, and augments this native-protocol deep application discovery with netflow
+- Get a list of all deployed applications, manufacturer, version number
+- Get a list of all services, running or not, users, protocols & ports
+- Easily view application to server and application to application mapping
+- View comprehensive application dependency maps even for machines that can't be directly accessed, built out with Netflow data!
+
+
+[feature[1].title]
+Automated Service Impact Discovery
+[feature[1].image_format]
+png
+[feature[1].content]
+Device42 auto-discovery spans from legacy to newer systems and builds dependencies between physical, virtuals and applications. No need to use multiple tools to put together information anymore. WMI and SSH discovery build complete dependencies across vendor or custom applications.
+
+[feature[2].title]
+Application Dependency Flow with lists and charts
+[feature[2].content]
+Know the impact of any application, whether you are contemplating a migration or a change control. Easy to consume list pages and charts can be imported into Visio as well.
+
+[feature[3].title]
+Powerful visualizations, reporting and APIs
+[feature[3].content]
+Easily build move groups, or report on any the dependency data in your desired format, whether it is excel, CSV or direct connection to an external database. Flexible APIs let you consume the data your way or integrate Device42 with other products.

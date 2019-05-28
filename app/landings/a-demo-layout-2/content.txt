@@ -1,0 +1,45 @@
+[head.title]
+HP Warranty Check
+
+[head.description]
+Device42 is a comprehensive ADDM Tool with Agentless Autodiscovery. Scan Your Entire IT Infrastructure in Minutes!
+
+[landing.title]
+Automatic HP Warranty Check tool with agent-less auto-discovery!
+
+
+[landing.content]
+## Single Pane of Glass for your IT Infrastructure
+
+Device42 provides comprehensive IT software and hardware inventory management capabilities, including powerful HP warranty checking, auto-discovery, and fully configurable asset types!
+
+1. **Auto-Discovery**
+    Hardware inventory tools use agent-less auto-discovery, keeping your entire inventory up-to-date
+2. **HP Serial Lookup**
+    HP serial number lookup supports automatic HP server warranty checks, hp laptop warranty checking, etc!
+3. **Total Infrastructure Support**
+    Support for ALL physical, virtual, and cloud infrastructure
+4. **Across Operating Systems**
+    Discover software and hardware inventory on any operating system: Windows, Linux, UNIX, Mac, or BSD
+5. **Suite of Integrations**
+    Device42's integrates with your existing IT tools like JIRA, ServiceNow, Cherwell and more!
+6. **Contract Management**
+    Know your support expiry and more with automatic contract management for various vendors
+
+[feature[1].title]
+Complete HP Hardware Auto-discovery
+[feature[1].content]
+Device42's hardware inventory auto-discovery covers across legacy and newer systems alike, discovering hardware inventory and dependencies between physical, virtuals, cloud infrastructure and applications. No need to use multiple tools to put together information anymore.
+
+[feature[2].title]
+HP Server Warranty Check and Support Entitlement Tracking
+[feature[2].content]
+Device42 helps you auto-discover your warranty information for your hardware inventory so you know when your support expires. Know when it's time to renew, or quickly find support information related to any piece of your hardware inventory!
+
+[feature[3].title]
+Real-time map of your IT infrastructure with Integrations
+[feature[3].content]
+Go beyond manual HP warranty lookup tools, plus take advantage using our out of box integrations with JIRA, Confluence, Puppet, Chef, Microsoft SCCM, Infoblox, Splunk, ServiceNow and many more!
+
+
+#template=landing_alt/layout-2.html
