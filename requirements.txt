@@ -35,7 +35,7 @@ pytz==2016.7
 PyYAML==3.12
 requests==2.11.1
 restkit==4.2.2
-rsa==3.4.2
+rsa==4.1
 six==1.10.0
 socketpool==0.5.3
 ua-parser==0.7.2
