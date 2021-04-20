@@ -23,7 +23,7 @@ paramiko==2.0.2
 Pillow==5.0.0
 poeditor==1.0.4
 psycopg2==2.7.3.1
-py==1.4.31
+py==1.10.0
 pyasn1==0.4.2
 pyasn1-modules==0.2.1
 pycparser==2.17
